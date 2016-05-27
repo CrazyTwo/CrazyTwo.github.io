@@ -1,0 +1,559 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.1" />
+
+
+
+
+
+
+<meta name="description" content="在讲九九乘法表之前，先讲下js写入标签的方法之一。（可选择不看，如果你已经会了的话）
+for循环写入标签有时候标签是可以在js里添加的，以下是方法之一
+12345678910111213141516171819202122232425262728293031&amp;lt;!DOCTYPE html&amp;gt;&amp;lt;html&amp;gt;	&amp;lt;head&amp;gt;		&amp;lt;meta charset=&quot;UTF-8">
+<meta property="og:type" content="article">
+<meta property="og:title" content="九九乘法表与do{}while()和while(){}">
+<meta property="og:url" content="http://yoursite.com/2016/05/27/while/index.html">
+<meta property="og:site_name" content="H5课堂笔记">
+<meta property="og:description" content="在讲九九乘法表之前，先讲下js写入标签的方法之一。（可选择不看，如果你已经会了的话）
+for循环写入标签有时候标签是可以在js里添加的，以下是方法之一
+12345678910111213141516171819202122232425262728293031&amp;lt;!DOCTYPE html&amp;gt;&amp;lt;html&amp;gt;	&amp;lt;head&amp;gt;		&amp;lt;meta charset=&quot;UTF-8">
+<meta property="og:updated_time" content="2016-05-27T07:28:07.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="九九乘法表与do{}while()和while(){}">
+<meta name="twitter:description" content="在讲九九乘法表之前，先讲下js写入标签的方法之一。（可选择不看，如果你已经会了的话）
+for循环写入标签有时候标签是可以在js里添加的，以下是方法之一
+12345678910111213141516171819202122232425262728293031&amp;lt;!DOCTYPE html&amp;gt;&amp;lt;html&amp;gt;	&amp;lt;head&amp;gt;		&amp;lt;meta charset=&quot;UTF-8">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Muse',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 0,
+      author: 'Author'
+    }
+  };
+</script>
+
+  <title> 九九乘法表与do{}while()和while(){} | H5课堂笔记 </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="">
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">H5课堂笔记</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle"></p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Startseite
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Archiv
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            Tags
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                九九乘法表与do{}while()和while(){}
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Veröffentlicht am</span>
+            <time itemprop="dateCreated" datetime="2016-05-27T15:22:06+08:00" content="2016-05-27">
+              2016-05-27
+            </time>
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>在讲九九乘法表之前，先讲下js写入标签的方法之一。（可选择不看，如果你已经会了的话）</p>
+<h3 id="for循环写入标签"><a href="#for循环写入标签" class="headerlink" title="for循环写入标签"></a>for循环写入标签</h3><p>有时候标签是可以在js里添加的，以下是方法之一</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">title</span>&gt;</span><span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">		</span><br><span class="line">	<span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">		</span><br><span class="line">	<span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span>&gt;</span><span class="undefined"></span><br><span class="line">	//document 运行缓慢</span><br><span class="line">		document.write("&lt;table border='1'&gt;");	</span><br><span class="line">		for (var i=0;i &lt; 5 ; i++) &#123;//大循环</span><br><span class="line">			document.write("&lt;tr&gt;");	</span><br><span class="line">			for (var j=0;j &lt; 5 ; j++) &#123;//小循环  大循环循环一次，小循环循环5次 共循环5*5</span><br><span class="line">				document.write("&lt;td&gt;"+j+"&lt;/td&gt;");</span><br><span class="line">			&#125;//小循环结束后结果是&lt;td&gt;0&lt;/td&gt;&lt;td&gt;1&lt;/td&gt;&lt;td&gt;2&lt;/td&gt;&lt;td&gt;3&lt;/td&gt;&lt;td&gt;4&lt;/td&gt;</span><br><span class="line">			document.write("&lt;/tr&gt;")</span><br><span class="line">		&#125;//两循环结束后结果是&lt;tr&gt;&lt;td&gt;1&lt;/td&gt;&lt;td&gt;2&lt;/td&gt;&lt;td&gt;3&lt;/td&gt;&lt;td&gt;4&lt;/td&gt;&lt;/tr&gt;*5</span><br><span class="line">		document.write("&lt;/table&gt;");</span><br><span class="line">		//解决方案：字符串拼接(table的写入也是很慢的)</span><br><span class="line">		var str ="&lt;table border='1'&gt;";	</span><br><span class="line">		for (var i=0;i &lt; 5 ; i++) &#123;</span><br><span class="line">			str+="&lt;tr&gt;";	</span><br><span class="line">			for (var j=0;j &lt; 5 ; j++) &#123;</span><br><span class="line">				str+="&lt;td&gt;"+j+"&lt;/td&gt;";</span><br><span class="line">			&#125;</span><br><span class="line">			str+="&lt;/tr&gt;";</span><br><span class="line">		&#125;</span><br><span class="line">		document.write(str + "&lt;/table&gt;");</span></span><br></pre></td></tr></table></figure>
+<h3 id="九九乘法表"><a href="#九九乘法表" class="headerlink" title="九九乘法表"></a>九九乘法表</h3><p>最经典的例子就是九九乘法表，可谓是程序猿必经之路，以下纯属个人想法</p>
+<p>九九乘法表思路</p>
+<pre><code>九九乘法表中是1-9*1-9
+一个1-9就可以设置一个循环1,然后1-9里各乘一遍1-9，就可以再在循环1里设置循环2。
+循环1第一遍循环时是i=1输出&lt;tr&gt;
+然后进入循环2，循环2第一遍循环时是j=1，二者相乘可获得九九乘法表第一个&lt;td&gt;1*1=1&lt;/td&gt;,输出&lt;tr&gt;&lt;td&gt;1*1=1&lt;/td&gt;
+然后循环2 j=2 未达到退出循环条件，所以会继续循环，这时 i=1 ，j=2，如果按上一步的执行就会得出&lt;td&gt;1*1=1&lt;/td&gt;&lt;td&gt;1*2=2&lt;/td&gt;,这样输出来就是在同一行内
+而在九九乘法表内第一行只有一个1*1，所以我们需要在1*1的的后面输入空的td，也就是&lt;td&gt;&lt;/td&gt;，这时候就需要判断了，可是判断的标准是什么呢？
+所以我们可以看一下九九乘法表的排布规律，九九乘法表中，每当第二个数大于第一个数时，就会输出空，所以判断的标准就是当j&gt;i时，就输出&lt;td&gt;&lt;/td&gt;；
+好了，接下来就是j&gt;9,退出里面的循环时输出的是&lt;tr&gt;&lt;td&gt;1*1=1&lt;/td&gt;(&lt;td&gt;&lt;/td&gt;)*8&lt;/tr&gt;
+这时循环1的 i ++ 也就是i=2，循环1继续，i=2进入循环2，循环2执行完成后&lt;tr&gt;&lt;td&gt;1*2=2&lt;/td&gt;&lt;td&gt;2*2=4&lt;/td&gt;(&lt;td&gt;&lt;/td&gt;)*7&lt;/tr&gt;
+如此反复，最后得出九九乘法表。
+</code></pre><p>看代码</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">title</span>&gt;</span><span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span>&gt;</span><span class="undefined"></span><br><span class="line">			var str ="&lt;table border='1'&gt;";</span><br><span class="line">			for (var i=1;i &lt;= 9; i++) &#123;//循环1  循环一次得出的内容为一列tr，tr里包含循环2循环结束后的内容</span><br><span class="line">				str += "&lt;tr&gt;" ;</span><br><span class="line">				for (var j = 1 ; j &lt;= 9; j++) &#123;//循环2 循环结束后得出的内容为一行td</span><br><span class="line">					if(j&gt;i )&#123;//当j大于i时，输出空的空格</span><br><span class="line">						str+="&lt;td&gt;&lt;/td&gt;";</span><br><span class="line">					&#125;else&#123;//否则输出内容</span><br><span class="line">						str += "&lt;td&gt;" ;</span><br><span class="line">						str += j + "*" + i + "=" + (i*j);</span><br><span class="line">						str += "&lt;/td&gt;" ;</span><br><span class="line">					&#125;</span><br><span class="line">					</span><br><span class="line">				&#125;</span><br><span class="line">				str += "&lt;/tr&gt;" ;</span><br><span class="line">			&#125;</span><br><span class="line">			str += "&lt;table&gt;";</span><br><span class="line">			document.write(str);</span><br><span class="line">		</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h3 id="do-while-和while"><a href="#do-while-和while" class="headerlink" title="do{}while()和while(){}"></a>do{}while()和while(){}</h3><p>do{}while()先执行再判断，最少执行一次 </p>
+<p>while(){}先判断在执行</p>
+<p>看代码</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">title</span>&gt;</span><span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span>&gt;</span><span class="undefined"></span><br><span class="line">//			for (var i=0;i &lt;= 1000; i++) &#123;</span><br><span class="line">//				if (i%7==0 &amp;&amp; i%13==0) &#123;</span><br><span class="line">//					document.write(i);</span><br><span class="line">//					document.write("&lt;br /&gt;");</span><br><span class="line">//				&#125;</span><br><span class="line">//			&#125;</span><br><span class="line">			//获取一个可以同时整除 任意三个数的最小值</span><br><span class="line">			//方法1</span><br><span class="line">			function a (num1,num2 ,num3)&#123;//定义函数，输入三个数可以获取同时整除这三个数的最小值</span><br><span class="line">				for (var i=1;i &lt;=(num1*num2*num3); i++) &#123;//三个数的积一定可以同时整除这三个数，所以可以在这个积的范围内寻找最小值</span><br><span class="line">					if (i%num1==0 &amp;&amp; i%num2==0 &amp;&amp; i%num3==0) &#123;//判断是否可以同时整除这三个数</span><br><span class="line">						//是就写入，并退出循环</span><br><span class="line">						document.write("可以同时整除"+num1+","+num2+","+num3+"三个数的最小值是"+i);</span><br><span class="line">						document.write("&lt;br /&gt;");</span><br><span class="line">						break;</span><br><span class="line">					&#125;</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line">			//调用函数</span><br><span class="line">			a(7,13,5);</span><br><span class="line">			//方法2，使用while，思路与上一个相似</span><br><span class="line">			var i = 0;</span><br><span class="line">			function b (num1,num2 ,num3)&#123;</span><br><span class="line">				while(true)&#123;//死循环</span><br><span class="line">					i++;</span><br><span class="line">					if (i%num1==0 &amp;&amp; i%num2==0 &amp;&amp; i%num3==0) &#123;</span><br><span class="line">						document.write("可以同时整除"+num1+","+num2+","+num3+"三个数的最小值是"+i);</span><br><span class="line">						document.write("&lt;br /&gt;");</span><br><span class="line">						break;//找到后退出死循环</span><br><span class="line">					&#125;</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line">			b(7,13,15);</span><br><span class="line">			</span><br><span class="line">			//do&#123;&#125;while()先执行再判断，最少执行一次   while()&#123;&#125;先判断在执行</span><br><span class="line">			var j = 0;</span><br><span class="line">			while(j&lt;0)&#123;</span><br><span class="line">				j++;</span><br><span class="line">				document.write(j+"我是while（）&#123;&#125;");</span><br><span class="line">			&#125;</span><br><span class="line">			do&#123;</span><br><span class="line">				j++;</span><br><span class="line">				document.write(j+"我是do&#123;&#125;while（）");</span><br><span class="line">			&#125;while(j&lt;0)</span><br><span class="line">		</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+      
+    </div>
+
+    <div>
+      
+        
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/05/27/tab/" rel="next" title="JS的切换案例分析">
+                <i class="fa fa-chevron-left"></i> JS的切换案例分析
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            Inhaltsverzeichnis
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            Übersicht
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.gif"
+               alt="CrazyTwo" />
+          <p class="site-author-name" itemprop="name">CrazyTwo</p>
+          <p class="site-description motion-element" itemprop="description"></p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">8</span>
+              <span class="site-state-item-name">Artikel</span>
+            </a>
+          </div>
+
+          
+
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#for循环写入标签"><span class="nav-number">1.</span> <span class="nav-text">for循环写入标签</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#九九乘法表"><span class="nav-number">2.</span> <span class="nav-text">九九乘法表</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#do-while-和while"><span class="nav-number">3.</span> <span class="nav-text">do{}while()和while(){}</span></a></li></ol></div>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2016</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">CrazyTwo</span>
+</div>
+
+<div class="powered-by">
+  Erstellt mit  <a class="theme-link" href="http://hexo.io">Hexo</a>
+</div>
+
+<div class="theme-info">
+  Theme -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Muse
+  </a>
+</div>
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.1"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.1"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+  
+  
+  
+
+  
+
+  
+
+</body>
+</html>
