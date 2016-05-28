@@ -5,7 +5,7 @@
   
 
 
-<html class="theme-next mist use-motion">
+<html class="theme-next muse use-motion">
 <head>
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
@@ -102,7 +102,7 @@
 2.一种基于对象的脚本语言
 3.一种简单弱类型的脚本语言（数字、字符、函数、对象、数组、undefined）
 4.一种相对安全的脚本语言（只能在浏览">
-<meta property="og:updated_time" content="2016-05-25T05:29:50.000Z">
+<meta property="og:updated_time" content="2016-05-28T02:34:33.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JS入门">
 <meta name="twitter:description" content="JavaScript的组成1.核心（ECMAScript）是一个标准 ES6
@@ -118,7 +118,7 @@
 <script type="text/javascript" id="hexo.configuration">
   var NexT = window.NexT || {};
   var CONFIG = {
-    scheme: 'Mist',
+    scheme: 'Muse',
     sidebar: {"position":"left","display":"post"},
     fancybox: true,
     motion: true,
@@ -187,7 +187,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
             
-            Home
+            Startseite
           </a>
         </li>
       
@@ -197,7 +197,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
             
-            Archives
+            Archiv
           </a>
         </li>
       
@@ -260,7 +260,7 @@
             <span class="post-meta-item-icon">
               <i class="fa fa-calendar-o"></i>
             </span>
-            <span class="post-meta-item-text">Posted on</span>
+            <span class="post-meta-item-text">Veröffentlicht am</span>
             <time itemprop="dateCreated" datetime="2016-05-24T17:52:36+08:00" content="2016-05-24">
               2016-05-24
             </time>
@@ -301,7 +301,7 @@
 <h3 id="引入方式和弹出框"><a href="#引入方式和弹出框" class="headerlink" title="引入方式和弹出框"></a>引入方式和弹出框</h3><p>直接上颗栗子</p>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">title</span>&gt;</span><span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">		<span class="comment">&lt;!--外部引入--&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"a.js"</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span> <span class="attr">charset</span>=<span class="string">"utf-8"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">		<span class="comment">&lt;!--内部引入--&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span>&gt;</span><span class="undefined"></span><br><span class="line">//			消息框</span><br><span class="line">			alert("a");</span><br><span class="line">//			确认框</span><br><span class="line">			var a = confirm("是否？");</span><br><span class="line">			alert(a);</span><br><span class="line">//			提示框</span><br><span class="line">			var n = prompt("请输入姓名？");</span><br><span class="line">			alert(n);</span><br><span class="line">		</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <h3 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h3><p>单行注释  //</p>
-<p>多行注释 /<em> </em>/</p>
+<p>多行注释 /* */</p>
 <p>变量</p>
 <p>number  值为数值</p>
 <p>string 值为字符串</p>
@@ -464,10 +464,10 @@ if (判断语句1) {
       
         <ul class="sidebar-nav motion-element">
           <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
-            Table of Contents
+            Inhaltsverzeichnis
           </li>
           <li class="sidebar-nav-overview" data-target="site-overview">
-            Overview
+            Übersicht
           </li>
         </ul>
       
@@ -483,8 +483,8 @@ if (判断语句1) {
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">8</span>
-              <span class="site-state-item-name">posts</span>
+              <span class="site-state-item-count">9</span>
+              <span class="site-state-item-name">Artikel</span>
             </a>
           </div>
 
@@ -542,13 +542,13 @@ if (判断语句1) {
 </div>
 
 <div class="powered-by">
-  Powered by <a class="theme-link" href="http://hexo.io">Hexo</a>
+  Erstellt mit  <a class="theme-link" href="http://hexo.io">Hexo</a>
 </div>
 
 <div class="theme-info">
   Theme -
   <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
-    NexT.Mist
+    NexT.Muse
   </a>
 </div>
 
@@ -632,6 +632,7 @@ if (判断语句1) {
 
 
   
+
 
 
 
