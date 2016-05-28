@@ -1,15 +1,90 @@
+<!doctype html>
 
- <!DOCTYPE HTML>
-<html lang="中文">
-<head>
-  <meta charset="UTF-8">
+
+
   
-    <title>CSS入门 | H5课堂笔记</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=3, minimum-scale=1">
+
+
+<html class="theme-next mist use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
     
-    <meta name="author" content="CrazyTwo">
     
-    <meta name="description" content="CCS（是一组格式设置规则，用于控制web外观） 
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.1" />
+
+
+
+
+
+
+<meta name="description" content="CCS（是一组格式设置规则，用于控制web外观） 
 web标准结构  结构 HTML+  样式 CSS+  行为  交互行为javascript
   特点
 1.页面内容与表现形式分离
@@ -17,83 +92,210 @@ web标准结构  结构 HTML+  样式 CSS+  行为  交互行为javascript
 3.提高网页加载速度
 4.降低服务器的成本
 5.呈现一致的效果
-CSS引入方式 1)    ">
-    
-    
-    
-    
-    
-    <link rel="icon" href="/img/favicon.ico">
-    
-    
-    <link rel="apple-touch-icon" href="/img/pacman.jpg">
-    <link rel="apple-touch-icon-precomposed" href="/img/pacman.jpg">
-    
-    <link rel="stylesheet" href="/css/style.css">
+CSS引入方式 1)    有3中引入方式，第一种head标签内用link标签引入外部css文件，这种引入方式使用最为广泛，优点">
+<meta property="og:type" content="article">
+<meta property="og:title" content="CSS入门">
+<meta property="og:url" content="http://yoursite.com/2016/05/24/Introduction_CSS /index.html">
+<meta property="og:site_name" content="H5课堂笔记">
+<meta property="og:description" content="CCS（是一组格式设置规则，用于控制web外观） 
+web标准结构  结构 HTML+  样式 CSS+  行为  交互行为javascript
+  特点
+1.页面内容与表现形式分离
+2.可很好控制页面布局
+3.提高网页加载速度
+4.降低服务器的成本
+5.呈现一致的效果
+CSS引入方式 1)    有3中引入方式，第一种head标签内用link标签引入外部css文件，这种引入方式使用最为广泛，优点">
+<meta property="og:updated_time" content="2016-05-24T09:49:10.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="CSS入门">
+<meta name="twitter:description" content="CCS（是一组格式设置规则，用于控制web外观） 
+web标准结构  结构 HTML+  样式 CSS+  行为  交互行为javascript
+  特点
+1.页面内容与表现形式分离
+2.可很好控制页面布局
+3.提高网页加载速度
+4.降低服务器的成本
+5.呈现一致的效果
+CSS引入方式 1)    有3中引入方式，第一种head标签内用link标签引入外部css文件，这种引入方式使用最为广泛，优点">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Mist',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 0,
+      author: 'Author'
+    }
+  };
+</script>
+
+  <title> CSS入门 | H5课堂笔记 </title>
 </head>
 
-  <body>
-    <header>
-      <div>
-		
-			<div id="imglogo">
-				<a href="/"><img src="/img/logo.svg" alt="H5课堂笔记" title="H5课堂笔记"/></a>
-			</div>
-			
-			<div id="textlogo">
-				<h1 class="site-name"><a href="/" title="H5课堂笔记">H5课堂笔记</a></h1>
-				<h2 class="blog-motto"></h2>
-			</div>
-			<div class="navbar"><a class="navbutton navmobile" href="#" title="Menu">
-			</a></div>
-			<nav class="animated">
-				<ul>
-					
-						<li><a href="/">Home</a></li>
-					
-						<li><a href="/archives">Archives</a></li>
-					
-					<li>
-					
-					<form class="search" action="//google.com/search" method="get" accept-charset="utf-8">
-						<label>Search</label>
-						<input type="text" id="search" name="q" autocomplete="off" maxlength="20" placeholder="Search" />
-						<input type="hidden" name="q" value="site:yoursite.com">
-					</form>
-					
-					</li>
-				</ul>
-			</nav>			
+<body itemscope itemtype="http://schema.org/WebPage" lang="中文">
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">H5课堂笔记</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle"></p>
 </div>
 
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Startseite
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Archiv
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            Tags
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
     </header>
-    <div id="container">
-      <div id="main" class="post" itemscope itemprop="blogPost">
-	<article itemprop="articleBody"> 
-		<header class="article-info clearfix">
-  <h1 itemprop="name">
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
     
-      <a href="/2016/05/24/Introduction_CSS /" title="CSS入门" itemprop="url">CSS入门</a>
-  </h1>
-  <p class="article-author">By
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
     
-      <a href="http://yoursite.com" title="CrazyTwo">CrazyTwo</a>
-    </p>
-  <p class="article-time">
-    <time datetime="2016-05-24T09:49:10.000Z" itemprop="datePublished">2016-05-24</time>
-    Updated:<time datetime="2016-05-24T09:49:10.000Z" itemprop="dateModified">2016-05-24</time>
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                CSS入门
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Veröffentlicht am</span>
+            <time itemprop="dateCreated" datetime="2016-05-24T17:49:10+08:00" content="2016-05-24">
+              2016-05-24
+            </time>
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
     
-  </p>
-</header>
-	<div class="article-content">
-		
-		
-		<div id="toc" class="toc-article">
-			<strong class="toc-title">Contents</strong>
-		<ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#web标准结构"><span class="toc-number">1.</span> <span class="toc-text">web标准结构</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#CSS引入方式"><span class="toc-number">2.</span> <span class="toc-text">CSS引入方式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#CSS基础语法"><span class="toc-number">3.</span> <span class="toc-text">CSS基础语法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#CSS属性"><span class="toc-number">4.</span> <span class="toc-text">CSS属性</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#字体属性设置："><span class="toc-number">5.</span> <span class="toc-text">字体属性设置：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#文本设置"><span class="toc-number">6.</span> <span class="toc-text">文本设置</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-颜色设置："><span class="toc-number">6.1.</span> <span class="toc-text">1.颜色设置：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-文本修饰："><span class="toc-number">6.2.</span> <span class="toc-text">2.文本修饰：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-行距："><span class="toc-number">6.3.</span> <span class="toc-text">3.行距：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#背景设置："><span class="toc-number">6.4.</span> <span class="toc-text">背景设置：</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#常用布局"><span class="toc-number">7.</span> <span class="toc-text">常用布局</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#a标签的伪类（编辑时请注意按顺序编写）"><span class="toc-number">8.</span> <span class="toc-text">a标签的伪类（编辑时请注意按顺序编写）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#默认清除样式格式："><span class="toc-number">9.</span> <span class="toc-text">默认清除样式格式：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#盒模型"><span class="toc-number">10.</span> <span class="toc-text">盒模型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#CSS-注意的问题"><span class="toc-number">11.</span> <span class="toc-text">CSS 注意的问题</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#BFC"><span class="toc-number">12.</span> <span class="toc-text">BFC</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#IFC"><span class="toc-number">13.</span> <span class="toc-text">IFC</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#IE6怪癖解析"><span class="toc-number">14.</span> <span class="toc-text">IE6怪癖解析</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#cCSS-hack"><span class="toc-number">15.</span> <span class="toc-text">cCSS hack</span></a></li></ol>
-		</div>
-		
-		<p>CCS（是一组格式设置规则，用于控制web外观） </p>
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>CCS（是一组格式设置规则，用于控制web外观） </p>
 <h3 id="web标准结构"><a href="#web标准结构" class="headerlink" title="web标准结构"></a>web标准结构</h3><p>  结构 HTML+<br>  样式 CSS+<br>  行为  交互行为javascript</p>
 <pre><code>  特点
 1.页面内容与表现形式分离
@@ -212,196 +414,194 @@ display的值为table-cell, table-caption, inline-block中的任何一个。
 5.\0    ：IE8、IE9支持，opera部分支持
 6.\9\0  ：IE8部分支持、IE9支持
 7.\0\9  ：IE8、IE9支持
-</code></pre>  
-	</div>
-		<footer class="article-footer clearfix">
-
-
-
-
-<div class="article-share" id="share">
-
-  <div data-url="http://yoursite.com/2016/05/24/Introduction_CSS /" data-title="CSS入门 | H5课堂笔记" data-tsina="null" class="share clearfix">
-  </div>
-
-</div>
-</footer>   	       
-	</article>
-	
-<nav class="article-nav clearfix">
- 
- <div class="prev" >
- <a href="/2016/05/24/Introduction_JavaScript /" title="JS入门">
-  <strong>PREVIOUS:</strong><br/>
-  <span>
-  JS入门</span>
-</a>
-</div>
-
-
-<div class="next">
-<a href="/2016/05/23/Introduction_HTML /"  title="Html入门">
- <strong>NEXT:</strong><br/> 
- <span>Html入门
-</span>
-</a>
-</div>
-
-</nav>
-
-	
-</div>  
-      <div class="openaside"><a class="navbutton" href="#" title="Show Sidebar"></a></div>
-
-  <div id="toc" class="toc-aside">
-  <strong class="toc-title">Contents</strong>
-  <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#web标准结构"><span class="toc-number">1.</span> <span class="toc-text">web标准结构</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#CSS引入方式"><span class="toc-number">2.</span> <span class="toc-text">CSS引入方式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#CSS基础语法"><span class="toc-number">3.</span> <span class="toc-text">CSS基础语法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#CSS属性"><span class="toc-number">4.</span> <span class="toc-text">CSS属性</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#字体属性设置："><span class="toc-number">5.</span> <span class="toc-text">字体属性设置：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#文本设置"><span class="toc-number">6.</span> <span class="toc-text">文本设置</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-颜色设置："><span class="toc-number">6.1.</span> <span class="toc-text">1.颜色设置：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-文本修饰："><span class="toc-number">6.2.</span> <span class="toc-text">2.文本修饰：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-行距："><span class="toc-number">6.3.</span> <span class="toc-text">3.行距：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#背景设置："><span class="toc-number">6.4.</span> <span class="toc-text">背景设置：</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#常用布局"><span class="toc-number">7.</span> <span class="toc-text">常用布局</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#a标签的伪类（编辑时请注意按顺序编写）"><span class="toc-number">8.</span> <span class="toc-text">a标签的伪类（编辑时请注意按顺序编写）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#默认清除样式格式："><span class="toc-number">9.</span> <span class="toc-text">默认清除样式格式：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#盒模型"><span class="toc-number">10.</span> <span class="toc-text">盒模型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#CSS-注意的问题"><span class="toc-number">11.</span> <span class="toc-text">CSS 注意的问题</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#BFC"><span class="toc-number">12.</span> <span class="toc-text">BFC</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#IFC"><span class="toc-number">13.</span> <span class="toc-text">IFC</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#IE6怪癖解析"><span class="toc-number">14.</span> <span class="toc-text">IE6怪癖解析</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#cCSS-hack"><span class="toc-number">15.</span> <span class="toc-text">cCSS hack</span></a></li></ol>
-  </div>
-
-<div id="asidepart">
-<div class="closeaside"><a class="closebutton" href="#" title="Hide Sidebar"></a></div>
-<aside class="clearfix">
-
-  
-
-  
-
-  <div class="rsspart">
-	<a href="null" target="_blank" title="rss">RSS</a>
-</div>
-
-</aside>
-</div>
-    </div>
-    <footer><div id="footer" >
-	
-	<div class="line">
-		<span></span>
-		<div class="author"></div>
-	</div>
-	
-	
-	<div class="social-font clearfix">
-		
-		
-		
-		
-		
-	</div>
-		<p class="copyright">Powered by <a href="http://hexo.io" target="_blank" title="hexo">hexo</a> and Theme by <a href="https://github.com/A-limon/pacman" target="_blank" title="Pacman">Pacman</a> © 2016 
-		
-		<a href="http://yoursite.com" target="_blank" title="CrazyTwo">CrazyTwo</a>
-		
-		</p>
-</div>
-</footer>
-    <script src="/js/jquery-2.1.0.min.js"></script>
-<script type="text/javascript">
-$(document).ready(function(){ 
-  $('.navbar').click(function(){
-    $('header nav').toggleClass('shownav');
-  });
-  var myWidth = 0;
-  function getSize(){
-    if( typeof( window.innerWidth ) == 'number' ) {
-      myWidth = window.innerWidth;
-    } else if( document.documentElement && document.documentElement.clientWidth) {
-      myWidth = document.documentElement.clientWidth;
-    };
-  };
-  var m = $('#main'),
-      a = $('#asidepart'),
-      c = $('.closeaside'),
-      o = $('.openaside');
-  $(window).resize(function(){
-    getSize(); 
-    if (myWidth >= 1024) {
-      $('header nav').removeClass('shownav');
-    }else
-    {
-      m.removeClass('moveMain');
-      a.css('display', 'block').removeClass('fadeOut');
-      o.css('display', 'none');
+</code></pre>
       
-      $('#toc.toc-aside').css('display', 'none');
+    </div>
+
+    <div>
+      
         
-    }
-  });
-  c.click(function(){
-    a.addClass('fadeOut').css('display', 'none');
-    o.css('display', 'block').addClass('fadeIn');
-    m.addClass('moveMain');
-  });
-  o.click(function(){
-    o.css('display', 'none').removeClass('beforeFadeIn');
-    a.css('display', 'block').removeClass('fadeOut').addClass('fadeIn');      
-    m.removeClass('moveMain');
-  });
-  $(window).scroll(function(){
-    o.css("top",Math.max(80,260-$(this).scrollTop()));
-  });
-});
-</script>
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/05/23/Introduction_HTML /" rel="next" title="Html入门">
+                <i class="fa fa-chevron-left"></i> Html入门
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/05/24/Introduction_JavaScript /" rel="prev" title="JS入门">
+                JS入门 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            Inhaltsverzeichnis
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            Übersicht
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.gif"
+               alt="CrazyTwo" />
+          <p class="site-author-name" itemprop="name">CrazyTwo</p>
+          <p class="site-description motion-element" itemprop="description">这是我学习H5的笔记</p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">9</span>
+              <span class="site-state-item-name">Artikel</span>
+            </a>
+          </div>
+
+          
+
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#web标准结构"><span class="nav-number">1.</span> <span class="nav-text">web标准结构</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CSS引入方式"><span class="nav-number">2.</span> <span class="nav-text">CSS引入方式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CSS基础语法"><span class="nav-number">3.</span> <span class="nav-text">CSS基础语法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CSS属性"><span class="nav-number">4.</span> <span class="nav-text">CSS属性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#字体属性设置："><span class="nav-number">5.</span> <span class="nav-text">字体属性设置：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#文本设置"><span class="nav-number">6.</span> <span class="nav-text">文本设置</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-颜色设置："><span class="nav-number">6.1.</span> <span class="nav-text">1.颜色设置：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-文本修饰："><span class="nav-number">6.2.</span> <span class="nav-text">2.文本修饰：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-行距："><span class="nav-number">6.3.</span> <span class="nav-text">3.行距：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#背景设置："><span class="nav-number">6.4.</span> <span class="nav-text">背景设置：</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#常用布局"><span class="nav-number">7.</span> <span class="nav-text">常用布局</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#a标签的伪类（编辑时请注意按顺序编写）"><span class="nav-number">8.</span> <span class="nav-text">a标签的伪类（编辑时请注意按顺序编写）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#默认清除样式格式："><span class="nav-number">9.</span> <span class="nav-text">默认清除样式格式：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#盒模型"><span class="nav-number">10.</span> <span class="nav-text">盒模型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CSS-注意的问题"><span class="nav-number">11.</span> <span class="nav-text">CSS 注意的问题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#BFC"><span class="nav-number">12.</span> <span class="nav-text">BFC</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#IFC"><span class="nav-number">13.</span> <span class="nav-text">IFC</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#IE6怪癖解析"><span class="nav-number">14.</span> <span class="nav-text">IE6怪癖解析</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#cCSS-hack"><span class="nav-number">15.</span> <span class="nav-text">cCSS hack</span></a></li></ol></div>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2016</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">CrazyTwo</span>
+</div>
+
+<div class="powered-by">
+  Erstellt mit  <a class="theme-link" href="http://hexo.io">Hexo</a>
+</div>
+
+<div class="theme-info">
+  Theme -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Mist
+  </a>
+</div>
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
 
 <script type="text/javascript">
-$(document).ready(function(){ 
-  var ai = $('.article-content>iframe'),
-      ae = $('.article-content>embed'),
-      t  = $('#toc'),
-      h  = $('article h2')
-      ah = $('article h2'),
-      ta = $('#toc.toc-aside'),
-      o  = $('.openaside'),
-      c  = $('.closeaside');
-  if(ai.length>0){
-    ai.wrap('<div class="video-container" />');
-  };
-  if(ae.length>0){
-   ae.wrap('<div class="video-container" />');
-  };
-  if(ah.length==0){
-    t.css('display','none');
-  }else{
-    c.click(function(){
-      ta.css('display', 'block').addClass('fadeIn');
-    });
-    o.click(function(){
-      ta.css('display', 'none');
-    });
-    $(window).scroll(function(){
-      ta.css("top",Math.max(140,320-$(this).scrollTop()));
-    });
-  };
-});
-</script>
-
-
-<script type="text/javascript">
-$(document).ready(function(){ 
-  var $this = $('.share'),
-      url = $this.attr('data-url'),
-      encodedUrl = encodeURIComponent(url),
-      title = $this.attr('data-title'),
-      tsina = $this.attr('data-tsina');
-  var html = [
-  '<a href="#" class="overlay" id="qrcode"></a>',
-  '<div class="qrcode clearfix"><span>扫描二维码分享到微信朋友圈</span><a class="qrclose" href="#share"></a><strong>Loading...Please wait</strong><img id="qrcode-pic" data-src="http://s.jiathis.com/qrcode.php?url=' + encodedUrl + '"/></div>',
-  '<a href="#textlogo" class="article-back-to-top" title="Top"></a>',
-  '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
-  '<a href="#qrcode" class="article-share-qrcode" title="QRcode"></a>',
-  '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
-  '<a href="http://service.weibo.com/share/share.php?title='+title+'&url='+encodedUrl +'&ralateUid='+ tsina +'&searchPic=true&style=number' +'" class="article-share-weibo" target="_blank" title="Weibo"></a>',
-  '<span title="Share to"></span>'
-  ].join('');
-  $this.append(html);
-  $('.article-share-qrcode').click(function(){
-    var imgSrc = $('#qrcode-pic').attr('data-src');
-    $('#qrcode-pic').attr('src', imgSrc);
-    $('#qrcode-pic').load(function(){
-        $('.qrcode strong').text(' ');
-    });
-  });
-});     
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
 </script>
 
 
@@ -409,5 +609,72 @@ $(document).ready(function(){
 
 
 
-  </body>
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.1"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.1"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+  
+  
+  
+
+  
+
+  
+
+</body>
 </html>
