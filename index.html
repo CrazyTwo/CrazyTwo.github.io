@@ -1,283 +1,86 @@
-<!doctype html>
-
-
-
-  
-
-
-<html class="theme-next mist use-motion">
+<!DOCTYPE HTML>
+<html>
 <head>
-  <meta charset="UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
-
-
-
-<meta http-equiv="Cache-Control" content="no-transform" />
-<meta http-equiv="Cache-Control" content="no-siteapp" />
-
-
-
-
-
-
-
-
-
-
-
-
+  <meta charset="utf-8">
+  
+  <title>H5课堂笔记</title>
+  <meta name="author" content="CrazyTwo">
+  
+  <meta name="description" content="这是我学习H5的笔记">
   
   
-  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
-
-
-
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
   
-  
-  
-  
+  <meta property="og:site_name" content="H5课堂笔记"/>
 
   
-    
-    
+    <meta property="og:image" content="undefined"/>
   
 
+  <link href="/favicon.png" rel="icon">
+  <link rel="alternate" href="/atom.xml" title="H5课堂笔记" type="application/atom+xml">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
+  <script>
+  $(document).ready(function() {
+    $('#sidebar').delay(400).animate({ width: '285px' }, 500, function() {
+      $('.personal-info').css({display: 'table'}).hide().fadeIn(500);
+    });
+  });
+  </script>
   
-
-  
-
-  
-
-  
-
-  
-    
-    
-    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
-  
-
-
-
-
-
-
-<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
-
-<link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
-
-
-  <meta name="keywords" content="Hexo, NexT" />
-
-
-
-
-
-
-
-
-  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.1" />
-
-
-
-
-
-
-<meta name="description" content="这是我学习H5的笔记">
-<meta property="og:type" content="website">
-<meta property="og:title" content="H5课堂笔记">
-<meta property="og:url" content="http://yoursite.com/index.html">
-<meta property="og:site_name" content="H5课堂笔记">
-<meta property="og:description" content="这是我学习H5的笔记">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="H5课堂笔记">
-<meta name="twitter:description" content="这是我学习H5的笔记">
-
-
-
-<script type="text/javascript" id="hexo.configuration">
-  var NexT = window.NexT || {};
-  var CONFIG = {
-    scheme: 'Mist',
-    sidebar: {"position":"left","display":"post"},
-    fancybox: true,
-    motion: true,
-    duoshuo: {
-      userId: 0,
-      author: 'Author'
-    }
-  };
-</script>
-
-  <title> H5课堂笔记 </title>
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage" lang="中文">
 
-  
-
-
-
-
-
-
-
-
-
-
-  
-  
+<body>
+  <header id="header" class="inner"><!-- <div class="alignleft">
+  <h1><a href="/">H5课堂笔记</a></h1>
+  <h2><a href="/"></a></h2>
+</div>
+ --><!-- <nav id="main-nav" class="alignright">
+  <ul>
     
-  
-
-  <div class="container one-collumn sidebar-position-left 
-   page-home 
- ">
-    <div class="headband"></div>
-
-    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-meta ">
-  
-
-  <div class="custom-logo-site-title">
-    <a href="/"  class="brand" rel="start">
-      <span class="logo-line-before"><i></i></span>
-      <span class="site-title">H5课堂笔记</span>
-      <span class="logo-line-after"><i></i></span>
-    </a>
-  </div>
-  <p class="site-subtitle"></p>
-</div>
-
-<div class="site-nav-toggle">
-  <button>
-    <span class="btn-bar"></span>
-    <span class="btn-bar"></span>
-    <span class="btn-bar"></span>
-  </button>
-</div>
-
-<nav class="site-nav">
-  
-
-  
-    <ul id="menu" class="menu">
-      
-        
-        <li class="menu-item menu-item-home">
-          <a href="/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
-            
-            Startseite
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-archives">
-          <a href="/archives" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
-            
-            Archiv
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-tags">
-          <a href="/tags" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
-            
-            Tags
-          </a>
-        </li>
-      
-
-      
-    </ul>
-  
-
-  
+      <li><a href="/">Home</a></li>
+    
+      <li><a href="/archives">Archives</a></li>
+    
+  </ul>
+  <div class="clearfix"></div>
 </nav>
+ --></header>
+  <div id="content" class="inner">
+    <div id="main-col" class="alignright"><div id="wrapper">
+  <!-- <article class="post">
+  
+    <div class="gallery">
+  <div class="photoset">
+    
+      <img src="">
+    
+  </div>
+  <div class="control">
+    <div class="prev"></div>
+    <div class="next"></div>
+  </div>
+</div>
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon depth"></div>
+        <time class="depth" datetime="2016-05-28T03:16:04.000Z"><a href="/2016/05/28/hexo/">2016-05-28</a></time>
+      
+      
+  
+    <h1 class="title depth"><a href="/2016/05/28/hexo/">hexo的简单使用</a></h1>
+  
 
- </div>
     </header>
-
-    <main id="main" class="main">
-      <div class="main-inner">
-        <div class="content-wrap">
-          <div id="content" class="content">
-            
-  <section id="posts" class="posts-expand">
-    
+    <div class="entry depth">
       
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/05/28/hexo/" itemprop="url">
-                  hexo的简单使用
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">Veröffentlicht am</span>
-            <time itemprop="dateCreated" datetime="2016-05-28T11:16:04+08:00" content="2016-05-28">
-              2016-05-28
-            </time>
-          </span>
-
-          
-
-          
-            
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>由于有人叫我写这个，尽管一开始是拒绝的，但是我还是开始着手做了！！<br>我只会简单的使用，毕竟英语不好也是个大问题，所以不要嫌弃它哦！</p>
+        <p>由于有人叫我写这个，尽管一开始是拒绝的，但是我还是开始着手做了！！<br>我只会简单的使用，毕竟英语不好也是个大问题，所以不要嫌弃它哦！</p>
 <h3 id="搭建Hexo"><a href="#搭建Hexo" class="headerlink" title="搭建Hexo"></a>搭建Hexo</h3><p>首先就是搭建Hexo</p>
 <p>由于网上教程很多所以我就不讲啦，直接给个链接就OK啦<br><a href="http://www.jianshu.com/p/06c0fb6f8b4d" target="_blank" rel="external">http://www.jianshu.com/p/06c0fb6f8b4d</a></p>
 <p>搭建完成以后，就是开始编写啦，编写也有一些工具，这里我用的是MacDown，就是下面那个</p>
@@ -364,99 +167,66 @@ $ git pull
 <p>上传到github只需上传你的hexo文件夹里的public文件夹下所有的文件就可以了，每一次更新就上传替换一次，这样简单的个人博客就完成啦！</p>
 <p>鼓掌！！！！</p>
 
-          
+      
+    </div>
+    <footer>
+      
+        
         
       
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
+      <div class="clearfix"></div>
     </footer>
-  </article>
+  </div>
+</article>
 
+ -->
 
+  
+  <div class="archive">
     
-      
+    <article class="post">
+      <div class="post-content">
+        <header>
+            
+              <a href="/2016/05/28/hexo/"><div class="icon depth"></div> </a>
+              <h2 class="depth title" ><a href="/2016/05/28/hexo/">hexo的简单使用</a></h2>
+            
+            <time class="time title depth" datetime="2016-05-28T03:16:04.000Z"><a href="/2016/05/28/hexo/">2016-05-28</a></time>
+          </header>
+      </div>
+    </article>
+  </div>
+  
 
+  <!-- <article class="post">
   
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
+    <div class="gallery">
+  <div class="photoset">
     
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/05/27/while/" itemprop="url">
-                  九九乘法表与do{}while()和while(){}
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">Veröffentlicht am</span>
-            <time itemprop="dateCreated" datetime="2016-05-27T15:22:06+08:00" content="2016-05-27">
-              2016-05-27
-            </time>
-          </span>
-
-          
-
-          
-            
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
+      <img src="">
     
-
-
-    <div class="post-body" itemprop="articleBody">
-
+  </div>
+  <div class="control">
+    <div class="prev"></div>
+    <div class="next"></div>
+  </div>
+</div>
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon depth"></div>
+        <time class="depth" datetime="2016-05-27T07:22:06.000Z"><a href="/2016/05/27/while/">2016-05-27</a></time>
       
       
+  
+    <h1 class="title depth"><a href="/2016/05/27/while/">九九乘法表与do{}while()和while(){}</a></h1>
+  
 
+    </header>
+    <div class="entry depth">
       
-        
-          
-            <p>在讲九九乘法表之前，先讲下js写入标签的方法之一。（可选择不看，如果你已经会了的话）</p>
+        <p>在讲九九乘法表之前，先讲下js写入标签的方法之一。（可选择不看，如果你已经会了的话）</p>
 <h3 id="for循环写入标签"><a href="#for循环写入标签" class="headerlink" title="for循环写入标签"></a>for循环写入标签</h3><p>有时候标签是可以在js里添加的，以下是方法之一</p>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">title</span>&gt;</span><span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">		</span><br><span class="line">	<span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">		</span><br><span class="line">	<span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span>&gt;</span><span class="undefined"></span><br><span class="line">	//document 运行缓慢</span><br><span class="line">		document.write("&lt;table border='1'&gt;");	</span><br><span class="line">		for (var i=0;i &lt; 5 ; i++) &#123;//大循环</span><br><span class="line">			document.write("&lt;tr&gt;");	</span><br><span class="line">			for (var j=0;j &lt; 5 ; j++) &#123;//小循环  大循环循环一次，小循环循环5次 共循环5*5</span><br><span class="line">				document.write("&lt;td&gt;"+j+"&lt;/td&gt;");</span><br><span class="line">			&#125;//小循环结束后结果是&lt;td&gt;0&lt;/td&gt;&lt;td&gt;1&lt;/td&gt;&lt;td&gt;2&lt;/td&gt;&lt;td&gt;3&lt;/td&gt;&lt;td&gt;4&lt;/td&gt;</span><br><span class="line">			document.write("&lt;/tr&gt;")</span><br><span class="line">		&#125;//两循环结束后结果是&lt;tr&gt;&lt;td&gt;1&lt;/td&gt;&lt;td&gt;2&lt;/td&gt;&lt;td&gt;3&lt;/td&gt;&lt;td&gt;4&lt;/td&gt;&lt;/tr&gt;*5</span><br><span class="line">		document.write("&lt;/table&gt;");</span><br><span class="line">		//解决方案：字符串拼接(table的写入也是很慢的)</span><br><span class="line">		var str ="&lt;table border='1'&gt;";	</span><br><span class="line">		for (var i=0;i &lt; 5 ; i++) &#123;</span><br><span class="line">			str+="&lt;tr&gt;";	</span><br><span class="line">			for (var j=0;j &lt; 5 ; j++) &#123;</span><br><span class="line">				str+="&lt;td&gt;"+j+"&lt;/td&gt;";</span><br><span class="line">			&#125;</span><br><span class="line">			str+="&lt;/tr&gt;";</span><br><span class="line">		&#125;</span><br><span class="line">		document.write(str + "&lt;/table&gt;");</span></span><br></pre></td></tr></table></figure>
 <h3 id="九九乘法表"><a href="#九九乘法表" class="headerlink" title="九九乘法表"></a>九九乘法表</h3><p>最经典的例子就是九九乘法表，可谓是程序猿必经之路，以下纯属个人想法</p>
@@ -477,99 +247,66 @@ $ git pull
 <p>while(){}先判断在执行</p>
 <p>看代码</p>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">title</span>&gt;</span><span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span>&gt;</span><span class="undefined"></span><br><span class="line">//			for (var i=0;i &lt;= 1000; i++) &#123;</span><br><span class="line">//				if (i%7==0 &amp;&amp; i%13==0) &#123;</span><br><span class="line">//					document.write(i);</span><br><span class="line">//					document.write("&lt;br /&gt;");</span><br><span class="line">//				&#125;</span><br><span class="line">//			&#125;</span><br><span class="line">			//获取一个可以同时整除 任意三个数的最小值</span><br><span class="line">			//方法1</span><br><span class="line">			function a (num1,num2 ,num3)&#123;//定义函数，输入三个数可以获取同时整除这三个数的最小值</span><br><span class="line">				for (var i=1;i &lt;=(num1*num2*num3); i++) &#123;//三个数的积一定可以同时整除这三个数，所以可以在这个积的范围内寻找最小值</span><br><span class="line">					if (i%num1==0 &amp;&amp; i%num2==0 &amp;&amp; i%num3==0) &#123;//判断是否可以同时整除这三个数</span><br><span class="line">						//是就写入，并退出循环</span><br><span class="line">						document.write("可以同时整除"+num1+","+num2+","+num3+"三个数的最小值是"+i);</span><br><span class="line">						document.write("&lt;br /&gt;");</span><br><span class="line">						break;</span><br><span class="line">					&#125;</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line">			//调用函数</span><br><span class="line">			a(7,13,5);</span><br><span class="line">			//方法2，使用while，思路与上一个相似</span><br><span class="line">			var i = 0;</span><br><span class="line">			function b (num1,num2 ,num3)&#123;</span><br><span class="line">				while(true)&#123;//死循环</span><br><span class="line">					i++;</span><br><span class="line">					if (i%num1==0 &amp;&amp; i%num2==0 &amp;&amp; i%num3==0) &#123;</span><br><span class="line">						document.write("可以同时整除"+num1+","+num2+","+num3+"三个数的最小值是"+i);</span><br><span class="line">						document.write("&lt;br /&gt;");</span><br><span class="line">						break;//找到后退出死循环</span><br><span class="line">					&#125;</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line">			b(7,13,15);</span><br><span class="line">			</span><br><span class="line">			//do&#123;&#125;while()先执行再判断，最少执行一次   while()&#123;&#125;先判断在执行</span><br><span class="line">			var j = 0;</span><br><span class="line">			while(j&lt;0)&#123;</span><br><span class="line">				j++;</span><br><span class="line">				document.write(j+"我是while（）&#123;&#125;");</span><br><span class="line">			&#125;</span><br><span class="line">			do&#123;</span><br><span class="line">				j++;</span><br><span class="line">				document.write(j+"我是do&#123;&#125;while（）");</span><br><span class="line">			&#125;while(j&lt;0)</span><br><span class="line">		</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
-          
+      
+    </div>
+    <footer>
+      
+        
         
       
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
+      <div class="clearfix"></div>
     </footer>
-  </article>
+  </div>
+</article>
 
+ -->
 
+  
+  <div class="archive">
     
-      
+    <article class="post">
+      <div class="post-content">
+        <header>
+            
+              <a href="/2016/05/27/while/"><div class="icon depth"></div> </a>
+              <h2 class="depth title" ><a href="/2016/05/27/while/">九九乘法表与do{}while()和while(){}</a></h2>
+            
+            <time class="time title depth" datetime="2016-05-27T07:22:06.000Z"><a href="/2016/05/27/while/">2016-05-27</a></time>
+          </header>
+      </div>
+    </article>
+  </div>
+  
 
+  <!-- <article class="post">
   
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
+    <div class="gallery">
+  <div class="photoset">
     
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/05/27/tab/" itemprop="url">
-                  JS的切换案例分析
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">Veröffentlicht am</span>
-            <time itemprop="dateCreated" datetime="2016-05-27T14:28:35+08:00" content="2016-05-27">
-              2016-05-27
-            </time>
-          </span>
-
-          
-
-          
-            
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
+      <img src="">
     
-
-
-    <div class="post-body" itemprop="articleBody">
-
+  </div>
+  <div class="control">
+    <div class="prev"></div>
+    <div class="next"></div>
+  </div>
+</div>
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon depth"></div>
+        <time class="depth" datetime="2016-05-27T06:28:35.000Z"><a href="/2016/05/27/tab/">2016-05-27</a></time>
       
       
+  
+    <h1 class="title depth"><a href="/2016/05/27/tab/">JS的切换案例分析</a></h1>
+  
 
+    </header>
+    <div class="entry depth">
       
-        
-          
-            <p>js什么的用文字说都太丧心病狂了，所以能用代码解决的事就不要揪着文字不放了！！！以下所有分析都在代码里，别说你看不见!!!</p>
+        <p>js什么的用文字说都太丧心病狂了，所以能用代码解决的事就不要揪着文字不放了！！！以下所有分析都在代码里，别说你看不见!!!</p>
 <h3 id="案例1-按钮点击切换div"><a href="#案例1-按钮点击切换div" class="headerlink" title="案例1 按钮点击切换div"></a>案例1 按钮点击切换div</h3><p>代码</p>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">title</span>&gt;</span><span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">style</span> <span class="attr">type</span>=<span class="string">"text/css"</span>&gt;</span><span class="undefined"></span><br><span class="line">			div&#123;</span><br><span class="line">				width: 100px;</span><br><span class="line">				height: 100px;</span><br><span class="line">				background: cornflowerblue;</span><br><span class="line">				font-size: 50px;</span><br><span class="line">				text-align: center;</span><br><span class="line">				line-height: 100px;</span><br><span class="line">				display: none;</span><br><span class="line">			&#125;</span><br><span class="line">			.show&#123;</span><br><span class="line">				display: block;</span><br><span class="line">			&#125;</span><br><span class="line">			.select&#123;</span><br><span class="line">				background: darkorange;</span><br><span class="line">			&#125;</span><br><span class="line">		</span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span>&gt;</span><span class="undefined"></span><br><span class="line">			window.onload = function()&#123;</span><br><span class="line">				//			根据TagName获取四个按钮</span><br><span class="line">				var input = document.getElementsByTagName("input");</span><br><span class="line">				//			根据TagName获取四个div</span><br><span class="line">				var div = document.getElementsByTagName("div");</span><br><span class="line">//				//最简单的写法</span><br><span class="line">//				//			第1个按钮</span><br><span class="line">//				input[0].onclick = function()&#123;</span><br><span class="line">//					//清空样式</span><br><span class="line">//					for (var i=0; i&lt;input.length;i++) &#123;</span><br><span class="line">//						input[i].className = "";</span><br><span class="line">//						div[i].className ="";</span><br><span class="line">//					&#125;</span><br><span class="line">//					this.className = "select";</span><br><span class="line">//					div[0].className = "show";</span><br><span class="line">//				&#125;</span><br><span class="line">//				//			第2个按钮</span><br><span class="line">//				input[1].onclick = function()&#123;</span><br><span class="line">//					//清空样式</span><br><span class="line">//					for (var i=0; i&lt;input.length;i++) &#123;</span><br><span class="line">//						input[i].className = "";</span><br><span class="line">//						div[i].className ="";</span><br><span class="line">//					&#125;</span><br><span class="line">//					this.className = "select";</span><br><span class="line">//					div[1].className = "show";</span><br><span class="line">//				&#125;</span><br><span class="line">//				//			第3个按钮</span><br><span class="line">//				input[2].onclick = function()&#123;</span><br><span class="line">//					//清空样式</span><br><span class="line">//					for (var i=0; i&lt;input.length;i++) &#123;</span><br><span class="line">//						input[i].className = "";</span><br><span class="line">//						div[i].className ="";</span><br><span class="line">//					&#125;</span><br><span class="line">//					this.className = "select";</span><br><span class="line">//					div[2].className = "show";</span><br><span class="line">//				&#125;</span><br><span class="line">//				//			第4个按钮</span><br><span class="line">//				input[3].onclick = function()&#123;</span><br><span class="line">//					//清空样式</span><br><span class="line">//					for (var i=0; i&lt;input.length;i++) &#123;</span><br><span class="line">//						input[i].className = "";</span><br><span class="line">//						div[i].className ="";</span><br><span class="line">//					&#125;</span><br><span class="line">//					this.className = "select";</span><br><span class="line">//					div[3].className = "show";</span><br><span class="line">//				&#125;</span><br><span class="line">				//			以上代码不一样的地方只有[]里的数字，所以可以采用for循环来简洁代码</span><br><span class="line">//				//写法1</span><br><span class="line">//				for(var i=0; i &lt; input.length; i++)&#123;</span><br><span class="line">//					//给input标志一个数字，用于告诉div，input是第几个</span><br><span class="line">//					input[i].index = i;</span><br><span class="line">//					input[i].onclick = function()&#123;</span><br><span class="line">//						//清空样式</span><br><span class="line">//						for (var i=0; i&lt;input.length;i++) &#123;</span><br><span class="line">//							input[i].className = "";</span><br><span class="line">//							div[i].className ="";</span><br><span class="line">//						&#125;</span><br><span class="line">//						this.className = "select";</span><br><span class="line">//						div[this.index].className = "show";</span><br><span class="line">//					&#125;</span><br><span class="line">//				&#125;</span><br><span class="line">				//写法2</span><br><span class="line">//				for(var i=0; i &lt; input.length; i++)&#123;</span><br><span class="line">//					input[i].onclick = function()&#123;</span><br><span class="line">//						for (var i=0; i&lt;input.length;i++) &#123;</span><br><span class="line">//							if (this == input[i]) &#123;//判断this是哪个input</span><br><span class="line">//								input[i].className = "select";</span><br><span class="line">//								div[i].className = "show";</span><br><span class="line">//							&#125; else&#123;</span><br><span class="line">//								//清空样式</span><br><span class="line">//								input[i].className = "";</span><br><span class="line">//								div[i].className ="";</span><br><span class="line">//							&#125;</span><br><span class="line">//						&#125;</span><br><span class="line">//					&#125;</span><br><span class="line">//				&#125;</span><br><span class="line">				//写法3 减少计算器的运算</span><br><span class="line">				var before = 0;//用于记录当前选中的index值，并在下次点击事件变成上一个，然后清除它的样式，达到切换效果</span><br><span class="line">				for(var i=0; i &lt; input.length; i++)&#123;</span><br><span class="line">					//给input标志一个数字，用于告诉div，input是第几个</span><br><span class="line">					input[i].index = i;</span><br><span class="line">					input[i].onclick = function()&#123;</span><br><span class="line">						input[before].className = "";//清除上一个选中的index值</span><br><span class="line">						div[before].className = "";</span><br><span class="line">						this.className = "select";</span><br><span class="line">						div[this.index].className = "show";</span><br><span class="line">						before = this.index;//记录当前选中的index值</span><br><span class="line">					&#125;</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line">		</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">input</span> <span class="attr">class</span>=<span class="string">"select"</span> <span class="attr">type</span>=<span class="string">"button"</span> <span class="attr">value</span>=<span class="string">"按钮1"</span> /&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"button"</span> <span class="attr">value</span>=<span class="string">"按钮2"</span> /&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"button"</span> <span class="attr">value</span>=<span class="string">"按钮3"</span> /&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"button"</span> <span class="attr">value</span>=<span class="string">"按钮4"</span> /&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"show"</span>&gt;</span>1<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">div</span>&gt;</span>2<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">div</span>&gt;</span>3<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">div</span>&gt;</span>4<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <h3 id="案例2-图片切换"><a href="#案例2-图片切换" class="headerlink" title="案例2 图片切换"></a>案例2 图片切换</h3><p>代码</p>
@@ -584,99 +321,66 @@ this：函数里的一个对象
 默认调用的函数是window
 谁调用函数,this就是谁
 </code></pre>
-          
+      
+    </div>
+    <footer>
+      
+        
         
       
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
+      <div class="clearfix"></div>
     </footer>
-  </article>
+  </div>
+</article>
 
+ -->
 
+  
+  <div class="archive">
     
-      
+    <article class="post">
+      <div class="post-content">
+        <header>
+            
+              <a href="/2016/05/27/tab/"><div class="icon depth"></div> </a>
+              <h2 class="depth title" ><a href="/2016/05/27/tab/">JS的切换案例分析</a></h2>
+            
+            <time class="time title depth" datetime="2016-05-27T06:28:35.000Z"><a href="/2016/05/27/tab/">2016-05-27</a></time>
+          </header>
+      </div>
+    </article>
+  </div>
+  
 
+  <!-- <article class="post">
   
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
+    <div class="gallery">
+  <div class="photoset">
     
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/05/26/css3/" itemprop="url">
-                  H5基础 与 CSS3
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">Veröffentlicht am</span>
-            <time itemprop="dateCreated" datetime="2016-05-26T19:41:25+08:00" content="2016-05-26">
-              2016-05-26
-            </time>
-          </span>
-
-          
-
-          
-            
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
+      <img src="">
     
-
-
-    <div class="post-body" itemprop="articleBody">
-
+  </div>
+  <div class="control">
+    <div class="prev"></div>
+    <div class="next"></div>
+  </div>
+</div>
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon depth"></div>
+        <time class="depth" datetime="2016-05-26T11:41:25.000Z"><a href="/2016/05/26/css3/">2016-05-26</a></time>
       
       
+  
+    <h1 class="title depth"><a href="/2016/05/26/css3/">H5基础 与 CSS3</a></h1>
+  
 
+    </header>
+    <div class="entry depth">
       
-        
-          
-            <h3 id="H5基础"><a href="#H5基础" class="headerlink" title="H5基础"></a>H5基础</h3><p>HTML5 是下一代的 HTML。</p>
+        <h3 id="H5基础"><a href="#H5基础" class="headerlink" title="H5基础"></a>H5基础</h3><p>HTML5 是下一代的 HTML。</p>
 <h4 id="特性"><a href="#特性" class="headerlink" title="特性"></a>特性</h4><p> 1.语义化更好</p>
 <pre><code>—新增标签—
 
@@ -964,99 +668,66 @@ box-pack  子元素的水平对齐方式
 <p>对齐方式</p>
 <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.wrap</span>&#123;</span><br><span class="line">	<span class="attribute">width</span>: <span class="number">600px</span>;</span><br><span class="line">	<span class="attribute">height</span>: <span class="number">600px</span>;</span><br><span class="line">	<span class="attribute">border</span>: <span class="number">5px</span> solid darkcyan;</span><br><span class="line">	<span class="attribute">display</span>: -webkit-box;</span><br><span class="line">	<span class="attribute">-webkit-box-align</span>: center;<span class="comment">/*垂直居中 在vertical中显示为水平居中 start（默认） end*/</span></span><br><span class="line">	<span class="attribute">-webkit-box-pack</span>: center;<span class="comment">/*水平居中 在vertical中显示为垂直居中 start end  justify（两端对齐，只有水平才有）*/</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.wrap</span> <span class="selector-tag">div</span>&#123;</span><br><span class="line">	<span class="attribute">width</span>: <span class="number">100px</span>;</span><br><span class="line">	<span class="attribute">height</span>: <span class="number">100px</span>;</span><br><span class="line">	<span class="attribute">background</span>: brown;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-          
+      
+    </div>
+    <footer>
+      
+        
         
       
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
+      <div class="clearfix"></div>
     </footer>
-  </article>
+  </div>
+</article>
 
+ -->
 
+  
+  <div class="archive">
     
-      
+    <article class="post">
+      <div class="post-content">
+        <header>
+            
+              <a href="/2016/05/26/css3/"><div class="icon depth"></div> </a>
+              <h2 class="depth title" ><a href="/2016/05/26/css3/">H5基础 与 CSS3</a></h2>
+            
+            <time class="time title depth" datetime="2016-05-26T11:41:25.000Z"><a href="/2016/05/26/css3/">2016-05-26</a></time>
+          </header>
+      </div>
+    </article>
+  </div>
+  
 
+  <!-- <article class="post">
   
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
+    <div class="gallery">
+  <div class="photoset">
     
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/05/25/for/" itemprop="url">
-                  for - 循环代码块一定的次数
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">Veröffentlicht am</span>
-            <time itemprop="dateCreated" datetime="2016-05-25T19:54:33+08:00" content="2016-05-25">
-              2016-05-25
-            </time>
-          </span>
-
-          
-
-          
-            
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
+      <img src="">
     
-
-
-    <div class="post-body" itemprop="articleBody">
-
+  </div>
+  <div class="control">
+    <div class="prev"></div>
+    <div class="next"></div>
+  </div>
+</div>
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon depth"></div>
+        <time class="depth" datetime="2016-05-25T11:54:33.000Z"><a href="/2016/05/25/for/">2016-05-25</a></time>
       
       
+  
+    <h1 class="title depth"><a href="/2016/05/25/for/">for - 循环代码块一定的次数</a></h1>
+  
 
+    </header>
+    <div class="entry depth">
       
-        
-          
-            <p> for 循环是您在希望创建循环时常会用到的工具。</p>
+        <p> for 循环是您在希望创建循环时常会用到的工具。</p>
 <h3 id="下面是-for-循环的语法："><a href="#下面是-for-循环的语法：" class="headerlink" title="下面是 for 循环的语法："></a>下面是 for 循环的语法：</h3><pre><code>for (语句 1; 语句 2; 语句 3)
   {
        被执行的代码块
@@ -1104,99 +775,66 @@ box-pack  子元素的水平对齐方式
 <p>练习：点击切换</p>
 <p>参考答案：</p>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">title</span>&gt;</span><span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">style</span> <span class="attr">type</span>=<span class="string">"text/css"</span>&gt;</span><span class="undefined"></span><br><span class="line">			div&#123;</span><br><span class="line">				width: 100px;</span><br><span class="line">				height: 100px;</span><br><span class="line">				background: cornflowerblue;</span><br><span class="line">				font-size: 50px;</span><br><span class="line">				text-align: center;</span><br><span class="line">				line-height: 100px;</span><br><span class="line">				display: none;</span><br><span class="line">			&#125;</span><br><span class="line">			.show&#123;</span><br><span class="line">				display: block;</span><br><span class="line">			&#125;</span><br><span class="line">			.select&#123;</span><br><span class="line">				background: darkorange;</span><br><span class="line">			&#125;</span><br><span class="line">		</span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span>&gt;</span><span class="undefined"></span><br><span class="line">			window.onload = function()&#123;</span><br><span class="line">//				获取四个按钮</span><br><span class="line">				var btn = document.getElementsByTagName('input');</span><br><span class="line">//				获取四个div</span><br><span class="line">				var div = document.getElementsByTagName('div');</span><br><span class="line">				for (var i=0; i&lt; btn.length;i++) &#123;</span><br><span class="line">					btn[i].index = i ;//可以自己定义一个属性，告诉按钮它自己是第几个</span><br><span class="line">					btn[i].onclick=function()&#123;</span><br><span class="line">						//清空样式</span><br><span class="line">						for (var i=0; i&lt; btn.length;i++) &#123;</span><br><span class="line">							btn[i].className = "";</span><br><span class="line">							div[i].className = "";</span><br><span class="line">						&#125;</span><br><span class="line">						this.className = 'select';//this是btn[i]本身</span><br><span class="line">						div[this.index].className = 'show';</span><br><span class="line">					&#125;</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line">		</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">input</span> <span class="attr">class</span>=<span class="string">"select"</span> <span class="attr">type</span>=<span class="string">"button"</span> <span class="attr">value</span>=<span class="string">"按钮1"</span> /&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"button"</span> <span class="attr">value</span>=<span class="string">"按钮2"</span> /&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"button"</span> <span class="attr">value</span>=<span class="string">"按钮3"</span> /&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"button"</span> <span class="attr">value</span>=<span class="string">"按钮4"</span> /&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"show"</span>&gt;</span>1<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">div</span>&gt;</span>2<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">div</span>&gt;</span>3<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">div</span>&gt;</span>4<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
-          
+      
+    </div>
+    <footer>
+      
+        
         
       
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
+      <div class="clearfix"></div>
     </footer>
-  </article>
+  </div>
+</article>
 
+ -->
 
+  
+  <div class="archive">
     
-      
+    <article class="post">
+      <div class="post-content">
+        <header>
+            
+              <a href="/2016/05/25/for/"><div class="icon depth"></div> </a>
+              <h2 class="depth title" ><a href="/2016/05/25/for/">for - 循环代码块一定的次数</a></h2>
+            
+            <time class="time title depth" datetime="2016-05-25T11:54:33.000Z"><a href="/2016/05/25/for/">2016-05-25</a></time>
+          </header>
+      </div>
+    </article>
+  </div>
+  
 
+  <!-- <article class="post">
   
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
+    <div class="gallery">
+  <div class="photoset">
     
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/05/25/to_IE6/" itemprop="url">
-                  兼容IE6
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">Veröffentlicht am</span>
-            <time itemprop="dateCreated" datetime="2016-05-25T13:58:54+08:00" content="2016-05-25">
-              2016-05-25
-            </time>
-          </span>
-
-          
-
-          
-            
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
+      <img src="">
     
-
-
-    <div class="post-body" itemprop="articleBody">
-
+  </div>
+  <div class="control">
+    <div class="prev"></div>
+    <div class="next"></div>
+  </div>
+</div>
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon depth"></div>
+        <time class="depth" datetime="2016-05-25T05:58:54.000Z"><a href="/2016/05/25/to_IE6/">2016-05-25</a></time>
       
       
+  
+    <h1 class="title depth"><a href="/2016/05/25/to_IE6/">兼容IE6</a></h1>
+  
 
+    </header>
+    <div class="entry depth">
       
-        
-          
-            <p>做网站的都要保存一些兼容的方法，以下内容是一些涉及的是IE6的兼容，请拿好不谢！</p>
+        <p>做网站的都要保存一些兼容的方法，以下内容是一些涉及的是IE6的兼容，请拿好不谢！</p>
 <h3 id="1-a标签里嵌套img时，不同浏览器下会出现不同颜色边框："><a href="#1-a标签里嵌套img时，不同浏览器下会出现不同颜色边框：" class="headerlink" title="1.a标签里嵌套img时，不同浏览器下会出现不同颜色边框："></a>1.a标签里嵌套img时，不同浏览器下会出现不同颜色边框：</h3><pre><code>解决：重置样式把border取消(重置样式请参考CSS入门)
 </code></pre><h3 id="2-各个浏览器下图片与图片之间有间隙："><a href="#2-各个浏览器下图片与图片之间有间隙：" class="headerlink" title="2.各个浏览器下图片与图片之间有间隙："></a>2.各个浏览器下图片与图片之间有间隙：</h3><pre><code>解决：用float，或取消img标签的换行
 </code></pre><h3 id="3-清除浮动"><a href="#3-清除浮动" class="headerlink" title="3.清除浮动"></a>3.清除浮动</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.clear</span><span class="selector-pseudo">:after</span>&#123;</span><br><span class="line">	<span class="attribute">content</span>: <span class="string">""</span>;</span><br><span class="line">	<span class="attribute">clear</span>:both;</span><br><span class="line">	<span class="attribute">display</span>:block;</span><br><span class="line">	<span class="attribute">height</span>:<span class="number">0</span>;</span><br><span class="line">	<span class="attribute">overflow</span>:hidden;</span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure>
@@ -1215,99 +853,66 @@ box-pack  子元素的水平对齐方式
 <h3 id="9-左浮元素margin-bottom失效"><a href="#9-左浮元素margin-bottom失效" class="headerlink" title="9.左浮元素margin-bottom失效"></a>9.左浮元素margin-bottom失效</h3><pre><code>解决：用padding 
 </code></pre><h3 id="10-ul、ol的li中-如有元素浮动-在ie6中会出现多出几像素的问题"><a href="#10-ul、ol的li中-如有元素浮动-在ie6中会出现多出几像素的问题" class="headerlink" title="10.ul、ol的li中,如有元素浮动,在ie6中会出现多出几像素的问题"></a>10.ul、ol的li中,如有元素浮动,在ie6中会出现多出几像素的问题</h3><pre><code>解决：li浮动 或者浮动元素inline-block
 </code></pre>
-          
+      
+    </div>
+    <footer>
+      
+        
         
       
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
+      <div class="clearfix"></div>
     </footer>
-  </article>
+  </div>
+</article>
 
+ -->
 
+  
+  <div class="archive">
     
-      
+    <article class="post">
+      <div class="post-content">
+        <header>
+            
+              <a href="/2016/05/25/to_IE6/"><div class="icon depth"></div> </a>
+              <h2 class="depth title" ><a href="/2016/05/25/to_IE6/">兼容IE6</a></h2>
+            
+            <time class="time title depth" datetime="2016-05-25T05:58:54.000Z"><a href="/2016/05/25/to_IE6/">2016-05-25</a></time>
+          </header>
+      </div>
+    </article>
+  </div>
+  
 
+  <!-- <article class="post">
   
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
+    <div class="gallery">
+  <div class="photoset">
     
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/05/24/Introduction_JavaScript /" itemprop="url">
-                  JS入门
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">Veröffentlicht am</span>
-            <time itemprop="dateCreated" datetime="2016-05-24T17:52:36+08:00" content="2016-05-24">
-              2016-05-24
-            </time>
-          </span>
-
-          
-
-          
-            
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
+      <img src="">
     
-
-
-    <div class="post-body" itemprop="articleBody">
-
+  </div>
+  <div class="control">
+    <div class="prev"></div>
+    <div class="next"></div>
+  </div>
+</div>
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon depth"></div>
+        <time class="depth" datetime="2016-05-24T09:52:36.000Z"><a href="/2016/05/24/Introduction_JavaScript /">2016-05-24</a></time>
       
       
+  
+    <h1 class="title depth"><a href="/2016/05/24/Introduction_JavaScript /">JS入门</a></h1>
+  
 
+    </header>
+    <div class="entry depth">
       
-        
-          
-            <h3 id="JavaScript的组成"><a href="#JavaScript的组成" class="headerlink" title="JavaScript的组成"></a>JavaScript的组成</h3><p>1.核心（ECMAScript）是一个标准 ES6</p>
+        <h3 id="JavaScript的组成"><a href="#JavaScript的组成" class="headerlink" title="JavaScript的组成"></a>JavaScript的组成</h3><p>1.核心（ECMAScript）是一个标准 ES6</p>
 <p>2.文档对象模型（DOM）Document Obj Model</p>
 <p>3.浏览器对象模型（BOM）Browser Obj Model</p>
 <h3 id="特点"><a href="#特点" class="headerlink" title="特点"></a>特点</h3><p>1.一种解释性执行的脚本语言（无需编译）</p>
@@ -1400,99 +1005,66 @@ if (判断语句1) {
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">p</span> <span class="attr">id</span>=<span class="string">“a</span>"&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">“text/javascript”</span>&gt;</span><span class="undefined"></span><br><span class="line">		var a = document.getElementById('a');</span><br><span class="line">		alert(a);</span><br><span class="line">	</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!--或--&gt;</span></span><br><span class="line"><span class="comment">&lt;!--</span><br><span class="line">&lt;script type=“text/javascript”&gt;</span><br><span class="line">	var a = document.getElementById('a');</span><br><span class="line">	alert(a);</span><br><span class="line">&lt;/script&gt;</span><br><span class="line">--&gt;</span></span><br></pre></td></tr></table></figure>
 <p>2.如果你想要在head里面写，可以给他加一个onload事件，然它先加载标签在运行js：</p>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">“text/javascript”</span>&gt;</span><span class="undefined"></span><br><span class="line">		window.onload = function ()&#123;</span><br><span class="line">			var a = document.getElementById('a');</span><br><span class="line">			alert(a);</span><br><span class="line">		&#125;</span><br><span class="line">	</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br></pre></td></tr></table></figure>
-          
+      
+    </div>
+    <footer>
+      
+        
         
       
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
+      <div class="clearfix"></div>
     </footer>
-  </article>
+  </div>
+</article>
 
+ -->
 
+  
+  <div class="archive">
     
-      
+    <article class="post">
+      <div class="post-content">
+        <header>
+            
+              <a href="/2016/05/24/Introduction_JavaScript /"><div class="icon depth"></div> </a>
+              <h2 class="depth title" ><a href="/2016/05/24/Introduction_JavaScript /">JS入门</a></h2>
+            
+            <time class="time title depth" datetime="2016-05-24T09:52:36.000Z"><a href="/2016/05/24/Introduction_JavaScript /">2016-05-24</a></time>
+          </header>
+      </div>
+    </article>
+  </div>
+  
 
+  <!-- <article class="post">
   
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
+    <div class="gallery">
+  <div class="photoset">
     
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/05/24/Introduction_CSS /" itemprop="url">
-                  CSS入门
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">Veröffentlicht am</span>
-            <time itemprop="dateCreated" datetime="2016-05-24T17:49:10+08:00" content="2016-05-24">
-              2016-05-24
-            </time>
-          </span>
-
-          
-
-          
-            
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
+      <img src="">
     
-
-
-    <div class="post-body" itemprop="articleBody">
-
+  </div>
+  <div class="control">
+    <div class="prev"></div>
+    <div class="next"></div>
+  </div>
+</div>
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon depth"></div>
+        <time class="depth" datetime="2016-05-24T09:49:10.000Z"><a href="/2016/05/24/Introduction_CSS /">2016-05-24</a></time>
       
       
+  
+    <h1 class="title depth"><a href="/2016/05/24/Introduction_CSS /">CSS入门</a></h1>
+  
 
+    </header>
+    <div class="entry depth">
       
-        
-          
-            <p>CCS（是一组格式设置规则，用于控制web外观） </p>
+        <p>CCS（是一组格式设置规则，用于控制web外观） </p>
 <h3 id="web标准结构"><a href="#web标准结构" class="headerlink" title="web标准结构"></a>web标准结构</h3><p>  结构 HTML+<br>  样式 CSS+<br>  行为  交互行为javascript</p>
 <pre><code>  特点
 1.页面内容与表现形式分离
@@ -1612,99 +1184,66 @@ display的值为table-cell, table-caption, inline-block中的任何一个。
 6.\9\0  ：IE8部分支持、IE9支持
 7.\0\9  ：IE8、IE9支持
 </code></pre>
-          
+      
+    </div>
+    <footer>
+      
+        
         
       
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
+      <div class="clearfix"></div>
     </footer>
-  </article>
+  </div>
+</article>
 
+ -->
 
+  
+  <div class="archive">
     
-      
+    <article class="post">
+      <div class="post-content">
+        <header>
+            
+              <a href="/2016/05/24/Introduction_CSS /"><div class="icon depth"></div> </a>
+              <h2 class="depth title" ><a href="/2016/05/24/Introduction_CSS /">CSS入门</a></h2>
+            
+            <time class="time title depth" datetime="2016-05-24T09:49:10.000Z"><a href="/2016/05/24/Introduction_CSS /">2016-05-24</a></time>
+          </header>
+      </div>
+    </article>
+  </div>
+  
 
+  <!-- <article class="post">
   
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
+    <div class="gallery">
+  <div class="photoset">
     
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/05/23/Introduction_HTML /" itemprop="url">
-                  Html入门
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">Veröffentlicht am</span>
-            <time itemprop="dateCreated" datetime="2016-05-23T20:41:41+08:00" content="2016-05-23">
-              2016-05-23
-            </time>
-          </span>
-
-          
-
-          
-            
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
+      <img src="">
     
-
-
-    <div class="post-body" itemprop="articleBody">
-
+  </div>
+  <div class="control">
+    <div class="prev"></div>
+    <div class="next"></div>
+  </div>
+</div>
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon depth"></div>
+        <time class="depth" datetime="2016-05-23T12:41:41.000Z"><a href="/2016/05/23/Introduction_HTML /">2016-05-23</a></time>
       
       
+  
+    <h1 class="title depth"><a href="/2016/05/23/Introduction_HTML /">Html入门</a></h1>
+  
 
+    </header>
+    <div class="entry depth">
       
-        
-          
-            <p>HTML是一种超文本标签语言</p>
+        <p>HTML是一种超文本标签语言</p>
 <h2 id="html的基本结构如下："><a href="#html的基本结构如下：" class="headerlink" title="html的基本结构如下："></a>html的基本结构如下：</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span>    <span class="comment">&lt;!--文档声明（告诉浏览器页面版本）--&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">“en</span>"&gt;</span> <span class="comment">&lt;!-- 网页语言（中文：zh）--&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">     <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">“UTF-8</span>"&gt;</span> <span class="comment">&lt;!-- 编码格式 （提供页面的元信息，常用属性：charset，name，content）--&gt;</span></span><br><span class="line">     <span class="tag">&lt;<span class="name">title</span>&gt;</span>Document<span class="tag">&lt;/<span class="name">title</span>&gt;</span>      <span class="comment">&lt;!--  网页标题--&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">head</span>&gt;</span>     <span class="comment">&lt;!--  页头--&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">     <span class="comment">&lt;!--  页身--&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">html</span>&gt;</span>  <span class="comment">&lt;!--  HTML文档--&gt;</span></span><br></pre></td></tr></table></figure>
 <h2 id="meta的其他属性值-与SEO优化有关联"><a href="#meta的其他属性值-与SEO优化有关联" class="headerlink" title="meta的其他属性值(与SEO优化有关联)"></a>meta的其他属性值(与SEO优化有关联)</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">“Keywords”</span>  <span class="attr">content</span>=<span class="string">“关键字”</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">“Description”</span>  <span class="attr">content</span>=<span class="string">“描述”</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <h2 id="基本标签"><a href="#基本标签" class="headerlink" title="基本标签"></a>基本标签</h2><h3 id="块属性标签（块嵌套行）"><a href="#块属性标签（块嵌套行）" class="headerlink" title="块属性标签（块嵌套行）"></a>块属性标签（块嵌套行）</h3><p>div:无语义标签，主要用于布局</p>
@@ -1744,218 +1283,111 @@ display的值为table-cell, table-caption, inline-block中的任何一个。
 <h3 id="拓展"><a href="#拓展" class="headerlink" title="拓展"></a>拓展</h3><p>EMMET插件的初级应用—-emmet 快速添加类名、ID、文本和属性</p>
 <p>在Emmet中，还有一个功效，能快速帮助你添加类名、ID、文本和属性。</p>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!--1.使用E#ID添加ID名--&gt;</span></span><br><span class="line"><span class="comment">&lt;!--a#a1--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">""</span> <span class="attr">id</span>=<span class="string">"a1"</span>&gt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!--2.使用E.class添加类名--&gt;</span></span><br><span class="line"><span class="comment">&lt;!--a.a1--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">""</span> <span class="attr">class</span>=<span class="string">"a1"</span>&gt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!--3.使用E[attr]添加属性--&gt;</span></span><br><span class="line"><span class="comment">&lt;!--a.a1[href="http://baidu.com"]--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"http://baidu.com"</span> <span class="attr">class</span>=<span class="string">"a1"</span>&gt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!--4.使用E&#123;text&#125;添加文本--&gt;</span></span><br><span class="line"><span class="comment">&lt;!--a.a1&#123;我是a&#125;--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">""</span> <span class="attr">class</span>=<span class="string">"a1"</span>&gt;</span>我是a<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!--5.+并列元素--&gt;</span></span><br><span class="line"><span class="comment">&lt;!--a.a1+span--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">""</span> <span class="attr">class</span>=<span class="string">"a1"</span>&gt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">span</span>&gt;</span><span class="tag">&lt;/<span class="name">sapn</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!--6.*元素个数--&gt;</span></span><br><span class="line"><span class="comment">&lt;!--a.a1*3--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">""</span> <span class="attr">class</span>=<span class="string">"a1"</span>&gt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">""</span> <span class="attr">class</span>=<span class="string">"a1"</span>&gt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">""</span> <span class="attr">class</span>=<span class="string">"a1"</span>&gt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!--7.&gt;元素向内创建子元素--&gt;</span></span><br><span class="line"><span class="comment">&lt;!--a.a1&gt;span--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">""</span> <span class="attr">class</span>=<span class="string">"a1"</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">span</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!--8.&gt;元素向上创建子元素--&gt;</span></span><br><span class="line"><span class="comment">&lt;!--a.a1&gt;span^span--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">""</span> <span class="attr">class</span>=<span class="string">"a1"</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">span</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">span</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br></pre></td></tr></table></figure>
-          
+      
+    </div>
+    <footer>
+      
+        
         
       
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
+      <div class="clearfix"></div>
     </footer>
-  </article>
+  </div>
+</article>
 
+ -->
 
+  
+  <div class="archive">
     
-  </section>
-
-  
-
-
-          </div>
-          
-
-
-          
-
-        </div>
-        
-          
-  
-  <div class="sidebar-toggle">
-    <div class="sidebar-toggle-line-wrap">
-      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
-    </div>
-  </div>
-
-  <aside id="sidebar" class="sidebar">
-    <div class="sidebar-inner">
-
-      
-
-      
-
-      <section class="site-overview sidebar-panel  sidebar-panel-active ">
-        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-          <img class="site-author-image" itemprop="image"
-               src="/images/avatar.gif"
-               alt="CrazyTwo" />
-          <p class="site-author-name" itemprop="name">CrazyTwo</p>
-          <p class="site-description motion-element" itemprop="description">这是我学习H5的笔记</p>
-        </div>
-        <nav class="site-state motion-element">
-          <div class="site-state-item site-state-posts">
-            <a href="/archives">
-              <span class="site-state-item-count">9</span>
-              <span class="site-state-item-name">Artikel</span>
-            </a>
-          </div>
-
-          
-
-          
-
-        </nav>
-
-        
-
-        <div class="links-of-author motion-element">
-          
-        </div>
-
-        
-        
-
-        
-        
-
-      </section>
-
-      
-
-    </div>
-  </aside>
-
-
-        
+    <article class="post">
+      <div class="post-content">
+        <header>
+            
+              <a href="/2016/05/23/Introduction_HTML /"><div class="icon depth"></div> </a>
+              <h2 class="depth title" ><a href="/2016/05/23/Introduction_HTML /">Html入门</a></h2>
+            
+            <time class="time title depth" datetime="2016-05-23T12:41:41.000Z"><a href="/2016/05/23/Introduction_HTML /">2016-05-23</a></time>
+          </header>
       </div>
-    </main>
-
-    <footer id="footer" class="footer">
-      <div class="footer-inner">
-        <div class="copyright" >
-  
-  &copy; 
-  <span itemprop="copyrightYear">2016</span>
-  <span class="with-love">
-    <i class="fa fa-heart"></i>
-  </span>
-  <span class="author" itemprop="copyrightHolder">CrazyTwo</span>
-</div>
-
-<div class="powered-by">
-  Erstellt mit  <a class="theme-link" href="http://hexo.io">Hexo</a>
-</div>
-
-<div class="theme-info">
-  Theme -
-  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
-    NexT.Mist
-  </a>
-</div>
-
-        
-
-        
-      </div>
-    </footer>
-
-    <div class="back-to-top">
-      <i class="fa fa-arrow-up"></i>
-    </div>
+    </article>
   </div>
+  
+
+
+<nav id="pagination">
+  
+  
+  <div class="clearfix"></div>
+</nav></div></div>
+    <aside id="sidebar" class="alignleft"><!-- 
+  
 
   
+
+  
+<div class="widget twitter">
+  <h3 class="title">推文</h3>
+  <ul id="tweets"></ul>
+</div>
 
 <script type="text/javascript">
-  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
-    window.Promise = null;
-  }
+var twitter_stream = ['thiagopnts', 5, false];
+var moment_js_path = '/js/moment.min.js';
 </script>
+<script src="/js/twitter.js"></script>
 
 
-
-
-
-
-
-
-
+ -->
+<div class="personal-info">
+  <figure>
+    
+      <a href="/">
+        <img class="personal-photo" src="https://2.gravatar.com/avatar/dfdcc7fdb4b631ae9c30acd5ac6c2cbe?r=x&s=440" alt="CrazyTwo">
+      </a>
+    
+    <figcaption>
+      <h3 class=>CrazyTwo</h3>
+      <p>Something about you here</p>
+    </figcaption>
+  </figure>
+  <section class="social">
+    
+      <a target="_blank" class="icon twitter depth" href="http://twitter.com/thiagopnts"></a>
+    
+    
+      <a target="_blank" class="icon facebook depth" href="http://fb.com/your facebook url"></a> 
+    
+    
+      <a target="_blank" class="icon github depth" href="http://github.com/thiagopnts"></a>
+    
+    
+      <a target="_blank" class="icon email depth" href="mailto:email"></a>
+    
+  </section>
+</div>
+</aside>
+    <div class="clearfix"></div>
+  </div>
+  <footer id="footer" class="inner"><div class="alignright depth">
+  <a href="http://github.com/thiagopnts/hexo-persona-dark" style="text-decoration: underline;">Persona Dark Theme</a> 
+  &copy; - 2016 CrazyTwo
   
+</div>
+<div class="clearfix"></div></footer>
+  <script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
 
 
 
-  
-  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
 
-  
-  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
-
-  
-  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
-
-  
-  <script type="text/javascript" src="/vendors/velocity/velocity.min.js?v=1.2.1"></script>
-
-  
-  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js?v=1.2.1"></script>
-
-  
-  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
-
-
-  
-
-
-  <script type="text/javascript" src="/js/src/utils.js?v=5.0.1"></script>
-
-  <script type="text/javascript" src="/js/src/motion.js?v=5.0.1"></script>
-
-
-
-  
-  
-
-  
-
-  
-
-
-  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.1"></script>
-
-
-
-  
-
-
-
-  
-
-
-
-  
-  
-  
-
-  
-
-  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
 
 </body>
 </html>
