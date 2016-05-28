@@ -5,21 +5,34 @@
   
   <title>CSS入门 | H5课堂笔记</title>
   <meta name="author" content="CrazyTwo">
-
   
   <meta name="description" content="这是我学习H5的笔记">
   
   
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
+  <meta property="og:title" content="CSS入门"/>
+  <meta property="og:site_name" content="H5课堂笔记"/>
+
+  
+    <meta property="og:image" content="undefined"/>
+  
+
+  <link href="/favicon.png" rel="icon">
   <link rel="alternate" href="/atom.xml" title="H5课堂笔记" type="application/atom+xml">
   <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
   <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
   
+
 </head>
 
+
 <body>
-  <header id="header" class="inner"><nav>
+  <header id="header" class="inner"><div class="alignleft">
+  <h1><a href="/">H5课堂笔记</a></h1>
+  <h2><a href="/"></a></h2>
+</div>
+<nav id="main-nav" class="alignright">
   <ul>
     
       <li><a href="/">Home</a></li>
@@ -27,34 +40,27 @@
       <li><a href="/archives">Archives</a></li>
     
   </ul>
-</nav></header>
-  <div id="content" class="inner"><article class="post">
+  <div class="clearfix"></div>
+</nav>
+<div class="clearfix"></div></header>
+  <div id="content" class="inner">
+    <div id="main-col" class="alignleft"><div id="wrapper"><article class="post">
   
-    <div class="gallery">
-  <div class="photoset">
-    
-      <img src="">
-    
-  </div>
-  <div class="control">
-    <div class="prev"></div>
-    <div class="next"></div>
-  </div>
-</div>
-  
-  <header>
-    
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
+        <time datetime="2016-05-24T09:49:10.000Z"><a href="/2016/05/24/Introduction_CSS /">2016-05-24</a></time>
+      
+      
   
     <h1 class="title">CSS入门</h1>
   
 
-    <time datetime="2016-05-24T09:49:10.000Z">
-  <span class="day">24</span><span class="month">May</span>
-</time>
-  </header>
-  <div class="entry-content">
-    
-      <p>CCS（是一组格式设置规则，用于控制web外观） </p>
+    </header>
+    <div class="entry">
+      
+        <p>CCS（是一组格式设置规则，用于控制web外观） </p>
 <h3 id="web标准结构"><a href="#web标准结构" class="headerlink" title="web标准结构"></a>web标准结构</h3><p>  结构 HTML+<br>  样式 CSS+<br>  行为  交互行为javascript</p>
 <pre><code>  特点
 1.页面内容与表现形式分离
@@ -174,31 +180,80 @@ display的值为table-cell, table-caption, inline-block中的任何一个。
 6.\9\0  ：IE8部分支持、IE9支持
 7.\0\9  ：IE8、IE9支持
 </code></pre>
+      
+    </div>
+    <footer>
+      
+        
+        
+        
+  <div class="addthis addthis_toolbox addthis_default_style">
+    
+      <a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>
     
     
-    <footer class="meta">
-      
-      
-      
-    </footer>
+      <a class="addthis_button_tweet"></a>
     
+    
+      <a class="addthis_button_google_plusone" g:plusone:size="medium"></a>
+    
+    
+      <a class="addthis_button_pinterest_pinit" pi:pinit:layout="horizontal"></a>
+    
+    <a class="addthis_counter addthis_pill_style"></a>
   </div>
+  <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js"></script>
+
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+<section id="comment">
+  <h1 class="title">Comments</h1>
+
   
-</article></div>
-  <footer id="footer" class="inner"><div class="social alignright">
+      <div id="fb-root"></div>
+<script>
+  (function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=123456789012345";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));
+</script>
+
+<div class="fb-comments" data-href="http://yoursite.com/2016/05/24/Introduction_CSS /index.html" data-num-posts="5" data-width="840" data-colorscheme="light"></div>
+      
   
-  
-  
-  
-  <a class="rss" href="/atom.xml" title="RSS">RSS</a>
+</section>
+
+</div></div>
+    <aside id="sidebar" class="alignright">
+  <div class="search">
+  <form action="//google.com/search" method="get" accept-charset="utf-8">
+    <input type="search" name="q" results="0" placeholder="Search">
+    <input type="hidden" name="q" value="site:yoursite.com">
+  </form>
 </div>
-<p>
+
+  
+
+  
+</aside>
+    <div class="clearfix"></div>
+  </div>
+  <footer id="footer" class="inner"><div class="alignleft">
   
   &copy; 2016 CrazyTwo
   
-</p>
+</div>
 <div class="clearfix"></div></footer>
-  <script src="/js/jquery.imagesloaded.min.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+<script src="/js/jquery.imagesloaded.min.js"></script>
 <script src="/js/gallery.js"></script>
 
 
@@ -212,12 +267,5 @@ display的值为table-cell, table-caption, inline-block中的任何一个。
 })(jQuery);
 </script>
 
-
-<div id="phasebeam">
-  <canvas></canvas>
-  <canvas></canvas>
-  <canvas></canvas>
-</div>
-<script src="/js/phasebeam.js"></script>
 </body>
 </html>
