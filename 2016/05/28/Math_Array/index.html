@@ -1,0 +1,209 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Math &amp; Array(数组) | H5课堂笔记</title>
+  <meta name="author" content="CrazyTwo">
+  
+  <meta name="description" content="这是我学习H5的笔记">
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <meta property="og:title" content="Math &amp; Array(数组)"/>
+  <meta property="og:site_name" content="H5课堂笔记"/>
+
+  
+    <meta property="og:image" content="undefined"/>
+  
+
+  <link href="/favicon.png" rel="icon">
+  <link rel="alternate" href="/atom.xml" title="H5课堂笔记" type="application/atom+xml">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  
+
+</head>
+
+
+<body>
+  <header id="header" class="inner"><div class="alignleft">
+  <h1><a href="/">H5课堂笔记</a></h1>
+  <h2><a href="/"></a></h2>
+</div>
+<nav id="main-nav" class="alignright">
+  <ul>
+    
+      <li><a href="/">Home</a></li>
+    
+      <li><a href="/archives">Archives</a></li>
+    
+  </ul>
+  <div class="clearfix"></div>
+</nav>
+<div class="clearfix"></div></header>
+  <div id="content" class="inner">
+    <div id="main-col" class="alignleft"><div id="wrapper"><article class="post">
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
+        <time datetime="2016-05-28T12:13:30.000Z"><a href="/2016/05/28/Math_Array/">2016-05-28</a></time>
+      
+      
+  
+    <h1 class="title">Math &amp; Array(数组)</h1>
+  
+
+    </header>
+    <div class="entry">
+      
+        <h3 id="Math"><a href="#Math" class="headerlink" title="Math"></a>Math</h3><p>Math对象允许您执行数学任务。<br>Math对象包括几个数学方法。</p>
+<p>Math 对象属性</p>
+<pre><code>E    返回算术常量 e，即自然对数的底数（约等于2.718）。
+LN2    返回 2 的自然对数（约等于0.693）。
+LN10    返回 10 的自然对数（约等于2.302）。
+LOG2E    返回以 2 为底的 e 的对数（约等于 1.414）。
+LOG10E    返回以 10 为底的 e 的对数（约等于0.434）。
+PI    返回圆周率（约等于3.14159）。
+SQRT1_2    返回返回 2 的平方根的倒数（约等于 0.707）。
+SQRT2    返回 2 的平方根（约等于 1.414）。
+</code></pre><p>Math 对象方法</p>
+<pre><code>abs(x)    返回数的绝对值。
+acos(x)    返回数的反余弦值。
+asin(x)    返回数的反正弦值。
+atan(x)    以介于 -PI/2 与 PI/2 弧度之间的数值来返回 x 的反正切值。
+atan2(y,x)    返回从 x 轴到点 (x,y) 的角度（介于 -PI/2 与 PI/2 弧度之间）。
+ceil(x)    对数进行上舍入。
+cos(x)    返回数的余弦。
+exp(x)    返回 e 的指数。
+floor(x)    对数进行下舍入。
+log(x)    返回数的自然对数（底为e）。
+max(x,y)    返回 x 和 y 中的最高值。
+min(x,y)    返回 x 和 y 中的最低值。
+pow(x,y)    返回 x 的 y 次幂。
+random()    返回 0 ~ 1 之间的随机数。
+round(x)    把数四舍五入为最接近的整数。
+sin(x)    返回数的正弦。
+sqrt(x)    返回数的平方根。
+tan(x)    返回角的正切。
+toSource()    返回该对象的源代码。
+valueOf()    返回 Math 对象的原始值。
+</code></pre><p>解析：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">title</span>&gt;</span><span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span>&gt;</span><span class="undefined"></span><br><span class="line">			console.log(Math);</span><br><span class="line">//			ceil:ceil()		向上取整5.00001，取6</span><br><span class="line">//			var num = 5.00001;</span><br><span class="line">//			alert(Math.ceil(num));</span><br><span class="line"></span><br><span class="line">//			floor:floor()向下取整，5.9999999，取5</span><br><span class="line">//			var num1 = 5.9999999;</span><br><span class="line">//			alert(Math.floor(num));</span><br><span class="line"></span><br><span class="line">//			Math.min（）和Math.max（）可以用来查找的参数列表中的最低或最高值</span><br><span class="line">//			max:max()</span><br><span class="line">//			alert(Math.max(1,9,5,2,3));//9</span><br><span class="line">//			min:min()</span><br><span class="line">//			alert(Math.min(1,9,5,2,3));//1</span><br><span class="line"></span><br><span class="line">//			pow:pow()求次方数</span><br><span class="line">//			alert(Math.pow(2,3));//8----2的3次方</span><br><span class="line">//			random:random()随机数，取值在0-1之间，不包括0和1 最小0.0000000......1 最大0.99999...9</span><br><span class="line">//			alert(Math.random());</span><br><span class="line"></span><br><span class="line">			//栗子 0-10最小值</span><br><span class="line">			//0.00001*10 = 0.0001 四舍五入得  0</span><br><span class="line">			//0.99999*10 =9.9999  四舍五入得  10</span><br><span class="line">			//0-10</span><br><span class="line">			var rnb = Math.round(Math.random()*10);</span><br><span class="line">			//1-10</span><br><span class="line">			var rnb1 = Math.ceil(Math.random()*10);</span><br><span class="line">			//0-9</span><br><span class="line">			var rnb2 = Math.floor(Math.random()*10);</span><br><span class="line">			//30-60</span><br><span class="line">			var rnb3 = Math.round(Math.random()*30+30);</span><br><span class="line">			var rnb4 = Math.round(Math.random()*17);</span><br><span class="line">			alert(rnb4);</span><br><span class="line">			</span><br><span class="line">//			round:round()四舍五入取整</span><br><span class="line">//			var num2 = 5.9999999;</span><br><span class="line">//			alert(Math.round(num));//6</span><br><span class="line">//			var num3 = 5.499999;</span><br><span class="line">//			alert(Math.round(num));//5</span><br><span class="line"></span><br><span class="line">		</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h3 id="Array-数组"><a href="#Array-数组" class="headerlink" title="Array(数组)"></a>Array(数组)</h3><p>Array 对象<br>Array 对象用于在单个的变量中存储多个值。</p>
+<p>Array 对象属性</p>
+<pre><code>constructor    返回对创建此对象的数组函数的引用。
+length    设置或返回数组中元素的数目。
+prototype    使您有能力向对象添加属性和方法。
+</code></pre><p>Array 对象方法</p>
+<pre><code>concat()    连接两个或更多的数组，并返回结果。
+join()    把数组的所有元素放入一个字符串。元素通过指定的分隔符进行分隔。
+pop()    删除并返回数组的最后一个元素
+push()    向数组的末尾添加一个或更多元素，并返回新的长度。
+reverse()    颠倒数组中元素的顺序。
+shift()    删除并返回数组的第一个元素
+slice()    从某个已有的数组返回选定的元素
+sort()    对数组的元素进行排序
+splice()    删除元素，并向数组添加新元素。
+toSource()    返回该对象的源代码。
+toString()    把数组转换为字符串，并返回结果。
+toLocaleString()    把数组转换为本地数组，并返回结果。
+unshift()    向数组的开头添加一个或更多元素，并返回新的长度。
+valueOf()    返回数组对象的原始值
+</code></pre><p>解析</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">title</span>&gt;</span><span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">style</span> <span class="attr">type</span>=<span class="string">"text/css"</span>&gt;</span><span class="undefined"></span><br><span class="line">			span&#123;</span><br><span class="line">				background: red;</span><br><span class="line">			&#125;</span><br><span class="line">		</span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span>&gt;</span><span class="xml"></span><br><span class="line">			//数组方法</span><br><span class="line">			/*</span><br><span class="line">				 join:把数组拼接为字符串</span><br><span class="line">				 将数组里面的逗号替换为join里面的参数，然后拼接为字符串</span><br><span class="line">				 栗子</span><br><span class="line">			 */</span><br><span class="line">//			var str = "acbcdcecf";</span><br><span class="line">//			document.write(str + "<span class="tag">&lt;<span class="name">br</span> /&gt;</span>");</span><br><span class="line">//			var arr = str.split("c");//每个字符之间劈开</span><br><span class="line">//			document.write(arr + "<span class="tag">&lt;<span class="name">br</span> /&gt;</span>");</span><br><span class="line">//			str = arr.join("<span class="tag">&lt;<span class="name">span</span>&gt;</span>p<span class="tag">&lt;/<span class="name">span</span>&gt;</span>");</span><br><span class="line">//			document.write(str + "<span class="tag">&lt;<span class="name">br</span> /&gt;</span>");</span><br><span class="line">//			</span><br><span class="line">//			//数组增加删除方法</span><br><span class="line">//			var arr = [1, 2 , 3, 4, 5];</span><br><span class="line">//			arr[arr.length] = arr.length + 1;</span><br><span class="line">//			//push 在数组后面添加内容</span><br><span class="line">//			arr.push(7);</span><br><span class="line">//			//unshift 在数组前面添加内容</span><br><span class="line">//			arr.unshift(0);</span><br><span class="line">//			//pop 删除最后一个 返回删除的内容</span><br><span class="line">//			//arr.pop()</span><br><span class="line">//			//把最后内容添加到前面</span><br><span class="line">//			arr.unshift(arr.pop());</span><br><span class="line">//			//shift删除第一个  返回删除的内容</span><br><span class="line">//			//arr.shift();</span><br><span class="line">//			//把第一个内容添加到最后面</span><br><span class="line">//			arr.push(arr.shift());</span><br><span class="line">//			document.write(arr);</span><br><span class="line">			</span><br><span class="line">			//数组合并方法</span><br><span class="line">//			var arr = [1,2,3,4,5];</span><br><span class="line">//			var arr2 = [6,7,8,9];</span><br><span class="line">//			var arr3 = [10,11,12];</span><br><span class="line">			/*</span><br><span class="line">			 	concat 合并数组</span><br><span class="line">			 	在concat 里面加上要合并的数组</span><br><span class="line">			 	可以添加多个 用逗号隔开</span><br><span class="line">			 	原来数组不会有任何改变，合并的是返回值</span><br><span class="line">			 */</span><br><span class="line">//			var newArr = arr.concat(arr2,arr3);</span><br><span class="line">//			document.write("newArr："+newArr+"<span class="tag">&lt;<span class="name">br</span> /&gt;</span>");</span><br><span class="line">//			document.write("arr："+arr+"<span class="tag">&lt;<span class="name">br</span> /&gt;</span>");</span><br><span class="line">//			document.write("arr2："+arr2+"<span class="tag">&lt;<span class="name">br</span> /&gt;</span>");</span><br><span class="line">//			document.write("arr3："+arr3+"<span class="tag">&lt;<span class="name">br</span> /&gt;</span>");</span><br><span class="line"></span><br><span class="line">			//截取</span><br><span class="line">//			var arr = [1,2,3,4,5,6];</span><br><span class="line">//			document.write(arr.slice(2,4));</span><br><span class="line"></span><br><span class="line">			//倒序 原来数组会改变为倒序</span><br><span class="line">//			var arr = [1,2,3,4,5,6,7,8,9];</span><br><span class="line">//			document.write(arr.reverse());</span><br><span class="line">//			document.write(arr);</span><br><span class="line">			//</span><br><span class="line">//			var arr = [6,8,5,2,9,1,7,4,3];</span><br><span class="line">//			arr.sort();//默认按顺序排列</span><br><span class="line">//			arr.sort(function (a ,b )&#123;</span><br><span class="line">//				return b-a;</span><br><span class="line">//			&#125;);//a-b 正 b-a 负</span><br><span class="line">//			arr.sort(function()&#123;</span><br><span class="line">//				return Math.random()-0.5;//随机</span><br><span class="line">//			&#125;)</span><br><span class="line">//			document.write(arr);</span><br><span class="line">			</span><br><span class="line">			/*</span><br><span class="line">			 	splice（a，b，c）</span><br><span class="line">			 	a:从哪里开始</span><br><span class="line">			 	b:往后删除多少个</span><br><span class="line">			 	c:添加内容后面可以添加多个，用逗号隔开</span><br><span class="line">			 */</span><br><span class="line">//			var arr = ["a","b","c","d"];</span><br><span class="line">			//删除</span><br><span class="line">//			arr.splice(1,1);</span><br><span class="line">			//替换</span><br><span class="line">//			arr.splice(1,1,"新的");</span><br><span class="line">			//添加</span><br><span class="line">//			arr.splice(1,0,"新的");</span><br><span class="line">//			document.write(arr);</span><br><span class="line">			//转换  </span><br><span class="line">			//Number():把数据类型转为数字  </span><br><span class="line">			//String():把数据类型转为字符串</span><br><span class="line">			/*parseInt(a,b):把数据类型转为数字 从开始找字符串里的数字，直到不是数字就会停下来（ 类似向上取整）</span><br><span class="line">			 a:是要转换的数据</span><br><span class="line">			 b: 是要按什么进制进行转换 2进制 8进制 10进制 16进制</span><br><span class="line">			</span><br><span class="line">			 parseFloat：把数据类型转为浮点数（有小数点的数）</span><br><span class="line">			 */</span><br><span class="line">//			alert(Number("123px123"));//NaN</span><br><span class="line">//			alert(parseInt("123px123",10));//123</span><br><span class="line">		</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>栗子-输出随机的顺序</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> arr =[<span class="string">'韦*'</span>,<span class="string">'李*'</span>,<span class="string">'戚*'</span>,<span class="string">'杨**'</span>,<span class="string">'张**'</span>,<span class="string">'徐**'</span>,<span class="string">'赖**'</span>,<span class="string">'代*'</span>,<span class="string">'李**'</span>,<span class="string">'孔**'</span>,<span class="string">'李**'</span>,<span class="string">'庞**'</span>,<span class="string">'胡**'</span>,<span class="string">'肖*'</span>,<span class="string">'肖*'</span>,<span class="string">'张**'</span>,<span class="string">'唐*'</span>];</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">var</span> i=<span class="number">0</span>; i &lt; <span class="number">10000</span> ; i++) &#123;</span><br><span class="line">	arr.sort(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;<span class="comment">//对数组的元素进行排序</span></span><br><span class="line">	<span class="keyword">return</span> <span class="built_in">Math</span>.random()<span class="number">-0.5</span>;<span class="comment">//获取一个随机数</span></span><br><span class="line">	&#125;);</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">var</span> i=<span class="number">0</span>; i &lt; arr.length ; i++) &#123;</span><br><span class="line">	<span class="built_in">document</span>.write((i+<span class="number">1</span>)+<span class="string">". "</span> +arr[i] + <span class="string">"&lt;br /&gt;"</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    <footer>
+      
+        
+        
+        
+  <div class="addthis addthis_toolbox addthis_default_style">
+    
+      <a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>
+    
+    
+      <a class="addthis_button_tweet"></a>
+    
+    
+      <a class="addthis_button_google_plusone" g:plusone:size="medium"></a>
+    
+    
+      <a class="addthis_button_pinterest_pinit" pi:pinit:layout="horizontal"></a>
+    
+    <a class="addthis_counter addthis_pill_style"></a>
+  </div>
+  <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js"></script>
+
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+<section id="comment">
+  <h1 class="title">Comentarios</h1>
+
+  
+      <div id="fb-root"></div>
+<script>
+  (function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=123456789012345";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));
+</script>
+
+<div class="fb-comments" data-href="http://yoursite.com/2016/05/28/Math_Array/index.html" data-num-posts="5" data-width="840" data-colorscheme="light"></div>
+      
+  
+</section>
+
+</div></div>
+    <aside id="sidebar" class="alignright">
+  <div class="search">
+  <form action="//google.com/search" method="get" accept-charset="utf-8">
+    <input type="search" name="q" results="0" placeholder="Buscar">
+    <input type="hidden" name="q" value="site:yoursite.com">
+  </form>
+</div>
+
+  
+
+  
+</aside>
+    <div class="clearfix"></div>
+  </div>
+  <footer id="footer" class="inner"><div class="alignleft">
+  
+  &copy; 2016 CrazyTwo
+  
+</div>
+<div class="clearfix"></div></footer>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+
+
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+</body>
+</html>

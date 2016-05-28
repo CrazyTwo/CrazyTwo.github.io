@@ -1,0 +1,198 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>String &amp; dorpdownlist(下拉列表) | H5课堂笔记</title>
+  <meta name="author" content="CrazyTwo">
+  
+  <meta name="description" content="这是我学习H5的笔记">
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <meta property="og:title" content="String &amp; dorpdownlist(下拉列表)"/>
+  <meta property="og:site_name" content="H5课堂笔记"/>
+
+  
+    <meta property="og:image" content="undefined"/>
+  
+
+  <link href="/favicon.png" rel="icon">
+  <link rel="alternate" href="/atom.xml" title="H5课堂笔记" type="application/atom+xml">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  
+
+</head>
+
+
+<body>
+  <header id="header" class="inner"><div class="alignleft">
+  <h1><a href="/">H5课堂笔记</a></h1>
+  <h2><a href="/"></a></h2>
+</div>
+<nav id="main-nav" class="alignright">
+  <ul>
+    
+      <li><a href="/">Home</a></li>
+    
+      <li><a href="/archives">Archives</a></li>
+    
+  </ul>
+  <div class="clearfix"></div>
+</nav>
+<div class="clearfix"></div></header>
+  <div id="content" class="inner">
+    <div id="main-col" class="alignleft"><div id="wrapper"><article class="post">
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
+        <time datetime="2016-05-28T12:21:37.000Z"><a href="/2016/05/28/String_dorpdownlist/">2016-05-28</a></time>
+      
+      
+  
+    <h1 class="title">String &amp; dorpdownlist(下拉列表)</h1>
+  
+
+    </header>
+    <div class="entry">
+      
+        <h3 id="String"><a href="#String" class="headerlink" title="String"></a>String</h3><p>String 对象<br>String 对象用于处理文本（字符串）。</p>
+<p>String 对象属性</p>
+<pre><code>constructor    对创建该对象的函数的引用
+length    字符串的长度
+prototype    允许您向对象添加属性和方法
+</code></pre><p>String 对象方法</p>
+<pre><code>anchor()    创建 HTML 锚。
+big()    用大号字体显示字符串。
+blink()    显示闪动字符串。
+bold()    使用粗体显示字符串。
+charAt()    返回在指定位置的字符。
+charCodeAt()    返回在指定的位置的字符的 Unicode 编码。
+concat()    连接字符串。
+fixed()    以打字机文本显示字符串。
+fontcolor()    使用指定的颜色来显示字符串。
+fontsize()    使用指定的尺寸来显示字符串。
+fromCharCode()    从字符编码创建一个字符串。
+indexOf()    检索字符串。
+italics()    使用斜体显示字符串。
+lastIndexOf()    从后向前搜索字符串。
+link()    将字符串显示为链接。
+localeCompare()    用本地特定的顺序来比较两个字符串。
+match()    找到一个或多个正则表达式的匹配。
+replace()    替换与正则表达式匹配的子串。
+search()    检索与正则表达式相匹配的值。
+slice()    提取字符串的片断，并在新的字符串中返回被提取的部分。
+small()    使用小字号来显示字符串。
+split()    把字符串分割为字符串数组。
+strike()    使用删除线来显示字符串。
+sub()    把字符串显示为下标。
+substr()    从起始索引号提取字符串中指定数目的字符。
+substring()    提取字符串中两个指定的索引号之间的字符。
+sup()    把字符串显示为上标。
+toLocaleLowerCase()    把字符串转换为小写。
+toLocaleUpperCase()    把字符串转换为大写。
+toLowerCase()    把字符串转换为小写。
+toUpperCase()    把字符串转换为大写。
+toSource()    代表对象的源代码。
+toString()    返回字符串。
+valueOf()    返回某个字符串对象的原始值。
+</code></pre><p>案例：字符串的截取</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">title</span>&gt;</span><span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">style</span> <span class="attr">type</span>=<span class="string">"text/css"</span>&gt;</span><span class="undefined"></span><br><span class="line">			div&#123;</span><br><span class="line">				width: 400px;</span><br><span class="line">				margin: 50px auto;</span><br><span class="line">				background: khaki;</span><br><span class="line">				padding: 20px;</span><br><span class="line">				border: 10px solid gainsboro;</span><br><span class="line">			&#125;</span><br><span class="line">		</span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span>&gt;</span><span class="javascript"></span><br><span class="line">			<span class="comment">//获取内容标签span</span></span><br><span class="line">			<span class="comment">//获取点击按钮a</span></span><br><span class="line">			<span class="comment">//获取标签内容str</span></span><br><span class="line">			<span class="comment">//点击收缩时显示str截取后的内容</span></span><br><span class="line">			<span class="comment">//点击展开时显示str全部内容</span></span><br><span class="line">			</span><br><span class="line">			<span class="built_in">window</span>.onload =<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">				<span class="keyword">var</span> span = <span class="built_in">document</span>.getElementsByTagName(<span class="string">'span'</span>)[<span class="number">0</span>];</span><br><span class="line">				<span class="keyword">var</span> a = <span class="built_in">document</span>.getElementsByTagName(<span class="string">'a'</span>)[<span class="number">0</span>];</span><br><span class="line">				<span class="keyword">var</span> str =span.innerText;<span class="comment">//span完整内容</span></span><br><span class="line">				a.onclick = <span class="function"><span class="keyword">function</span> (<span class="params"></span>)</span>&#123;</span><br><span class="line">					<span class="keyword">if</span>(span.innerHTML == str)&#123;<span class="comment">//判断内容是否被截取</span></span><br><span class="line">						span.innerText = str.substring(<span class="number">0</span>,<span class="number">30</span>) + <span class="string">"......"</span>;<span class="comment">//显示str截取后的内容</span></span><br><span class="line">						a.innerHTML = <span class="string">"&gt;&gt;展开"</span>;</span><br><span class="line">					&#125;<span class="keyword">else</span>&#123;</span><br><span class="line">						span.innerText = str;<span class="comment">//显示str的内容</span></span><br><span class="line">						a.innerHTML = <span class="string">"&gt;&gt;收缩"</span>;</span><br><span class="line">					&#125;</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line">			</span><br><span class="line">		</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">div</span>&gt;</span></span><br><span class="line">			<span class="tag">&lt;<span class="name">span</span>&gt;</span>蓝鸥科技是美国苹果公司AATC官方授权培训机构，是国内专业的移动互联网研发实训基地，致力于iOS、安卓、Unity、HTML5等开发人才的培养。2012年由中国知名移动开发专家刘辉、李静波和崔亚允创立。蓝鸥科技拥有北京、上海、广州、大连、郑州和西安等众多实训中心，合作院校超过500所，战略合作企业800多家。截至目前，在苹果App Store和谷歌商店累计上线1000多款应用和游戏。<span class="tag">&lt;/<span class="name">span</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"###"</span>&gt;</span>&gt;&gt;收缩<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>案例 字符串方法以及查找字符</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">title</span>&gt;</span><span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span>&gt;</span><span class="javascript"></span><br><span class="line">			<span class="keyword">var</span> str = <span class="string">"我是字符串我是字符串我是字符串我是字符串我是字符串我是字符串我是字符串我是字符串我是字符串我是字符串"</span>;</span><br><span class="line">			<span class="comment">//字符串截取方法substring, substring里面最小参数是0（负数也是0）</span></span><br><span class="line">			<span class="comment">//里面的参数是从最小截取到最大的位置（读取时先找到最小，再往最大截取）</span></span><br><span class="line"><span class="comment">//			var str2 = str.substring(2,5);</span></span><br><span class="line"><span class="comment">//			alert(str2);</span></span><br><span class="line">			<span class="comment">//查找的方法 indexOf() 返回位置值 如果找不到返回-1 只会找一次</span></span><br><span class="line"><span class="comment">//			alert(str.indexOf('字',3));</span></span><br><span class="line"></span><br><span class="line">			<span class="keyword">var</span> i = <span class="number">0</span> ;</span><br><span class="line">			<span class="keyword">var</span> sum = <span class="number">0</span>;</span><br><span class="line">			<span class="keyword">while</span> (str.indexOf(<span class="string">'字'</span>,i) &gt; <span class="number">-1</span>) &#123;<span class="comment">//在找到的时候循环</span></span><br><span class="line">				sum ++;<span class="comment">//找到后+1</span></span><br><span class="line">				i=str.indexOf(<span class="string">'字'</span>,i) + <span class="number">1</span>;<span class="comment">//在位置之后再开始查找</span></span><br><span class="line">			&#125;</span><br><span class="line">			alert(<span class="string">"str中字共有"</span>+sum+<span class="string">"个"</span>);</span><br><span class="line">			<span class="comment">// 1   i=0 	位置2&gt;-1 sum ++ ; i = 位置2 +1;</span></span><br><span class="line">			<span class="comment">//2	   i=3 	位置7&gt;-1 sum ++ ; i = 位置7 +1;</span></span><br><span class="line">			<span class="comment">//3	   i=8 	位置13&gt;-1 sum ++ ; i = 位置13 +1;</span></span><br><span class="line">			<span class="comment">//...</span></span><br><span class="line">			<span class="comment">//2	   i=？ 	位置-1不大于-1 退出循环   弹出对话框</span></span><br><span class="line">			</span><br><span class="line">		</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>案例 字符串与数组</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">title</span>&gt;</span><span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span>&gt;</span><span class="javascript"></span><br><span class="line">			<span class="keyword">var</span> str = <span class="string">"abcdefg"</span>;</span><br><span class="line">			<span class="keyword">var</span> arr = [<span class="string">'a'</span>,<span class="string">'b'</span>,<span class="string">'c'</span>,<span class="string">'d'</span>,<span class="string">'e'</span>,<span class="string">'f'</span>,<span class="string">'g'</span>];</span><br><span class="line">			<span class="comment">//字符串不可以通过下标修改其中的值，只能整体修改</span></span><br><span class="line">			str[<span class="number">3</span>] = <span class="string">"D"</span>;</span><br><span class="line"><span class="comment">//			alert(str);</span></span><br><span class="line">			arr[<span class="number">3</span>] = <span class="string">"D"</span>;</span><br><span class="line"><span class="comment">//			alert(arr);</span></span><br><span class="line">			<span class="comment">//字符串变成数组</span></span><br><span class="line">			<span class="comment">//split 把字符串劈开变成数组 劈开是按照字符串里的参数</span></span><br><span class="line">			<span class="keyword">var</span> arr =str.split(<span class="string">"d"</span>);</span><br><span class="line"><span class="comment">//			alert(arr[1]);</span></span><br><span class="line"></span><br><span class="line">			<span class="comment">//charAt 获取字符串里的第几个字符 从0开始</span></span><br><span class="line">			<span class="comment">//charCodeAt 获取字符串里的第几个字符的字符Ascii</span></span><br><span class="line"><span class="comment">//			alert(str.charAt(2));</span></span><br><span class="line"><span class="comment">//			alert(str.charCodeAt(2));</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//			alert(str.toLowerCase());//变成小写</span></span><br><span class="line"><span class="comment">//			alert(str.toUpperCase());//变成大写</span></span><br><span class="line">		</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h3 id="dorpdownlist-下拉列表"><a href="#dorpdownlist-下拉列表" class="headerlink" title="dorpdownlist(下拉列表)"></a>dorpdownlist(下拉列表)</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">title</span>&gt;</span><span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">style</span> <span class="attr">type</span>=<span class="string">"text/css"</span>&gt;</span><span class="undefined"></span><br><span class="line">			.droplist input&#123;</span><br><span class="line">				width: 150px;</span><br><span class="line">				height: 30px;</span><br><span class="line">				font-size: 14px;</span><br><span class="line">				font-weight: lighter;</span><br><span class="line">				text-align: center;</span><br><span class="line">				border: 1px solid cadetblue;</span><br><span class="line">				border-radius: 6px;</span><br><span class="line">				border-color: cornflowerblue;</span><br><span class="line">				box-shadow: 0.1px 0.1px 1px 0.5px cadetblue;</span><br><span class="line">				background: white;</span><br><span class="line">			&#125;</span><br><span class="line">			.droplist ul&#123;</span><br><span class="line">				width: 150px;</span><br><span class="line">				border: 1px solid cadetblue;</span><br><span class="line">				border-radius: 6px;</span><br><span class="line">				list-style: none;</span><br><span class="line">				color: #333;</span><br><span class="line">				text-align: center;</span><br><span class="line">				margin-top: 5px;</span><br><span class="line">				padding: 0;	</span><br><span class="line">			&#125;</span><br><span class="line">			.droplist ul li&#123;</span><br><span class="line">				width: 98%;</span><br><span class="line">				padding: 10px 0;</span><br><span class="line">				margin: 0 auto;</span><br><span class="line">				border-bottom: 1px solid #ccc;;</span><br><span class="line">			&#125;</span><br><span class="line">			.droplist ul li:hover&#123;</span><br><span class="line">				background: rgba(244,244,244,0.75);</span><br><span class="line">			&#125;</span><br><span class="line">			.droplist ul li:nth-child(3)&#123;</span><br><span class="line">				border: 0;</span><br><span class="line">			&#125;</span><br><span class="line">		</span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span>&gt;</span><span class="javascript"></span><br><span class="line">			<span class="built_in">window</span>.onclick=<span class="function"><span class="keyword">function</span> (<span class="params"></span>)</span>&#123;</span><br><span class="line">				<span class="comment">//做法思路</span></span><br><span class="line">				<span class="comment">//1.获取元素</span></span><br><span class="line">				<span class="comment">//2.点击请选择-列表显示</span></span><br><span class="line">				<span class="comment">//3.点击列表-选择框内容 = 你点击列表框的内容</span></span><br><span class="line">				<span class="comment">//4.列表消失</span></span><br><span class="line">				<span class="comment">//这里获取document.getElementsByClassName('btn')是一个数组：['按钮']，而我们要获取的是'按钮'，所以读取是['按钮'][0],也就是document.getElementsByClassName('btn')[0]</span></span><br><span class="line">				<span class="keyword">var</span> btn =<span class="built_in">document</span>.getElementsByClassName(<span class="string">'btn'</span>)[<span class="number">0</span>];</span><br><span class="line">				<span class="keyword">var</span> list =<span class="built_in">document</span>.getElementById(<span class="string">'list'</span>);</span><br><span class="line">				<span class="keyword">var</span> li = list.getElementsByTagName(<span class="string">'li'</span>);<span class="comment">//获取list里的&lt;li&gt;集合</span></span><br><span class="line">				</span><br><span class="line">				<span class="comment">//选择按钮</span></span><br><span class="line">				btn.onclick = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">					<span class="keyword">if</span>(list.style.display != <span class="string">"block"</span>)&#123;<span class="comment">//判断list是否已经隐藏</span></span><br><span class="line">						<span class="comment">//是，就显示</span></span><br><span class="line">						list.style.display = <span class="string">'block'</span>;</span><br><span class="line">					&#125;<span class="keyword">else</span>&#123;</span><br><span class="line">						<span class="comment">//否，就隐藏</span></span><br><span class="line">						list.style.display = <span class="string">'none'</span>;</span><br><span class="line">					&#125;</span><br><span class="line">				&#125;</span><br><span class="line">				<span class="keyword">for</span> (<span class="keyword">var</span> i=<span class="number">0</span>; i&lt;li.length; i++) &#123;<span class="comment">//循环，给每个&lt;li&gt;添加点击事件</span></span><br><span class="line">					li[i].onclick = <span class="function"><span class="keyword">function</span> (<span class="params"></span>)</span>&#123;</span><br><span class="line">						<span class="comment">//注：input里的内容获取是-input.value，其他标签的内容获取是-标签.innerHTML</span></span><br><span class="line">						btn.value = <span class="keyword">this</span>.innerHTML;<span class="comment">//将当前&lt;li&gt;里的内容赋值给btn</span></span><br><span class="line">						list.style.display = <span class="string">'none'</span>;<span class="comment">//列表消失</span></span><br><span class="line">					&#125;</span><br><span class="line">				&#125;</span><br><span class="line">				</span><br><span class="line">				</span><br><span class="line">			&#125;</span><br><span class="line">		</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"droplist"</span>&gt;</span></span><br><span class="line">			<span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"button"</span> <span class="attr">class</span>=<span class="string">"btn"</span> <span class="attr">value</span>=<span class="string">"请选择"</span> /&gt;</span></span><br><span class="line">			<span class="tag">&lt;<span class="name">ul</span> <span class="attr">id</span>=<span class="string">"list"</span> <span class="attr">style</span>=<span class="string">"display: none;	"</span>&gt;</span></span><br><span class="line">				<span class="tag">&lt;<span class="name">li</span>&gt;</span>栗子<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">				<span class="tag">&lt;<span class="name">li</span>&gt;</span>李子<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">				<span class="tag">&lt;<span class="name">li</span>&gt;</span>芒果<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">			<span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">		</span><br><span class="line">	<span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+      
+    </div>
+    <footer>
+      
+        
+        
+        
+  <div class="addthis addthis_toolbox addthis_default_style">
+    
+      <a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>
+    
+    
+      <a class="addthis_button_tweet"></a>
+    
+    
+      <a class="addthis_button_google_plusone" g:plusone:size="medium"></a>
+    
+    
+      <a class="addthis_button_pinterest_pinit" pi:pinit:layout="horizontal"></a>
+    
+    <a class="addthis_counter addthis_pill_style"></a>
+  </div>
+  <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js"></script>
+
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+<section id="comment">
+  <h1 class="title">Comentarios</h1>
+
+  
+      <div id="fb-root"></div>
+<script>
+  (function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=123456789012345";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));
+</script>
+
+<div class="fb-comments" data-href="http://yoursite.com/2016/05/28/String_dorpdownlist/index.html" data-num-posts="5" data-width="840" data-colorscheme="light"></div>
+      
+  
+</section>
+
+</div></div>
+    <aside id="sidebar" class="alignright">
+  <div class="search">
+  <form action="//google.com/search" method="get" accept-charset="utf-8">
+    <input type="search" name="q" results="0" placeholder="Buscar">
+    <input type="hidden" name="q" value="site:yoursite.com">
+  </form>
+</div>
+
+  
+
+  
+</aside>
+    <div class="clearfix"></div>
+  </div>
+  <footer id="footer" class="inner"><div class="alignleft">
+  
+  &copy; 2016 CrazyTwo
+  
+</div>
+<div class="clearfix"></div></footer>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+
+
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+</body>
+</html>
