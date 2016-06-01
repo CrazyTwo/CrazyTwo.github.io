@@ -1,66 +1,107 @@
-<!DOCTYPE HTML>
-<html>
+
+ <!DOCTYPE HTML>
+<html lang="中文">
 <head>
-  <meta charset="utf-8">
+  <meta charset="UTF-8">
   
-  <title>程序猿经典案例之计算器 | H5课堂笔记</title>
-  <meta name="author" content="CrazyTwo">
-  
-  <meta name="description" content="这是我学习H5的笔记">
-  
-  
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>程序猿经典案例之计算器 | H5课堂笔记</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
+    
+    <meta name="author" content="CrazyTwo">
+    
+    <meta name="description" content="思路：
+找到按钮
+实现数字添加功能
+实现运算符功能
+实现等于号功能
+小数点功能
+清除功能
+正负数功能
+求百分数功能
+查漏补缺
 
-  <meta property="og:title" content="程序猿经典案例之计算器"/>
-  <meta property="og:site_name" content="H5课堂笔记"/>
-
-  
-    <meta property="og:image" content="undefined"/>
-  
-
-  <link href="/favicon.png" rel="icon">
-  <link rel="alternate" href="/atom.xml" title="H5课堂笔记" type="application/atom+xml">
-  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
-  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
-  
-
+HTML部分123456789101112131415161718192021222324252627282930313233&amp;lt;!DOCTYPE html&amp;gt;&amp;l">
+    
+    
+    
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="https://twitter.com/Crazytwo8" />
+    <meta name="twitter:title" content="程序猿经典案例之计算器 | H5课堂笔记" />
+      
+    
+    
+    
+    <link rel="icon" href="/img/favicon.ico">
+    
+    
+    <link rel="apple-touch-icon" href="/img/pacman.jpg">
+    <link rel="apple-touch-icon-precomposed" href="/img/pacman.jpg">
+    
+    <link rel="stylesheet" href="/css/style.css">
 </head>
 
-
-<body>
-  <header id="header" class="inner"><div class="alignleft">
-  <h1><a href="/">H5课堂笔记</a></h1>
-  <h2><a href="/"></a></h2>
-</div>
-<nav id="main-nav" class="alignright">
-  <ul>
-    
-      <li><a href="/">Home</a></li>
-    
-      <li><a href="/archives">Archives</a></li>
-    
-  </ul>
-  <div class="clearfix"></div>
-</nav>
-<div class="clearfix"></div></header>
-  <div id="content" class="inner">
-    <div id="main-col" class="alignleft"><div id="wrapper"><article class="post">
-  
-  <div class="post-content">
+  <body>
     <header>
-      
-        <div class="icon"></div>
-        <time datetime="2016-05-31T12:21:12.000Z"><a href="/2016/05/31/calculator/">2016-05-31</a></time>
-      
-      
-  
-    <h1 class="title">程序猿经典案例之计算器</h1>
-  
-
+      <div>
+		
+			<div id="imglogo">
+				<a href="/"><img src="/img/logo.svg" alt="H5课堂笔记" title="H5课堂笔记"/></a>
+			</div>
+			
+			<div id="textlogo">
+				<h1 class="site-name"><a href="/" title="H5课堂笔记">H5课堂笔记</a></h1>
+				<h2 class="blog-motto"></h2>
+			</div>
+			<div class="navbar"><a class="navbutton navmobile" href="#" title="菜单">
+			</a></div>
+			<nav class="animated">
+				<ul>
+					<ul>
+					 
+						<li><a href="/">Home</a></li>
+					
+						<li><a href="/archives">Archives</a></li>
+					
+					<li>
+					
+					<form class="search" action="//google.com/search" method="get" accept-charset="utf-8">
+						<label>Search</label>
+						<input type="search" id="search" name="q" autocomplete="off" maxlength="20" placeholder="Search" />
+						<input type="hidden" name="q" value="site:github.com/CrazyTwo/CrazyTwo.github.io">
+					</form>
+					
+					</li>
+				</ul>
+			</nav>			
+</div>
     </header>
-    <div class="entry">
-      
-        <h3 id="思路："><a href="#思路：" class="headerlink" title="思路："></a>思路：</h3><ol>
+    <div id="container">
+      <div id="main" class="post" itemscope itemprop="blogPost">
+	<article itemprop="articleBody"> 
+		<header class="article-info clearfix">
+  <h1 itemprop="name">
+    
+      <a href="/2016/05/31/calculator/" title="程序猿经典案例之计算器" itemprop="url">程序猿经典案例之计算器</a>
+  </h1>
+  <p class="article-author">By
+    
+      <a href="https://github.com/CrazyTwo/CrazyTwo.github.io" title="CrazyTwo">CrazyTwo</a>
+    </p>
+  <p class="article-time">
+    <time datetime="2016-05-31T12:21:12.000Z" itemprop="datePublished">2016-05-31</time>
+    更新日期:<time datetime="2016-05-31T12:36:16.000Z" itemprop="dateModified">2016-05-31</time>
+    
+  </p>
+</header>
+	<div class="article-content">
+		
+		
+		<div id="toc" class="toc-article">
+			<strong class="toc-title">文章目录</strong>
+		<ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#思路："><span class="toc-number">1.</span> <span class="toc-text">思路：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#HTML部分"><span class="toc-number">2.</span> <span class="toc-text">HTML部分</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#CSS部分"><span class="toc-number">3.</span> <span class="toc-text">CSS部分</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#js部分"><span class="toc-number">4.</span> <span class="toc-text">js部分</span></a></li></ol>
+		</div>
+		
+		<h3 id="思路："><a href="#思路：" class="headerlink" title="思路："></a>思路：</h3><ol>
 <li>找到按钮</li>
 <li>实现数字添加功能</li>
 <li>实现运算符功能</li>
@@ -75,93 +116,207 @@
 <h3 id="CSS部分"><a href="#CSS部分" class="headerlink" title="CSS部分"></a>CSS部分</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.wrap</span>&#123;</span><br><span class="line">	<span class="attribute">width</span>: <span class="number">232px</span>;</span><br><span class="line">	<span class="attribute">height</span>: <span class="number">320px</span>;</span><br><span class="line">	<span class="attribute">border</span>: <span class="number">1px</span> solid <span class="number">#8e8e8e</span>;</span><br><span class="line">	<span class="attribute">border-radius</span>: <span class="number">5px</span>;</span><br><span class="line">	<span class="attribute">margin</span>: <span class="number">50px</span> auto;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-id">#header</span>&#123;</span><br><span class="line">	<span class="attribute">width</span>: <span class="number">100%</span>;</span><br><span class="line">	<span class="attribute">height</span>: <span class="number">80px</span>;</span><br><span class="line">	<span class="attribute">background</span>: <span class="built_in">rgba</span>(90,90,90,0.6);</span><br><span class="line">	<span class="attribute">text-align</span>: right;</span><br><span class="line">	<span class="attribute">line-height</span>: <span class="number">100px</span>;</span><br><span class="line">	<span class="attribute">color</span>: white;</span><br><span class="line">	<span class="attribute">font-size</span>: <span class="number">60px</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-id">#btns</span>&#123;</span><br><span class="line">	<span class="attribute">width</span>: <span class="number">100%</span>;</span><br><span class="line">	<span class="attribute">height</span>: <span class="number">100%</span>;</span><br><span class="line">	<span class="attribute">list-style</span>: none;</span><br><span class="line">	<span class="attribute">overflow</span>: hidden;</span><br><span class="line">	<span class="attribute">padding</span>: <span class="number">0</span>;</span><br><span class="line">	<span class="attribute">margin</span>: <span class="number">0</span>;</span><br><span class="line">	<span class="attribute">font-size</span>: <span class="number">20px</span>;</span><br><span class="line">&#125;</span><br><span class="line">	</span><br><span class="line"><span class="selector-id">#btns</span> <span class="selector-tag">li</span>&#123;</span><br><span class="line">	<span class="attribute">margin</span>: <span class="number">0</span>;</span><br><span class="line">	<span class="attribute">float</span>: left;</span><br><span class="line">	<span class="attribute">width</span>: <span class="number">57px</span>;</span><br><span class="line">	<span class="attribute">height</span>: <span class="number">47px</span>;</span><br><span class="line">	<span class="attribute">text-align</span>: center;</span><br><span class="line">	<span class="attribute">line-height</span>: <span class="number">47px</span>;</span><br><span class="line">	<span class="attribute">border-bottom</span>: <span class="number">1px</span> solid <span class="number">#8e8e8e</span>;</span><br><span class="line">	<span class="attribute">background</span>: <span class="number">#d6d6d6</span>;</span><br><span class="line">	<span class="attribute">cursor</span>: pointer;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-id">#btns</span> <span class="selector-class">.long</span>&#123;</span><br><span class="line">	<span class="attribute">width</span>: <span class="number">115px</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-id">#btns</span> <span class="selector-class">.center</span>&#123;</span><br><span class="line">	<span class="attribute">border-right</span>: <span class="number">1px</span> solid <span class="number">#8e8e8e</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-id">#btns</span> <span class="selector-class">.o</span>&#123;</span><br><span class="line">	<span class="attribute">background</span>: <span class="number">#f49437</span>;</span><br><span class="line">	<span class="attribute">width</span>: <span class="number">58px</span>;</span><br><span class="line">	<span class="attribute">color</span>: white;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-id">#btns</span> <span class="selector-class">.under</span>&#123;</span><br><span class="line">	<span class="attribute">border-bottom</span>: <span class="number">0</span>;</span><br><span class="line">	<span class="attribute">height</span>: <span class="number">48px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h3 id="js部分"><a href="#js部分" class="headerlink" title="js部分"></a>js部分</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">window</span>.onload = <span class="function"><span class="keyword">function</span> (<span class="params"></span>)</span>&#123;</span><br><span class="line">	<span class="comment">//获取计算框</span></span><br><span class="line">	<span class="keyword">var</span> header = <span class="built_in">document</span>.getElementById(<span class="string">'header'</span>);</span><br><span class="line">	<span class="comment">//获取所有按钮</span></span><br><span class="line">	<span class="keyword">var</span> li =<span class="built_in">document</span>.getElementsByTagName(<span class="string">'li'</span>);</span><br><span class="line">	<span class="comment">//定义上一个数 保存第一个数</span></span><br><span class="line">	<span class="keyword">var</span> per_number = <span class="literal">null</span>;</span><br><span class="line">	<span class="comment">//定义下一个数 保存第二个数</span></span><br><span class="line">	<span class="keyword">var</span> next_number = <span class="literal">null</span>;</span><br><span class="line">	<span class="comment">//定义一个字符串类型保存运算符</span></span><br><span class="line">	<span class="keyword">var</span> operation = <span class="string">''</span>;</span><br><span class="line">	<span class="comment">//记录符号的类型，1为无，0为运算符，2为等于号</span></span><br><span class="line">	<span class="keyword">var</span> flag = <span class="number">0</span>;</span><br><span class="line">	<span class="comment">//给所有按钮添加点击事件</span></span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">var</span> i=<span class="number">0</span>;i&lt;li.length;i++) &#123;</span><br><span class="line">		li[i].onclick = <span class="function"><span class="keyword">function</span> (<span class="params"></span>)</span>&#123;</span><br><span class="line">			<span class="keyword">switch</span> (<span class="keyword">this</span>.innerHTML)&#123;</span><br><span class="line">				<span class="comment">//清除按钮的点击事件</span></span><br><span class="line">				<span class="keyword">case</span> <span class="string">'C'</span>:</span><br><span class="line">				<span class="keyword">case</span> <span class="string">'AC'</span>:</span><br><span class="line">					<span class="comment">//把所有数据以及变量都初始化</span></span><br><span class="line">					per_number = <span class="literal">null</span>;</span><br><span class="line">					next_number = <span class="literal">null</span>;</span><br><span class="line">					operation = <span class="string">""</span>;</span><br><span class="line">					flag = <span class="number">0</span>;</span><br><span class="line">					header.innerHTML = <span class="string">"0"</span>;</span><br><span class="line">					<span class="keyword">break</span>;</span><br><span class="line">				<span class="comment">//正负切换按钮的点击事件</span></span><br><span class="line">				<span class="keyword">case</span><span class="string">'+/-'</span>:</span><br><span class="line">					header.innerHTML= <span class="number">-1</span>*<span class="built_in">Number</span>(header.innerHTML);</span><br><span class="line">					<span class="keyword">break</span>;</span><br><span class="line">				<span class="comment">//百分比的点击事件</span></span><br><span class="line">				<span class="keyword">case</span><span class="string">'%'</span>:</span><br><span class="line">					header.innerHTML = <span class="built_in">Number</span>(header.innerHTML)/<span class="number">100</span>;</span><br><span class="line">					<span class="keyword">break</span>;</span><br><span class="line">				<span class="comment">//数字按钮的点击事件</span></span><br><span class="line">				<span class="keyword">case</span><span class="string">'1'</span>:</span><br><span class="line">				<span class="keyword">case</span><span class="string">'2'</span>:</span><br><span class="line">				<span class="keyword">case</span><span class="string">'3'</span>:</span><br><span class="line">				<span class="keyword">case</span><span class="string">'4'</span>:</span><br><span class="line">				<span class="keyword">case</span><span class="string">'5'</span>:</span><br><span class="line">				<span class="keyword">case</span><span class="string">'6'</span>:</span><br><span class="line">				<span class="keyword">case</span><span class="string">'7'</span>:</span><br><span class="line">				<span class="keyword">case</span><span class="string">'8'</span>:</span><br><span class="line">				<span class="keyword">case</span><span class="string">'9'</span>:</span><br><span class="line">				<span class="keyword">case</span><span class="string">'0'</span>:</span><br><span class="line">					</span><br><span class="line">					<span class="keyword">if</span> (header.innerHTML == <span class="string">"0"</span> || flag==<span class="number">0</span> || flag==<span class="number">2</span>) &#123;</span><br><span class="line">					<span class="comment">//当计算框为零，或者刚点击完运算符，或者刚点击完等于号时</span></span><br><span class="line">						header.innerHTML = <span class="keyword">this</span>.innerHTML;<span class="comment">//赋值</span></span><br><span class="line">						<span class="keyword">if</span>(flag==<span class="number">2</span>)&#123;</span><br><span class="line">						<span class="comment">//刚点击完等于号时</span></span><br><span class="line">							per_number = <span class="literal">null</span>;<span class="comment">//清空第一个数</span></span><br><span class="line">						&#125;</span><br><span class="line">						<span class="comment">//修改点击符号为数字</span></span><br><span class="line">						flag = <span class="number">1</span>;</span><br><span class="line">					&#125; </span><br><span class="line">					<span class="keyword">else</span>&#123;</span><br><span class="line">					<span class="comment">//否则拼接字符串</span></span><br><span class="line">						header.innerHTML += <span class="keyword">this</span>.innerHTML;</span><br><span class="line">					&#125;</span><br><span class="line">					<span class="keyword">break</span>;</span><br><span class="line">				<span class="comment">//四则运算的点击事件</span></span><br><span class="line">				<span class="keyword">case</span><span class="string">'+'</span>:</span><br><span class="line">				<span class="keyword">case</span><span class="string">'-'</span>:</span><br><span class="line">				<span class="keyword">case</span><span class="string">'*'</span>:</span><br><span class="line">				<span class="keyword">case</span><span class="string">'/'</span>:</span><br><span class="line">					<span class="keyword">if</span>(per_number == <span class="literal">null</span> || flag == <span class="number">2</span>)&#123;</span><br><span class="line">					<span class="comment">//第一个数为空，或者刚点击完等于号时，第一个数等于计算框里的数字</span></span><br><span class="line">						per_number = <span class="built_in">Number</span>(header.innerHTML);</span><br><span class="line">					&#125;<span class="keyword">else</span> <span class="keyword">if</span>(operation != <span class="string">''</span> &amp;&amp; flag!=<span class="number">0</span>)&#123;</span><br><span class="line">					<span class="comment">//运算符不等于空，或者不是刚点击完运算符时，第二个数等于计算框里的数字</span></span><br><span class="line">						next_number = <span class="built_in">Number</span>(header.innerHTML);</span><br><span class="line">						_equals(operation);<span class="comment">//进行四则运算</span></span><br><span class="line">					&#125;</span><br><span class="line">					flag = <span class="number">0</span>;<span class="comment">//修改点击符号为运算符</span></span><br><span class="line">					operation =<span class="keyword">this</span>.innerHTML;<span class="comment">//保存运算符</span></span><br><span class="line">					<span class="keyword">break</span>;</span><br><span class="line">				<span class="comment">//等于的点击事件</span></span><br><span class="line">				<span class="keyword">case</span><span class="string">'='</span>:</span><br><span class="line">					<span class="keyword">if</span>(operation != <span class="string">''</span>)&#123;</span><br><span class="line">					<span class="comment">//运算符不为空时</span></span><br><span class="line">						<span class="keyword">if</span>(flag == <span class="number">1</span>)&#123;</span><br><span class="line">						<span class="comment">//刚点击完数字时，第二个数等于计算框里的数字</span></span><br><span class="line">							next_number = <span class="built_in">Number</span>(header.innerHTML);</span><br><span class="line">						&#125;</span><br><span class="line">						_equals(operation);<span class="comment">//进行四则运算</span></span><br><span class="line">					&#125;</span><br><span class="line">					flag = <span class="number">2</span>;<span class="comment">//修改点击符号为等于号</span></span><br><span class="line">					<span class="keyword">break</span>;</span><br><span class="line">					<span class="comment">//.的点击事件</span></span><br><span class="line">				<span class="keyword">default</span>:</span><br><span class="line">					<span class="keyword">if</span> (header.innerHTML == <span class="string">"0"</span> || flag==<span class="number">0</span> || flag==<span class="number">2</span>) &#123;</span><br><span class="line">					<span class="comment">//当计算框为零，或者刚点击完运算符，或者刚点击完等于号时，输出0.</span></span><br><span class="line">						header.innerHTML = <span class="string">'0'</span>+<span class="keyword">this</span>.innerHTML;</span><br><span class="line">						flag = <span class="number">1</span>;</span><br><span class="line">					&#125;<span class="keyword">else</span>&#123;</span><br><span class="line">						<span class="keyword">if</span>(header.innerHTML.indexOf(<span class="string">'.'</span>,<span class="number">0</span>) == <span class="number">-1</span>)&#123;</span><br><span class="line">						<span class="comment">//计算框内没有.时，拼接0.</span></span><br><span class="line">							header.innerHTML += <span class="keyword">this</span>.innerHTML;</span><br><span class="line">						&#125;</span><br><span class="line">					&#125;</span><br><span class="line">					<span class="keyword">break</span>;</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="comment">//AC与C的切换</span></span><br><span class="line">			<span class="keyword">if</span>((li[<span class="number">0</span>].innerHTML == <span class="string">'AC'</span> || <span class="keyword">this</span>.innerHTML != li[<span class="number">0</span>].innerHTML) &amp;&amp; <span class="keyword">this</span>.innerHTML!=<span class="string">"AC"</span>)&#123;</span><br><span class="line">			<span class="comment">//清除键内容为 AC或者当前点击不是清除键,和当前点击内容不是AC</span></span><br><span class="line">				li[<span class="number">0</span>].innerHTML =<span class="string">'C'</span>;<span class="comment">//修改清除键内容为C</span></span><br><span class="line">			&#125;<span class="keyword">else</span>&#123;</span><br><span class="line">				li[<span class="number">0</span>].innerHTML =<span class="string">'AC'</span>;<span class="comment">//修改清除键内容为AC</span></span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="comment">//文档点击事件，设置计算框自适应字体大小</span></span><br><span class="line">	<span class="built_in">document</span>.onclick =<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">		<span class="keyword">if</span>(header.innerHTML.length&lt;<span class="number">8</span>)&#123;</span><br><span class="line">		<span class="comment">//计算框内容长度小于8时，字体大小为60px</span></span><br><span class="line">			header.style.fontSize = <span class="string">"60px"</span></span><br><span class="line">		&#125;<span class="keyword">else</span> <span class="keyword">if</span>(header.innerHTML.length&lt;<span class="number">16</span>)&#123;</span><br><span class="line">		<span class="comment">//计算框内容长度大于8小于16时，字体大小为30px</span></span><br><span class="line">			header.style.fontSize = <span class="string">"30px"</span>;</span><br><span class="line">		&#125;<span class="keyword">else</span> <span class="keyword">if</span>(header.innerHTML.length&lt;<span class="number">24</span>)&#123;</span><br><span class="line">		<span class="comment">//计算框内容长度大于16小于24时，字体大小为20px</span></span><br><span class="line">			header.style.fontSize = <span class="string">"20px"</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">else</span> <span class="keyword">if</span>(header.innerHTML.length&lt;<span class="number">30</span>)&#123;</span><br><span class="line">		<span class="comment">//计算框内容长度大于24小于30时，字体大小为16px</span></span><br><span class="line">			header.style.fontSize = <span class="string">"16px"</span>;</span><br><span class="line">		&#125;<span class="keyword">else</span>&#123;</span><br><span class="line">		<span class="comment">//计算框内容长度大于30时，字体大小为12px</span></span><br><span class="line">			header.style.fontSize = <span class="string">"12px"</span>;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="comment">//四则运算的函数</span></span><br><span class="line">	<span class="function"><span class="keyword">function</span> <span class="title">_equals</span>(<span class="params">operation</span>)</span>&#123;</span><br><span class="line">		<span class="keyword">switch</span> (operation)&#123;</span><br><span class="line">			<span class="keyword">case</span> <span class="string">'+'</span>:<span class="comment">//加运算符</span></span><br><span class="line">				per_number += next_number;</span><br><span class="line">				<span class="keyword">break</span>;</span><br><span class="line">			<span class="keyword">case</span> <span class="string">'-'</span>:<span class="comment">//减运算符</span></span><br><span class="line">				per_number -= next_number;</span><br><span class="line">				<span class="keyword">break</span>;</span><br><span class="line">			<span class="keyword">case</span> <span class="string">'*'</span>:<span class="comment">//乘运算符</span></span><br><span class="line">				per_number *= next_number;</span><br><span class="line">				<span class="keyword">break</span>;</span><br><span class="line">			<span class="keyword">case</span> <span class="string">'/'</span>:<span class="comment">//除运算符</span></span><br><span class="line">				<span class="keyword">if</span>(next_number ==<span class="number">0</span> )&#123;</span><br><span class="line">					<span class="comment">//0为被除数时</span></span><br><span class="line">					per_number = <span class="literal">null</span>;<span class="comment">//设置计算结果为空</span></span><br><span class="line">				&#125;<span class="keyword">else</span>&#123;</span><br><span class="line">					per_number /= next_number;</span><br><span class="line">				&#125;</span><br><span class="line">				<span class="keyword">break</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">if</span>(per_number == <span class="literal">null</span>)&#123;</span><br><span class="line">			<span class="comment">//计算结果为空时，输出非数字NaN</span></span><br><span class="line">			header.innerHTML = <span class="literal">NaN</span>;</span><br><span class="line">		&#125;<span class="keyword">else</span>&#123;</span><br><span class="line">			header.innerHTML = per_number;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>以上例子仅供参考！！！！感谢您的阅读，祝您学习愉快！！</p>
-
-      
-    </div>
-    <footer>
-      
-        
-        
-        
-  <div class="addthis addthis_toolbox addthis_default_style">
-    
-      <a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>
-    
-    
-      <a class="addthis_button_tweet"></a>
-    
-    
-      <a class="addthis_button_google_plusone" g:plusone:size="medium"></a>
-    
-    
-      <a class="addthis_button_pinterest_pinit" pi:pinit:layout="horizontal"></a>
-    
-    <a class="addthis_counter addthis_pill_style"></a>
-  </div>
-  <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js"></script>
-
-      
-      <div class="clearfix"></div>
-    </footer>
-  </div>
-</article>
-
-
-<section id="comment">
-  <h1 class="title">Kommentare</h1>
-
   
-      <div id="fb-root"></div>
-<script>
-  (function(d, s, id) {
-    var js, fjs = d.getElementsByTagName(s)[0];
-    if (d.getElementById(id)) return;
-    js = d.createElement(s); js.id = id;
-    js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=123456789012345";
-    fjs.parentNode.insertBefore(js, fjs);
-  }(document, 'script', 'facebook-jssdk'));
-</script>
+	</div>
+		<footer class="article-footer clearfix">
 
-<div class="fb-comments" data-href="http://yoursite.com/2016/05/31/calculator/index.html" data-num-posts="5" data-width="840" data-colorscheme="light"></div>
-      
-  
-</section>
 
-</div></div>
-    <aside id="sidebar" class="alignright">
-  <div class="search">
-  <form action="//google.com/search" method="get" accept-charset="utf-8">
-    <input type="search" name="q" results="0" placeholder="Suche">
-    <input type="hidden" name="q" value="site:yoursite.com">
-  </form>
+
+
+<div class="article-share" id="share">
+
+  <div data-url="https://github.com/CrazyTwo/CrazyTwo.github.io/2016/05/31/calculator/" data-title="程序猿经典案例之计算器 | H5课堂笔记" data-tsina="null" class="share clearfix">
+  </div>
+
+</div>
+</footer>   	       
+	</article>
+	
+<nav class="article-nav clearfix">
+ 
+ <div class="prev" >
+ <a href="/2016/05/31/browser/" title="browser---浏览器检测">
+  <strong>PREVIOUS:</strong><br/>
+  <span>
+  browser---浏览器检测</span>
+</a>
 </div>
 
+
+<div class="next">
+<a href="/2016/05/28/String_dorpdownlist/"  title="String &amp; dorpdownlist(下拉列表)">
+ <strong>NEXT:</strong><br/> 
+ <span>String &amp; dorpdownlist(下拉列表)
+</span>
+</a>
+</div>
+
+</nav>
+
+	
+</div>  
+      <div class="openaside"><a class="navbutton" href="#" title="显示侧边栏"></a></div>
+
+  <div id="toc" class="toc-aside">
+  <strong class="toc-title">文章目录</strong>
+  <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#思路："><span class="toc-number">1.</span> <span class="toc-text">思路：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#HTML部分"><span class="toc-number">2.</span> <span class="toc-text">HTML部分</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#CSS部分"><span class="toc-number">3.</span> <span class="toc-text">CSS部分</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#js部分"><span class="toc-number">4.</span> <span class="toc-text">js部分</span></a></li></ol>
+  </div>
+
+<div id="asidepart">
+<div class="closeaside"><a class="closebutton" href="#" title="隐藏侧边栏"></a></div>
+<aside class="clearfix">
+
   
 
   
+
+  <div class="rsspart">
+	<a href="null" target="_blank" title="rss">RSS 订阅</a>
+</div>
+
+  <div class="widget tag">
+<h3 class="title">友情链接</h3>
+<ul class="entry">
+<li><a href="http://hongbinzuo.github.io/" title="Hongbin Zuo's Blog">Hongbin Zuo</a></li>
+</ul>
+</div>
+
 </aside>
-    <div class="clearfix"></div>
-  </div>
-  <footer id="footer" class="inner"><div class="alignleft">
-  
-  &copy; 2016 CrazyTwo
-  
 </div>
-<div class="clearfix"></div></footer>
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-<script src="/js/jquery.imagesloaded.min.js"></script>
-<script src="/js/gallery.js"></script>
-
-
-
-
-<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
-<script src="/fancybox/jquery.fancybox.pack.js"></script>
+    </div>
+    <footer><div id="footer" >
+	
+	
+	<div class="social-font" class="clearfix">
+		
+		
+		<a href="https://twitter.com/https://twitter.com/Crazytwo8" target="_blank" title="twitter"></a>
+		
+		
+		<a href="https://github.com/https://github.com/CrazyTwo" target="_blank" title="github"></a>
+		
+		
+	</div>
+		<p class="copyright">Powered by <a href="http://zespia.tw/hexo/" target="_blank" title="hexo">hexo</a> and Theme by <a href="https://github.com/A-limon/pacman" target="_blank" title="Pacman">Pacman</a> © 2016 
+		
+		<a href="https://github.com/CrazyTwo/CrazyTwo.github.io" target="_blank" title="CrazyTwo">CrazyTwo</a>
+		
+		</p>
+</div>
+</footer>
+    <script src="/js/jquery-2.0.3.min.js"></script>
 <script type="text/javascript">
-(function($){
-  $('.fancybox').fancybox();
-})(jQuery);
+$(document).ready(function(){ 
+  $('.navbar').click(function(){
+    $('header nav').toggleClass('shownav');
+  });
+  var myWidth = 0;
+  function getSize(){
+    if( typeof( window.innerWidth ) == 'number' ) {
+      myWidth = window.innerWidth;
+    } else if( document.documentElement && document.documentElement.clientWidth) {
+      myWidth = document.documentElement.clientWidth;
+    };
+  };
+  var m = $('#main'),
+      a = $('#asidepart'),
+      c = $('.closeaside'),
+      o = $('.openaside');
+  $(window).resize(function(){
+    getSize(); 
+    if (myWidth >= 1024) {
+      $('header nav').removeClass('shownav');
+    }else
+    {
+      m.removeClass('moveMain');
+      a.css('display', 'block').removeClass('fadeOut');
+      o.css('display', 'none');
+      
+      $('#toc.toc-aside').css('display', 'none');
+        
+    }
+  });
+  c.click(function(){
+    a.addClass('fadeOut').css('display', 'none');
+    o.css('display', 'block').addClass('fadeIn');
+    m.addClass('moveMain');
+  });
+  o.click(function(){
+    o.css('display', 'none').removeClass('beforeFadeIn');
+    a.css('display', 'block').removeClass('fadeOut').addClass('fadeIn');      
+    m.removeClass('moveMain');
+  });
+  $(window).scroll(function(){
+    o.css("top",Math.max(80,260-$(this).scrollTop()));
+  });
+});
 </script>
 
-</body>
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var ai = $('.article-content>iframe'),
+      ae = $('.article-content>embed'),
+      t  = $('#toc'),
+      h  = $('article h2')
+      ah = $('article h2'),
+      ta = $('#toc.toc-aside'),
+      o  = $('.openaside'),
+      c  = $('.closeaside');
+  if(ai.length>0){
+    ai.wrap('<div class="video-container" />');
+  };
+  if(ae.length>0){
+   ae.wrap('<div class="video-container" />');
+  };
+  if(ah.length==0){
+    t.css('display','none');
+  }else{
+    c.click(function(){
+      ta.css('display', 'block').addClass('fadeIn');
+    });
+    o.click(function(){
+      ta.css('display', 'none');
+    });
+    $(window).scroll(function(){
+      ta.css("top",Math.max(140,320-$(this).scrollTop()));
+    });
+  };
+});
+</script>
+
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var $this = $('.share'),
+      url = $this.attr('data-url'),
+      encodedUrl = encodeURIComponent(url),
+      title = $this.attr('data-title'),
+      tsina = $this.attr('data-tsina');
+  var html = [
+  '<a href="#" class="overlay" id="qrcode"></a>',
+  '<div class="qrcode clearfix"><span>扫描二维码分享到微信朋友圈</span><a class="qrclose" href="#share"></a><strong>Loading...Please wait</strong><img id="qrcode-pic" data-src="http://s.jiathis.com/qrcode.php?url=' + encodedUrl + '"/></div>',
+  '<a href="#textlogo" class="article-back-to-top" title="Top"></a>',
+  '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+  '<a href="#qrcode" class="article-share-qrcode" title="QRcode"></a>',
+  '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+  '<a href="http://service.weibo.com/share/share.php?title='+title+'&url='+encodedUrl +'&ralateUid='+ tsina +'&searchPic=true&style=number' +'" class="article-share-weibo" target="_blank" title="Weibo"></a>',
+  '<span title="Share to"></span>'
+  ].join('');
+  $this.append(html);
+  $('.article-share-qrcode').click(function(){
+    var imgSrc = $('#qrcode-pic').attr('data-src');
+    $('#qrcode-pic').attr('src', imgSrc);
+    $('#qrcode-pic').load(function(){
+        $('.qrcode strong').text(' ');
+    });
+  });
+});     
+</script>
+
+
+
+
+
+
+  </body>
 </html>
