@@ -11,36 +11,15 @@
     
     <meta name="description" content="实现思路
 
-
 获取元素
-
-
-
 开始倒计时
-
-
-
 点击五个颜色按钮
-
-
-
 题目文字随机改变文字与颜色
-
-
-
 五个颜色按钮随机改变文字的顺序和颜色
-
-
-
 如果点击的内容文字与题目文字的颜色相等就加分，否则减分
-
-
-
 时间为0时，停止游戏
 
-
-
-HTML 代码12345678910111213141516">
+HTML 代码123456789101112131415161718192021222324&amp;lt;!">
     
     
     
@@ -109,7 +88,7 @@ HTML 代码12345678910111213141516">
     </p>
   <p class="article-time">
     <time datetime="2016-06-01T06:16:16.000Z" itemprop="datePublished">2016-06-01</time>
-    更新日期:<time datetime="2016-06-01T06:16:16.000Z" itemprop="dateModified">2016-06-01</time>
+    更新日期:<time datetime="2016-06-01T06:18:25.000Z" itemprop="dateModified">2016-06-01</time>
     
   </p>
 </header>
@@ -123,34 +102,13 @@ HTML 代码12345678910111213141516">
 		
 		<p>实现思路</p>
 <ul>
-<li><ol>
 <li>获取元素</li>
-</ol>
-</li>
-<li><ol>
 <li>开始倒计时</li>
-</ol>
-</li>
-<li><ol>
 <li>点击五个颜色按钮</li>
-</ol>
-</li>
-<li><ol>
 <li>题目文字随机改变文字与颜色</li>
-</ol>
-</li>
-<li><ol>
 <li>五个颜色按钮随机改变文字的顺序和颜色</li>
-</ol>
-</li>
-<li><ol>
 <li>如果点击的内容文字与题目文字的颜色相等就加分，否则减分</li>
-</ol>
-</li>
-<li><ol>
 <li>时间为0时，停止游戏</li>
-</ol>
-</li>
 </ul>
 <h1 id="HTML-代码"><a href="#HTML-代码" class="headerlink" title="HTML 代码"></a>HTML 代码</h1><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!Doctype html&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">"en"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"viewport"</span> <span class="attr">content</span>=<span class="string">"width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">title</span>&gt;</span>Document<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"wrap"</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"dao"</span>&gt;</span>剩余时间：20<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"wan"</span>&gt;</span>完成：0<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"show"</span>&gt;</span>红<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"menu"</span>&gt;</span>根据上面的字的颜色从下面选择正确的字，选择正确计一分,否则扣一分<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">ul</span> <span class="attr">id</span>=<span class="string">"ul1"</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">li</span>&gt;</span>绿<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">li</span>&gt;</span>蓝<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">li</span>&gt;</span>黑<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">li</span>&gt;</span>黄<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">li</span>&gt;</span>红<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"button"</span> <span class="attr">id</span>=<span class="string">"start"</span> <span class="attr">value</span>=<span class="string">"开始"</span> /&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <h1 id="CSS代码"><a href="#CSS代码" class="headerlink" title="CSS代码"></a>CSS代码</h1><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br></pre></td><td class="code"><pre><span class="line">*&#123;</span><br><span class="line">	<span class="attribute">margin</span>:<span class="number">0</span>;</span><br><span class="line">	<span class="attribute">padding</span>: <span class="number">0</span>;</span><br><span class="line">	<span class="attribute">font-family</span>: <span class="string">"微软雅黑"</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">body</span>,<span class="selector-tag">html</span>&#123;</span><br><span class="line">	<span class="attribute">height</span>: <span class="number">100%</span>;</span><br><span class="line">	<span class="attribute">font-size</span>: <span class="number">15px</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-id">#wrap</span>&#123;</span><br><span class="line">	<span class="attribute">width</span>: <span class="number">400px</span>;</span><br><span class="line">	<span class="attribute">margin</span>: <span class="number">0</span> auto;</span><br><span class="line">	<span class="attribute">position</span>: relative;</span><br><span class="line">	<span class="attribute">height</span>: <span class="number">100%</span>;</span><br><span class="line">	<span class="attribute">min-height</span>: <span class="number">500px</span>;</span><br><span class="line">	<span class="attribute">max-height</span>: <span class="number">600px</span>;</span><br><span class="line">	<span class="attribute">border</span>: <span class="number">1px</span> solid <span class="number">#ccc</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-id">#dao</span>&#123;</span><br><span class="line">	<span class="attribute">position</span>: absolute;</span><br><span class="line">	<span class="attribute">left</span>: <span class="number">20px</span>;</span><br><span class="line">	<span class="attribute">top</span>: <span class="number">20px</span>;</span><br><span class="line">	<span class="attribute">font-size</span>: <span class="number">2em</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-id">#wan</span>&#123;</span><br><span class="line">	<span class="attribute">position</span>: absolute;</span><br><span class="line">	<span class="attribute">top</span>: <span class="number">20px</span>;</span><br><span class="line">	<span class="attribute">font-size</span>: <span class="number">2em</span>;</span><br><span class="line">	<span class="attribute">right</span>: <span class="number">20px</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-id">#show</span>&#123;</span><br><span class="line">	<span class="attribute">font-size</span>: <span class="number">10em</span>;</span><br><span class="line">	<span class="attribute">top</span>: <span class="number">90px</span>;</span><br><span class="line">	<span class="attribute">left</span>: <span class="number">120px</span>;</span><br><span class="line">	<span class="attribute">position</span>: absolute;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-id">#menu</span>&#123;</span><br><span class="line">	<span class="attribute">padding</span>: <span class="number">40px</span>;</span><br><span class="line">	<span class="attribute">font-size</span>: <span class="number">2em</span>;</span><br><span class="line">	<span class="attribute">top</span>: <span class="number">250px</span>;</span><br><span class="line">	<span class="attribute">position</span>: absolute;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-id">#ul1</span>&#123;</span><br><span class="line">	<span class="attribute">position</span>: absolute;</span><br><span class="line">	<span class="attribute">left</span>: <span class="number">0</span>;</span><br><span class="line">	<span class="attribute">bottom</span>: <span class="number">0</span>;</span><br><span class="line">	<span class="attribute">list-style</span>: none;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-id">#ul1</span> <span class="selector-tag">li</span>&#123;</span><br><span class="line">	<span class="attribute">float</span>: left;</span><br><span class="line">	<span class="attribute">font-size</span>: <span class="number">5em</span>;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">body</span>&#123;</span><br><span class="line">	<span class="attribute">text-align</span>: center;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-id">#start</span>&#123;</span><br><span class="line">	<span class="attribute">width</span>: <span class="number">100px</span>;</span><br><span class="line">	<span class="attribute">height</span>: <span class="number">50px</span>;</span><br><span class="line">	<span class="attribute">line-height</span>: <span class="number">50px</span>;</span><br><span class="line">	<span class="attribute">font-size</span>: <span class="number">45px</span>;</span><br><span class="line">	<span class="attribute">border</span>: none;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
