@@ -1,0 +1,186 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>函数 &amp; 变量的作用域 &amp; eval | H5课堂笔记</title>
+  <meta name="author" content="CrazyTwo">
+  
+  <meta name="description" content="这是我学习H5的笔记">
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <meta property="og:title" content="函数 &amp; 变量的作用域 &amp; eval"/>
+  <meta property="og:site_name" content="H5课堂笔记"/>
+
+  
+    <meta property="og:image" content="undefined"/>
+  
+
+  <link href="/favicon.png" rel="icon">
+  <link rel="alternate" href="/atom.xml" title="H5课堂笔记" type="application/atom+xml">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  
+
+</head>
+
+
+<body>
+  <header id="header" class="inner"><div class="alignleft">
+  <h1><a href="/">H5课堂笔记</a></h1>
+  <h2><a href="/"></a></h2>
+</div>
+<nav id="main-nav" class="alignright">
+  <ul>
+    
+      <li><a href="/">Home</a></li>
+    
+      <li><a href="/archives">Archives</a></li>
+    
+  </ul>
+  <div class="clearfix"></div>
+</nav>
+<div class="clearfix"></div></header>
+  <div id="content" class="inner">
+    <div id="main-col" class="alignleft"><div id="wrapper"><article class="post">
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
+        <time datetime="2016-05-31T13:36:16.000Z"><a href="/2016/05/31/fun/">2016-05-31</a></time>
+      
+      
+  
+    <h1 class="title">函数 &amp; 变量的作用域 &amp; eval</h1>
+  
+
+    </header>
+    <div class="entry">
+      
+        <h1 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h1><p>函数对任何语言来说都是一个核心的概念。通过函数可以封装任意多条语句，而且可以在任何地方、任何时候调用执行。 </p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment">// function show() &#123;</span></span><br><span class="line"><span class="comment">// 	alert("函数");</span></span><br><span class="line"><span class="comment">// &#125;</span></span><br><span class="line"><span class="comment">// show()//只有函数被调用，才会被之执行</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> show = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">	alert(<span class="string">"函数"</span>);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">1</span>;<span class="comment">//函数结束后的返回值，如果没有就是undefined</span></span><br><span class="line">	alert(<span class="string">"内容"</span>);<span class="comment">//return 后面的内容不会再执行</span></span><br><span class="line">&#125;</span><br><span class="line">alert(show())</span><br><span class="line"><span class="comment">//return 语句还有一个功能就是退出当前函数，注意和break 的区别。PS：break 用在循环和switch 分支语句里。</span></span><br></pre></td></tr></table></figure>
+<hr>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//传参</span></span><br><span class="line"><span class="keyword">var</span> show = <span class="function"><span class="keyword">function</span> (<span class="params">a,b</span>) </span>&#123;</span><br><span class="line">	<span class="comment">//模拟 var a = 7;</span></span><br><span class="line">	<span class="comment">//模拟 var b = 9;</span></span><br><span class="line">	<span class="keyword">var</span> sum = a + b;</span><br><span class="line">	<span class="keyword">return</span> sum;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// alert(show(7,9))</span></span><br><span class="line">alert(show(<span class="number">15</span>,<span class="number">38</span>))</span><br></pre></td></tr></table></figure>
+<hr>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//利用arguments写一个找最大值的变量</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">max</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">	<span class="keyword">var</span> max = <span class="built_in">arguments</span>[<span class="number">0</span>];</span><br><span class="line">	<span class="comment">// alert(arguments.length);</span></span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">1</span>; i &lt; <span class="built_in">arguments</span>.length; i++) &#123;</span><br><span class="line">		<span class="keyword">if</span> (max&lt;<span class="built_in">arguments</span>[i]) &#123;</span><br><span class="line">			max = <span class="built_in">arguments</span>[i];</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> max;		</span><br><span class="line">&#125;	</span><br><span class="line">alert(max(<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">35</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>,<span class="number">7</span>,<span class="number">8</span>))</span><br></pre></td></tr></table></figure>
+<hr>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//匿名函数</span></span><br><span class="line"><span class="keyword">var</span> num = (</span><br><span class="line">	<span class="function"><span class="keyword">function</span>(<span class="params">a,b</span>)</span>&#123;</span><br><span class="line"><span class="comment">//					alert(a+b);</span></span><br><span class="line">		<span class="keyword">return</span> a+b;</span><br><span class="line">	&#125;</span><br><span class="line">)(<span class="number">3</span>,<span class="number">4</span>);</span><br><span class="line">alert(num);</span><br></pre></td></tr></table></figure>
+<h1 id="变量的作用域"><a href="#变量的作用域" class="headerlink" title="变量的作用域"></a>变量的作用域</h1><p>变量的作用域无非就是两种：全局变量和局部变量。<br>Javascript语言的特殊之处，就在于函数内部可以直接读取全局变量。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a = <span class="number">5</span>;<span class="comment">//全局变量</span></span><br><span class="line"><span class="comment">/*</span><br><span class="line">	函数里面的变量定义了就是局部变量，</span><br><span class="line">	只能在当前函数里面使用</span><br><span class="line">*/</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">show</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">	<span class="keyword">var</span> a = <span class="number">10</span>;</span><br><span class="line">	alert(a);</span><br><span class="line">&#125;</span><br><span class="line">show();<span class="comment">//弹10</span></span><br><span class="line">alert(a);<span class="comment">//弹5</span></span><br></pre></td></tr></table></figure>
+<hr>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a = <span class="number">15</span>;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">show1</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">	a = <span class="number">10</span>;</span><br><span class="line">	<span class="function"><span class="keyword">function</span> <span class="title">show2</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">		alert(a)<span class="comment">//第一次弹undefined</span></span><br><span class="line">		<span class="keyword">var</span> a = <span class="number">5</span>;</span><br><span class="line">		alert(a);<span class="comment">//第二次弹5</span></span><br><span class="line">	&#125;</span><br><span class="line">	show2();</span><br><span class="line">	alert(a);<span class="comment">//第三次弹10</span></span><br><span class="line">&#125;</span><br><span class="line">show1()</span><br><span class="line">alert(a)<span class="comment">//第四次弹15</span></span><br></pre></td></tr></table></figure>
+<h2 id="作用域练习"><a href="#作用域练习" class="headerlink" title="作用域练习"></a>作用域练习</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a = <span class="number">6</span>;</span><br><span class="line">setTimeout(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    alert(a);<span class="comment">//66</span></span><br><span class="line">    a = <span class="number">666</span>;</span><br><span class="line"> &#125;, <span class="number">1000</span>);</span><br><span class="line"></span><br><span class="line"> a = <span class="number">66</span>;</span><br></pre></td></tr></table></figure>
+<hr>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a = <span class="number">6</span>;        <span class="comment">//a=6</span></span><br><span class="line">	(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">		(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">		    alert(a);</span><br><span class="line">		    a = <span class="number">666</span>;<span class="comment">//a = 666</span></span><br><span class="line">		&#125;)();</span><br><span class="line">	&#125;)();</span><br><span class="line">	a = <span class="number">66</span>; </span><br><span class="line">	alert(a)<span class="comment">//a =66</span></span><br></pre></td></tr></table></figure>
+<hr>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//匿名函数</span></span><br><span class="line">	<span class="keyword">var</span> num = (<span class="function"><span class="keyword">function</span> (<span class="params">a,b</span>) </span>&#123;</span><br><span class="line">		<span class="comment">// alert(a+b);</span></span><br><span class="line">		<span class="keyword">return</span> a+b;</span><br><span class="line">	&#125;)(<span class="number">3</span>,<span class="number">4</span>)</span><br><span class="line">	</span><br><span class="line">	alert(num)<span class="comment">//弹7</span></span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">function</span> <span class="title">show</span>(<span class="params">a,b</span>) </span>&#123;</span><br><span class="line">		alert(a+b)<span class="comment">//弹7</span></span><br><span class="line">	&#125;</span><br><span class="line">	show(<span class="number">3</span>,<span class="number">4</span>);</span><br></pre></td></tr></table></figure>
+<h1 id="闭包"><a href="#闭包" class="headerlink" title="闭包"></a>闭包</h1><p> JavaScript中所有的function都是一个闭包。不过一般来说，嵌套的function所产生的闭包更为强大，也是大部分时候我们所谓的“闭包”。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span><br><span class="line">		什么闭包：function函数就是一个闭包，闭包里面的变量是封闭的，函数外面不可以获取。</span><br><span class="line">		主要功能：function里面再嵌套一个函数，把这个函数返回出去</span><br><span class="line">		赋给外面的变量，函数外面就可以获取到函数里面的内容</span><br><span class="line"></span><br><span class="line">		注意的问题：闭包要注意内存溢出的问题，不可以乱用，需要用得才用</span><br><span class="line">	*/</span></span><br><span class="line">	<span class="function"><span class="keyword">function</span> <span class="title">a</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">		<span class="keyword">var</span> i = <span class="number">5</span>; <span class="comment">// a_i;</span></span><br><span class="line">		<span class="function"><span class="keyword">function</span> <span class="title">b</span>(<span class="params">n</span>) </span>&#123;</span><br><span class="line">			i += n;<span class="comment">//a_i</span></span><br><span class="line">			<span class="keyword">return</span> i;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">return</span> b;</span><br><span class="line">	&#125;	</span><br><span class="line">	<span class="keyword">var</span> c = a();</span><br><span class="line">	c(<span class="number">5</span>)</span><br><span class="line">	alert(c(<span class="number">5</span>))<span class="comment">//15</span></span><br><span class="line"></span><br><span class="line">	<span class="comment">// alert(c(1));//6</span></span><br><span class="line">	<span class="comment">// alert(c(5));//11</span></span><br></pre></td></tr></table></figure>
+<h2 id="闭包有什么作用？"><a href="#闭包有什么作用？" class="headerlink" title="闭包有什么作用？"></a>闭包有什么作用？</h2><p>简而言之，闭包的作用就是在a执行完并返回后，闭包使得javascript的垃圾回收机制GC不会收回a所占用的资源，因为a的内部函数b的执行需要依赖a中的变量。这是对闭包作用的非常直白的描述，不专业也不严谨，但大概意思就是这样，理解闭包需要循序渐进的过程。</p>
+<h2 id="使用闭包的注意点"><a href="#使用闭包的注意点" class="headerlink" title="使用闭包的注意点"></a>使用闭包的注意点</h2><p>由于闭包会使得函数中的变量都被保存在内存中，内存消耗很大，所以不能滥用闭包，否则会造成网页的性能问题，在IE中可能导致内存泄露。</p>
+<h1 id="案例练习"><a href="#案例练习" class="headerlink" title="案例练习"></a>案例练习</h1><h2 id="去重复"><a href="#去重复" class="headerlink" title="去重复"></a>去重复</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> arr = [<span class="number">5</span>,<span class="number">2</span>,<span class="number">1</span>,<span class="number">1</span>,<span class="number">1</span>,<span class="number">1</span>,<span class="number">3</span>,<span class="number">5</span>,<span class="number">6</span>,<span class="number">6</span>,<span class="number">6</span>,<span class="number">6</span>,<span class="number">2</span>,<span class="number">8</span>,<span class="number">3</span>,<span class="number">5</span>,<span class="number">9</span>,<span class="number">9</span>,<span class="number">9</span>,<span class="number">9</span>,<span class="number">9</span>,<span class="number">9</span>,<span class="number">9</span>];</span><br><span class="line">	<span class="comment">// 0  arr[0]==arr[5] 如果是重复 删掉arr[5]</span></span><br><span class="line">	<span class="comment">//splice(5,1)</span></span><br><span class="line">	</span><br><span class="line">	<span class="function"><span class="keyword">function</span> <span class="title">noRepeat</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; arr.length; i++) &#123;<span class="comment">//每个遍历一次</span></span><br><span class="line">			<span class="keyword">for</span> (<span class="keyword">var</span> j = i+<span class="number">1</span>; j &lt; arr.length; j++) &#123;<span class="comment">//与后面每个比较</span></span><br><span class="line">				<span class="keyword">if</span> (arr[i]==arr[j]) &#123;</span><br><span class="line">					arr.splice(j,<span class="number">1</span>)<span class="comment">//相同清除</span></span><br><span class="line">					j--;<span class="comment">//清除后，位置变化，j就要返回上一个</span></span><br><span class="line">				&#125;</span><br><span class="line">			&#125;					</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">return</span> arr;<span class="comment">//结束返回数组</span></span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">var</span> arr = noRepeat();</span><br><span class="line">	alert(arr);</span><br></pre></td></tr></table></figure>
+<hr>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> arr = [<span class="number">5</span>,<span class="number">2</span>,<span class="number">1</span>,<span class="number">1</span>,<span class="number">1</span>,<span class="number">1</span>,<span class="number">3</span>,<span class="number">5</span>,<span class="number">6</span>,<span class="number">6</span>,<span class="number">6</span>,<span class="number">6</span>,<span class="number">2</span>,<span class="number">8</span>,<span class="number">3</span>,<span class="number">5</span>,<span class="number">9</span>,<span class="number">9</span>,<span class="number">9</span>,<span class="number">9</span>,<span class="number">9</span>,<span class="number">9</span>,<span class="number">9</span>];</span><br><span class="line">	<span class="comment">// 0  arr[0]==arr[5] 如果是重复 删掉arr[5]</span></span><br><span class="line">	<span class="comment">//splice(5,1)	</span></span><br><span class="line">	<span class="function"><span class="keyword">function</span> <span class="title">noRepeat</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">		<span class="keyword">var</span> newArr = [];<span class="comment">//定义存放数组中不相同的值</span></span><br><span class="line">		newArr.push(arr[<span class="number">0</span>])<span class="comment">//初始化</span></span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">1</span>; i &lt; arr.length; i++) &#123;<span class="comment">//每个遍历一次</span></span><br><span class="line">			<span class="keyword">for</span> (<span class="keyword">var</span> j = <span class="number">0</span>; j &lt; newArr.length; j++) &#123;<span class="comment">//与后面每个比较</span></span><br><span class="line">				<span class="keyword">if</span> (newArr[j]==arr[i]) &#123;<span class="comment">//判断新数组的值是否与数组当前值相等，是就退出当前循环</span></span><br><span class="line">					<span class="keyword">break</span>;</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;	</span><br><span class="line">			<span class="comment">//判断新数组是否完全遍历，如果不是说明新数组的值与数组当前值相等，则不添加入新数组，否则反之</span></span><br><span class="line">			<span class="keyword">if</span> (j==newArr.length) &#123;</span><br><span class="line">				newArr.push(arr[i]);</span><br><span class="line">				<span class="comment">// newArr[newArr.length] = arr[i]</span></span><br><span class="line">			&#125;			</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">return</span> newArr;<span class="comment">//结束返回数组</span></span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">var</span> arr = noRepeat();</span><br><span class="line">	alert(arr);</span><br></pre></td></tr></table></figure>
+<h2 id="排序"><a href="#排序" class="headerlink" title="排序"></a>排序</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> arr = [<span class="number">5</span>,<span class="number">3</span>,<span class="number">2</span>,<span class="number">4</span>,<span class="number">8</span>,<span class="number">1</span>,<span class="number">7</span>,<span class="number">6</span>];</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">function</span> <span class="title">px</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">		<span class="built_in">document</span>.write(<span class="string">"i="</span>+<span class="number">0</span>+<span class="string">";j="</span>+<span class="number">0</span>+<span class="string">"-"</span>+arr+<span class="string">"&lt;br&gt;"</span>);</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; arr.length; i++) &#123;</span><br><span class="line">			<span class="keyword">for</span> (<span class="keyword">var</span> j = i+<span class="number">1</span>; j &lt; arr.length; j++) &#123;</span><br><span class="line">				<span class="keyword">if</span> (arr[i]&gt;arr[j]) &#123;</span><br><span class="line">					<span class="keyword">var</span> num = arr[i];</span><br><span class="line">					arr[i]=arr[j];</span><br><span class="line">					arr[j]=num;					</span><br><span class="line">				&#125;</span><br><span class="line">				<span class="built_in">document</span>.write(<span class="string">"i="</span>+i+<span class="string">";j="</span>+j+<span class="string">"-"</span>+arr+<span class="string">"&lt;br&gt;"</span>);</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="built_in">document</span>.write(<span class="string">"&lt;br&gt;"</span>);</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">return</span> arr;</span><br><span class="line">		</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">var</span> arr = px();</span><br><span class="line">	alert(arr);</span><br></pre></td></tr></table></figure>
+<h1 id="eval"><a href="#eval" class="headerlink" title="eval"></a>eval</h1><p>eval() 函数可将字符串转换为代码执行，并返回一个或多个值</p>
+<p>eval调用时，实例为eval( “ javascript代码 “ )</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">var str = "function()&#123;alert('a');&#125;“;</span><br><span class="line">str = eval(str);</span><br><span class="line">str();</span><br></pre></td></tr></table></figure>
+<p><strong>eval()的返回值</strong></p>
+<h2 id="eval-的返回值遵循以下规则："><a href="#eval-的返回值遵循以下规则：" class="headerlink" title="eval()的返回值遵循以下规则："></a>eval()的返回值遵循以下规则：</h2><ul>
+<li>1.如果eval()的参数不是字符串，那么eval()将直接返回参数。</li>
+<li>2.如果eval()的参数是字符串，那么eval()将这个字符串解析成代码后进行执行，并返回最后一行代码执行的结果。</li>
+<li>3.如果字符串无法解析成合法的代码，eval()将抛出错误。</li>
+</ul>
+
+      
+    </div>
+    <footer>
+      
+        
+        
+        
+  <div class="addthis addthis_toolbox addthis_default_style">
+    
+      <a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>
+    
+    
+      <a class="addthis_button_tweet"></a>
+    
+    
+      <a class="addthis_button_google_plusone" g:plusone:size="medium"></a>
+    
+    
+      <a class="addthis_button_pinterest_pinit" pi:pinit:layout="horizontal"></a>
+    
+    <a class="addthis_counter addthis_pill_style"></a>
+  </div>
+  <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js"></script>
+
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+<section id="comment">
+  <h1 class="title">Kommentare</h1>
+
+  
+      <div id="fb-root"></div>
+<script>
+  (function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=123456789012345";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));
+</script>
+
+<div class="fb-comments" data-href="http://yoursite.com/2016/05/31/fun/index.html" data-num-posts="5" data-width="840" data-colorscheme="light"></div>
+      
+  
+</section>
+
+</div></div>
+    <aside id="sidebar" class="alignright">
+  <div class="search">
+  <form action="//google.com/search" method="get" accept-charset="utf-8">
+    <input type="search" name="q" results="0" placeholder="Suche">
+    <input type="hidden" name="q" value="site:yoursite.com">
+  </form>
+</div>
+
+  
+
+  
+</aside>
+    <div class="clearfix"></div>
+  </div>
+  <footer id="footer" class="inner"><div class="alignleft">
+  
+  &copy; 2016 CrazyTwo
+  
+</div>
+<div class="clearfix"></div></footer>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+
+
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+</body>
+</html>

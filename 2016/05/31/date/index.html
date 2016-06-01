@@ -1,0 +1,164 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>日期对象-Date &amp;&amp; 定时器 | H5课堂笔记</title>
+  <meta name="author" content="CrazyTwo">
+  
+  <meta name="description" content="这是我学习H5的笔记">
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <meta property="og:title" content="日期对象-Date &amp;&amp; 定时器"/>
+  <meta property="og:site_name" content="H5课堂笔记"/>
+
+  
+    <meta property="og:image" content="undefined"/>
+  
+
+  <link href="/favicon.png" rel="icon">
+  <link rel="alternate" href="/atom.xml" title="H5课堂笔记" type="application/atom+xml">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  
+
+</head>
+
+
+<body>
+  <header id="header" class="inner"><div class="alignleft">
+  <h1><a href="/">H5课堂笔记</a></h1>
+  <h2><a href="/"></a></h2>
+</div>
+<nav id="main-nav" class="alignright">
+  <ul>
+    
+      <li><a href="/">Home</a></li>
+    
+      <li><a href="/archives">Archives</a></li>
+    
+  </ul>
+  <div class="clearfix"></div>
+</nav>
+<div class="clearfix"></div></header>
+  <div id="content" class="inner">
+    <div id="main-col" class="alignleft"><div id="wrapper"><article class="post">
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
+        <time datetime="2016-05-31T13:30:02.000Z"><a href="/2016/05/31/date/">2016-05-31</a></time>
+      
+      
+  
+    <h1 class="title">日期对象-Date &amp;&amp; 定时器</h1>
+  
+
+    </header>
+    <div class="entry">
+      
+        <h3 id="Date"><a href="#Date" class="headerlink" title="Date"></a>Date</h3><p><strong>时间戳:</strong>是指格林威治时间1970年01月01日00时00分00秒(北京时间1970年01月01日08时00分00秒)起至现在的总秒数</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// var oDate = new Date(2015,5,30);</span></span><br><span class="line"><span class="comment">// var oDate = new Date('2015-6-29');</span></span><br><span class="line"><span class="keyword">var</span> oDate = <span class="keyword">new</span> <span class="built_in">Date</span>()<span class="comment">//当前时间</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> year = oDate.getFullYear();<span class="comment">//获取年份</span></span><br><span class="line"><span class="keyword">var</span> month = oDate.getMonth();<span class="comment">//获取月份 0-11</span></span><br><span class="line"><span class="keyword">var</span> day = oDate.getDate();<span class="comment">//获取多少号</span></span><br><span class="line"><span class="keyword">var</span> week = oDate.getDay();<span class="comment">////返回星期几，0 表示星期日，6 表示星期六</span></span><br><span class="line"><span class="keyword">var</span> hour = oDate.getHours();<span class="comment">//获取时</span></span><br><span class="line"><span class="keyword">var</span> minutes = oDate.getMinutes()<span class="comment">//获取份</span></span><br><span class="line"><span class="keyword">var</span> second = oDate.getSeconds();<span class="comment">//获取秒</span></span><br><span class="line"><span class="keyword">var</span> time = oDate.getTime();<span class="comment">//获取时间戳</span></span><br><span class="line"><span class="built_in">document</span>.body.innerHTML = <span class="string">''</span>;</span><br><span class="line"><span class="built_in">document</span>.write(<span class="string">"年份:"</span>+year+<span class="string">"&lt;br&gt;"</span>)</span><br><span class="line"><span class="built_in">document</span>.write(<span class="string">"月份:"</span>+month+<span class="string">"&lt;br&gt;"</span>)</span><br><span class="line"><span class="built_in">document</span>.write(<span class="string">"日:"</span>+day+<span class="string">"&lt;br&gt;"</span>)</span><br><span class="line"><span class="built_in">document</span>.write(<span class="string">"星期:"</span>+week+<span class="string">"&lt;br&gt;"</span>)</span><br><span class="line"><span class="built_in">document</span>.write(<span class="string">"时:"</span>+hour+<span class="string">"&lt;br&gt;"</span>)</span><br><span class="line"><span class="built_in">document</span>.write(<span class="string">"分:"</span>+minutes+<span class="string">"&lt;br&gt;"</span>)</span><br><span class="line"><span class="built_in">document</span>.write(<span class="string">"秒:"</span>+second+<span class="string">"&lt;br&gt;"</span>)</span><br><span class="line"><span class="built_in">document</span>.write(<span class="string">"时间戳:"</span>+time+<span class="string">"&lt;br&gt;"</span>)</span><br></pre></td></tr></table></figure>
+<h3 id="setTimeout"><a href="#setTimeout" class="headerlink" title="setTimeout"></a>setTimeout</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span><br><span class="line"> 一次性定时器</span><br><span class="line"> setTimeout（a,b）;</span><br><span class="line"> a:函数</span><br><span class="line"> b:时间-每隔多少毫秒执行一次a的这个函数</span><br><span class="line"> */</span></span><br><span class="line">setTimeout(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">	alert(<span class="string">'一次性定时器'</span>);</span><br><span class="line">&#125;,<span class="number">1000</span>)</span><br></pre></td></tr></table></figure>
+<h3 id="setInterval"><a href="#setInterval" class="headerlink" title="setInterval"></a>setInterval</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span><br><span class="line"> 循环性定时器</span><br><span class="line"> setInterval（a,b）;</span><br><span class="line"> a:函数</span><br><span class="line"> b:时间-每隔多少毫秒执行一次a的这个函数</span><br><span class="line"> */</span></span><br><span class="line"><span class="comment">// setInterval(function()&#123;</span></span><br><span class="line"><span class="comment">// alert('循环性定时器');</span></span><br><span class="line"><span class="comment">// &#125;,1000)</span></span><br><span class="line"><span class="keyword">var</span> i = <span class="number">0</span>;</span><br><span class="line"><span class="keyword">var</span>  timer = setInterval(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">	i++;</span><br><span class="line">	<span class="keyword">if</span> (i&gt;<span class="number">5</span>) &#123;</span><br><span class="line">		clearInterval(timer);</span><br><span class="line">	&#125; <span class="keyword">else</span> &#123;</span><br><span class="line"><span class="comment">//					alert('循环性定时器');</span></span><br><span class="line">	&#125;</span><br><span class="line">&#125;,<span class="number">1000</span>)</span><br></pre></td></tr></table></figure>
+<h3 id="案例"><a href="#案例" class="headerlink" title="案例"></a>案例</h3><p>倒计时的实现</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">setInterval(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">	<span class="keyword">var</span> oDate = <span class="keyword">new</span> <span class="built_in">Date</span>()<span class="comment">//当前时间</span></span><br><span class="line">	<span class="keyword">var</span> d = <span class="keyword">new</span> <span class="built_in">Date</span>(<span class="string">"2016-6-9"</span>);</span><br><span class="line">	<span class="comment">//计算当前时间到端午节的时间戳 秒数</span></span><br><span class="line">	<span class="keyword">var</span> time = <span class="built_in">parseInt</span>((d-oDate)/<span class="number">1000</span>);</span><br><span class="line">	<span class="comment">//剩余天数 = 秒/（24*60*60）</span></span><br><span class="line">	<span class="keyword">var</span> day = <span class="built_in">parseInt</span>(time/<span class="number">86400</span>);</span><br><span class="line">	<span class="comment">//剩余小时数 = 秒%（24*60*60）/(60*60)</span></span><br><span class="line">	<span class="keyword">var</span> h = <span class="built_in">parseInt</span>(time%<span class="number">86400</span>/<span class="number">3600</span>);</span><br><span class="line">	<span class="comment">//剩余分钟数 = 秒%(60*60)/60</span></span><br><span class="line">	<span class="keyword">var</span> m = <span class="built_in">parseInt</span>(time%<span class="number">3600</span>/<span class="number">60</span>);</span><br><span class="line">	<span class="comment">//剩余秒数 = 秒%60</span></span><br><span class="line">	<span class="keyword">var</span> s = <span class="built_in">parseInt</span>(time%<span class="number">60</span>);</span><br><span class="line"></span><br><span class="line">	<span class="built_in">document</span>.body.innerHTML = <span class="string">"距离端午节放假还有："</span>+day+<span class="string">"天-"</span>+h+<span class="string">"小时-"</span>+m+<span class="string">"分"</span>+s+<span class="string">"秒"</span>;</span><br><span class="line">&#125;,<span class="number">1000</span>)</span><br></pre></td></tr></table></figure>
+<p>时钟的实现</p>
+<p>HTML部分</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">title</span>&gt;</span><span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>CSS部分</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.wrap</span>&#123;</span><br><span class="line">				<span class="attribute">width</span>: <span class="number">400px</span>;</span><br><span class="line">				<span class="attribute">height</span>: <span class="number">400px</span>;</span><br><span class="line">				<span class="attribute">border</span>: <span class="number">1px</span> solid powderblue;</span><br><span class="line">				<span class="attribute">border-radius</span>: <span class="number">50%</span>;</span><br><span class="line">				<span class="attribute">margin</span>: <span class="number">100px</span> auto;</span><br><span class="line">				<span class="attribute">position</span>: relative;</span><br><span class="line">				<span class="attribute">box-shadow</span>: <span class="number">1px</span> <span class="number">0.5px</span> <span class="number">1px</span> <span class="number">3px</span> <span class="number">#87CEEB</span> inset;</span><br><span class="line">				<span class="attribute">font-size</span>: <span class="number">18px</span>;</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="selector-class">.wrap</span> <span class="selector-class">.seconds</span>&#123;</span><br><span class="line">				<span class="attribute">width</span>: <span class="number">15px</span>;</span><br><span class="line">				<span class="attribute">height</span>: <span class="number">1.5px</span>;</span><br><span class="line">				<span class="attribute">background</span>: paleturquoise;</span><br><span class="line">				<span class="attribute">position</span>: absolute;</span><br><span class="line">				<span class="attribute">top</span>: <span class="number">0</span>;</span><br><span class="line">				<span class="attribute">left</span>: <span class="number">0</span>;</span><br><span class="line">				<span class="attribute">right</span>: <span class="number">0</span>;</span><br><span class="line">				<span class="attribute">bottom</span>: <span class="number">0</span>;</span><br><span class="line">				<span class="attribute">margin</span>: auto;</span><br><span class="line">				<span class="attribute">z-index</span>: -<span class="number">2</span>;</span><br><span class="line">				<span class="attribute">box-shadow</span>: <span class="number">1px</span> <span class="number">1px</span> <span class="number">1px</span> skyblue;</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="selector-class">.wrap</span> <span class="selector-class">.time</span>&#123;</span><br><span class="line">				<span class="attribute">width</span>: <span class="number">20px</span>;</span><br><span class="line">				<span class="attribute">height</span>: <span class="number">20px</span>;</span><br><span class="line">				<span class="attribute">position</span>: absolute;</span><br><span class="line">				<span class="attribute">top</span>: <span class="number">0</span>;</span><br><span class="line">				<span class="attribute">left</span>: <span class="number">0</span>;</span><br><span class="line">				<span class="attribute">right</span>: <span class="number">0</span>;</span><br><span class="line">				<span class="attribute">bottom</span>: <span class="number">0</span>;</span><br><span class="line">				<span class="attribute">margin</span>: auto;</span><br><span class="line">				<span class="attribute">border-radius</span>: <span class="number">50%</span>;</span><br><span class="line">				<span class="attribute">background</span>: skyblue;</span><br><span class="line">				<span class="attribute">box-shadow</span>: <span class="number">1px</span> <span class="number">1px</span> <span class="number">1px</span> black;</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="selector-class">.wrap</span> <span class="selector-class">.time</span> <span class="selector-tag">div</span>&#123;</span><br><span class="line">				<span class="attribute">border-radius</span>: <span class="number">50%</span> <span class="number">50%</span> <span class="number">0</span> <span class="number">0</span>;</span><br><span class="line">				<span class="attribute">z-index</span>: -<span class="number">1</span>;</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="selector-class">.wrap</span> <span class="selector-class">.seconds</span><span class="selector-pseudo">:nth-child(5n+1)</span>&#123;</span><br><span class="line">				<span class="attribute">width</span>: <span class="number">20px</span>;</span><br><span class="line">				<span class="attribute">height</span>: <span class="number">1.5px</span>;</span><br><span class="line">				<span class="attribute">background</span>: black;</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="selector-class">.wrap</span> <span class="selector-class">.time</span> <span class="selector-class">.s</span>&#123;</span><br><span class="line">				<span class="attribute">width</span>: <span class="number">2px</span>;</span><br><span class="line">				<span class="attribute">height</span>: <span class="number">230px</span>;</span><br><span class="line">				<span class="attribute">position</span>: absolute;</span><br><span class="line">				<span class="attribute">background</span>: red;</span><br><span class="line">				<span class="attribute">top</span>: <span class="number">0</span>;</span><br><span class="line">				<span class="attribute">left</span>: <span class="number">0</span>;</span><br><span class="line">				<span class="attribute">right</span>: <span class="number">0</span>;</span><br><span class="line">				<span class="attribute">bottom</span>: <span class="number">0</span>;</span><br><span class="line">				<span class="attribute">margin</span>: auto;</span><br><span class="line">				<span class="attribute">transform</span>: <span class="built_in">rotate</span>(0deg) <span class="built_in">translateY</span>(-80px);</span><br><span class="line">				<span class="attribute">box-shadow</span>: <span class="number">1px</span> <span class="number">1px</span> <span class="number">2px</span> black;</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="selector-class">.wrap</span> <span class="selector-class">.time</span> <span class="selector-class">.m</span>&#123;</span><br><span class="line">				<span class="attribute">width</span>: <span class="number">4px</span>;</span><br><span class="line">				<span class="attribute">height</span>: <span class="number">200px</span>;</span><br><span class="line">				<span class="attribute">position</span>: absolute;</span><br><span class="line">				<span class="attribute">background</span>: dodgerblue;</span><br><span class="line">				<span class="attribute">top</span>: <span class="number">0</span>;</span><br><span class="line">				<span class="attribute">left</span>: <span class="number">0</span>;</span><br><span class="line">				<span class="attribute">right</span>: <span class="number">0</span>;</span><br><span class="line">				<span class="attribute">bottom</span>: <span class="number">0</span>;</span><br><span class="line">				<span class="attribute">margin</span>: auto;</span><br><span class="line">				<span class="attribute">transform</span>: <span class="built_in">rotate</span>(0deg) <span class="built_in">translateY</span>(-70px);</span><br><span class="line">				<span class="attribute">box-shadow</span>: <span class="number">1px</span> <span class="number">1px</span> <span class="number">2px</span> black;</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="selector-class">.wrap</span> <span class="selector-class">.time</span> <span class="selector-class">.h</span>&#123;</span><br><span class="line">				<span class="attribute">width</span>: <span class="number">6px</span>;</span><br><span class="line">				<span class="attribute">height</span>: <span class="number">180px</span>;</span><br><span class="line">				<span class="attribute">position</span>: absolute;</span><br><span class="line">				<span class="attribute">background</span>: cadetblue;</span><br><span class="line">				<span class="attribute">top</span>: <span class="number">0</span>;</span><br><span class="line">				<span class="attribute">left</span>: <span class="number">0</span>;</span><br><span class="line">				<span class="attribute">right</span>: <span class="number">0</span>;</span><br><span class="line">				<span class="attribute">bottom</span>: <span class="number">0</span>;</span><br><span class="line">				<span class="attribute">margin</span>: auto;</span><br><span class="line">				<span class="attribute">transform</span>: <span class="built_in">rotate</span>(0deg) <span class="built_in">translateY</span>(-60px);</span><br><span class="line">				<span class="attribute">box-shadow</span>: <span class="number">1px</span> <span class="number">1px</span> <span class="number">2px</span> black;</span><br><span class="line">			&#125;</span><br></pre></td></tr></table></figure>
+<p>JS部分</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//画出时钟</span></span><br><span class="line"><span class="built_in">document</span>.write(<span class="string">'&lt;div class="wrap"&gt;'</span>);</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; <span class="number">60</span>; i ++) &#123;<span class="comment">//画出刻度</span></span><br><span class="line">	<span class="built_in">document</span>.write(<span class="string">"&lt;span class='seconds' style='transform: rotate("</span>+i*<span class="number">6</span>+<span class="string">"deg) translate(190px)'&gt;&lt;/span&gt;"</span>)</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">document</span>.write(<span class="string">"&lt;div class='time'&gt;"</span>)</span><br><span class="line"><span class="built_in">document</span>.write(<span class="string">"&lt;div class='h'&gt;&lt;/div&gt;"</span>);<span class="comment">//时针</span></span><br><span class="line"><span class="built_in">document</span>.write(<span class="string">"&lt;div class='m'&gt;&lt;/div&gt;"</span>);<span class="comment">//分针</span></span><br><span class="line"><span class="built_in">document</span>.write(<span class="string">"&lt;div class='s'&gt;&lt;/div&gt;"</span>);<span class="comment">//秒针</span></span><br><span class="line"><span class="built_in">document</span>.write(<span class="string">"&lt;/div&gt;"</span>);<span class="comment">//类time结束</span></span><br><span class="line"><span class="built_in">document</span>.write(<span class="string">'&lt;/div&gt;'</span>);<span class="comment">//类wrap结束</span></span><br><span class="line"><span class="comment">//通过类获取时分秒针</span></span><br><span class="line"><span class="keyword">var</span> s = <span class="built_in">document</span>.getElementsByClassName(<span class="string">'s'</span>)[<span class="number">0</span>];</span><br><span class="line"><span class="keyword">var</span> m = <span class="built_in">document</span>.getElementsByClassName(<span class="string">'m'</span>)[<span class="number">0</span>];</span><br><span class="line"><span class="keyword">var</span> h = <span class="built_in">document</span>.getElementsByClassName(<span class="string">'h'</span>)[<span class="number">0</span>];</span><br><span class="line">timer();<span class="comment">//初始分秒的旋转角度</span></span><br><span class="line">setInterval(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;<span class="comment">//循坏计时，每秒刷新一次达到时钟效果</span></span><br><span class="line">	timer();</span><br><span class="line">&#125;,<span class="number">1000</span>)</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">timer</span>(<span class="params"></span>)</span>&#123;<span class="comment">//获取当前时分秒的旋转角度</span></span><br><span class="line">	<span class="keyword">var</span> oDate = <span class="keyword">new</span> <span class="built_in">Date</span>();</span><br><span class="line">	<span class="comment">//秒针一圈60刻度，每秒6度，所以得出每秒旋转6度</span></span><br><span class="line">	s.style.transform = <span class="string">'rotate('</span>+(oDate.getSeconds()*<span class="number">6</span>)+<span class="string">'deg) translateY(-80px)'</span>;</span><br><span class="line">	<span class="comment">//分针一圈60刻度，每分6度，每秒旋转 秒/360*6*6所以得出每秒旋转oDate.getMinutes()*6+oDate.getSeconds()*0.1度</span></span><br><span class="line">	m.style.transform = <span class="string">'rotate('</span>+(oDate.getMinutes()*<span class="number">6</span>+oDate.getSeconds()*<span class="number">0.1</span>)+<span class="string">'deg) translateY(-70px)'</span>;</span><br><span class="line">	<span class="comment">//时针一圈12刻度，每时30度，每分旋转 分/360*30*6所以得出每分旋转oDate.getHours()*30+oDate.getMinutes()*0.5度</span></span><br><span class="line">	h.style.transform = <span class="string">'rotate('</span>+(oDate.getHours()*<span class="number">30</span>+oDate.getMinutes()*<span class="number">0.5</span>)+<span class="string">'deg) translateY(-60px)'</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+      
+    </div>
+    <footer>
+      
+        
+        
+        
+  <div class="addthis addthis_toolbox addthis_default_style">
+    
+      <a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>
+    
+    
+      <a class="addthis_button_tweet"></a>
+    
+    
+      <a class="addthis_button_google_plusone" g:plusone:size="medium"></a>
+    
+    
+      <a class="addthis_button_pinterest_pinit" pi:pinit:layout="horizontal"></a>
+    
+    <a class="addthis_counter addthis_pill_style"></a>
+  </div>
+  <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js"></script>
+
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+<section id="comment">
+  <h1 class="title">Kommentare</h1>
+
+  
+      <div id="fb-root"></div>
+<script>
+  (function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=123456789012345";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));
+</script>
+
+<div class="fb-comments" data-href="http://yoursite.com/2016/05/31/date/index.html" data-num-posts="5" data-width="840" data-colorscheme="light"></div>
+      
+  
+</section>
+
+</div></div>
+    <aside id="sidebar" class="alignright">
+  <div class="search">
+  <form action="//google.com/search" method="get" accept-charset="utf-8">
+    <input type="search" name="q" results="0" placeholder="Suche">
+    <input type="hidden" name="q" value="site:yoursite.com">
+  </form>
+</div>
+
+  
+
+  
+</aside>
+    <div class="clearfix"></div>
+  </div>
+  <footer id="footer" class="inner"><div class="alignleft">
+  
+  &copy; 2016 CrazyTwo
+  
+</div>
+<div class="clearfix"></div></footer>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+
+
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+</body>
+</html>
