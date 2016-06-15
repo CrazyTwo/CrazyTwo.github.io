@@ -1,0 +1,321 @@
+
+ <!DOCTYPE HTML>
+<html lang="中文">
+<head>
+  <meta charset="UTF-8">
+  
+    <title>案例 -- JS实现留言（DOM练习） | H5课堂笔记</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
+    
+    <meta name="author" content="CrazyTwo">
+    
+    <meta name="description" content="DOM 是 Document Object Model（文档对象模型）的缩写。
+根据 W3C 的 HTML DOM 标准，HTML 文档中的所有内容都是节点：
+
+整个文档是一个文档节点
+每个 HTML 元素是元素节点
+HTML 元素内的文本是文本节点
+每个 HTML 属性是属性节点
+注释是注释节点
+">
+    
+    
+    
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="https://twitter.com/Crazytwo8" />
+    <meta name="twitter:title" content="案例 -- JS实现留言（DOM练习） | H5课堂笔记" />
+      
+    
+    
+    
+    <link rel="icon" href="/img/favicon.ico">
+    
+    
+    <link rel="apple-touch-icon" href="/img/pacman.jpg">
+    <link rel="apple-touch-icon-precomposed" href="/img/pacman.jpg">
+    
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+  <body>
+    <header>
+      <div>
+		
+			<div id="imglogo">
+				<a href="/"><img src="/img/logo.svg" alt="H5课堂笔记" title="H5课堂笔记"/></a>
+			</div>
+			
+			<div id="textlogo">
+				<h1 class="site-name"><a href="/" title="H5课堂笔记">H5课堂笔记</a></h1>
+				<h2 class="blog-motto"></h2>
+			</div>
+			<div class="navbar"><a class="navbutton navmobile" href="#" title="菜单">
+			</a></div>
+			<nav class="animated">
+				<ul>
+					<ul>
+					 
+						<li><a href="/">Home</a></li>
+					
+						<li><a href="/archives">Archives</a></li>
+					
+					<li>
+					
+					<form class="search" action="//google.com/search" method="get" accept-charset="utf-8">
+						<label>Search</label>
+						<input type="search" id="search" name="q" autocomplete="off" maxlength="20" placeholder="Search" />
+						<input type="hidden" name="q" value="site:github.com/CrazyTwo/CrazyTwo.github.io">
+					</form>
+					
+					</li>
+				</ul>
+			</nav>			
+</div>
+    </header>
+    <div id="container">
+      <div id="main" class="post" itemscope itemprop="blogPost">
+	<article itemprop="articleBody"> 
+		<header class="article-info clearfix">
+  <h1 itemprop="name">
+    
+      <a href="/2016/06/13/node/" title="案例 -- JS实现留言（DOM练习）" itemprop="url">案例 -- JS实现留言（DOM练习）</a>
+  </h1>
+  <p class="article-author">By
+    
+      <a href="https://github.com/CrazyTwo/CrazyTwo.github.io" title="CrazyTwo">CrazyTwo</a>
+    </p>
+  <p class="article-time">
+    <time datetime="2016-06-13T06:02:41.000Z" itemprop="datePublished">2016-06-13</time>
+    更新日期:<time datetime="2016-06-15T13:34:18.000Z" itemprop="dateModified">2016-06-15</time>
+    
+  </p>
+</header>
+	<div class="article-content">
+		
+		
+		<div id="toc" class="toc-article">
+			<strong class="toc-title">文章目录</strong>
+		<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#js-实现-留言板"><span class="toc-number">1.</span> <span class="toc-text">js 实现 留言板</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#补充知识点"><span class="toc-number">2.</span> <span class="toc-text">补充知识点</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#复制节点"><span class="toc-number">2.1.</span> <span class="toc-text">复制节点</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#标签属性操作"><span class="toc-number">2.2.</span> <span class="toc-text">标签属性操作</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#childen"><span class="toc-number">2.3.</span> <span class="toc-text">childen</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#查找节点"><span class="toc-number">2.4.</span> <span class="toc-text">查找节点</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#查找元素在文档的top和left"><span class="toc-number">2.5.</span> <span class="toc-text">查找元素在文档的top和left</span></a></li></ol></li></ol>
+		</div>
+		
+		<p>DOM 是 Document Object Model（文档对象模型）的缩写。</p>
+<p>根据 W3C 的 HTML DOM 标准，HTML 文档中的所有内容都是节点：</p>
+<ul>
+<li>整个文档是一个文档节点</li>
+<li>每个 HTML 元素是元素节点</li>
+<li>HTML 元素内的文本是文本节点</li>
+<li>每个 HTML 属性是属性节点</li>
+<li>注释是注释节点</li>
+</ul>
+<h1 id="js-实现-留言板"><a href="#js-实现-留言板" class="headerlink" title="js 实现 留言板"></a>js 实现 留言板</h1><p>HTML</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">title</span>&gt;</span>留言吧<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"tween_js/tween.js"</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span> <span class="attr">charset</span>=<span class="string">"utf-8"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"wrap"</span>&gt;</span></span><br><span class="line">			<span class="tag">&lt;<span class="name">p</span>&gt;</span>姓名:<span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">id</span>=<span class="string">"username"</span> <span class="attr">value</span>=<span class="string">""</span>/&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">			<span class="tag">&lt;<span class="name">p</span>&gt;</span>内容:<span class="tag">&lt;<span class="name">textarea</span>  <span class="attr">rows</span>=<span class="string">"10"</span> <span class="attr">cols</span>=<span class="string">"35"</span> <span class="attr">id</span>=<span class="string">"message"</span>&gt;</span><span class="tag">&lt;/<span class="name">textarea</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">			<span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">"p"</span>&gt;</span><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"button"</span> <span class="attr">id</span>=<span class="string">"btn"</span> <span class="attr">value</span>=<span class="string">"提交"</span> /&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">			<span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"d"</span>&gt;</span></span><br><span class="line">				<span class="tag">&lt;<span class="name">h2</span>&gt;</span>显示留言<span class="tag">&lt;/<span class="name">h2</span>&gt;</span></span><br><span class="line">			<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">			<span class="tag">&lt;<span class="name">ul</span>&gt;</span></span><br><span class="line">				<span class="comment">&lt;!--&lt;li&gt;</span><br><span class="line">					&lt;div&gt;1&lt;/div&gt;&lt;div&gt;&lt;span&gt;1&lt;/span&gt;&lt;a href="###"&gt;删除&lt;/a&gt;&lt;/div&gt;</span><br><span class="line">				&lt;/li&gt;--&gt;</span></span><br><span class="line">			<span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>CSS</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">html</span>,<span class="selector-tag">body</span>&#123;</span><br><span class="line">	<span class="attribute">margin</span>: <span class="number">0</span>;</span><br><span class="line">	<span class="attribute">padding</span>: <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.wrap</span>&#123;</span><br><span class="line">	<span class="attribute">width</span>: <span class="number">500px</span>;</span><br><span class="line">	<span class="attribute">min-height</span>: <span class="number">500px</span>;</span><br><span class="line">	<span class="attribute">margin</span>: auto;</span><br><span class="line">	<span class="attribute">background-color</span>: <span class="number">#ddd</span>;</span><br><span class="line">	<span class="attribute">padding-top</span>: <span class="number">10px</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-id">#username</span>&#123;</span><br><span class="line">	<span class="attribute">width</span>: <span class="number">410px</span>;</span><br><span class="line">	<span class="attribute">height</span>: <span class="number">30px</span>;</span><br><span class="line">	<span class="attribute">font-size</span>: <span class="number">20px</span>;</span><br><span class="line">	<span class="attribute">border</span>: <span class="number">1px</span> solid <span class="number">#bbb</span>;</span><br><span class="line">	<span class="attribute">vertical-align</span>: middle;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">p</span>&#123;</span><br><span class="line">	<span class="attribute">width</span>: <span class="number">500px</span>;</span><br><span class="line">	<span class="attribute">line-height</span>: <span class="number">16px</span>;</span><br><span class="line">	<span class="attribute">text-align</span>: center;</span><br><span class="line">	<span class="attribute">font-weight</span>: bolder;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">textarea</span>&#123;</span><br><span class="line">	<span class="attribute">vertical-align</span>: text-top;</span><br><span class="line">	<span class="attribute">font-size</span>: <span class="number">20px</span>;</span><br><span class="line">	<span class="attribute">border</span>: <span class="number">1px</span> solid <span class="number">#bbb</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.p</span>&#123;</span><br><span class="line">	<span class="attribute">width</span>: <span class="number">220px</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-id">#btn</span>&#123;</span><br><span class="line">	<span class="attribute">width</span>: <span class="number">90px</span>;</span><br><span class="line">	<span class="attribute">height</span>: <span class="number">30px</span>;</span><br><span class="line">	<span class="attribute">border</span>: <span class="number">1px</span> solid <span class="number">#bbb</span>;</span><br><span class="line">	<span class="attribute">background</span>: white;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.d</span>&#123;</span><br><span class="line">	<span class="attribute">width</span>: <span class="number">450px</span>;</span><br><span class="line">	<span class="attribute">margin</span>: auto;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">ul</span>&#123;</span><br><span class="line">	<span class="attribute">list-style</span>: none;</span><br><span class="line">	<span class="attribute">margin</span>: <span class="number">0</span>;</span><br><span class="line">	<span class="attribute">padding</span>: <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">li</span>&#123;</span><br><span class="line">	<span class="attribute">border-bottom</span>: <span class="number">1px</span> solid <span class="number">#999999</span>;</span><br><span class="line">	<span class="attribute">height</span>: <span class="number">80px</span>;</span><br><span class="line">	<span class="attribute">overflow</span>: hidden;</span><br><span class="line">	<span class="comment">/*margin-bottom: 10px;*/</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">li</span> <span class="selector-tag">div</span>&#123;</span><br><span class="line">	<span class="attribute">width</span>: <span class="number">450px</span>;</span><br><span class="line">	<span class="attribute">margin</span>: auto;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">li</span> <span class="selector-tag">div</span><span class="selector-pseudo">:nth-child(1)</span>&#123;</span><br><span class="line">	<span class="attribute">width</span>: <span class="number">435px</span>;</span><br><span class="line">	<span class="attribute">background</span>: <span class="number">#999</span>;</span><br><span class="line">	<span class="attribute">line-height</span>: <span class="number">30px</span>;</span><br><span class="line">	<span class="attribute">padding-left</span>: <span class="number">1em</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">li</span> <span class="selector-tag">div</span><span class="selector-pseudo">:nth-child(2)</span>&#123;</span><br><span class="line">	<span class="attribute">background</span>: white;</span><br><span class="line">	<span class="attribute">min-height</span>: <span class="number">40px</span>;</span><br><span class="line">	<span class="attribute">overflow</span>: hidden;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">ul</span> <span class="selector-tag">li</span> <span class="selector-tag">span</span>&#123;</span><br><span class="line">	<span class="attribute">text-indent</span>: <span class="number">3em</span>;</span><br><span class="line">	<span class="attribute">float</span>: left;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">ul</span> <span class="selector-tag">li</span> <span class="selector-tag">a</span>&#123;</span><br><span class="line">	<span class="attribute">float</span>: right;</span><br><span class="line">	<span class="attribute">margin-right</span>: <span class="number">1em</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>JS</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span><br><span class="line"> * 知识点</span><br><span class="line"> * Selector参照jQuery的元素获取，通过css选择器获取元素</span><br><span class="line"> *querySelector获取一个元素，如果有多个同名的只选择第一个</span><br><span class="line"> *querySelectorAll获取一组元素，结果得到一个数组，使用方法与数组一样</span><br><span class="line">*/</span></span><br><span class="line"><span class="comment">//获取姓名文本框</span></span><br><span class="line"><span class="keyword">var</span> username = <span class="built_in">document</span>.querySelector(<span class="string">'#username'</span>);</span><br><span class="line"><span class="comment">//获取内容文本框</span></span><br><span class="line"><span class="keyword">var</span> message = <span class="built_in">document</span>.querySelector(<span class="string">'#message'</span>);</span><br><span class="line"><span class="comment">//获取按钮</span></span><br><span class="line"><span class="keyword">var</span> btn = <span class="built_in">document</span>.querySelector(<span class="string">'#btn'</span>);</span><br><span class="line"><span class="comment">//获取留言区ul</span></span><br><span class="line"><span class="keyword">var</span> ul = <span class="built_in">document</span>.querySelector(<span class="string">'ul'</span>);</span><br><span class="line">	</span><br><span class="line"><span class="comment">//按钮点击事件</span></span><br><span class="line">btn.onclick = <span class="function"><span class="keyword">function</span> (<span class="params"></span>)</span>&#123;</span><br><span class="line">	<span class="comment">//判断文本框是否为空，一个为空都要执行if里的代码块</span></span><br><span class="line">	<span class="keyword">if</span> (username.value == <span class="string">''</span> || message.value == <span class="string">''</span>) &#123;</span><br><span class="line">		alert(<span class="string">'请输入完整信息！'</span>);</span><br><span class="line">		<span class="keyword">return</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="comment">/*</span><br><span class="line">	 * 知识点</span><br><span class="line">	 * 在document（文档）中创建一个标签节点 document.createElement(obj)</span><br><span class="line">	 * 在元素里的后面添加 obj.appendChild(newNode)</span><br><span class="line">	 * 在元素里某个节点前面添加 obj.insertBefore(newNode, node)</span><br><span class="line">	 * 在元素里替换某个节点	obj.replaceChild(newNode, oldNode)</span><br><span class="line">	 * 在元素里移除某个节点	obj.removeChild(node)</span><br><span class="line">	 * 在元素里添加文本/HTML代码  obj.innerHTML = 文本/HTML代码</span><br><span class="line">	 * 获取文本框的光标 input.focus()</span><br><span class="line">	 */</span></span><br><span class="line">	<span class="keyword">var</span> li = <span class="built_in">document</span>.createElement(<span class="string">'li'</span>);<span class="comment">//创建一个li节点</span></span><br><span class="line">	<span class="comment">//给li添加内容</span></span><br><span class="line">	li.innerHTML = <span class="string">'&lt;div&gt;'</span>+username.value+<span class="string">'&lt;/div&gt;&lt;div&gt;&lt;span&gt;'</span>+message.value+<span class="string">'&lt;/span&gt;&lt;a href="###"&gt;删除&lt;/a&gt;&lt;/div&gt;'</span>;</span><br><span class="line">	li.style.height = <span class="string">'0px'</span>;<span class="comment">//高度设为0</span></span><br><span class="line">	ul.appendChild(li);<span class="comment">//在ul里面的最后面添加li</span></span><br><span class="line">	myFn(li,<span class="number">80</span>);<span class="comment">//启动动画函数</span></span><br><span class="line">	message.value = <span class="string">''</span>;<span class="comment">//清空内容</span></span><br><span class="line">	message.focus();<span class="comment">//让内容文本框获取光标</span></span><br><span class="line">	<span class="comment">//获取当前li里的删除标签</span></span><br><span class="line">	<span class="keyword">var</span> a = li.querySelector(<span class="string">'a'</span>);</span><br><span class="line">	<span class="comment">//设置当前li里的删除标签的点击事件</span></span><br><span class="line">	a.onclick = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">		<span class="comment">//启动动画函数</span></span><br><span class="line">		myFn(li,<span class="number">0</span>,<span class="function"><span class="keyword">function</span>(<span class="params">obj</span>)</span>&#123;</span><br><span class="line">			<span class="comment">//在动画末端添加函数执行另外操作</span></span><br><span class="line">			ul.removeChild(obj);<span class="comment">//移除当前a的爷爷li</span></span><br><span class="line">			<span class="comment">//退出函数</span></span><br><span class="line">			<span class="keyword">return</span>;</span><br><span class="line">		&#125;);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/*</span><br><span class="line"> * 函数注释</span><br><span class="line"> * 改变元素高度动画函数</span><br><span class="line"> * obj参数是你的元素，不可为空</span><br><span class="line"> * end参数是最终高度，不可为空</span><br><span class="line"> * fn参数是计时器结束后执行的回调函数，可为空</span><br><span class="line"> */</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">myFn</span>(<span class="params">obj,end,fn</span>)</span>&#123;</span><br><span class="line">	<span class="keyword">var</span> start = <span class="built_in">parseInt</span>(getStyle(obj,<span class="string">'height'</span>)) ;<span class="comment">//初始高度</span></span><br><span class="line">	<span class="keyword">var</span> change = end - start;<span class="comment">//改变的高度值</span></span><br><span class="line">	<span class="keyword">var</span> t = <span class="number">0</span>;<span class="comment">//第几步开始</span></span><br><span class="line">	<span class="keyword">var</span> endT = <span class="number">30</span>;<span class="comment">//执行步数</span></span><br><span class="line">	<span class="keyword">var</span> timer = setInterval(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;<span class="comment">//设置计时器</span></span><br><span class="line">		t++;<span class="comment">//每30毫秒加一步</span></span><br><span class="line">		<span class="keyword">if</span>(t &gt;= endT)&#123;<span class="comment">//当到达第30步时执行if里的代码块</span></span><br><span class="line">			clearInterval(timer);<span class="comment">//endT步后清除计时器</span></span><br><span class="line">			<span class="comment">//如果fn是一个函数则执行fn()，否则不执行</span></span><br><span class="line">			fn &amp;&amp; fn(obj);</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">var</span> h = Tween.Bounce.easeOut(t, start, change, endT);<span class="comment">//计算每30毫秒移动的距离</span></span><br><span class="line">		obj.style.height = h+<span class="string">'px'</span>;</span><br><span class="line">	&#125;,<span class="number">30</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/*</span><br><span class="line"> * 函数注释</span><br><span class="line"> * 获取元素非行内样式函数</span><br><span class="line"> * obj参数是你的元素，不可为空</span><br><span class="line"> * attr参数是样式属性，不可为空</span><br><span class="line"> * 返回的是属性值</span><br><span class="line"> */</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">getStyle</span>(<span class="params">obj,attr</span>)</span>&#123;</span><br><span class="line">	<span class="comment">/*</span><br><span class="line">	 * 知识点</span><br><span class="line">	 * currentStyle  IE下有，非IE下没有</span><br><span class="line">	 * getComputedStyle 非IE下有，IE下没有</span><br><span class="line">	 */</span></span><br><span class="line">	<span class="comment">//判断是否有obj.currentStyle，有就返回obj.currentStyle[attr]，没有返回getComputedStyle(obj,null)[attr]</span></span><br><span class="line">	<span class="keyword">return</span> obj.currentStyle?obj.currentStyle[attr]:getComputedStyle(obj,<span class="literal">null</span>)[attr];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="补充知识点"><a href="#补充知识点" class="headerlink" title="补充知识点"></a>补充知识点</h1><h2 id="复制节点"><a href="#复制节点" class="headerlink" title="复制节点"></a>复制节点</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">title</span>&gt;</span><span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">div</span> <span class="attr">style</span>=<span class="string">"background: bisque;"</span>&gt;</span></span><br><span class="line">			I'm Div</span><br><span class="line">			<span class="tag">&lt;<span class="name">span</span>&gt;</span>I'm Span<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;/<span class="name">body</span>&gt;</span><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> div =<span class="built_in">document</span>.querySelector(<span class="string">'div'</span>);</span><br><span class="line"><span class="comment">/*</span><br><span class="line"> * cloneNode:复制节点 参数为布尔值</span><br><span class="line"> * 参数为false：浅复制，只复制标签</span><br><span class="line"> * 参数为true： 深复制，复制标签所有内容</span><br><span class="line"> */</span></span><br><span class="line"><span class="keyword">var</span> clone_div = div.cloneNode(<span class="literal">false</span>);</span><br><span class="line">clone_div.innerHTML += <span class="string">"浅复制"</span>;</span><br><span class="line"><span class="keyword">var</span> clone_div1 = div.cloneNode(<span class="literal">true</span>);</span><br><span class="line">clone_div1.innerHTML += <span class="string">"深复制"</span>;</span><br><span class="line"><span class="built_in">document</span>.body.appendChild(clone_div);</span><br><span class="line"><span class="built_in">document</span>.body.appendChild(clone_div1);</span><br></pre></td></tr></table></figure>
+<h2 id="标签属性操作"><a href="#标签属性操作" class="headerlink" title="标签属性操作"></a>标签属性操作</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">title</span>&gt;</span><span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"d1"</span> <span class="attr">class</span>=<span class="string">"d1"</span> <span class="attr">abc</span>=<span class="string">"a"</span> <span class="attr">index</span>=<span class="string">"0"</span>&gt;</span></span><br><span class="line">			I'm Div</span><br><span class="line">		<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> div = <span class="built_in">document</span>.getElementById(<span class="string">'d1'</span>);</span><br><span class="line"><span class="comment">//alert(div.index);//undefined</span></span><br><span class="line"><span class="comment">//获取标签里的属性</span></span><br><span class="line">alert(div.getAttribute(<span class="string">"index"</span>));<span class="comment">//0</span></span><br><span class="line"><span class="comment">//修改标签里的属性</span></span><br><span class="line">div.setAttribute(<span class="string">'index'</span>, <span class="string">'5'</span>);</span><br><span class="line">alert(div.getAttribute(<span class="string">"index"</span>));<span class="comment">//5</span></span><br><span class="line"><span class="comment">//删除标签里的属性</span></span><br><span class="line">alert(div.getAttribute(<span class="string">"abc"</span>));<span class="comment">//a</span></span><br><span class="line">div.removeAttribute(<span class="string">'abc'</span>);</span><br><span class="line">alert(div.getAttribute(<span class="string">"abc"</span>));<span class="comment">//null</span></span><br></pre></td></tr></table></figure>
+<h2 id="childen"><a href="#childen" class="headerlink" title="childen"></a>childen</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">title</span>&gt;</span><span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">ul</span>&gt;</span></span><br><span class="line">			<span class="tag">&lt;<span class="name">li</span>&gt;</span>1<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">			<span class="tag">&lt;<span class="name">li</span>&gt;</span>2<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">			<span class="tag">&lt;<span class="name">li</span>&gt;</span>3<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">			<span class="tag">&lt;<span class="name">li</span>&gt;</span>4<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">			<span class="tag">&lt;<span class="name">li</span>&gt;</span>5<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">			<span class="tag">&lt;<span class="name">li</span>&gt;</span>6<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">			<span class="tag">&lt;<span class="name">li</span>&gt;</span>7<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">			<span class="tag">&lt;<span class="name">li</span>&gt;</span>8<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">			<span class="tag">&lt;<span class="name">li</span>&gt;</span>9<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">			<span class="tag">&lt;<span class="name">li</span>&gt;</span>10</span><br><span class="line">				<span class="tag">&lt;<span class="name">ul</span>&gt;</span></span><br><span class="line">					<span class="tag">&lt;<span class="name">li</span>&gt;</span>1<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">					<span class="tag">&lt;<span class="name">li</span>&gt;</span>2<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">					<span class="tag">&lt;<span class="name">li</span>&gt;</span>3<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">				<span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br><span class="line">			<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> ul = <span class="built_in">document</span>.querySelector(<span class="string">'ul'</span>);</span><br><span class="line"><span class="comment">//children获取所有是标签类型的子节点</span></span><br><span class="line"><span class="keyword">var</span> li = ul.children;<span class="comment">//获取ul里所有标签子节点</span></span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i&lt;li.length;i++) &#123;</span><br><span class="line">	<span class="keyword">if</span>(i%<span class="number">2</span> == <span class="number">0</span>)&#123;</span><br><span class="line">		li[i].style.background = <span class="string">'lavender'</span></span><br><span class="line">	&#125;<span class="keyword">else</span>&#123;</span><br><span class="line">		li[i].style.background = <span class="string">'blanchedalmond'</span></span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> l11 = li[<span class="number">9</span>].children[<span class="number">0</span>].children[<span class="number">1</span>];</span><br><span class="line">l11.style.background = <span class="string">'forestgreen'</span>;</span><br></pre></td></tr></table></figure>
+<h2 id="查找节点"><a href="#查找节点" class="headerlink" title="查找节点"></a>查找节点</h2><p>HTML</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">title</span>&gt;</span><span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">ul</span>&gt;</span></span><br><span class="line">			<span class="tag">&lt;<span class="name">li</span>&gt;</span>1<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">			<span class="tag">&lt;<span class="name">li</span>&gt;</span>2<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">			<span class="tag">&lt;<span class="name">li</span>&gt;</span>3<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">			<span class="tag">&lt;<span class="name">li</span>&gt;</span>4<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">			<span class="tag">&lt;<span class="name">li</span>&gt;</span>5<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">			<span class="tag">&lt;<span class="name">li</span>&gt;</span>6<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">			<span class="tag">&lt;<span class="name">li</span>&gt;</span>7<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">			<span class="tag">&lt;<span class="name">li</span>&gt;</span>8<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">			<span class="tag">&lt;<span class="name">li</span>&gt;</span>9<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">			<span class="tag">&lt;<span class="name">li</span>&gt;</span>10<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span></span></span><br></pre></td></tr></table></figure>
+<p>JS</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> ul = <span class="built_in">document</span>.querySelector(<span class="string">'ul'</span>);</span><br><span class="line"><span class="keyword">var</span> li = ul.children;</span><br><span class="line"><span class="comment">/*</span><br><span class="line"> * nextSibling</span><br><span class="line"> * 在IE下nextSibling查找的下一个节点只有节点类型为标签的节点，非IE下查找下一个节点为节点类型所有类型节点</span><br><span class="line"> */</span></span><br><span class="line"><span class="comment">//		alert(li[0].nextSibling.nodeName);//#text</span></span><br><span class="line"><span class="comment">//解决方法</span></span><br><span class="line"><span class="comment">//		if(li[0].nextElementSibling)&#123;</span></span><br><span class="line"><span class="comment">//			li[0].nextElementSibling.style.background = 'forestgreen';//非IE的方法（IE下没有这一方法）</span></span><br><span class="line"><span class="comment">//		&#125;else&#123;</span></span><br><span class="line"><span class="comment">//			li[0].nextSibling.style.background = 'forestgreen';//IE的方法</span></span><br><span class="line"><span class="comment">//		&#125;</span></span><br><span class="line">	</span><br><span class="line"><span class="comment">//***************************************************************************</span></span><br><span class="line">	</span><br><span class="line"><span class="comment">//查找下一个节点函数</span></span><br><span class="line"><span class="comment">/*</span><br><span class="line"> * obj参数为当前标签元素</span><br><span class="line"> */</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">nextFn</span> (<span class="params">obj</span>) </span>&#123;</span><br><span class="line">	<span class="keyword">return</span> obj.nextElementSibling?obj.nextElementSibling:obj.nextSibling;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//调用</span></span><br><span class="line">nextFn(li[<span class="number">1</span>]).style.background = <span class="string">'burlywood'</span>;</span><br><span class="line">	</span><br><span class="line"><span class="comment">//****************************************************************************</span></span><br><span class="line">	</span><br><span class="line"><span class="comment">//查找上一个节点函数</span></span><br><span class="line"><span class="comment">/*</span><br><span class="line"> * obj参数为当前标签元素</span><br><span class="line"> */</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">previousFn</span>(<span class="params">obj</span>)</span>&#123;</span><br><span class="line">	<span class="keyword">return</span> obj.previousElementSibling?obj.previousElementSibling:obj.previousSibling;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//调用</span></span><br><span class="line">previousFn(li[<span class="number">4</span>]).style.background = <span class="string">'skyblue'</span>;</span><br><span class="line">	</span><br><span class="line"><span class="comment">//***************************************************************************</span></span><br><span class="line">	</span><br><span class="line"><span class="comment">//查找第一个子节点函数</span></span><br><span class="line"><span class="comment">/*</span><br><span class="line"> * obj参数为第一个子节点的父级标签元素</span><br><span class="line"> */</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">firstFn</span>(<span class="params">obj</span>)</span>&#123;</span><br><span class="line">	<span class="keyword">return</span> obj.firstElementChild?obj.firstElementChild:obj.firstChild;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//调用</span></span><br><span class="line">firstFn(ul).style.background = <span class="string">'palegreen'</span>;</span><br><span class="line">	</span><br><span class="line"><span class="comment">//*****************************************************************************</span></span><br><span class="line">	</span><br><span class="line"><span class="comment">//查找最后一个子节点函数</span></span><br><span class="line"><span class="comment">/*</span><br><span class="line"> * obj参数为最后一个子节点的父级标签元素</span><br><span class="line"> */</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">lastFn</span>(<span class="params">obj</span>)</span>&#123;</span><br><span class="line">	<span class="keyword">return</span> obj.lastElementChild?obj.lastElementChild:obj.lastChild;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//调用</span></span><br><span class="line">lastFn(ul).style.background = <span class="string">'coral'</span>;</span><br><span class="line">	</span><br><span class="line"><span class="comment">//******************************************************************************</span></span><br></pre></td></tr></table></figure>
+<h2 id="查找元素在文档的top和left"><a href="#查找元素在文档的top和left" class="headerlink" title="查找元素在文档的top和left"></a>查找元素在文档的top和left</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span><br><span class="line">*offsetFn 查找元素在文档的top和left</span><br><span class="line">*obj 目标元素 不可为空</span><br><span class="line">*逐级询问父子的top和left 并返回json</span><br><span class="line">*/</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">offsetFn</span>(<span class="params">obj</span>) </span>&#123;</span><br><span class="line">	<span class="keyword">var</span> t = <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">var</span> l = <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">while</span>(obj)&#123;			</span><br><span class="line">		<span class="keyword">var</span> bT = <span class="built_in">parseInt</span>(getStyle(obj,<span class="string">"borderTopWidth"</span>));</span><br><span class="line">		<span class="keyword">var</span> bL = <span class="built_in">parseInt</span>(getStyle(obj,<span class="string">"borderLeftWidth"</span>));</span><br><span class="line">		t += obj.offsetTop + bT ;</span><br><span class="line">		l += obj.offsetLeft + bL;</span><br><span class="line">		obj = obj.offsetParent;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> &#123;<span class="string">"top"</span>:t,<span class="string">"left"</span>:l&#125;;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/*</span><br><span class="line"> * 函数注释</span><br><span class="line"> * 获取元素非行内样式函数</span><br><span class="line"> * obj参数是你的元素，不可为空</span><br><span class="line"> * attr参数是样式属性，不可为空</span><br><span class="line"> * 返回的是属性值</span><br><span class="line"> */</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">getStyle</span>(<span class="params">obj,attr</span>) </span>&#123;</span><br><span class="line">	<span class="keyword">if</span> (obj.currentStyle) &#123;</span><br><span class="line">		<span class="keyword">return</span> obj.currentStyle[attr];</span><br><span class="line">	&#125;<span class="keyword">else</span>&#123;</span><br><span class="line">		<span class="keyword">return</span> getComputedStyle(obj,<span class="literal">null</span>)[attr];</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//调用</span></span><br><span class="line"><span class="keyword">var</span> Dtop = offsetFn(div).top;</span><br><span class="line"><span class="keyword">var</span> Dleft = offsetFn(div).left;</span><br></pre></td></tr></table></figure>  
+	</div>
+		<footer class="article-footer clearfix">
+
+
+
+
+<div class="article-share" id="share">
+
+  <div data-url="https://github.com/CrazyTwo/CrazyTwo.github.io/2016/06/13/node/" data-title="案例 -- JS实现留言（DOM练习） | H5课堂笔记" data-tsina="null" class="share clearfix">
+  </div>
+
+</div>
+</footer>   	       
+	</article>
+	
+<nav class="article-nav clearfix">
+ 
+
+<div class="next">
+<a href="/2016/06/04/img_tab/"  title="首页头部的图片切换案例">
+ <strong>NEXT:</strong><br/> 
+ <span>首页头部的图片切换案例
+</span>
+</a>
+</div>
+
+</nav>
+
+	
+</div>  
+      <div class="openaside"><a class="navbutton" href="#" title="显示侧边栏"></a></div>
+
+  <div id="toc" class="toc-aside">
+  <strong class="toc-title">文章目录</strong>
+  <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#js-实现-留言板"><span class="toc-number">1.</span> <span class="toc-text">js 实现 留言板</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#补充知识点"><span class="toc-number">2.</span> <span class="toc-text">补充知识点</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#复制节点"><span class="toc-number">2.1.</span> <span class="toc-text">复制节点</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#标签属性操作"><span class="toc-number">2.2.</span> <span class="toc-text">标签属性操作</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#childen"><span class="toc-number">2.3.</span> <span class="toc-text">childen</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#查找节点"><span class="toc-number">2.4.</span> <span class="toc-text">查找节点</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#查找元素在文档的top和left"><span class="toc-number">2.5.</span> <span class="toc-text">查找元素在文档的top和left</span></a></li></ol></li></ol>
+  </div>
+
+<div id="asidepart">
+<div class="closeaside"><a class="closebutton" href="#" title="隐藏侧边栏"></a></div>
+<aside class="clearfix">
+
+  
+
+  
+
+  <div class="rsspart">
+	<a href="null" target="_blank" title="rss">RSS 订阅</a>
+</div>
+
+  <div class="widget tag">
+<h3 class="title">友情链接</h3>
+<ul class="entry">
+<li><a href="http://hongbinzuo.github.io/" title="Hongbin Zuo's Blog">Hongbin Zuo</a></li>
+</ul>
+</div>
+
+</aside>
+</div>
+    </div>
+    <footer><div id="footer" >
+	
+	
+	<div class="social-font" class="clearfix">
+		
+		
+		<a href="https://twitter.com/https://twitter.com/Crazytwo8" target="_blank" title="twitter"></a>
+		
+		
+		<a href="https://github.com/https://github.com/CrazyTwo" target="_blank" title="github"></a>
+		
+		
+	</div>
+		<p class="copyright">Powered by <a href="http://zespia.tw/hexo/" target="_blank" title="hexo">hexo</a> and Theme by <a href="https://github.com/A-limon/pacman" target="_blank" title="Pacman">Pacman</a> © 2016 
+		
+		<a href="https://github.com/CrazyTwo/CrazyTwo.github.io" target="_blank" title="CrazyTwo">CrazyTwo</a>
+		
+		</p>
+</div>
+</footer>
+    <script src="/js/jquery-2.0.3.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){ 
+  $('.navbar').click(function(){
+    $('header nav').toggleClass('shownav');
+  });
+  var myWidth = 0;
+  function getSize(){
+    if( typeof( window.innerWidth ) == 'number' ) {
+      myWidth = window.innerWidth;
+    } else if( document.documentElement && document.documentElement.clientWidth) {
+      myWidth = document.documentElement.clientWidth;
+    };
+  };
+  var m = $('#main'),
+      a = $('#asidepart'),
+      c = $('.closeaside'),
+      o = $('.openaside');
+  $(window).resize(function(){
+    getSize(); 
+    if (myWidth >= 1024) {
+      $('header nav').removeClass('shownav');
+    }else
+    {
+      m.removeClass('moveMain');
+      a.css('display', 'block').removeClass('fadeOut');
+      o.css('display', 'none');
+      
+      $('#toc.toc-aside').css('display', 'none');
+        
+    }
+  });
+  c.click(function(){
+    a.addClass('fadeOut').css('display', 'none');
+    o.css('display', 'block').addClass('fadeIn');
+    m.addClass('moveMain');
+  });
+  o.click(function(){
+    o.css('display', 'none').removeClass('beforeFadeIn');
+    a.css('display', 'block').removeClass('fadeOut').addClass('fadeIn');      
+    m.removeClass('moveMain');
+  });
+  $(window).scroll(function(){
+    o.css("top",Math.max(80,260-$(this).scrollTop()));
+  });
+});
+</script>
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var ai = $('.article-content>iframe'),
+      ae = $('.article-content>embed'),
+      t  = $('#toc'),
+      h  = $('article h2')
+      ah = $('article h2'),
+      ta = $('#toc.toc-aside'),
+      o  = $('.openaside'),
+      c  = $('.closeaside');
+  if(ai.length>0){
+    ai.wrap('<div class="video-container" />');
+  };
+  if(ae.length>0){
+   ae.wrap('<div class="video-container" />');
+  };
+  if(ah.length==0){
+    t.css('display','none');
+  }else{
+    c.click(function(){
+      ta.css('display', 'block').addClass('fadeIn');
+    });
+    o.click(function(){
+      ta.css('display', 'none');
+    });
+    $(window).scroll(function(){
+      ta.css("top",Math.max(140,320-$(this).scrollTop()));
+    });
+  };
+});
+</script>
+
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var $this = $('.share'),
+      url = $this.attr('data-url'),
+      encodedUrl = encodeURIComponent(url),
+      title = $this.attr('data-title'),
+      tsina = $this.attr('data-tsina');
+  var html = [
+  '<a href="#" class="overlay" id="qrcode"></a>',
+  '<div class="qrcode clearfix"><span>扫描二维码分享到微信朋友圈</span><a class="qrclose" href="#share"></a><strong>Loading...Please wait</strong><img id="qrcode-pic" data-src="http://s.jiathis.com/qrcode.php?url=' + encodedUrl + '"/></div>',
+  '<a href="#textlogo" class="article-back-to-top" title="Top"></a>',
+  '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+  '<a href="#qrcode" class="article-share-qrcode" title="QRcode"></a>',
+  '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+  '<a href="http://service.weibo.com/share/share.php?title='+title+'&url='+encodedUrl +'&ralateUid='+ tsina +'&searchPic=true&style=number' +'" class="article-share-weibo" target="_blank" title="Weibo"></a>',
+  '<span title="Share to"></span>'
+  ].join('');
+  $this.append(html);
+  $('.article-share-qrcode').click(function(){
+    var imgSrc = $('#qrcode-pic').attr('data-src');
+    $('#qrcode-pic').attr('src', imgSrc);
+    $('#qrcode-pic').load(function(){
+        $('.qrcode strong').text(' ');
+    });
+  });
+});     
+</script>
+
+
+
+
+
+
+  </body>
+</html>
