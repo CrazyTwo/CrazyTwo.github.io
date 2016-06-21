@@ -7,18 +7,32 @@
 			body{
 				font-size: 200%;
 			}
+			div{
+				width: 100px;
+				height: 100px;
+				background: brown;
+				position: absolute;
+			}
 		</style>
 	</head>
 	<body>
+		<div></div>
 	</body>
 	<script type="text/javascript">
 		window.addEventListener('deviceorientation',function(e){
 			/*
-			 * e.alpha
-			 *e.beta
-			 *e.gamma
+			 * 重力感应
+			 * e.alpha Z-3d
+			 *e.beta X-3d
+			 *e.gamma Y-3d
 			 */
-			document.body.innerHTML = 'alpha:' + parseInt(e.alpha) + '<br />beta:' + parseInt(e.beta) + '<br />gamma:' + parseInt(e.gamma);
+//			document.body.innerHTML = 'alpha:' + parseInt(e.alpha) + '<br />beta:' + parseInt(e.beta) + '<br />gamma:' + parseInt(e.gamma);
+			if (e.alpha>120) {
+				div.style.left = div.offsetLeft - 50 + 'px'
+			}else{
+				div.style.left = div.offsetLeft + 50 + 'px'
+			}
+			
 		})
 	</script>
 </html>
