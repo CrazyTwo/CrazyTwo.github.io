@@ -27,10 +27,12 @@
 			 *e.gamma Y-3d
 			 */
 //			document.body.innerHTML = 'alpha:' + parseInt(e.alpha) + '<br />beta:' + parseInt(e.beta) + '<br />gamma:' + parseInt(e.gamma);
-			if (e.alpha>120) {
+			if (parseInt(e.alpha)>120) {
 				div.style.left = div.offsetLeft - 50 + 'px'
+				div.innerHTML =parseInt(e.alpha);
 			}else{
 				div.style.left = div.offsetLeft + 50 + 'px'
+				div.innerHTML =parseInt(e.alpha);
 			}
 			
 		})
