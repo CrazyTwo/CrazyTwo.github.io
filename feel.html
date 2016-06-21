@@ -3,6 +3,11 @@
 	<head>
 		<meta charset="UTF-8">
 		<title></title>
+		<style type="text/css">
+			body{
+				font-size: 200%;
+			}
+		</style>
 	</head>
 	<body>
 	</body>
@@ -13,7 +18,7 @@
 			 *e.beta
 			 *e.gamma
 			 */
-			document.body.innerHTML = 'alpha:' + e.alpha + '<br />beta:' + e.beta + '<br />gamma:' + e.gamma;
+			document.body.innerHTML = 'alpha:' + parseInt(e.alpha) + '<br />beta:' + parseInt(e.beta) + '<br />gamma:' + parseInt(e.gamma);
 		})
 	</script>
 </html>
