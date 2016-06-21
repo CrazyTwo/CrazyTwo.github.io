@@ -12,13 +12,31 @@
 	<body>
 	</body>
 	<script type="text/javascript">
+		document.body.innerHTML = ''
+		var bX = 0;
+		var bY = 0;
+		var bZ = 0;
+		var speed = 0;
+		var bTime = new Date();
 		if (window.DeviceMotionEvent) {
-			window.addEventListener('deviceorientation',function(e){
-				var motion = e.accelerationIncludingGravity;
-				var x = motion.x;
-				var y = motion.y;
-				var z = motion.z;
-				document.body.innerHTML = 'x:'+parseInt(x)+"<br />y:"+parseInt(y)+"<br />z:"+parseInt(z);
+			window.addEventListener('devicemotion',function(e){
+				var now = new Date();
+				if (now - bTime >100) {
+					var motion = e.accelerationIncludingGravity;
+					
+					var x = parseInt(motion.x);
+					var y = parseInt(motion.y);
+					var z = parseInt(motion.z);
+					
+					speed += Math.abs(x+y+z-bX-bY-bZ);
+					document.body.innerHTML = speed;
+				}
+				bX = x;
+				bY = y;
+				bZ = z;
+				bTime = new Date();
+					
+				document.body.innerHTML = 'x:'+x+"<br />y:"+y+"<br />z:"+z;
 			})
 		}else{
 			alert('设备不支持摇一摇功能！')
