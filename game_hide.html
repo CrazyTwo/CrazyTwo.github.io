@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			.wrap{
+				position: absolute;
+				width: 100%;
+				height: 100%;
+				background: antiquewhite;
+			}
+			.main{
+				position: relative;
+				width: 70%;
+				max-width: 900px;
+				height: 100%;
+				top: -80%;
+				left: 30%;
+				background: rgba(255,255,255,0.8);
+				overflow: hidden;
+			}
+			.main div{
+				position: absolute;
+				background: firebrick;
+				margin-right: 2px;
+			}
+			.main .self{
+				position: absolute;
+				background: darkcyan;
+				bottom: 0;
+			}
+			.wrap .scelet{
+				position: relative;
+				width: 30%;
+				height: 80%;
+				background: rgba(200,100,0,0.5);
+			}
+			.mode{
+				text-align: center;
+				padding-top: 5%;
+				color: white;
+			}
+			.mode h3{
+				margin-bottom: 5%;
+			}
+			.mode span{
+				margin-left: 15%;
+				cursor: pointer;
+				padding: 2%;
+				border: 1px white solid;
+				border-radius: 5px;
+				color: gainsboro;
+			}
+			.mode span:nth-child(2){
+				margin-left: 0;
+			}
+			.mode span:hover{
+				color: gray;
+				background: rgba(255,255,255,0.3);
+			}
+			.mode .check{
+				color: gray;
+				background: rgba(255,255,255,0.3);
+				border-color: darkorange;
+			}
+			.start{
+				width: 40%;
+				border: 1px white solid;
+				background: darkcyan;
+				padding: 4%;
+				font-size: 110%;
+				text-align: center;
+				margin: 20% auto 0;
+				border-radius: 5px;
+				color: white;
+				cursor: pointer;
+			}
+			.history{
+				width: 80%;
+				margin: 25% auto;
+				font-size: 130%;
+				color: gainsboro;
+			}
+			.history p:nth-child(1){
+				margin-bottom: 20%;
+			}
+			.str{
+				width: 80%;
+				margin: auto;
+				text-indent: 2em;
+				font-size: 110%;
+				color: gold;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="wrap">
+			<div class="scelet">
+				<div class="mode">
+					<h3>关卡选择</h3>
+					<span class='check' data-number = "3">简单</span>
+					<span data-number = "5">一般</span>
+					<span data-number = "9">困难</span>
+				</div>
+				<div class="start">开始游戏</div>
+				<div class="history">
+					<p>您的分数：<em>0</em></p>
+					<p>历史最高：<strong>0</strong></p>
+				</div>
+				<div class="str">
+					躲避障碍，可通过键盘的左右键操作方块躲避掉下来的障碍，也可使用滑动操作方块。
+				</div>
+			</div>
+			<div class="main">
+				<div class="self"></div>
+			</div>
+		</div>
+	</body>
+	<script src="touch.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		//获取标签
+		var w = document.querySelector('.wrap');
+		var m = document.querySelector('.main');
+		var s = document.querySelector('.self');
+		var start = document.querySelector('.start');
+		var span = document.querySelectorAll('.mode span');
+		var score = document.querySelector('em');
+		var maxscore = document.querySelector('strong');
+		
+		var x,speedX, box,playbol,myscore,max;
+		var endT = 70;
+		//设置关卡
+		var num = 3;
+		//记录当前选择的span
+		Sindex = 0;
+		//初始化
+		initFn();
+		function initFn(){
+			s.style.width = parseInt((m.offsetWidth)/num) + 'px';
+			m.style.width = num * s.offsetWidth + 'px';
+			s.style.left = (m.offsetWidth-s.offsetWidth)/2 +'px';
+			s.style.background = 'darkcyan'
+			resetDivFn();
+			x= s.offsetLeft;//玩家方块的left值
+			speedX = 0;//移动距离以及方向
+			box = s.offsetWidth;//玩家方块的宽度（宽高一样）
+			playbol = false; //游戏开始判断
+			myscore = 0;//玩家分数
+			score.innerHTML = myscore;
+			maxscore.parentNode.style.color = 'gainsboro';
+			max = localStorage.getItem('gameMaxscore');
+			max?max:max=0;
+			maxscore.innerHTML = max;
+		}
+		/*
+		 * 设置置div的宽高
+		 */
+		function resetDivFn(){
+			for (var i=0; i<m.children.length; i ++) {
+				m.children[i].style.height = s.offsetWidth + 'px';
+				m.children[i].style.width = s.offsetWidth + 'px';
+			}
+		}
+		
+		for (var i = 0; i<span.length;i++) {
+			span[i].onclick = function(){
+				if(playbol){
+					return
+				}
+				span[Sindex].className ='';
+				this.className = 'check';
+				switch (this.getAttribute('data-number')){
+					case '3':
+						num = 3;
+						Sindex =0;
+						endT = 100;
+						//初始化
+						initFn();
+						break;
+					case '5':
+						num = 5;
+						Sindex =1;
+						endT = 110;
+						//初始化
+						initFn();
+						break;
+					case '9':
+						num = 9;
+						Sindex =2;
+						endT = 130;
+						//初始化
+						initFn();
+						break;
+				}
+			}
+		}
+		start.onclick = function(){
+			if (playbol) {return}
+			if (this.innerHTML = '开始游戏') {
+				this.style.backgroundColor = 'red';
+				this.innerHTML = '重新开始';
+			}
+			var divs = document.querySelectorAll('.main div');
+			for (var i = 1; i < divs.length;i++) {
+				m.removeChild(divs[i]);
+			}
+			initFn();
+			playbol = true;
+			playFn()
+			this.style.opacity = 0;
+		}
+		function creatFn(){
+			var n = Math.ceil(Math.random()*(num-1));
+			var arr = [];
+			var rnd = rndIndex(num);
+			for (var i = 0;i<n;i++) {
+				var div = document.createElement('div');
+				m.appendChild(div);
+				div.style.top =-box + 'px';
+				div.style.left = rnd[i]*box +'px';
+				arr[i] = div;
+			}
+			resetDivFn();
+			return arr;
+		}
+		function rndIndex(n){
+			var arr=[];
+			for (var i = 0;i<n-1;i++){
+				var rnd = Math.floor(Math.random()*n);
+				arr[i] = rnd;
+				if (arr.length > 1) {
+					for (var j=0;j<i;j++) {
+						if (arr[i] == arr[j]) {
+							i --;
+							break;
+						}
+					}
+				}
+			}
+			return arr;
+		}
+		/*
+		 * 游戏开始函数
+		 */
+		
+		function playFn(){
+			var objArr = creatFn();
+			var start = -box;
+			var end = m.offsetHeight;
+			var change = end - start;
+			var t = 0;
+			objArr[0].timer = setInterval(function(){
+				t ++;
+				if (t>=endT) {
+					clearInterval(objArr[0].timer);
+					var len = objArr.length;
+					for (var i = 0;i<len;i++){
+						m.removeChild(objArr[i]);
+					}
+					myscore ++;
+					if (myscore > max){
+						maxscore.innerHTML = myscore;
+						maxscore.parentNode.style.color = 'red';
+					}
+					score.innerHTML = myscore;
+				}
+				for (var i = 0;i<objArr.length;i++) {
+					objArr[i].style.top = start + t/endT*change +'px';
+				}
+				if (t == Math.ceil((3/2*box-start)/change*endT)) {
+					playFn();
+				}
+				check();
+			},30)
+		}
+		/*
+		 * 判断函数
+		 */
+		function check(){
+			var selfL = s.offsetLeft;
+			var selfT = m.offsetHeight - box;
+			var div = m.querySelectorAll('div');
+			for (var i = 1; i < div.length;i++) {
+				var l = div[i].offsetLeft;
+				var b = div[i].offsetTop + div[i].offsetHeight;
+				if(selfT<b && selfL == l){
+					for (var i = 1; i < div.length;i++) {
+						div[i].timer && clearInterval(div[i].timer);
+					}
+					playbol = false; 
+					s.style.backgroundColor = 'darkgrey';
+					if (myscore > max) {
+						localStorage.setItem('gameMaxscore',myscore);
+					}
+					alert('Game over!!');
+					start.style.opacity = 1;
+					return;
+				}
+			}
+		}
+		/*
+		 * 移动函数
+		 */
+		function moveFn(){
+			var timer = setInterval(function(){
+				x += speedX;
+				if (Math.abs(speedX) >= box) {
+					clearInterval(timer)
+				}
+				if (x<0) {
+					x=0;
+				}else if(x > m.offsetWidth-s.offsetWidth){
+					x = m.offsetWidth-s.offsetWidth;
+				}
+				s.style.left = x +'px';
+			},30)
+		}
+		
+		//键盘事件
+		document.onkeydown = function(e){
+			if(!playbol){return}
+			var e = e || window.event;
+			switch (e.keyCode){
+				case 37:speedX = -box;moveFn();break;//左
+				case 39:speedX = box;moveFn();break;//右
+			}
+		}
+		//鼠标滑动事件  使用了 touch.js
+		touch.on(document, 'swipeleft swiperight',function(ev){
+			if(!playbol){return}
+			switch (ev.type){
+				case 'swipeleft':
+					speedX = -box;
+					moveFn();
+					break;//左
+				case 'swiperight':
+					speedX = box;
+					moveFn();
+					break;//右
+			}
+		})
+	</script>
+</html>
