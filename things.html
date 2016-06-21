@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>]
+		<style type="text/css">
+			body{
+				font-size: 300%;
+			}
+		</style>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+		if (window.DeviceMotionEvent) {
+			window.addEventListener('deviceorientation',function(e){
+				var motion = e.accelerationIncludingGravity;
+				var x = motion.x;
+				var y = motion.y;
+				var z = motion.z;
+				document.body.innerHTML = 'x:'+parseInt(x)+"<br />y:"+parseInt(y)+"<br />z:"+parseInt(z);
+			})
+		}else{
+			alert('设备不支持摇一摇功能！')
+		}
+	</script>
+</html>
