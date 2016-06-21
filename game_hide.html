@@ -3,6 +3,7 @@
 	<head>
 		<meta charset="UTF-8">
 		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
 		<style type="text/css">
 			*{
 				margin: 0;
@@ -113,7 +114,7 @@
 					<p>历史最高：<strong>0</strong></p>
 				</div>
 				<div class="str">
-					躲避障碍，可通过键盘的左右键操作方块躲避掉下来的障碍，也可使用滑动操作方块。
+					躲避障碍，可通过键盘的左右键操作方块躲避掉下来的障碍，也可使用鼠标滑动操作方块。
 				</div>
 			</div>
 			<div class="main">
@@ -121,7 +122,7 @@
 			</div>
 		</div>
 	</body>
-	<script src="touch.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../touch.js" type="text/javascript" charset="utf-8"></script>
 	<script type="text/javascript">
 		//获取标签
 		var w = document.querySelector('.wrap');
@@ -158,7 +159,7 @@
 			maxscore.innerHTML = max;
 		}
 		/*
-		 * 设置置div的宽高
+		 * 设置div的宽高
 		 */
 		function resetDivFn(){
 			for (var i=0; i<m.children.length; i ++) {
