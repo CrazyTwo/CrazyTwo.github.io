@@ -30,10 +30,11 @@
 					
 					speed += Math.abs(x+y+z-bX-bY-bZ);
 					document.body.innerHTML = speed;
+					bX = x;
+					bY = y;
+					bZ = z;
 				}
-				bX = x;
-				bY = y;
-				bZ = z;
+				
 				bTime = new Date();
 					
 				document.body.innerHTML = 'x:'+x+"<br />y:"+y+"<br />z:"+z;
