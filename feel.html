@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+		window.addEventListener('deviceorientation',function(e){
+			/*
+			 * e.alpha
+			 *e.beta
+			 *e.gamma
+			 */
+			document.body.innerHTML = 'alpha:' + e.alpha + '<br />beta:' + e.beta + '<br />gamma:' + e.gamma;
+		})
+	</script>
+</html>
