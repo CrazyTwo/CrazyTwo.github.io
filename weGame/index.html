@@ -368,10 +368,15 @@ oRestart.onclick = function(){
 		function loadmove() {
 			var img = new Image()
 			img.src='img/background_2.png'
-			ctx.drawImage(img,0,0,320,568,0,0,canvas.width,canvas.height)
-			var img = new Image()
-			img.src='img/loading3.png'
-			ctx.drawImage(img,0,0,116,25,x,canvas.height/2-25/2,116,25)
+			var img1 = new Image()
+			img1.src='img/loading3.png'
+			img.onload = function() {
+				img1.onload = function() {
+					ctx.drawImage(img,0,0,320,568,0,0,canvas.width,canvas.height)
+					ctx.drawImage(img1,0,0,116,25,x,canvas.height/2-25/2,116,25)
+				}
+			}
+			
 			x+=5
 			if (x+116>canvas.width) {x=0}
 			id= requestAnimationFrame(loadmove);
