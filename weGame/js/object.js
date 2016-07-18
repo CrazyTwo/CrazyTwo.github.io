@@ -156,6 +156,7 @@ function Bullet(w,h,ws) {
 	Bu.delay = 5;
 	Bu.dI = 0;//判断延时用
 	Bu.obs = [];//存放子弹的数组
+	Bu.changeDI = 0
 	Bu.draw = function (hero,arr,audio) {
 		Bu.dI++;
 		if (Bu.dI>Bu.delay) {
@@ -176,7 +177,7 @@ function Bullet(w,h,ws) {
 				continue;
 			}
 			audio.play()
-			if (Bu.change) {ctx.drawImage(Bu.imgs,hero.x+hero.w/2-Bu.ws/2,Bu.obs[i].y)}
+			if (Bu.change && Bu.changeDI<1000) {Bu.changeDI++;ctx.drawImage(Bu.imgs,hero.x+hero.w/2-Bu.ws/2,Bu.obs[i].y)}
 			else {ctx.drawImage(Bu.img,Bu.obs[i].x,Bu.obs[i].y)}
 		}
 		
@@ -192,7 +193,7 @@ function Bullet(w,h,ws) {
 				score+=100;
 				
 				//如果有一驾飞机的hb被打完了,全局的分数那里就加10分
-				if (arr[i].hp<=0) {
+				if (arr[i].hp<=0 || arr[i].die) {
 					score +=arr[i].dieScore;
 				}
 				return true;
