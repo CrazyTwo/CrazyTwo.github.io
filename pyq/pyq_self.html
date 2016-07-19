@@ -5,6 +5,7 @@
     <title>个人中心</title>
     <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
     <link rel="stylesheet" href="css/reset.css" media="screen" title="no title" charset="utf-8">
+    <link rel="stylesheet" href="css/footer.css" media="screen" title="no title" charset="utf-8">
     <style media="screen">
       a:active{
         color: black;
@@ -31,6 +32,7 @@
       .self{
         margin-top: .1rem;
         margin-bottom: .105rem;
+        text-align: center;
       }
       .self .btn{
         border: 2px solid #c3ad88;
@@ -38,8 +40,8 @@
         font-size: 0.16rem;
         color: #c3ad88;
         width: 21.25%;
-        height: .28rem;
-        line-height: .28rem;
+        height: .24rem;
+        line-height: .24rem;
         text-align: center;
         margin: auto;
       }
@@ -75,6 +77,7 @@
       }
       .list{
         font-size: .12rem;
+        padding-bottom: .79rem;
       }
       .all{
         padding: 0 4.6875%;
@@ -96,19 +99,20 @@
         padding-top:.1075rem;
         border-bottom: 1px solid #ebeae4;
       }
-      .makelist a{
+      .makelist .lis{
+        width: 25%;
+        float: left;
+        text-align: center;
+      }
+      .makelist .lis a{
         width: .36rem;
         height: .35rem;
-        margin-right: 10%;
-        float: left;
+        display: inline-block;
         color: #7e7e7e;
-      }
-      .makelist .pay {
-        margin-left: 9.573%;
       }
       .makelist a span{
         display: block;
-        width: .225rem;
+        width: .22rem;
         height: .185rem;
         margin: auto;
         margin-bottom: .06rem;
@@ -123,7 +127,7 @@
         background-size: .86rem .375rem;
       }
       .makelist .take span{
-        width: .17rem;
+        width: .165rem;
         height: .215rem;
         background-position: -.47rem 0;
         background-size: .86rem .375rem;
@@ -194,6 +198,31 @@
         background-position: -.79499999rem -.21499999rem;
         background-size: .86rem .375rem;
       }
+      @media screen and (min-width:400px) {
+        html{
+          font-size: 120px;
+        }
+      }
+      @media screen and (min-width:500px) {
+        html{
+          font-size: 130px;
+        }
+      }
+      @media screen and (min-width:600px) {
+        html{
+          font-size: 140px;
+        }
+      }
+      @media screen and (min-width:700px) {
+        html{
+          font-size: 150px;
+        }
+      }
+      @media screen and (min-width:800px) {
+        html{
+          font-size: 160px;
+        }
+      }
     </style>
   </head>
   <body>
@@ -223,22 +252,30 @@
         全部订单 <span class="fr"></span>
       </div>
       <div class="makelist clear">
-        <a href="###" class="pay">
-          <span></span>
-          <p>待付款</p>
-        </a>
-        <a href="###" class="send">
-          <span></span>
-          <p>待发货</p>
-        </a>
-        <a href="###" class="take">
-          <span></span>
-          <p>待收货</p>
-        </a>
-        <a href="###" class="judeg">
-          <span></span>
-          <p>待评价</p>
-        </a>
+        <div class="lis">
+          <a href="###" class="pay">
+            <span></span>
+            <p>待付款</p>
+          </a>
+        </div>
+        <div class="lis">
+          <a href="###" class="send">
+            <span></span>
+            <p>待发货</p>
+          </a>
+        </div>
+        <div class="lis">
+          <a href="###" class="take">
+            <span></span>
+            <p>待收货</p>
+          </a>
+        </div>
+        <div class="lis">
+          <a href="###" class="judeg">
+            <span></span>
+            <p>待评价</p>
+          </a>
+        </div>
       </div>
       <ul>
         <li><a href="###" class="car"><b></b>我的购物车<span></span></a></li>
@@ -247,6 +284,13 @@
         <li><a href="###" class="update"><b></b>我的上传<span></span></a></li>
         <li><a href="###" class="setting"><b></b>我的设置<span></span></a></li>
       </ul>
+    </div>
+    <div class="footer clear">
+      <div class="ls"><a href="###" class="h"><span></span>主页</a></div>
+      <div class="ls"><a href="###" class="s"><span></span>商城</a></div>
+      <div class="ls"><a href="###" class="sl"><span></span>选菜</a></div>
+      <div class="ls"><a href="###" class="f"><span></span>发现</a></div>
+      <div class="ls"><a href="###" class="m  select"><span></span>我的</a></div>
     </div>
   </body>
 </html>

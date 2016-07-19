@@ -56,3 +56,28 @@ html{
 .footer .ls .select span{
   background-position-y:-.87000002rem;
 }
+@media screen and (min-width:400px) {
+  html{
+    font-size: 120px;
+  }
+}
+@media screen and (min-width:500px) {
+  html{
+    font-size: 130px;
+  }
+}
+@media screen and (min-width:600px) {
+  html{
+    font-size: 140px;
+  }
+}
+@media screen and (min-width:700px) {
+  html{
+    font-size: 150px;
+  }
+}
+@media screen and (min-width:800px) {
+  html{
+    font-size: 160px;
+  }
+}
