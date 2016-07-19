@@ -1,0 +1,87 @@
+body{
+	width: 100%;
+	height: 100%;
+}
+html{
+	font-size: 100px;
+}
+.fl{
+	float: left;
+}
+.fr{
+	float: right;
+}
+.clear:after{
+	content: '';
+	clear: both;
+	display: block;
+}
+.header{
+	width: 100%;
+	height: 0.68rem;
+	padding-top: 0.15rem;
+	background-color: rgb(72,56,43);
+	position: fixed;
+	z-index: 1;
+}
+.header form{
+	margin-left: 4%;
+	width: 77.866%;
+	height: 0.53rem;
+}
+.header input{
+	width: 89.726%;
+	height: 100%;
+	border-radius: 0.15rem;
+	border: none;
+	border-bottom: 1px solid rgb(126,98,75);
+	background-color: rgb(64,50,40);
+	-webkit-box-shadow: inset 3px 3px 5px rgb(44,34,27);
+	background-image: url(../img/1.png);
+	background-repeat: no-repeat;
+	background-position: 2% center;
+	background-size: 0.34rem;
+	padding-left: 10.274%;
+	font-size: 0.2rem;
+	color: rgb(153,136,107);
+}
+.header ul{
+	width: 5.6%;
+	margin-right: 4%;
+	margin-top: 0.11rem;
+}
+.header ul li{
+	width: 100%;
+	height: 0.04rem;
+	background: rgb(255,255,255);
+	border: 1px solid rgb(163,155,149);
+	border-radius: 0.03rem;
+}
+.header ul li:nth-child(2){
+	margin: 0.07rem 0;
+}
+@media screen and (max-width: 650px){
+	html{
+		font-size: 80px;
+	}
+}
+@media screen and (max-width: 600px){
+	html{
+		font-size: 70px;
+	}
+}
+@media screen and (max-width: 500px){
+	html{
+		font-size: 60px;
+	}
+}
+@media screen and (max-width: 450px){
+	html{
+		font-size: 50px;
+	}
+}
+@media screen and (max-width: 400px){
+	html{
+		font-size: 45px;
+	}
+}
