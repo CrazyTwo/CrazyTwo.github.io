@@ -248,13 +248,13 @@
         var userT = user.offsetTop;
         tips.style.display = 'block';
         var w = tips.offsetHeight;
-        tips.style.top = userT - w -20 + 'px';
+        tips.style.top = userT - w + 'px';
         error.innerHTML = '不输用户名就登录的就是耍流氓!';
       }else if(pwd.value == ''){
         var pwdT = pwd.offsetTop;
         tips.style.display = 'block';
         var w = tips.offsetHeight;
-        tips.style.top = pwdT - w -20 + 'px';
+        tips.style.top = pwdT - w + 'px';
         error.innerHTML = '用户名都输了,为什么不输密码？耍流氓吗!';
       }
       e.cancelBubble = true;
