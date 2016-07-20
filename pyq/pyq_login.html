@@ -245,15 +245,15 @@
     pwd.value = '';
     btn.onclick = function(e){
       if (user.value == '') {
-        var w = tips.offsetHeight;
         var userT = user.offsetTop;
         tips.style.display = 'block';
+        var w = tips.offsetHeight;
         tips.style.top = userT - w -20 + 'px';
         error.innerHTML = '不输用户名就登录的就是耍流氓!';
       }else if(pwd.value == ''){
-        var w = tips.offsetHeight;
         var pwdT = pwd.offsetTop;
         tips.style.display = 'block';
+        var w = tips.offsetHeight;
         tips.style.top = pwdT - w -20 + 'px';
         error.innerHTML = '用户名都输了,为什么不输密码？耍流氓吗!';
       }
