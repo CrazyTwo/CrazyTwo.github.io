@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>个人中心</title>
+    <title>兔购个人中心</title>
     <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
     <link rel="stylesheet" href="css/reset.css" media="screen" title="no title" charset="utf-8">
     <link rel="stylesheet" href="css/footer.css" media="screen" title="no title" charset="utf-8">
@@ -44,6 +44,15 @@
         line-height: .24rem;
         text-align: center;
         margin: auto;
+      }
+      .self .user{
+        height: .24rem;
+        line-height: .24rem;
+        text-align: center;
+        margin: auto;
+        font-size: .18rem;
+        color: white;
+        display: none;
       }
       .other{
         width: 95.9375%;
@@ -232,7 +241,7 @@
       </div>
       <div class="self">
         <div class="btn">登录</div>
-        <div class="user"></div>
+        <div class="user">lalalalal</div>
       </div>
       <div class="other">
         <div class="someone clear">
@@ -293,4 +302,11 @@
       <div class="ls"><a href="###" class="m  select"><span></span>我的</a></div>
     </div>
   </body>
+  <script src="js/public.js" charset="utf-8"></script>
+  <script type="text/javascript">
+    var loginBtn = document.querySelector('.btn');
+    loginBtn.onclick = function() {
+      loginPage();
+    }
+  </script>
 </html>
