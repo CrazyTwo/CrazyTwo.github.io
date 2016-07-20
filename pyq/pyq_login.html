@@ -133,6 +133,38 @@
         color: #000;
         text-decoration: underline;
       }
+      .tips{
+        height: 0.2rem;
+        line-height: 0.2rem;
+        color: red;
+        border-radius: .05rem;
+        border: 1px solid #ccc;
+        background-color: #fff;
+        font-size: .12rem;
+        text-align: center;
+        padding: 0 2%;
+        position: absolute;
+        box-shadow: 2px 2px 2px #ccc;
+        display: none;
+        left: 10%;
+      }
+      .tips b{
+        width: 0;
+        height: 0;
+        border: .1rem solid black;
+        border-color: #ccc transparent transparent transparent;
+        position: relative;
+        bottom: -0.06rem;
+      }
+      .tips var{
+        width: 0;
+        height: 0;
+        border: .09rem solid black;
+        border-color: #fff transparent transparent transparent;
+        position: relative;
+        left: -.19rem;
+        bottom: -.03rem;
+      }
       @media screen and (min-width:360px) {
         html{
           font-size: 110px;
@@ -194,11 +226,42 @@
           <a class="fr" href="###">新用户注册</a>
         </div>
       </div>
+      <div class="tips">
+        <span>error!</span>
+        <b></b>
+        <var></var>
+      </div>
     </div>
   </body>
   <script src="js/public.js" charset="utf-8"></script>
   <script type="text/javascript">
     var backBtn = document.querySelector('.header a');
+    var btn = document.getElementsByName('login')[0];
+    var user = document.getElementsByName('user')[0];
+    var pwd = document.getElementsByName('pwd')[0];
+    var tips = document.querySelector('.tips');
+    var error = tips.getElementsByTagName('span')[0];
+    user.value = '';
+    pwd.value = '';
+    btn.onclick = function(e){
+      if (user.value == '') {
+        var w = tips.offsetHeight;
+        var userT = user.offsetTop;
+        tips.style.display = 'block';
+        tips.style.top = userT - w -20 + 'px';
+        error.innerHTML = '不输用户名就登录的就是耍流氓!';
+      }else if(pwd.value == ''){
+        var w = tips.offsetHeight;
+        var pwdT = pwd.offsetTop;
+        tips.style.display = 'block';
+        tips.style.top = pwdT - w -20 + 'px';
+        error.innerHTML = '用户名都输了,为什么不输密码？耍流氓吗!';
+      }
+      e.cancelBubble = true;
+    }
+    document.onclick = function() {
+      tips.style.display = 'none';
+    }
     backBtn.onclick = function() {
       backUrl();
     }
