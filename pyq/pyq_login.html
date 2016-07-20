@@ -121,12 +121,9 @@
       }
       .link{
         width: 86.8%;
-        left: 0;
-        right: 0;
         margin: auto;
         font-size: .12rem;
-        position: absolute;
-        bottom: 3.073463%;
+        margin-top: .85877061rem;
       }
       .link a{
         color: #000;
@@ -200,12 +197,7 @@
   </body>
   <script src="js/public.js" charset="utf-8"></script>
   <script type="text/javascript">
-    var wrap = document.querySelector('.wrap');
     var backBtn = document.querySelector('.header a');
-    setH(wrap);
-    window.onresize = function() {
-      setH(wrap);
-    }
     backBtn.onclick = function() {
       backUrl();
     }
