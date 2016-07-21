@@ -10,6 +10,8 @@
         padding: 0;
         width: 100%;
         height: 100%;
+        position: absolute;
+        z-index: 999;
       }
       .wrap{
         width: 100%;
@@ -44,7 +46,7 @@ Orientation-设备方向
   <script type="text/javascript">
     var w = window.screen.availHeight;
     var h =window.screen.availWidth;
-    var w = document.documentElement.clientHeight;
+    // var w = document.documentElement.clientHeight;
       // var h = document.documentElement.clientWidth;
     document.body.style.transform = 'rotate(-90deg) translateX(-20%) translateY(-40%)';
     document.body.style.width = w +'px';
