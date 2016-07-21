@@ -3,25 +3,28 @@
   <head>
     <meta charset="utf-8">
     <title></title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
     <style media="screen">
-      *{
+      html,body{
         margin: 0;
         padding: 0;
+        width: 100%;
+        height: 100%;
       }
       .wrap{
         width: 100%;
-        position: absolute;
+        height: 100%;
       }
       .v{
         width: 100%;
+        height: 100%;
       }
       .v img{
+        margin: 0;
+        padding: 0;
+        border: 0;
         width: 100%;
-      }
-      @media screen and (orientation:portrait){
-        .wrap{
-          transform: rotate(90deg);
-        }
+        height: 100%;
       }
     </style>
   </head>
@@ -39,8 +42,10 @@ Orientation-设备方向
 -->
   </body>
   <script type="text/javascript">
-    var w = document.documentElement.clientHeight;
-    var wrap = document.querySelector('.wrap');
-    wrap.style.width = w +'px';
+    var w = window.screen.height;
+    var h =window.screen.width;
+    document.body.style.transform = 'rotate(-90deg) translateX(-20%) translateY(-40%)';
+    document.body.style.width = w +'px';
+    document.body.style.height = h +'px';
   </script>
 </html>
