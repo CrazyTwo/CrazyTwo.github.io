@@ -18,6 +18,11 @@
       .v img{
         width: 100%;
       }
+      @media screen and (orientation:portrait){
+        .wrap{
+          transform: rotate(90deg);
+        }
+      }
     </style>
   </head>
   <body>
@@ -36,9 +41,6 @@ Orientation-设备方向
   <script type="text/javascript">
     var w = document.documentElement.clientHeight;
     var wrap = document.querySelector('.wrap');
-    if(window.orientation == 'portrait'){
-      wrap.style.transform = 'rotate(90deg)';
-      wrap.style.width = w +'px';
-    }
+    wrap.style.width = w +'px';
   </script>
 </html>
