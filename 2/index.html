@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style media="screen">
+      *{
+        margin: 0;
+        padding: 0;
+      }
+      .wrap{
+        width: 100%;
+        position: absolute;
+      }
+      .v{
+        width: 100%;
+      }
+      .v img{
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <div class="v">
+        <img src="1.jpg" alt="" />
+      </div>
+    </div>
+<!--
+用到的知识点2:
+Orientation-设备方向
+@media screen and (orientation:portrait){} 竖屏
+@media screen and (orientation:landscape){} 横屏
+-->
+  </body>
+  <script type="text/javascript">
+    var w = document.documentElement.clientHeight;
+    var wrap = document.querySelector('.wrap');
+    if(window.orientation == 'portrait'){
+      wrap.style.transform = 'rotate(90deg)';
+      wrap.style.width = w +'px';
+    }
+  </script>
+</html>
