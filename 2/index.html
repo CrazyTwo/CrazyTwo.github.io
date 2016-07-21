@@ -47,5 +47,34 @@ Orientation-设备方向
     document.body.style.transform = 'rotate(-90deg) translateX(-20%) translateY(-40%)';
     document.body.style.width = w +'px';
     document.body.style.height = h +'px';
+    var docElm = document.documentElement;
+    if (docElm.requestFullscreen) { 
+
+      docElm.requestFullscreen();
+
+    }
+    //FireFox
+
+    else if (docElm.mozRequestFullScreen) {
+
+      docElm.mozRequestFullScreen();
+
+    }
+
+    //Chrome等
+
+    else if (docElm.webkitRequestFullScreen) {
+
+      docElm.webkitRequestFullScreen();
+
+    }
+
+    //IE11
+
+    else if (elem.msRequestFullscreen) {
+
+     elem.msRequestFullscreen();
+
+    }
   </script>
 </html>
