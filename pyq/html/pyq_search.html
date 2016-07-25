@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>搜索</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <link rel="stylesheet" href="../css/reset.css" media="screen" title="no title" charset="utf-8">
+    <style media="screen">
+      .wrap{
+        width: 100%;
+        position: relative;
+      }
+      .header{
+        width: 100%;
+        height: .415rem;
+        background-color: #48382b;
+        position: relative;
+        text-align: center;
+        color: #f1f1f1;
+        font-size: .17rem;
+        line-height: .415rem;
+        box-shadow: 0px 2px 5px #a3a3a3;
+      }
+      .header a{
+        position: absolute;
+        width: .1rem;
+        height: .185rem;
+        background-image: url(../img/login.png);
+        background-size: .94500005rem .21rem;
+        background-position: 0 0;
+        top:.115rem;
+        left: 4%;
+      }
+      .header div{
+        width: 100%;
+      }
+      .header form{
+      	margin-left: 8.4%;
+      	width: 84.4%;
+      	height: 0.265rem;
+        margin-top: 0.075rem;
+      }
+      .header input{
+      	width: 72.555550%;
+      	height: 100%;
+      	border-radius: 0.1rem;
+      	border: none;
+      	border-bottom: 1px solid rgb(126,98,75);
+      	background-color: rgb(64,50,40);
+      	-webkit-box-shadow: inset 3px 3px 5px rgb(44,34,27);
+      	background-image: url(img/1.png);
+      	background-repeat: no-repeat;
+      	background-position: 2% center;
+      	background-size: 0.17rem;
+      	padding-left: 11.962616%;
+      	font-size: 0.12rem;
+      	color: #fff;
+        float: left;
+      }
+      .header input::-webkit-input-placeholder { /* WebKit browsers */
+        color: rgb(153,136,107)!important;
+      }
+      .header input:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+        color: rgb(153,136,107)!important;
+      }
+      .header input::-moz-placeholder { /* Mozilla Firefox 19+ */
+        color: rgb(153,136,107)!important;
+      }
+      .header input:-ms-input-placeholder { /* Internet Explorer 10+ */
+        color: rgb(153,136,107)!important;
+      }
+      .header .qx{
+        border: 0;
+        width: 10.426540%;
+        float: right;
+        color: #fff;
+        padding: 0;
+        border-radius: 0;
+        box-shadow: none;
+        background: none;
+      }
+      .content{
+        width: 100%;
+        margin-top: 0.13rem;
+      }
+      .history .h,.hot .h{
+        width: 86.4%;
+        height: .285rem;
+        line-height: .285rem;
+        font-size: .12rem;
+        margin: auto;
+        border-bottom: 1px solid #b9d0c4;
+        margin-bottom: .165rem;
+      }
+      .hot .h{
+        height: .265rem;
+        line-height: .265rem;
+        margin-bottom: .145rem;
+      }
+      .history span,.hot span{
+        color: #86765d;
+        float: left;
+      }
+      .history a{
+        float: right;
+        color: #aacf50;
+      }
+     .con .tr{
+       width: 86.4%;
+       margin: auto;
+       height: .12rem;
+       font-size: .12rem;
+       margin-bottom: .26rem;
+     }
+     .hot .con .tr{
+       margin-bottom: .29rem;
+     }
+     .con .tr .td{
+       float: left;
+       width: 45%;
+       text-align: left;
+       color: #000;
+       padding-right: 5%;
+       text-overflow: ellipsis;
+       white-space:nowrap;
+       overflow:hidden;
+     }
+      @media screen and (min-width:360px) {
+        html{
+          font-size: 110px;
+        }
+      }
+      @media screen and (min-width:400px) {
+        html{
+          font-size: 120px;
+        }
+      }
+      @media screen and (min-width:500px) {
+        html{
+          font-size: 130px;
+        }
+      }
+      @media screen and (min-width:600px) {
+        html{
+          font-size: 150px;
+        }
+      }
+      @media screen and (min-width:700px) {
+        html{
+          font-size: 180px;
+        }
+      }
+      @media screen and (min-width:800px) {
+        html{
+          font-size: 190px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <div class="header">
+        <a href="javascript:history.go(-1);"></a>
+        <div class="clear">
+          <form action="" class="fl">
+    			  <input type="text" value="" name="search" placeholder="搜索食材、菜品">
+            <input type="button" name="reset" class="qx" value="取消">
+    		 </form>
+        </div>
+      </div>
+      <div class="content">
+        <div class="history">
+          <div class="h clear">
+            <span>搜索记录</span>
+            <a href="###" id="aClear">清空记录</a>
+          </div>
+          <div class="con">
+            <div class="tr clear">
+              <a href="###" class="td">海带</a>
+              <a href="###" class="td">菠菜</a>
+            </div>
+            <div class="tr clear">
+              <a href="###" class="td">西蓝花</a>
+              <a href="###" class="td">澳大利亚小肥牛</a>
+            </div>
+            <div class="tr clear">
+              <a href="###" class="td">红烧排骨</a>
+              <a href="###" class="td">浓情布朗尼懒人版</a>
+            </div>
+          </div>
+        </div>
+        <div class="hot">
+          <div class="h clear">
+            <span>热门搜索</span>
+          </div>
+          <div class="con">
+            <div class="tr clear">
+              <a href="###"  class="td">湾仔红烧排骨</a>
+              <a href="###"  class="td">庄园养生小炒</a>
+            </div>
+            <div class="tr clear">
+              <a href="###"  class="td">生滚鱼片粥</a>
+              <a href="###"  class="td">鲜虾云吞面</a>
+            </div>
+            <div class="tr clear">
+              <a href="###"  class="td">浓情布朗尼懒人版</a>
+              <a href="###"  class="td"></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="../js/public.js" charset="utf-8"></script>
+  <script src="../js/jquery-3.0.0.min.js" charset="utf-8"></script>
+  <script type="text/javascript">
+    var resetBtn = document.getElementsByName('reset')[0];
+    var search = document.getElementsByName('search')[0];
+    search.focus();
+    resetBtn.onclick = function() {
+      search.value = '';
+    }
+    var index = 0;
+    for (var i = 0; i < 6; i++) {
+        var str = localStorage.getItem('search'+i) || '';
+        $('.history .td').eq(i).html(str);
+        if (!str) {
+          index++;
+        }
+    }
+    if (index>=6) {
+      $('.history').hide();
+    }
+    $('form').on('submit',function() {
+      var str = $(this).find('input').eq(0).val();
+      historyFn(str);
+    })
+    $('#aClear').on('click',function(){
+      $('.history .td').html('');
+      for (var i = 0; i < 6; i++) {
+          localStorage.removeItem('search'+i);
+      }
+      $('.history').slideUp(1000);
+    });
+    function historyFn(str) {
+      var per = '';
+      var per1 = '';
+      var bol = false;
+      for (var i = 0; i < 6; i++) {
+        if (bol) {
+          per1 = localStorage.getItem('search'+i);
+          if (per) {
+            localStorage.setItem('search'+i,per);
+          }
+          per = per1;
+        }
+        if (localStorage.getItem('search'+i) && !bol) {
+          per = localStorage.getItem('search'+i);
+          localStorage.setItem('search'+i,str);
+          bol = true;
+        }
+        if (!localStorage.getItem('search'+i) && !bol) {
+          localStorage.setItem('search'+i,str);
+          break;
+        }
+      }
+    }
+  </script>
+</html>

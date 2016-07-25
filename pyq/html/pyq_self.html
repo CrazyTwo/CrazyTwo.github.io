@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>兔购个人中心</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <link rel="stylesheet" href="../css/reset.css" media="screen" title="no title" charset="utf-8">
+    <link rel="stylesheet" href="../css/footer.css" media="screen" title="no title" charset="utf-8">
+    <style media="screen">
+      a:active{
+        color: black;
+      }
+      .header{
+        width: 100%;
+        height: 2.425rem;
+        border-bottom: 1px solid #dad9d6;
+        padding-top: .25rem;
+      }
+      .icon{
+        width: .905rem;
+        height: .905rem;
+        border-radius: 50%;
+        border: 0.035rem solid #c3ad88;
+        margin: auto;
+      }
+      .icon img{
+        width: .755rem;
+        height: .755rem;
+        border-radius: 50%;
+        margin: .07rem 7.734806%;
+      }
+      .self{
+        margin-top: .1rem;
+        margin-bottom: .105rem;
+        text-align: center;
+      }
+      .self .btn{
+        border: 2px solid #c3ad88;
+        border-radius: 8px;
+        font-size: 0.16rem;
+        color: #c3ad88;
+        width: 21.25%;
+        height: .24rem;
+        line-height: .24rem;
+        text-align: center;
+        margin: auto;
+      }
+      .self .user{
+        height: .24rem;
+        line-height: .24rem;
+        text-align: center;
+        margin: auto;
+        font-size: .18rem;
+        color: white;
+        display: none;
+      }
+      .other{
+        width: 95.9375%;
+        color: #7e7e7e;
+        margin: auto;
+      }
+      .someone,.something{
+        height: .29rem;
+        width: 100%;
+        padding-top: .05rem;
+        padding-bottom: .05rem;
+        border-top: 1px solid #c5c4c4;
+      }
+      .someone .see,.someone .likeme,.something .message,.something .like,.something .num{
+        width: 33.061889%;
+        height: .3rem;
+        line-height: .3rem;
+        text-align: center;
+        font-size: 0.12rem;
+      }
+      .someone .see span,.someone .likeme span,.something .message span,.something .like span,.something .num span{
+        margin-left: 0.15rem;
+      }
+      .someone .see,.someone .likeme{
+        width: 49.837133%;
+      }
+      .someone .see,.something .message,.something .like{
+        border-right: 1px solid #c5c4c4;
+      }
+      .cen{
+        width: 100%;
+        height: .045rem;
+        background-color: #f4f3f0;
+      }
+      .list{
+        font-size: .12rem;
+        padding-bottom: .79rem;
+      }
+      .all{
+        padding: 0 4.6875%;
+        height: .24rem;
+        line-height: .24rem;
+        border-bottom: 1px solid #ebeae4;
+      }
+      .all span{
+        width: .065rem;
+        height: .115rem;
+        background-image: url(../img/self.png);
+        background-position: -.79499999rem -.21499999rem;
+        background-size: .86rem .375rem;
+        margin-top: .06rem;
+      }
+      .makelist{
+        width: 100%;
+        height: .4575rem;
+        padding-top:.1075rem;
+        border-bottom: 1px solid #ebeae4;
+      }
+      .makelist .lis{
+        width: 25%;
+        float: left;
+        text-align: center;
+      }
+      .makelist .lis a{
+        width: .36rem;
+        height: .35rem;
+        display: inline-block;
+        color: #7e7e7e;
+      }
+      .makelist a span{
+        display: block;
+        width: .22rem;
+        height: .185rem;
+        margin: auto;
+        margin-bottom: .06rem;
+        background-image: url(../img/self.png);
+        background-position: 0 0;
+        background-size: .86000002rem .37500002rem;
+      }
+      .makelist .send span{
+        width: .24rem;
+        height: .20rem;
+        background-position: -.225rem 0;
+        background-size: .86rem .375rem;
+      }
+      .makelist .take span{
+        width: .165rem;
+        height: .215rem;
+        background-position: -.47rem 0;
+        background-size: .86rem .375rem;
+      }
+      .makelist .judeg span{
+        width: .22rem;
+        height: .185rem;
+        background-position: -.64rem 0;
+        background-size: .86000003rem .37499999rem;
+      }
+      ul{
+        width: 100%;
+      }
+      li{
+        height: .25rem;
+        padding-top: .15rem;
+        border-bottom: 1px solid #ebeae4;
+        padding-left: 4.6875%;
+      }
+      li a{
+        display: block;
+        width: 100%;
+        color: #252029;
+        position: relative;
+      }
+      li a b,li a span{
+        background-image: url(../img/self.png);
+      }
+      li a b{
+        display: inline-block;
+        width: .15rem;
+        height: .15rem;
+        background-position: 0 -.215rem;
+        background-size: .86000002rem .375rem;
+        margin-right: 4.21875%;
+        vertical-align: bottom;
+      }
+      li .menber b{
+        width: .17rem;
+        height: .145rem;
+        background-position: -.15rem -.215rem;
+        background-size: .86000003rem .375rem;
+      }
+      li .call b{
+        width: .155rem;
+        height: .16rem;
+        background-position: -.32rem -.215rem;
+        background-size: .86000003rem .375rem;
+      }
+      li .update b{
+        width: .175rem;
+        height: .12rem;
+        background-position: -.47rem -.215rem;
+        background-size: .86rem .375rem;
+      }
+      li .setting b{
+        width: .145rem;
+        height: .15rem;
+        background-position: -.645rem -.215rem;
+        background-size: .86000002rem .375rem;
+      }
+      li a span{
+        position: absolute;
+        right: 4.6875%;
+        top: 0;
+        width: .065rem;
+        height: .115rem;
+        background-position: -.79499999rem -.21499999rem;
+        background-size: .86rem .375rem;
+      }
+      @media screen and (min-width:400px) {
+        html{
+          font-size: 120px;
+        }
+      }
+      @media screen and (min-width:500px) {
+        html{
+          font-size: 130px;
+        }
+      }
+      @media screen and (min-width:600px) {
+        html{
+          font-size: 140px;
+        }
+      }
+      @media screen and (min-width:700px) {
+        html{
+          font-size: 150px;
+        }
+      }
+      @media screen and (min-width:800px) {
+        html{
+          font-size: 160px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <div class="icon">
+        <img src="../img/icon.png" alt="" />
+      </div>
+      <div class="self">
+        <div class="btn">登录</div>
+        <div class="user">...</div>
+      </div>
+      <div class="other">
+        <div class="someone clear">
+          <div class="see fl">关注 <span style="color:#71f704;"></span></div>
+          <div class="likeme fl">粉丝 <span style="color:#ff4e00;"></span></div>
+        </div>
+        <div class="something clear">
+          <div class="like fl">收藏 <span style="color:#00deff;"></span></div>
+          <div class="message fl">消息 <span style="color:#c600ff;"></span></div>
+          <div class="num fl">可用积分 <span style="color:#d50e24;"></span></div>
+        </div>
+      </div>
+    </div>
+    <div class="cen"></div>
+    <div class="list">
+      <div class="all clear">
+        全部订单 <span class="fr"></span>
+      </div>
+      <div class="makelist clear">
+        <div class="lis">
+          <a href="###" class="pay">
+            <span></span>
+            <p>待付款</p>
+          </a>
+        </div>
+        <div class="lis">
+          <a href="###" class="send">
+            <span></span>
+            <p>待发货</p>
+          </a>
+        </div>
+        <div class="lis">
+          <a href="###" class="take">
+            <span></span>
+            <p>待收货</p>
+          </a>
+        </div>
+        <div class="lis">
+          <a href="###" class="judeg">
+            <span></span>
+            <p>待评价</p>
+          </a>
+        </div>
+      </div>
+      <ul>
+        <li><a href="###" class="car"><b></b>我的购物车<span></span></a></li>
+        <li><a href="###" class="menber"><b></b>我的会员<span></span></a></li>
+        <li><a href="###" class="call"><b></b>客服热线<span></span></a></li>
+        <li><a href="###" class="update"><b></b>我的上传<span></span></a></li>
+        <li><a href="###" class="setting"><b></b>我的设置<span></span></a></li>
+      </ul>
+    </div>
+    <div class="footer clear">
+      <div class="ls"><a href="###" class="h"><span></span>主页</a></div>
+      <div class="ls"><a href="###" class="s"><span></span>商城</a></div>
+      <div class="ls"><a href="###" class="sl"><span></span>选菜</a></div>
+      <div class="ls"><a href="###" class="f"><span></span>发现</a></div>
+      <div class="ls"><a href="###" class="m  select"><span></span>我的</a></div>
+    </div>
+  </body>
+  <script src="../js/public.js" charset="utf-8"></script>
+  <script type="text/javascript">
+    var loginBtn = document.querySelector('.btn');
+    loginBtn.onclick = function() {
+      loginPage();
+    }
+  </script>
+</html>

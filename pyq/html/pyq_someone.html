@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>兔购他人个人信息</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <link rel="stylesheet" href="../css/reset.css" media="screen" title="no title" charset="utf-8">
+    <style media="screen">
+      a:active{
+        color: black;
+      }
+      a{
+        color: #000;
+      }
+      .header{
+        width: 100%;
+        height: .51rem;
+        position: absolute;
+        text-align: center;
+        color: #f1f1f1;
+        font-size: .17rem;
+        line-height: .415rem;
+        top: 0;
+        left: 0;
+      }
+      .header a{
+        position: absolute;
+        width: .1rem;
+        height: .185rem;
+        background-image: url(../img/login.png);
+        background-size: .94500005rem .21rem;
+        background-position: 0 0;
+        top:.1625rem;
+        left: 4%;
+      }
+      .header span{
+        position: absolute;
+        right: .155rem;
+        top: 0.145rem;
+        width: 0.6rem;
+        height: .22rem;
+        line-height: .22rem;
+        text-align: center;
+        color: #5bc662;
+        border: 0.015rem solid #5bc662;
+        font-size: .12rem;
+        border-radius: .16rem;
+      }
+      .message{
+        width: 100%;
+        height: 2.3rem;
+        border-bottom: 1px solid #dad9d6;
+        background-color: rgb(137, 155, 170);
+        background-image: url(../img/bg2.jpg);
+        background-size: 100% 100%;
+        padding-top: .36rem;
+        box-shadow: 0 5px 5px #f4f3f0;
+      }
+      .icon{
+        width: .905rem;
+        height: .905rem;
+        border-radius: 50%;
+        border: 0.035rem solid #c3ad88;
+        margin: auto;
+      }
+      .icon img{
+        width: .805rem;
+        height: .805rem;
+        border-radius: 50%;
+        margin: .05rem .05rem;
+      }
+      .self{
+        margin-top: .225rem;
+        margin-bottom: .26rem;
+        text-align: center;
+      }
+      .self .user{
+        height: .24rem;
+        line-height: .24rem;
+        text-align: center;
+        margin: auto;
+        font-size: .18rem;
+        color: white;
+      }
+      .other{
+        width: 95.9375%;
+        color: #fff;
+        margin: auto;
+      }
+      .someone{
+        height: .30rem;
+        width: 100%;
+        padding-top: .185rem;
+        border-top: 1px solid #c5c4c4;
+      }
+      .someone .see,.someone .likeme{
+        width: 33.061889%;
+        height: .3rem;
+        line-height: .3rem;
+        text-align: center;
+        font-size: 0.12rem;
+      }
+      .someone .see,.someone .likeme{
+        width: 49.837133%;
+      }
+      .someone .see{
+        border-right: 1px solid #c5c4c4;
+      }
+      #see{
+        color: #71f704;
+        font-size: .12rem;
+        margin-left: .15rem;
+      }
+      #like{
+        color: #ff4e00;
+        font-size: .12rem;
+        margin-left: .15rem;
+      }
+      .trends{
+        width: 100%;
+      }
+      .trends .th{
+        width: 95.733333%;
+        height: .3rem;
+        line-height: .3rem;
+        border-bottom: 1px solid #c5c4c4;
+        padding-left: 4.266666%;
+        font-size: .14rem;
+        color: #000;
+      }
+      .trends .th span{
+        margin-left: .14rem;
+        font-size: .12rem;
+      }
+      .trends .td{
+        width: 100%;
+        height: .8rem;
+        border-bottom: 1px solid #c5c4c4;
+        padding-top: .1rem;
+        font-size: .12rem;
+        color: #000;
+        display: block;
+        position: relative;
+      }
+      .trends .td .img{
+        margin-left: 4%;
+        width: 0.71rem;
+        margin-right: 2.666666%;
+      }
+      .trends .td .img img{
+        width: 100%;
+      }
+      .trends .td .con{
+        width: 66%;
+        height: 0.7rem;
+      }
+      .trends .td .con .h{
+        display: block;
+        font-size: .14rem;
+        margin-bottom: 0.055rem;
+      }
+      .trends .td .con .text{
+        width: 79.797979%;
+        height: .12rem;
+        color: #b8b8b8;
+        text-overflow: ellipsis;
+        white-space:nowrap;
+        overflow:hidden;
+        margin-bottom: .22rem;
+      }
+      .trends .td .con .make .reward{
+        margin-right: .105rem;
+      }
+      .trends .td .con .make .comment var{
+        background-image: url(../img/someone.png);
+        display: inline-block;
+        width: .105rem;
+        height: .1rem;
+        background-position: 0 0;
+        background-size: .315rem .115rem;
+        vertical-align: middle;
+      }
+      .trends .td .con .make .share strong{
+        background-image: url(../img/someone.png);
+        display: inline-block;
+        width: .115rem;
+        height: .105rem;
+        background-position: -.12142856rem 0;
+        background-size: .315rem .115rem;
+        vertical-align: middle;
+      }
+      .trends .td .more{
+        background-image: url(../img/someone.png);
+        background-repeat: no-repeat;
+        display: inline-block;
+        width: .065rem;
+        height: .115rem;
+        background-position: -.25285712rem 0;
+        background-size: .315rem .115rem;
+        position: absolute;
+        right: 3.333333%;
+        top: .3925rem;
+      }
+      @media screen and (min-width:400px) {
+        html{
+          font-size: 120px;
+        }
+      }
+      @media screen and (min-width:500px) {
+        html{
+          font-size: 130px;
+        }
+      }
+      @media screen and (min-width:600px) {
+        html{
+          font-size: 140px;
+        }
+      }
+      @media screen and (min-width:700px) {
+        html{
+          font-size: 150px;
+        }
+      }
+      @media screen and (min-width:800px) {
+        html{
+          font-size: 160px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <a href="javascript:history.go(-1);"></a>
+      <span id="tosee">+关注</span>
+    </div>
+    <div class="message">
+      <div class="icon">
+        <img src="../img/nzbst.png" alt="" />
+      </div>
+      <div class="self">
+        <div class="user">你咋不上天</div>
+      </div>
+      <div class="other">
+        <div class="someone clear">
+          <div class="see fl">关注 <span id="see">6</span></div>
+          <div class="likeme fl">粉丝  <span id="like">17</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="trends">
+      <div class="th">
+        Ta的动态 <span>153</span>
+      </div>
+      <div class="td clear">
+        <div class="img fl">
+          <img src="../img/fd1.jpg" alt="劲脆盐酥鸡" />
+        </div>
+        <div class="con fl">
+          <a href="###" class="h clear">
+            <span class="title fl">劲脆盐酥鸡</span><span class="date fr">2016-3-23</span>
+          </a>
+          <div class="text">明媚的阳光，懒洋洋的中午，炸上几块鲜香...</div>
+          <div class="make clear">
+            <a href="###" class="reward fl"><span class="person">12</span>人打赏</a>
+            <a href="###" class="comment fl"><var></var>写评论</a>
+            <a href="###" class="share fr"><strong></strong>分享</a>
+          </div>
+        </div>
+        <a href="###" class="more"></a>
+      </div>
+      <div class="td clear">
+        <div class="img fl">
+          <img src="../img/fd2.jpg" alt="麻麻的红烧肉" />
+        </div>
+        <div class="con fl">
+          <a href="###" class="h clear">
+            <span class="title fl">麻麻的红烧肉</span><span class="date fr">2016-3-21</span>
+          </a>
+          <div class="text">最好吃不过麻麻亲手做的红烧肉~这次我也....</div>
+          <div class="make clear">
+            <a href="###" class="reward fl"><span class="person">22</span>人打赏</a>
+            <a href="###" class="comment fl"><var></var>写评论</a>
+            <a href="###" class="share fr"><strong></strong>分享</a>
+          </div>
+        </div>
+        <a href="###" class="more"></a>
+      </div>
+      <div class="td clear">
+        <div class="img fl">
+          <img src="../img/fd3.jpg" alt="黑椒牛排" />
+        </div>
+        <div class="con fl">
+            <a href="###" class="h clear">
+              <span class="title fl">黑椒牛排</span><span class="date fr">2016-3-15</span>
+            </a>
+            <div class="text">温暖的烛光，浪漫的气氛，怎么少得了一份...</div>
+          <div class="make clear">
+            <a href="###" class="reward fl"><span class="person">8</span>人打赏</a>
+            <a href="###" class="comment fl"><var></var>写评论</a>
+            <a href="###" class="share fr"><strong></strong>分享</a>
+          </div>
+        </div>
+        <a href="###" class="more"></a>
+      </div>
+      <div class="td clear">
+        <div class="img fl">
+          <img src="../img/fd4.jpg" alt="梅子番茄" />
+        </div>
+        <div class="con fl">
+          <a href="###" class="h clear">
+            <span class="title fl">梅子番茄—恋爱的味道</span><span class="date fr">2016-2-23</span>
+          </a>
+          <div class="text">撒娇女人最好命！还记得酸酸甜甜的初恋吗...</div>
+          <div class="make clear">
+            <a href="###" class="reward fl"><span class="person">2</span>人打赏</a>
+            <a href="###" class="comment fl"><var></var>写评论</a>
+            <a href="###" class="share fr"><strong></strong>分享</a>
+          </div>
+        </div>
+        <a href="###" class="more"></a>
+      </div>
+    </div>
+  </body>
+  <script src="../js/jquery-3.0.0.min.js" charset="utf-8"></script>
+  <script type="text/javascript">
+    var bol = false;
+    $('#tosee').on('click',function() {
+      if (!bol) {
+        $(this).html('取消关注');
+        bol = true;
+      }else {
+        $(this).html('+关注');
+        bol = false;
+      }
+    });
+  </script>
+</html>
