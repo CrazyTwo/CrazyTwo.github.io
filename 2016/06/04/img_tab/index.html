@@ -1,98 +1,283 @@
+<!doctype html>
 
- <!DOCTYPE HTML>
-<html lang="中文">
-<head>
-  <meta charset="UTF-8">
+
+
   
-    <title>首页头部的图片切换案例 | H5课堂笔记</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
+
+
+<html class="theme-next pisces use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
     
-    <meta name="author" content="CrazyTwo">
     
-    <meta name="description" content="做前端的一定要会做头部的图片切换，例如淘宝、京东等等页面都有这些功能，所以我们可以做好一些例子把它封成一个函数，以备不时之需！！以下所介绍的是，以淘宝和京东为例子的切换案例，喜欢就收下吧！
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.1" />
+
+
+
+
+
+
+<meta name="description" content="做前端的一定要会做头部的图片切换，例如淘宝、京东等等页面都有这些功能，所以我们可以做好一些例子把它封成一个函数，以备不时之需！！以下所介绍的是，以淘宝和京东为例子的切换案例，喜欢就收下吧！
 左右移动的图片切换HTML代码
-123456789101112131415161718192021222324">
-    
-    
-    
-    <meta name="twitter:card" content="summary" />
-    <meta name="twitter:site" content="https://twitter.com/Crazytwo8" />
-    <meta name="twitter:title" content="首页头部的图片切换案例 | H5课堂笔记" />
-      
-    
-    
-    
-    <link rel="icon" href="/img/favicon.ico">
-    
-    
-    <link rel="apple-touch-icon" href="/img/pacman.jpg">
-    <link rel="apple-touch-icon-precomposed" href="/img/pacman.jpg">
-    
-    <link rel="stylesheet" href="/css/style.css">
+12345678910111213141516171819202122232425262728&amp;lt;!DOCTYPE html&amp;gt;&amp;lt;html&amp;gt;	&amp;lt;head">
+<meta property="og:type" content="article">
+<meta property="og:title" content="首页头部的图片切换案例">
+<meta property="og:url" content="https://github.com/CrazyTwo/CrazyTwo.github.io/2016/06/04/img_tab/index.html">
+<meta property="og:site_name" content="H5课堂笔记">
+<meta property="og:description" content="做前端的一定要会做头部的图片切换，例如淘宝、京东等等页面都有这些功能，所以我们可以做好一些例子把它封成一个函数，以备不时之需！！以下所介绍的是，以淘宝和京东为例子的切换案例，喜欢就收下吧！
+左右移动的图片切换HTML代码
+12345678910111213141516171819202122232425262728&amp;lt;!DOCTYPE html&amp;gt;&amp;lt;html&amp;gt;	&amp;lt;head">
+<meta property="og:updated_time" content="2016-06-04T05:33:54.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="首页头部的图片切换案例">
+<meta name="twitter:description" content="做前端的一定要会做头部的图片切换，例如淘宝、京东等等页面都有这些功能，所以我们可以做好一些例子把它封成一个函数，以备不时之需！！以下所介绍的是，以淘宝和京东为例子的切换案例，喜欢就收下吧！
+左右移动的图片切换HTML代码
+12345678910111213141516171819202122232425262728&amp;lt;!DOCTYPE html&amp;gt;&amp;lt;html&amp;gt;	&amp;lt;head">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 0,
+      author: 'Author'
+    }
+  };
+</script>
+
+  <title> 首页头部的图片切换案例 | H5课堂笔记 </title>
 </head>
 
-  <body>
-    <header>
-      <div>
-		
-			<div id="imglogo">
-				<a href="/"><img src="/img/logo.svg" alt="H5课堂笔记" title="H5课堂笔记"/></a>
-			</div>
-			
-			<div id="textlogo">
-				<h1 class="site-name"><a href="/" title="H5课堂笔记">H5课堂笔记</a></h1>
-				<h2 class="blog-motto"></h2>
-			</div>
-			<div class="navbar"><a class="navbutton navmobile" href="#" title="菜单">
-			</a></div>
-			<nav class="animated">
-				<ul>
-					<ul>
-					 
-						<li><a href="/">Home</a></li>
-					
-						<li><a href="/archives">Archives</a></li>
-					
-					<li>
-					
-					<form class="search" action="//google.com/search" method="get" accept-charset="utf-8">
-						<label>Search</label>
-						<input type="search" id="search" name="q" autocomplete="off" maxlength="20" placeholder="Search" />
-						<input type="hidden" name="q" value="site:github.com/CrazyTwo/CrazyTwo.github.io">
-					</form>
-					
-					</li>
-				</ul>
-			</nav>			
+<body itemscope itemtype="http://schema.org/WebPage" lang="中文">
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">H5课堂笔记</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle"></p>
 </div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Archives
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            Tags
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
     </header>
-    <div id="container">
-      <div id="main" class="post" itemscope itemprop="blogPost">
-	<article itemprop="articleBody"> 
-		<header class="article-info clearfix">
-  <h1 itemprop="name">
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
     
-      <a href="/2016/06/04/img_tab/" title="首页头部的图片切换案例" itemprop="url">首页头部的图片切换案例</a>
-  </h1>
-  <p class="article-author">By
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
     
-      <a href="https://github.com/CrazyTwo/CrazyTwo.github.io" title="CrazyTwo">CrazyTwo</a>
-    </p>
-  <p class="article-time">
-    <time datetime="2016-06-04T03:30:49.000Z" itemprop="datePublished">2016-06-04</time>
-    更新日期:<time datetime="2016-06-04T05:33:54.000Z" itemprop="dateModified">2016-06-04</time>
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                首页头部的图片切换案例
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Posted on</span>
+            <time itemprop="dateCreated" datetime="2016-06-04T11:30:49+08:00" content="2016-06-04">
+              2016-06-04
+            </time>
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
     
-  </p>
-</header>
-	<div class="article-content">
-		
-		
-		<div id="toc" class="toc-article">
-			<strong class="toc-title">文章目录</strong>
-		<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#左右移动的图片切换"><span class="toc-number">1.</span> <span class="toc-text">左右移动的图片切换</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#淡入类型的图片切换"><span class="toc-number">2.</span> <span class="toc-text">淡入类型的图片切换</span></a></li></ol>
-		</div>
-		
-		<p>做前端的一定要会做头部的图片切换，例如淘宝、京东等等页面都有这些功能，所以我们可以做好一些例子把它封成一个函数，以备不时之需！！<br>以下所介绍的是，以淘宝和京东为例子的切换案例，喜欢就收下吧！</p>
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>做前端的一定要会做头部的图片切换，例如淘宝、京东等等页面都有这些功能，所以我们可以做好一些例子把它封成一个函数，以备不时之需！！<br>以下所介绍的是，以淘宝和京东为例子的切换案例，喜欢就收下吧！</p>
 <h1 id="左右移动的图片切换"><a href="#左右移动的图片切换" class="headerlink" title="左右移动的图片切换"></a>左右移动的图片切换</h1><p>HTML代码</p>
 <figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html&gt;</span><br><span class="line">	&lt;head&gt;</span><br><span class="line">		&lt;meta charset="UTF-8"&gt;</span><br><span class="line">		&lt;title&gt;&lt;/title&gt;</span><br><span class="line">		&lt;!--这里使用了运动曲线，即贝塞尔曲线，以下是已经写好的函数，封装在tween.js里，调用就可以使用了--&gt;</span><br><span class="line">		&lt;script src="../tween_js/tween.js" type="text/javascript" charset="utf-8"&gt;&lt;/script&gt;</span><br><span class="line">	&lt;/head&gt;</span><br><span class="line">	&lt;body&gt;</span><br><span class="line">		&lt;div class="wrap"&gt;</span><br><span class="line">			&lt;div class="inner"&gt;</span><br><span class="line">				&lt;img src="1.jpg"/&gt;</span><br><span class="line">				&lt;img src="2.jpg"/&gt;</span><br><span class="line">				&lt;img src="3.jpg"/&gt;</span><br><span class="line">				&lt;img src="4.jpg"/&gt;</span><br><span class="line">				&lt;img src="1.jpg"/&gt;</span><br><span class="line">			&lt;/div&gt;</span><br><span class="line">			&lt;div id="left"&gt;&lt;&lt;/div&gt;</span><br><span class="line">			&lt;div id="right"&gt;&gt;&lt;/div&gt;</span><br><span class="line">			&lt;div id="dd"&gt;</span><br><span class="line">				&lt;span class="select"&gt;&lt;/span&gt;</span><br><span class="line">				&lt;span&gt;&lt;/span&gt;</span><br><span class="line">				&lt;span&gt;&lt;/span&gt;</span><br><span class="line">				&lt;span&gt;&lt;/span&gt;</span><br><span class="line">			&lt;/div&gt;</span><br><span class="line">		&lt;/div&gt;</span><br><span class="line">	&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
 <p>CSS代码</p>
@@ -106,201 +291,194 @@
 <p>CSS代码</p>
 <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.wrap</span>&#123;</span><br><span class="line">	<span class="attribute">width</span>: <span class="number">520px</span>;</span><br><span class="line">	<span class="attribute">height</span>: <span class="number">280px</span>;</span><br><span class="line">	<span class="attribute">border</span>: <span class="number">5px</span> solid skyblue;</span><br><span class="line">	<span class="attribute">overflow</span>: hidden;</span><br><span class="line">	<span class="attribute">position</span>: relative;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.inner</span>&#123;</span><br><span class="line">	<span class="attribute">width</span>: <span class="number">500%</span>;</span><br><span class="line">	<span class="attribute">overflow</span>: hidden;</span><br><span class="line">	<span class="attribute">height</span>: <span class="number">100%</span>;</span><br><span class="line">	<span class="attribute">position</span>: relative;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.inner</span> <span class="selector-tag">img</span>&#123;</span><br><span class="line">	<span class="attribute">width</span>: <span class="number">520px</span>;</span><br><span class="line">	<span class="attribute">position</span>: absolute;</span><br><span class="line">	<span class="attribute">top</span>: <span class="number">0</span>;</span><br><span class="line">	<span class="attribute">left</span>: <span class="number">0</span>;</span><br><span class="line">	<span class="attribute">z-index</span>: <span class="number">0</span>;</span><br><span class="line">	<span class="attribute">opacity</span>: <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-id">#left</span>&#123;</span><br><span class="line">	<span class="attribute">width</span>: <span class="number">24px</span>;</span><br><span class="line">	<span class="attribute">height</span>: <span class="number">36px</span>;</span><br><span class="line">	<span class="attribute">position</span>: absolute;</span><br><span class="line">	<span class="attribute">background</span>: <span class="built_in">rgba</span>(0,0,0,0.5);</span><br><span class="line">	<span class="attribute">left</span>: <span class="number">0</span>;</span><br><span class="line">	<span class="attribute">top</span>: <span class="number">46.538461%</span>;</span><br><span class="line">	<span class="attribute">font-size</span>: <span class="number">30px</span>;</span><br><span class="line">	<span class="attribute">text-align</span>: center;</span><br><span class="line">	<span class="attribute">line-height</span>: <span class="number">36px</span>;</span><br><span class="line">	<span class="attribute">color</span>: white;</span><br><span class="line">	<span class="attribute">cursor</span>: pointer;</span><br><span class="line">	<span class="attribute">z-index</span>: <span class="number">2</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-id">#right</span>&#123;</span><br><span class="line">	<span class="attribute">width</span>: <span class="number">24px</span>;</span><br><span class="line">	<span class="attribute">height</span>: <span class="number">36px</span>;</span><br><span class="line">	<span class="attribute">position</span>: absolute;</span><br><span class="line">	<span class="attribute">background</span>: <span class="built_in">rgba</span>(0,0,0,0.5);</span><br><span class="line">	<span class="attribute">right</span>: <span class="number">0</span>;</span><br><span class="line">	<span class="attribute">top</span>: <span class="number">46.538461%</span>;</span><br><span class="line">	<span class="attribute">font-size</span>: <span class="number">30px</span>;</span><br><span class="line">	<span class="attribute">text-align</span>: center;</span><br><span class="line">	<span class="attribute">line-height</span>: <span class="number">36px</span>;</span><br><span class="line">	<span class="attribute">color</span>: white;</span><br><span class="line">	<span class="attribute">cursor</span>: pointer;</span><br><span class="line">	<span class="attribute">z-index</span>: <span class="number">2</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-id">#dd</span>&#123;</span><br><span class="line">	<span class="attribute">width</span>: <span class="number">60px</span>;</span><br><span class="line">	<span class="attribute">height</span>: <span class="number">13px</span>;</span><br><span class="line">	<span class="attribute">border-radius</span>: <span class="number">5px</span>;</span><br><span class="line">	<span class="attribute">background</span>: <span class="built_in">rgba</span>(255,255,255,0.3);</span><br><span class="line">	<span class="attribute">position</span>: absolute;</span><br><span class="line">	<span class="attribute">left</span>: <span class="number">50%</span>;</span><br><span class="line">	<span class="attribute">margin-left</span>: -<span class="number">30px</span>;</span><br><span class="line">	<span class="attribute">bottom</span>: <span class="number">10px</span>;</span><br><span class="line">	<span class="attribute">z-index</span>: <span class="number">2</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-id">#dd</span> <span class="selector-tag">span</span>&#123;</span><br><span class="line">	<span class="attribute">width</span>: <span class="number">9px</span>;</span><br><span class="line">	<span class="attribute">height</span>: <span class="number">9px</span>;</span><br><span class="line">	<span class="attribute">background</span>: <span class="number">#b7b7b7</span>;</span><br><span class="line">	<span class="attribute">border-radius</span>: <span class="number">5px</span>;</span><br><span class="line">	<span class="attribute">float</span>: left;</span><br><span class="line">	<span class="attribute">margin-left</span>: <span class="number">5px</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-id">#dd</span> <span class="selector-class">.select</span>&#123;</span><br><span class="line">	<span class="attribute">background</span>: red;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>JS代码</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//获取移动标签</span></span><br><span class="line"><span class="keyword">var</span> inner = <span class="built_in">document</span>.getElementsByClassName(<span class="string">'inner'</span>)[<span class="number">0</span>];</span><br><span class="line"><span class="comment">//获取左右按钮</span></span><br><span class="line"><span class="keyword">var</span> lBtn = <span class="built_in">document</span>.getElementById(<span class="string">'left'</span>);</span><br><span class="line"><span class="keyword">var</span> rBtn = <span class="built_in">document</span>.getElementById(<span class="string">'right'</span>);</span><br><span class="line"><span class="comment">//获取图片位置点</span></span><br><span class="line"><span class="keyword">var</span> span = <span class="built_in">document</span>.getElementsByTagName(<span class="string">'span'</span>);</span><br><span class="line"><span class="keyword">var</span> img = inner.getElementsByTagName(<span class="string">'img'</span>);</span><br><span class="line"><span class="comment">//定义记录图片位置值</span></span><br><span class="line"><span class="keyword">var</span> index = <span class="number">0</span>;</span><br><span class="line"><span class="comment">//定义布尔值记录动画是否开始</span></span><br><span class="line"><span class="keyword">var</span> move_bol = <span class="literal">false</span>;</span><br><span class="line">	</span><br><span class="line"><span class="comment">//自动化动画</span></span><br><span class="line"><span class="keyword">var</span> mytimer =setInterval(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">	rBtn.click();<span class="comment">//模拟手动点击下一张，每3000毫秒点击一次</span></span><br><span class="line">&#125;,<span class="number">3000</span>);</span><br><span class="line"><span class="comment">//下一张点击事件</span></span><br><span class="line">rBtn.onclick = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">	<span class="keyword">if</span>(move_bol)&#123;<span class="keyword">return</span>&#125;<span class="comment">//动画正在执行就退出点击事件</span></span><br><span class="line">	<span class="keyword">var</span> before = index;</span><br><span class="line">	index ++;<span class="comment">//记录位置</span></span><br><span class="line">	<span class="keyword">if</span> (index &gt; <span class="number">3</span>) &#123;</span><br><span class="line">		index = <span class="number">0</span>;<span class="comment">//最后一张时记录位置为第二张</span></span><br><span class="line">	&#125;</span><br><span class="line">	showFn(before);<span class="comment">//执行动画函数</span></span><br><span class="line">	changespanFn();<span class="comment">//执行图片位置点切换函数</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//上一张点击事件</span></span><br><span class="line">lBtn.onclick = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">	<span class="keyword">if</span>(move_bol)&#123;<span class="keyword">return</span>&#125;<span class="comment">//动画正在执行就退出点击事件</span></span><br><span class="line">	<span class="keyword">var</span> before = index;</span><br><span class="line">	index --;<span class="comment">//记录位置</span></span><br><span class="line">	<span class="keyword">if</span> (index &lt; <span class="number">0</span>) &#123;</span><br><span class="line">		index = <span class="number">3</span>;<span class="comment">//第一张时记录位置为最后一张</span></span><br><span class="line">	&#125;</span><br><span class="line">	showFn(before);<span class="comment">//执行动画函数</span></span><br><span class="line">	changespanFn();<span class="comment">//执行图片位置点切换函数</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//图片位置点切换的点击事件</span></span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">var</span> i=<span class="number">0</span>; i &lt; span.length; i++) &#123;</span><br><span class="line">	span[i].index = i;<span class="comment">//记录图片位置点位置</span></span><br><span class="line">	span[i].onclick = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">		<span class="keyword">if</span>(move_bol)&#123;<span class="keyword">return</span>&#125;<span class="comment">//动画正在执行就退出点击事件</span></span><br><span class="line">		<span class="keyword">var</span> before = index;</span><br><span class="line">		index = <span class="keyword">this</span>.index;<span class="comment">//把图片位置点位置赋值给位置</span></span><br><span class="line">		changespanFn();<span class="comment">//执行动画函数</span></span><br><span class="line">		showFn(before);<span class="comment">//执行图片位置点切换函数</span></span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line">	</span><br><span class="line"><span class="comment">//图片位置点切换的函数</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">changespanFn</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">0</span>; i&lt; span.length; i++)&#123;</span><br><span class="line">		span[i].className = <span class="string">''</span>;<span class="comment">//清空所有图片位置点的样式，防止样式重叠</span></span><br><span class="line">	&#125;</span><br><span class="line">	span[index].className =<span class="string">'select'</span>;<span class="comment">//设置当前图片位置点的样式</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//图片动画函数</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">showFn</span>(<span class="params">before</span>)</span>&#123;</span><br><span class="line">	move_bol = <span class="literal">true</span>;<span class="comment">//记录动画开始</span></span><br><span class="line">	<span class="keyword">var</span> t = <span class="number">0</span>;<span class="comment">//初始透明度</span></span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">0</span>; i&lt; img.length; i++)&#123;</span><br><span class="line">		img[i].style.zIndex = <span class="number">0</span>;</span><br><span class="line">		<span class="keyword">if</span>(before!=i)&#123;</span><br><span class="line">			img[i].style.opacity = <span class="number">0</span>;<span class="comment">//除上一张以外其他设为透明，让显示不违和</span></span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	img[index].style.zIndex = <span class="number">1</span>;<span class="comment">//当前张位置上移覆盖上一张</span></span><br><span class="line">	<span class="keyword">var</span> timer = setInterval(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">		t++;<span class="comment">//逐渐增加不透明度</span></span><br><span class="line">		<span class="keyword">if</span>(t &gt;= <span class="number">50</span>)&#123;</span><br><span class="line">			clearInterval(timer);</span><br><span class="line">			move_bol = <span class="literal">false</span>;<span class="comment">//记录动画结束</span></span><br><span class="line">		&#125;</span><br><span class="line">		img[index].style.opacity = t/<span class="number">50</span> ;</span><br><span class="line">	&#125;,<span class="number">30</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>  
-	</div>
-		<footer class="article-footer clearfix">
-
-
-
-
-<div class="article-share" id="share">
-
-  <div data-url="https://github.com/CrazyTwo/CrazyTwo.github.io/2016/06/04/img_tab/" data-title="首页头部的图片切换案例 | H5课堂笔记" data-tsina="null" class="share clearfix">
-  </div>
-
-</div>
-</footer>   	       
-	</article>
-	
-<nav class="article-nav clearfix">
- 
- <div class="prev" >
- <a href="/2016/06/13/node/" title="案例 -- JS实现留言（DOM练习）">
-  <strong>PREVIOUS:</strong><br/>
-  <span>
-  案例 -- JS实现留言（DOM练习）</span>
-</a>
-</div>
-
-
-<div class="next">
-<a href="/2016/06/01/game0/"  title="小游戏案例--选择与颜色相符的字">
- <strong>NEXT:</strong><br/> 
- <span>小游戏案例--选择与颜色相符的字
-</span>
-</a>
-</div>
-
-</nav>
-
-	
-</div>  
-      <div class="openaside"><a class="navbutton" href="#" title="显示侧边栏"></a></div>
-
-  <div id="toc" class="toc-aside">
-  <strong class="toc-title">文章目录</strong>
-  <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#左右移动的图片切换"><span class="toc-number">1.</span> <span class="toc-text">左右移动的图片切换</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#淡入类型的图片切换"><span class="toc-number">2.</span> <span class="toc-text">淡入类型的图片切换</span></a></li></ol>
-  </div>
-
-<div id="asidepart">
-<div class="closeaside"><a class="closebutton" href="#" title="隐藏侧边栏"></a></div>
-<aside class="clearfix">
-
-  
-
-  
-
-  <div class="rsspart">
-	<a href="null" target="_blank" title="rss">RSS 订阅</a>
-</div>
-
-  <div class="widget tag">
-<h3 class="title">友情链接</h3>
-<ul class="entry">
-<li><a href="http://hongbinzuo.github.io/" title="Hongbin Zuo's Blog">Hongbin Zuo</a></li>
-</ul>
-</div>
-
-</aside>
-</div>
-    </div>
-    <footer><div id="footer" >
-	
-	
-	<div class="social-font" class="clearfix">
-		
-		
-		<a href="https://twitter.com/https://twitter.com/Crazytwo8" target="_blank" title="twitter"></a>
-		
-		
-		<a href="https://github.com/https://github.com/CrazyTwo" target="_blank" title="github"></a>
-		
-		
-	</div>
-		<p class="copyright">Powered by <a href="http://zespia.tw/hexo/" target="_blank" title="hexo">hexo</a> and Theme by <a href="https://github.com/A-limon/pacman" target="_blank" title="Pacman">Pacman</a> © 2016 
-		
-		<a href="https://github.com/CrazyTwo/CrazyTwo.github.io" target="_blank" title="CrazyTwo">CrazyTwo</a>
-		
-		</p>
-</div>
-</footer>
-    <script src="/js/jquery-2.0.3.min.js"></script>
-<script type="text/javascript">
-$(document).ready(function(){ 
-  $('.navbar').click(function(){
-    $('header nav').toggleClass('shownav');
-  });
-  var myWidth = 0;
-  function getSize(){
-    if( typeof( window.innerWidth ) == 'number' ) {
-      myWidth = window.innerWidth;
-    } else if( document.documentElement && document.documentElement.clientWidth) {
-      myWidth = document.documentElement.clientWidth;
-    };
-  };
-  var m = $('#main'),
-      a = $('#asidepart'),
-      c = $('.closeaside'),
-      o = $('.openaside');
-  $(window).resize(function(){
-    getSize(); 
-    if (myWidth >= 1024) {
-      $('header nav').removeClass('shownav');
-    }else
-    {
-      m.removeClass('moveMain');
-      a.css('display', 'block').removeClass('fadeOut');
-      o.css('display', 'none');
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//获取移动标签</span></span><br><span class="line"><span class="keyword">var</span> inner = <span class="built_in">document</span>.getElementsByClassName(<span class="string">'inner'</span>)[<span class="number">0</span>];</span><br><span class="line"><span class="comment">//获取左右按钮</span></span><br><span class="line"><span class="keyword">var</span> lBtn = <span class="built_in">document</span>.getElementById(<span class="string">'left'</span>);</span><br><span class="line"><span class="keyword">var</span> rBtn = <span class="built_in">document</span>.getElementById(<span class="string">'right'</span>);</span><br><span class="line"><span class="comment">//获取图片位置点</span></span><br><span class="line"><span class="keyword">var</span> span = <span class="built_in">document</span>.getElementsByTagName(<span class="string">'span'</span>);</span><br><span class="line"><span class="keyword">var</span> img = inner.getElementsByTagName(<span class="string">'img'</span>);</span><br><span class="line"><span class="comment">//定义记录图片位置值</span></span><br><span class="line"><span class="keyword">var</span> index = <span class="number">0</span>;</span><br><span class="line"><span class="comment">//定义布尔值记录动画是否开始</span></span><br><span class="line"><span class="keyword">var</span> move_bol = <span class="literal">false</span>;</span><br><span class="line">	</span><br><span class="line"><span class="comment">//自动化动画</span></span><br><span class="line"><span class="keyword">var</span> mytimer =setInterval(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">	rBtn.click();<span class="comment">//模拟手动点击下一张，每3000毫秒点击一次</span></span><br><span class="line">&#125;,<span class="number">3000</span>);</span><br><span class="line"><span class="comment">//下一张点击事件</span></span><br><span class="line">rBtn.onclick = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">	<span class="keyword">if</span>(move_bol)&#123;<span class="keyword">return</span>&#125;<span class="comment">//动画正在执行就退出点击事件</span></span><br><span class="line">	<span class="keyword">var</span> before = index;</span><br><span class="line">	index ++;<span class="comment">//记录位置</span></span><br><span class="line">	<span class="keyword">if</span> (index &gt; <span class="number">3</span>) &#123;</span><br><span class="line">		index = <span class="number">0</span>;<span class="comment">//最后一张时记录位置为第二张</span></span><br><span class="line">	&#125;</span><br><span class="line">	showFn(before);<span class="comment">//执行动画函数</span></span><br><span class="line">	changespanFn();<span class="comment">//执行图片位置点切换函数</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//上一张点击事件</span></span><br><span class="line">lBtn.onclick = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">	<span class="keyword">if</span>(move_bol)&#123;<span class="keyword">return</span>&#125;<span class="comment">//动画正在执行就退出点击事件</span></span><br><span class="line">	<span class="keyword">var</span> before = index;</span><br><span class="line">	index --;<span class="comment">//记录位置</span></span><br><span class="line">	<span class="keyword">if</span> (index &lt; <span class="number">0</span>) &#123;</span><br><span class="line">		index = <span class="number">3</span>;<span class="comment">//第一张时记录位置为最后一张</span></span><br><span class="line">	&#125;</span><br><span class="line">	showFn(before);<span class="comment">//执行动画函数</span></span><br><span class="line">	changespanFn();<span class="comment">//执行图片位置点切换函数</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//图片位置点切换的点击事件</span></span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">var</span> i=<span class="number">0</span>; i &lt; span.length; i++) &#123;</span><br><span class="line">	span[i].index = i;<span class="comment">//记录图片位置点位置</span></span><br><span class="line">	span[i].onclick = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">		<span class="keyword">if</span>(move_bol)&#123;<span class="keyword">return</span>&#125;<span class="comment">//动画正在执行就退出点击事件</span></span><br><span class="line">		<span class="keyword">var</span> before = index;</span><br><span class="line">		index = <span class="keyword">this</span>.index;<span class="comment">//把图片位置点位置赋值给位置</span></span><br><span class="line">		changespanFn();<span class="comment">//执行动画函数</span></span><br><span class="line">		showFn(before);<span class="comment">//执行图片位置点切换函数</span></span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line">	</span><br><span class="line"><span class="comment">//图片位置点切换的函数</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">changespanFn</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">0</span>; i&lt; span.length; i++)&#123;</span><br><span class="line">		span[i].className = <span class="string">''</span>;<span class="comment">//清空所有图片位置点的样式，防止样式重叠</span></span><br><span class="line">	&#125;</span><br><span class="line">	span[index].className =<span class="string">'select'</span>;<span class="comment">//设置当前图片位置点的样式</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//图片动画函数</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">showFn</span>(<span class="params">before</span>)</span>&#123;</span><br><span class="line">	move_bol = <span class="literal">true</span>;<span class="comment">//记录动画开始</span></span><br><span class="line">	<span class="keyword">var</span> t = <span class="number">0</span>;<span class="comment">//初始透明度</span></span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">0</span>; i&lt; img.length; i++)&#123;</span><br><span class="line">		img[i].style.zIndex = <span class="number">0</span>;</span><br><span class="line">		<span class="keyword">if</span>(before!=i)&#123;</span><br><span class="line">			img[i].style.opacity = <span class="number">0</span>;<span class="comment">//除上一张以外其他设为透明，让显示不违和</span></span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	img[index].style.zIndex = <span class="number">1</span>;<span class="comment">//当前张位置上移覆盖上一张</span></span><br><span class="line">	<span class="keyword">var</span> timer = setInterval(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">		t++;<span class="comment">//逐渐增加不透明度</span></span><br><span class="line">		<span class="keyword">if</span>(t &gt;= <span class="number">50</span>)&#123;</span><br><span class="line">			clearInterval(timer);</span><br><span class="line">			move_bol = <span class="literal">false</span>;<span class="comment">//记录动画结束</span></span><br><span class="line">		&#125;</span><br><span class="line">		img[index].style.opacity = t/<span class="number">50</span> ;</span><br><span class="line">	&#125;,<span class="number">30</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
       
-      $('#toc.toc-aside').css('display', 'none');
+    </div>
+
+    <div>
+      
         
-    }
-  });
-  c.click(function(){
-    a.addClass('fadeOut').css('display', 'none');
-    o.css('display', 'block').addClass('fadeIn');
-    m.addClass('moveMain');
-  });
-  o.click(function(){
-    o.css('display', 'none').removeClass('beforeFadeIn');
-    a.css('display', 'block').removeClass('fadeOut').addClass('fadeIn');      
-    m.removeClass('moveMain');
-  });
-  $(window).scroll(function(){
-    o.css("top",Math.max(80,260-$(this).scrollTop()));
-  });
-});
-</script>
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/06/01/game0/" rel="next" title="小游戏案例--选择与颜色相符的字">
+                <i class="fa fa-chevron-left"></i> 小游戏案例--选择与颜色相符的字
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/06/13/node/" rel="prev" title="案例 -- JS实现留言（DOM练习）">
+                案例 -- JS实现留言（DOM练习） <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.gif"
+               alt="CrazyTwo" />
+          <p class="site-author-name" itemprop="name">CrazyTwo</p>
+          <p class="site-description motion-element" itemprop="description">这是我学习H5的笔记</p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">27</span>
+              <span class="site-state-item-name">posts</span>
+            </a>
+          </div>
+
+          
+
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#左右移动的图片切换"><span class="nav-number">1.</span> <span class="nav-text">左右移动的图片切换</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#淡入类型的图片切换"><span class="nav-number">2.</span> <span class="nav-text">淡入类型的图片切换</span></a></li></ol></div>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2016</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">CrazyTwo</span>
+</div>
+
+<div class="powered-by">
+  Powered by <a class="theme-link" href="http://hexo.io">Hexo</a>
+</div>
+
+<div class="theme-info">
+  Theme -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Pisces
+  </a>
+</div>
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
 
 <script type="text/javascript">
-$(document).ready(function(){ 
-  var ai = $('.article-content>iframe'),
-      ae = $('.article-content>embed'),
-      t  = $('#toc'),
-      h  = $('article h2')
-      ah = $('article h2'),
-      ta = $('#toc.toc-aside'),
-      o  = $('.openaside'),
-      c  = $('.closeaside');
-  if(ai.length>0){
-    ai.wrap('<div class="video-container" />');
-  };
-  if(ae.length>0){
-   ae.wrap('<div class="video-container" />');
-  };
-  if(ah.length==0){
-    t.css('display','none');
-  }else{
-    c.click(function(){
-      ta.css('display', 'block').addClass('fadeIn');
-    });
-    o.click(function(){
-      ta.css('display', 'none');
-    });
-    $(window).scroll(function(){
-      ta.css("top",Math.max(140,320-$(this).scrollTop()));
-    });
-  };
-});
-</script>
-
-
-<script type="text/javascript">
-$(document).ready(function(){ 
-  var $this = $('.share'),
-      url = $this.attr('data-url'),
-      encodedUrl = encodeURIComponent(url),
-      title = $this.attr('data-title'),
-      tsina = $this.attr('data-tsina');
-  var html = [
-  '<a href="#" class="overlay" id="qrcode"></a>',
-  '<div class="qrcode clearfix"><span>扫描二维码分享到微信朋友圈</span><a class="qrclose" href="#share"></a><strong>Loading...Please wait</strong><img id="qrcode-pic" data-src="http://s.jiathis.com/qrcode.php?url=' + encodedUrl + '"/></div>',
-  '<a href="#textlogo" class="article-back-to-top" title="Top"></a>',
-  '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
-  '<a href="#qrcode" class="article-share-qrcode" title="QRcode"></a>',
-  '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
-  '<a href="http://service.weibo.com/share/share.php?title='+title+'&url='+encodedUrl +'&ralateUid='+ tsina +'&searchPic=true&style=number' +'" class="article-share-weibo" target="_blank" title="Weibo"></a>',
-  '<span title="Share to"></span>'
-  ].join('');
-  $this.append(html);
-  $('.article-share-qrcode').click(function(){
-    var imgSrc = $('#qrcode-pic').attr('data-src');
-    $('#qrcode-pic').attr('src', imgSrc);
-    $('#qrcode-pic').load(function(){
-        $('.qrcode strong').text(' ');
-    });
-  });
-});     
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
 </script>
 
 
@@ -308,5 +486,79 @@ $(document).ready(function(){
 
 
 
-  </body>
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.1"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.0.1"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.1"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+  
+  
+  
+
+  
+
+  
+
+</body>
 </html>

@@ -1,15 +1,90 @@
+<!doctype html>
 
- <!DOCTYPE HTML>
-<html lang="中文">
-<head>
-  <meta charset="UTF-8">
+
+
   
-    <title>小游戏案例--选择与颜色相符的字 | H5课堂笔记</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
+
+
+<html class="theme-next pisces use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
     
-    <meta name="author" content="CrazyTwo">
     
-    <meta name="description" content="实现思路
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.1" />
+
+
+
+
+
+
+<meta name="description" content="实现思路
 
 获取元素
 开始倒计时
@@ -19,88 +94,214 @@
 如果点击的内容文字与题目文字的颜色相等就加分，否则减分
 时间为0时，停止游戏
 
-HTML 代码123456789101112131415161718192021222324&amp;lt;!">
-    
-    
-    
-    <meta name="twitter:card" content="summary" />
-    <meta name="twitter:site" content="https://twitter.com/Crazytwo8" />
-    <meta name="twitter:title" content="小游戏案例--选择与颜色相符的字 | H5课堂笔记" />
-      
-    
-    
-    
-    <link rel="icon" href="/img/favicon.ico">
-    
-    
-    <link rel="apple-touch-icon" href="/img/pacman.jpg">
-    <link rel="apple-touch-icon-precomposed" href="/img/pacman.jpg">
-    
-    <link rel="stylesheet" href="/css/style.css">
+HTML 代码123456789101112131415161718192021222324&amp;lt;!Doctype html&amp;gt;&amp;lt;html lang=&quot;en&quot;&amp;gt;&amp;lt;head&amp;gt;">
+<meta property="og:type" content="article">
+<meta property="og:title" content="小游戏案例--选择与颜色相符的字">
+<meta property="og:url" content="https://github.com/CrazyTwo/CrazyTwo.github.io/2016/06/01/game0/index.html">
+<meta property="og:site_name" content="H5课堂笔记">
+<meta property="og:description" content="实现思路
+
+获取元素
+开始倒计时
+点击五个颜色按钮
+题目文字随机改变文字与颜色
+五个颜色按钮随机改变文字的顺序和颜色
+如果点击的内容文字与题目文字的颜色相等就加分，否则减分
+时间为0时，停止游戏
+
+HTML 代码123456789101112131415161718192021222324&amp;lt;!Doctype html&amp;gt;&amp;lt;html lang=&quot;en&quot;&amp;gt;&amp;lt;head&amp;gt;">
+<meta property="og:updated_time" content="2016-06-01T06:18:25.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="小游戏案例--选择与颜色相符的字">
+<meta name="twitter:description" content="实现思路
+
+获取元素
+开始倒计时
+点击五个颜色按钮
+题目文字随机改变文字与颜色
+五个颜色按钮随机改变文字的顺序和颜色
+如果点击的内容文字与题目文字的颜色相等就加分，否则减分
+时间为0时，停止游戏
+
+HTML 代码123456789101112131415161718192021222324&amp;lt;!Doctype html&amp;gt;&amp;lt;html lang=&quot;en&quot;&amp;gt;&amp;lt;head&amp;gt;">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 0,
+      author: 'Author'
+    }
+  };
+</script>
+
+  <title> 小游戏案例--选择与颜色相符的字 | H5课堂笔记 </title>
 </head>
 
-  <body>
-    <header>
-      <div>
-		
-			<div id="imglogo">
-				<a href="/"><img src="/img/logo.svg" alt="H5课堂笔记" title="H5课堂笔记"/></a>
-			</div>
-			
-			<div id="textlogo">
-				<h1 class="site-name"><a href="/" title="H5课堂笔记">H5课堂笔记</a></h1>
-				<h2 class="blog-motto"></h2>
-			</div>
-			<div class="navbar"><a class="navbutton navmobile" href="#" title="菜单">
-			</a></div>
-			<nav class="animated">
-				<ul>
-					<ul>
-					 
-						<li><a href="/">Home</a></li>
-					
-						<li><a href="/archives">Archives</a></li>
-					
-					<li>
-					
-					<form class="search" action="//google.com/search" method="get" accept-charset="utf-8">
-						<label>Search</label>
-						<input type="search" id="search" name="q" autocomplete="off" maxlength="20" placeholder="Search" />
-						<input type="hidden" name="q" value="site:github.com/CrazyTwo/CrazyTwo.github.io">
-					</form>
-					
-					</li>
-				</ul>
-			</nav>			
+<body itemscope itemtype="http://schema.org/WebPage" lang="中文">
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">H5课堂笔记</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle"></p>
 </div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Archives
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            Tags
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
     </header>
-    <div id="container">
-      <div id="main" class="post" itemscope itemprop="blogPost">
-	<article itemprop="articleBody"> 
-		<header class="article-info clearfix">
-  <h1 itemprop="name">
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
     
-      <a href="/2016/06/01/game0/" title="小游戏案例--选择与颜色相符的字" itemprop="url">小游戏案例--选择与颜色相符的字</a>
-  </h1>
-  <p class="article-author">By
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
     
-      <a href="https://github.com/CrazyTwo/CrazyTwo.github.io" title="CrazyTwo">CrazyTwo</a>
-    </p>
-  <p class="article-time">
-    <time datetime="2016-06-01T06:16:16.000Z" itemprop="datePublished">2016-06-01</time>
-    更新日期:<time datetime="2016-06-01T06:18:25.000Z" itemprop="dateModified">2016-06-01</time>
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                小游戏案例--选择与颜色相符的字
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Posted on</span>
+            <time itemprop="dateCreated" datetime="2016-06-01T14:16:16+08:00" content="2016-06-01">
+              2016-06-01
+            </time>
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
     
-  </p>
-</header>
-	<div class="article-content">
-		
-		
-		<div id="toc" class="toc-article">
-			<strong class="toc-title">文章目录</strong>
-		<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#HTML-代码"><span class="toc-number">1.</span> <span class="toc-text">HTML 代码</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#CSS代码"><span class="toc-number">2.</span> <span class="toc-text">CSS代码</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#JS代码"><span class="toc-number">3.</span> <span class="toc-text">JS代码</span></a></li></ol>
-		</div>
-		
-		<p>实现思路</p>
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>实现思路</p>
 <ul>
 <li>获取元素</li>
 <li>开始倒计时</li>
@@ -112,201 +313,194 @@ HTML 代码123456789101112131415161718192021222324&amp;lt;!">
 </ul>
 <h1 id="HTML-代码"><a href="#HTML-代码" class="headerlink" title="HTML 代码"></a>HTML 代码</h1><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!Doctype html&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">"en"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"viewport"</span> <span class="attr">content</span>=<span class="string">"width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">title</span>&gt;</span>Document<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"wrap"</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"dao"</span>&gt;</span>剩余时间：20<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"wan"</span>&gt;</span>完成：0<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"show"</span>&gt;</span>红<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"menu"</span>&gt;</span>根据上面的字的颜色从下面选择正确的字，选择正确计一分,否则扣一分<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">ul</span> <span class="attr">id</span>=<span class="string">"ul1"</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">li</span>&gt;</span>绿<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">li</span>&gt;</span>蓝<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">li</span>&gt;</span>黑<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">li</span>&gt;</span>黄<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">li</span>&gt;</span>红<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"button"</span> <span class="attr">id</span>=<span class="string">"start"</span> <span class="attr">value</span>=<span class="string">"开始"</span> /&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <h1 id="CSS代码"><a href="#CSS代码" class="headerlink" title="CSS代码"></a>CSS代码</h1><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br></pre></td><td class="code"><pre><span class="line">*&#123;</span><br><span class="line">	<span class="attribute">margin</span>:<span class="number">0</span>;</span><br><span class="line">	<span class="attribute">padding</span>: <span class="number">0</span>;</span><br><span class="line">	<span class="attribute">font-family</span>: <span class="string">"微软雅黑"</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">body</span>,<span class="selector-tag">html</span>&#123;</span><br><span class="line">	<span class="attribute">height</span>: <span class="number">100%</span>;</span><br><span class="line">	<span class="attribute">font-size</span>: <span class="number">15px</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-id">#wrap</span>&#123;</span><br><span class="line">	<span class="attribute">width</span>: <span class="number">400px</span>;</span><br><span class="line">	<span class="attribute">margin</span>: <span class="number">0</span> auto;</span><br><span class="line">	<span class="attribute">position</span>: relative;</span><br><span class="line">	<span class="attribute">height</span>: <span class="number">100%</span>;</span><br><span class="line">	<span class="attribute">min-height</span>: <span class="number">500px</span>;</span><br><span class="line">	<span class="attribute">max-height</span>: <span class="number">600px</span>;</span><br><span class="line">	<span class="attribute">border</span>: <span class="number">1px</span> solid <span class="number">#ccc</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-id">#dao</span>&#123;</span><br><span class="line">	<span class="attribute">position</span>: absolute;</span><br><span class="line">	<span class="attribute">left</span>: <span class="number">20px</span>;</span><br><span class="line">	<span class="attribute">top</span>: <span class="number">20px</span>;</span><br><span class="line">	<span class="attribute">font-size</span>: <span class="number">2em</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-id">#wan</span>&#123;</span><br><span class="line">	<span class="attribute">position</span>: absolute;</span><br><span class="line">	<span class="attribute">top</span>: <span class="number">20px</span>;</span><br><span class="line">	<span class="attribute">font-size</span>: <span class="number">2em</span>;</span><br><span class="line">	<span class="attribute">right</span>: <span class="number">20px</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-id">#show</span>&#123;</span><br><span class="line">	<span class="attribute">font-size</span>: <span class="number">10em</span>;</span><br><span class="line">	<span class="attribute">top</span>: <span class="number">90px</span>;</span><br><span class="line">	<span class="attribute">left</span>: <span class="number">120px</span>;</span><br><span class="line">	<span class="attribute">position</span>: absolute;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-id">#menu</span>&#123;</span><br><span class="line">	<span class="attribute">padding</span>: <span class="number">40px</span>;</span><br><span class="line">	<span class="attribute">font-size</span>: <span class="number">2em</span>;</span><br><span class="line">	<span class="attribute">top</span>: <span class="number">250px</span>;</span><br><span class="line">	<span class="attribute">position</span>: absolute;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-id">#ul1</span>&#123;</span><br><span class="line">	<span class="attribute">position</span>: absolute;</span><br><span class="line">	<span class="attribute">left</span>: <span class="number">0</span>;</span><br><span class="line">	<span class="attribute">bottom</span>: <span class="number">0</span>;</span><br><span class="line">	<span class="attribute">list-style</span>: none;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-id">#ul1</span> <span class="selector-tag">li</span>&#123;</span><br><span class="line">	<span class="attribute">float</span>: left;</span><br><span class="line">	<span class="attribute">font-size</span>: <span class="number">5em</span>;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">body</span>&#123;</span><br><span class="line">	<span class="attribute">text-align</span>: center;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-id">#start</span>&#123;</span><br><span class="line">	<span class="attribute">width</span>: <span class="number">100px</span>;</span><br><span class="line">	<span class="attribute">height</span>: <span class="number">50px</span>;</span><br><span class="line">	<span class="attribute">line-height</span>: <span class="number">50px</span>;</span><br><span class="line">	<span class="attribute">font-size</span>: <span class="number">45px</span>;</span><br><span class="line">	<span class="attribute">border</span>: none;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h1 id="JS代码"><a href="#JS代码" class="headerlink" title="JS代码"></a>JS代码</h1><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//1.获取元素</span></span><br><span class="line"><span class="comment">//获取显示倒计时的标签</span></span><br><span class="line"><span class="keyword">var</span> time = <span class="built_in">document</span>.getElementById(<span class="string">'dao'</span>);</span><br><span class="line"><span class="comment">//获取分数标签</span></span><br><span class="line"><span class="keyword">var</span> fs = <span class="built_in">document</span>.getElementById(<span class="string">'wan'</span>);</span><br><span class="line"><span class="comment">//获取题目文字标签</span></span><br><span class="line"><span class="keyword">var</span> show = <span class="built_in">document</span>.getElementById(<span class="string">'show'</span>);</span><br><span class="line"><span class="comment">//获取五个颜色按钮标签</span></span><br><span class="line"><span class="keyword">var</span> li = <span class="built_in">document</span>.getElementsByTagName(<span class="string">'li'</span>);</span><br><span class="line"><span class="comment">//获取开始按钮标签</span></span><br><span class="line"><span class="keyword">var</span> start = <span class="built_in">document</span>.getElementById(<span class="string">'start'</span>);</span><br><span class="line">	</span><br><span class="line"><span class="comment">//定义变量</span></span><br><span class="line"><span class="keyword">var</span> arrFont = [<span class="string">'绿'</span>,<span class="string">'蓝'</span>,<span class="string">'黑'</span>,<span class="string">'黄'</span>,<span class="string">'红'</span>];<span class="comment">//字数组</span></span><br><span class="line"><span class="keyword">var</span> arrColor = [<span class="string">'green'</span>,<span class="string">'blue'</span>,<span class="string">'black'</span>,<span class="string">'yellow'</span>,<span class="string">'red'</span>];<span class="comment">//颜色数组</span></span><br><span class="line"><span class="keyword">var</span> score = <span class="number">0</span>;<span class="comment">//分数</span></span><br><span class="line"><span class="keyword">var</span> start_bol = <span class="literal">false</span>;<span class="comment">//判断是否开始游戏</span></span><br><span class="line"><span class="comment">//开始按钮点击事件</span></span><br><span class="line">start.onclick = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">	<span class="keyword">if</span>(start_bol)&#123;<span class="keyword">return</span>&#125;<span class="comment">//如果游戏开始后不可以再执行开始游戏函数，反之执行</span></span><br><span class="line">	start_bol = <span class="literal">true</span> ;<span class="comment">//设定为游戏开始</span></span><br><span class="line">	startFn();</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//开始游戏函数</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">startFn</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">	<span class="comment">//初始化</span></span><br><span class="line">	score = <span class="number">0</span>;<span class="comment">//分数初始为0</span></span><br><span class="line">	fs.innerHTML = <span class="string">"完成："</span>+score;<span class="comment">//页面显示也为0</span></span><br><span class="line">	timeFn(<span class="number">20</span>);<span class="comment">//2.倒计时</span></span><br><span class="line">	btnFn();<span class="comment">//3.按钮点击</span></span><br><span class="line">	<span class="comment">//初始化</span></span><br><span class="line">	changeShow();<span class="comment">//改变题目</span></span><br><span class="line">	changeBnts();<span class="comment">//改变按钮</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//五个颜色按钮的点击事件</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">btnFn</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">var</span> i=<span class="number">0</span>; i&lt;li.length; i++) &#123;</span><br><span class="line">		li[i].onclick = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">			<span class="keyword">if</span>(!start_bol)&#123;<span class="keyword">return</span>;&#125;<span class="comment">//如果游戏开始后执行点击，反之不执行</span></span><br><span class="line">			<span class="comment">//判断点击是否正确</span></span><br><span class="line">			checkFn(<span class="keyword">this</span>.innerHTML);</span><br><span class="line">			<span class="comment">//改变题目</span></span><br><span class="line">			changeShow();</span><br><span class="line">			<span class="comment">//改变按钮</span></span><br><span class="line">			changeBnts();</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//游戏剩余时间函数</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">timeFn</span>(<span class="params">n</span>)</span>&#123;</span><br><span class="line">	<span class="keyword">var</span> timer = setInterval(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">		n-=<span class="number">0.02</span>;<span class="comment">//每20毫秒减0.02</span></span><br><span class="line">		<span class="keyword">if</span>(n&lt;=<span class="number">0</span>)&#123;<span class="comment">//如果小于0</span></span><br><span class="line">			clearInterval(timer);<span class="comment">//清除定时器</span></span><br><span class="line">			n=<span class="number">0</span>;<span class="comment">//n会有偏差所以需要强制设为0</span></span><br><span class="line">			start_bol = <span class="literal">false</span>;<span class="comment">//设定游戏结束</span></span><br><span class="line">		&#125;</span><br><span class="line">		time.innerHTML = <span class="string">"剩余时间："</span>+n.toFixed(<span class="number">2</span>);<span class="comment">//每20毫秒修改剩余时间标签内容</span></span><br><span class="line">	&#125;,<span class="number">20</span>)</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//随机函数</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">rndFn</span>(<span class="params">min,max</span>)</span>&#123;</span><br><span class="line">	<span class="keyword">return</span> <span class="built_in">Math</span>.round(<span class="built_in">Math</span>.random()*(max-min)+min);<span class="comment">//返回max到min的随机数</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//随机打乱数组内容</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">sortFn</span>(<span class="params">arr</span>)</span>&#123;</span><br><span class="line">	arr.sort(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;<span class="keyword">return</span> <span class="built_in">Math</span>.random()<span class="number">-0.5</span>&#125;);</span><br><span class="line">	<span class="keyword">return</span> arr;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//题目文字随机改变文字与颜色</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">changeShow</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">	show.innerHTML = arrFont[rndFn(<span class="number">0</span>,<span class="number">4</span>)];<span class="comment">//随机获取文字</span></span><br><span class="line">	show.style.color = arrColor[rndFn(<span class="number">0</span>,<span class="number">4</span>)];<span class="comment">//随机获取颜色</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//五个颜色按钮随机改变文字的顺序和颜色</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">changeBnts</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">	arrFont = sortFn(arrFont);<span class="comment">//打乱文字数组</span></span><br><span class="line">	arrColor = sortFn(arrColor);<span class="comment">//打乱颜色数组</span></span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">var</span> i=<span class="number">0</span>; i&lt;li.length; i++) &#123;<span class="comment">//分配值</span></span><br><span class="line">		li[i].innerHTML = arrFont[i];</span><br><span class="line">		li[i].style.color = arrColor[i];</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//判断统计</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">checkFn</span>(<span class="params">btnFont</span>)</span>&#123;</span><br><span class="line">	<span class="keyword">var</span> color = show.style.color;<span class="comment">//获取题目字体颜色</span></span><br><span class="line">	<span class="keyword">var</span> str =<span class="string">''</span>;<span class="comment">//定义存放题目字体颜色的中文值</span></span><br><span class="line">	<span class="comment">//判断颜色并赋值给str</span></span><br><span class="line">	<span class="keyword">switch</span> (color)&#123;</span><br><span class="line">		<span class="keyword">case</span> <span class="string">'green'</span>:str = <span class="string">'绿'</span>;<span class="keyword">break</span>;</span><br><span class="line">		<span class="keyword">case</span> <span class="string">'black'</span>:str = <span class="string">'黑'</span>;<span class="keyword">break</span>;</span><br><span class="line">		<span class="keyword">case</span> <span class="string">'blue'</span>:str = <span class="string">'蓝'</span>;<span class="keyword">break</span>;</span><br><span class="line">		<span class="keyword">case</span> <span class="string">'yellow'</span>:str = <span class="string">'黄'</span>;<span class="keyword">break</span>;</span><br><span class="line">		<span class="keyword">case</span> <span class="string">'red'</span>:str = <span class="string">'红'</span>;<span class="keyword">break</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="comment">//判断点击的内容文字与题目文字的颜色并统计分数</span></span><br><span class="line">	<span class="keyword">if</span>(btnFont == str)&#123;</span><br><span class="line">		score++</span><br><span class="line">	&#125;<span class="keyword">else</span>&#123;</span><br><span class="line">		score--</span><br><span class="line">	&#125;</span><br><span class="line">	fs.innerHTML = <span class="string">"完成："</span>+score;<span class="comment">//显示分数在页面</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>  
-	</div>
-		<footer class="article-footer clearfix">
-
-
-
-
-<div class="article-share" id="share">
-
-  <div data-url="https://github.com/CrazyTwo/CrazyTwo.github.io/2016/06/01/game0/" data-title="小游戏案例--选择与颜色相符的字 | H5课堂笔记" data-tsina="null" class="share clearfix">
-  </div>
-
-</div>
-</footer>   	       
-	</article>
-	
-<nav class="article-nav clearfix">
- 
- <div class="prev" >
- <a href="/2016/06/04/img_tab/" title="首页头部的图片切换案例">
-  <strong>PREVIOUS:</strong><br/>
-  <span>
-  首页头部的图片切换案例</span>
-</a>
-</div>
-
-
-<div class="next">
-<a href="/2016/06/01/myfn/"  title="封装好的一些有用函数">
- <strong>NEXT:</strong><br/> 
- <span>封装好的一些有用函数
-</span>
-</a>
-</div>
-
-</nav>
-
-	
-</div>  
-      <div class="openaside"><a class="navbutton" href="#" title="显示侧边栏"></a></div>
-
-  <div id="toc" class="toc-aside">
-  <strong class="toc-title">文章目录</strong>
-  <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#HTML-代码"><span class="toc-number">1.</span> <span class="toc-text">HTML 代码</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#CSS代码"><span class="toc-number">2.</span> <span class="toc-text">CSS代码</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#JS代码"><span class="toc-number">3.</span> <span class="toc-text">JS代码</span></a></li></ol>
-  </div>
-
-<div id="asidepart">
-<div class="closeaside"><a class="closebutton" href="#" title="隐藏侧边栏"></a></div>
-<aside class="clearfix">
-
-  
-
-  
-
-  <div class="rsspart">
-	<a href="null" target="_blank" title="rss">RSS 订阅</a>
-</div>
-
-  <div class="widget tag">
-<h3 class="title">友情链接</h3>
-<ul class="entry">
-<li><a href="http://hongbinzuo.github.io/" title="Hongbin Zuo's Blog">Hongbin Zuo</a></li>
-</ul>
-</div>
-
-</aside>
-</div>
-    </div>
-    <footer><div id="footer" >
-	
-	
-	<div class="social-font" class="clearfix">
-		
-		
-		<a href="https://twitter.com/https://twitter.com/Crazytwo8" target="_blank" title="twitter"></a>
-		
-		
-		<a href="https://github.com/https://github.com/CrazyTwo" target="_blank" title="github"></a>
-		
-		
-	</div>
-		<p class="copyright">Powered by <a href="http://zespia.tw/hexo/" target="_blank" title="hexo">hexo</a> and Theme by <a href="https://github.com/A-limon/pacman" target="_blank" title="Pacman">Pacman</a> © 2016 
-		
-		<a href="https://github.com/CrazyTwo/CrazyTwo.github.io" target="_blank" title="CrazyTwo">CrazyTwo</a>
-		
-		</p>
-</div>
-</footer>
-    <script src="/js/jquery-2.0.3.min.js"></script>
-<script type="text/javascript">
-$(document).ready(function(){ 
-  $('.navbar').click(function(){
-    $('header nav').toggleClass('shownav');
-  });
-  var myWidth = 0;
-  function getSize(){
-    if( typeof( window.innerWidth ) == 'number' ) {
-      myWidth = window.innerWidth;
-    } else if( document.documentElement && document.documentElement.clientWidth) {
-      myWidth = document.documentElement.clientWidth;
-    };
-  };
-  var m = $('#main'),
-      a = $('#asidepart'),
-      c = $('.closeaside'),
-      o = $('.openaside');
-  $(window).resize(function(){
-    getSize(); 
-    if (myWidth >= 1024) {
-      $('header nav').removeClass('shownav');
-    }else
-    {
-      m.removeClass('moveMain');
-      a.css('display', 'block').removeClass('fadeOut');
-      o.css('display', 'none');
+<h1 id="JS代码"><a href="#JS代码" class="headerlink" title="JS代码"></a>JS代码</h1><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//1.获取元素</span></span><br><span class="line"><span class="comment">//获取显示倒计时的标签</span></span><br><span class="line"><span class="keyword">var</span> time = <span class="built_in">document</span>.getElementById(<span class="string">'dao'</span>);</span><br><span class="line"><span class="comment">//获取分数标签</span></span><br><span class="line"><span class="keyword">var</span> fs = <span class="built_in">document</span>.getElementById(<span class="string">'wan'</span>);</span><br><span class="line"><span class="comment">//获取题目文字标签</span></span><br><span class="line"><span class="keyword">var</span> show = <span class="built_in">document</span>.getElementById(<span class="string">'show'</span>);</span><br><span class="line"><span class="comment">//获取五个颜色按钮标签</span></span><br><span class="line"><span class="keyword">var</span> li = <span class="built_in">document</span>.getElementsByTagName(<span class="string">'li'</span>);</span><br><span class="line"><span class="comment">//获取开始按钮标签</span></span><br><span class="line"><span class="keyword">var</span> start = <span class="built_in">document</span>.getElementById(<span class="string">'start'</span>);</span><br><span class="line">	</span><br><span class="line"><span class="comment">//定义变量</span></span><br><span class="line"><span class="keyword">var</span> arrFont = [<span class="string">'绿'</span>,<span class="string">'蓝'</span>,<span class="string">'黑'</span>,<span class="string">'黄'</span>,<span class="string">'红'</span>];<span class="comment">//字数组</span></span><br><span class="line"><span class="keyword">var</span> arrColor = [<span class="string">'green'</span>,<span class="string">'blue'</span>,<span class="string">'black'</span>,<span class="string">'yellow'</span>,<span class="string">'red'</span>];<span class="comment">//颜色数组</span></span><br><span class="line"><span class="keyword">var</span> score = <span class="number">0</span>;<span class="comment">//分数</span></span><br><span class="line"><span class="keyword">var</span> start_bol = <span class="literal">false</span>;<span class="comment">//判断是否开始游戏</span></span><br><span class="line"><span class="comment">//开始按钮点击事件</span></span><br><span class="line">start.onclick = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">	<span class="keyword">if</span>(start_bol)&#123;<span class="keyword">return</span>&#125;<span class="comment">//如果游戏开始后不可以再执行开始游戏函数，反之执行</span></span><br><span class="line">	start_bol = <span class="literal">true</span> ;<span class="comment">//设定为游戏开始</span></span><br><span class="line">	startFn();</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//开始游戏函数</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">startFn</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">	<span class="comment">//初始化</span></span><br><span class="line">	score = <span class="number">0</span>;<span class="comment">//分数初始为0</span></span><br><span class="line">	fs.innerHTML = <span class="string">"完成："</span>+score;<span class="comment">//页面显示也为0</span></span><br><span class="line">	timeFn(<span class="number">20</span>);<span class="comment">//2.倒计时</span></span><br><span class="line">	btnFn();<span class="comment">//3.按钮点击</span></span><br><span class="line">	<span class="comment">//初始化</span></span><br><span class="line">	changeShow();<span class="comment">//改变题目</span></span><br><span class="line">	changeBnts();<span class="comment">//改变按钮</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//五个颜色按钮的点击事件</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">btnFn</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">var</span> i=<span class="number">0</span>; i&lt;li.length; i++) &#123;</span><br><span class="line">		li[i].onclick = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">			<span class="keyword">if</span>(!start_bol)&#123;<span class="keyword">return</span>;&#125;<span class="comment">//如果游戏开始后执行点击，反之不执行</span></span><br><span class="line">			<span class="comment">//判断点击是否正确</span></span><br><span class="line">			checkFn(<span class="keyword">this</span>.innerHTML);</span><br><span class="line">			<span class="comment">//改变题目</span></span><br><span class="line">			changeShow();</span><br><span class="line">			<span class="comment">//改变按钮</span></span><br><span class="line">			changeBnts();</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//游戏剩余时间函数</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">timeFn</span>(<span class="params">n</span>)</span>&#123;</span><br><span class="line">	<span class="keyword">var</span> timer = setInterval(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">		n-=<span class="number">0.02</span>;<span class="comment">//每20毫秒减0.02</span></span><br><span class="line">		<span class="keyword">if</span>(n&lt;=<span class="number">0</span>)&#123;<span class="comment">//如果小于0</span></span><br><span class="line">			clearInterval(timer);<span class="comment">//清除定时器</span></span><br><span class="line">			n=<span class="number">0</span>;<span class="comment">//n会有偏差所以需要强制设为0</span></span><br><span class="line">			start_bol = <span class="literal">false</span>;<span class="comment">//设定游戏结束</span></span><br><span class="line">		&#125;</span><br><span class="line">		time.innerHTML = <span class="string">"剩余时间："</span>+n.toFixed(<span class="number">2</span>);<span class="comment">//每20毫秒修改剩余时间标签内容</span></span><br><span class="line">	&#125;,<span class="number">20</span>)</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//随机函数</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">rndFn</span>(<span class="params">min,max</span>)</span>&#123;</span><br><span class="line">	<span class="keyword">return</span> <span class="built_in">Math</span>.round(<span class="built_in">Math</span>.random()*(max-min)+min);<span class="comment">//返回max到min的随机数</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//随机打乱数组内容</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">sortFn</span>(<span class="params">arr</span>)</span>&#123;</span><br><span class="line">	arr.sort(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;<span class="keyword">return</span> <span class="built_in">Math</span>.random()<span class="number">-0.5</span>&#125;);</span><br><span class="line">	<span class="keyword">return</span> arr;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//题目文字随机改变文字与颜色</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">changeShow</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">	show.innerHTML = arrFont[rndFn(<span class="number">0</span>,<span class="number">4</span>)];<span class="comment">//随机获取文字</span></span><br><span class="line">	show.style.color = arrColor[rndFn(<span class="number">0</span>,<span class="number">4</span>)];<span class="comment">//随机获取颜色</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//五个颜色按钮随机改变文字的顺序和颜色</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">changeBnts</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">	arrFont = sortFn(arrFont);<span class="comment">//打乱文字数组</span></span><br><span class="line">	arrColor = sortFn(arrColor);<span class="comment">//打乱颜色数组</span></span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">var</span> i=<span class="number">0</span>; i&lt;li.length; i++) &#123;<span class="comment">//分配值</span></span><br><span class="line">		li[i].innerHTML = arrFont[i];</span><br><span class="line">		li[i].style.color = arrColor[i];</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//判断统计</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">checkFn</span>(<span class="params">btnFont</span>)</span>&#123;</span><br><span class="line">	<span class="keyword">var</span> color = show.style.color;<span class="comment">//获取题目字体颜色</span></span><br><span class="line">	<span class="keyword">var</span> str =<span class="string">''</span>;<span class="comment">//定义存放题目字体颜色的中文值</span></span><br><span class="line">	<span class="comment">//判断颜色并赋值给str</span></span><br><span class="line">	<span class="keyword">switch</span> (color)&#123;</span><br><span class="line">		<span class="keyword">case</span> <span class="string">'green'</span>:str = <span class="string">'绿'</span>;<span class="keyword">break</span>;</span><br><span class="line">		<span class="keyword">case</span> <span class="string">'black'</span>:str = <span class="string">'黑'</span>;<span class="keyword">break</span>;</span><br><span class="line">		<span class="keyword">case</span> <span class="string">'blue'</span>:str = <span class="string">'蓝'</span>;<span class="keyword">break</span>;</span><br><span class="line">		<span class="keyword">case</span> <span class="string">'yellow'</span>:str = <span class="string">'黄'</span>;<span class="keyword">break</span>;</span><br><span class="line">		<span class="keyword">case</span> <span class="string">'red'</span>:str = <span class="string">'红'</span>;<span class="keyword">break</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="comment">//判断点击的内容文字与题目文字的颜色并统计分数</span></span><br><span class="line">	<span class="keyword">if</span>(btnFont == str)&#123;</span><br><span class="line">		score++</span><br><span class="line">	&#125;<span class="keyword">else</span>&#123;</span><br><span class="line">		score--</span><br><span class="line">	&#125;</span><br><span class="line">	fs.innerHTML = <span class="string">"完成："</span>+score;<span class="comment">//显示分数在页面</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
       
-      $('#toc.toc-aside').css('display', 'none');
+    </div>
+
+    <div>
+      
         
-    }
-  });
-  c.click(function(){
-    a.addClass('fadeOut').css('display', 'none');
-    o.css('display', 'block').addClass('fadeIn');
-    m.addClass('moveMain');
-  });
-  o.click(function(){
-    o.css('display', 'none').removeClass('beforeFadeIn');
-    a.css('display', 'block').removeClass('fadeOut').addClass('fadeIn');      
-    m.removeClass('moveMain');
-  });
-  $(window).scroll(function(){
-    o.css("top",Math.max(80,260-$(this).scrollTop()));
-  });
-});
-</script>
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/06/01/myfn/" rel="next" title="封装好的一些有用函数">
+                <i class="fa fa-chevron-left"></i> 封装好的一些有用函数
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/06/04/img_tab/" rel="prev" title="首页头部的图片切换案例">
+                首页头部的图片切换案例 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.gif"
+               alt="CrazyTwo" />
+          <p class="site-author-name" itemprop="name">CrazyTwo</p>
+          <p class="site-description motion-element" itemprop="description">这是我学习H5的笔记</p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">27</span>
+              <span class="site-state-item-name">posts</span>
+            </a>
+          </div>
+
+          
+
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#HTML-代码"><span class="nav-number">1.</span> <span class="nav-text">HTML 代码</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#CSS代码"><span class="nav-number">2.</span> <span class="nav-text">CSS代码</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#JS代码"><span class="nav-number">3.</span> <span class="nav-text">JS代码</span></a></li></ol></div>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2016</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">CrazyTwo</span>
+</div>
+
+<div class="powered-by">
+  Powered by <a class="theme-link" href="http://hexo.io">Hexo</a>
+</div>
+
+<div class="theme-info">
+  Theme -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Pisces
+  </a>
+</div>
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
 
 <script type="text/javascript">
-$(document).ready(function(){ 
-  var ai = $('.article-content>iframe'),
-      ae = $('.article-content>embed'),
-      t  = $('#toc'),
-      h  = $('article h2')
-      ah = $('article h2'),
-      ta = $('#toc.toc-aside'),
-      o  = $('.openaside'),
-      c  = $('.closeaside');
-  if(ai.length>0){
-    ai.wrap('<div class="video-container" />');
-  };
-  if(ae.length>0){
-   ae.wrap('<div class="video-container" />');
-  };
-  if(ah.length==0){
-    t.css('display','none');
-  }else{
-    c.click(function(){
-      ta.css('display', 'block').addClass('fadeIn');
-    });
-    o.click(function(){
-      ta.css('display', 'none');
-    });
-    $(window).scroll(function(){
-      ta.css("top",Math.max(140,320-$(this).scrollTop()));
-    });
-  };
-});
-</script>
-
-
-<script type="text/javascript">
-$(document).ready(function(){ 
-  var $this = $('.share'),
-      url = $this.attr('data-url'),
-      encodedUrl = encodeURIComponent(url),
-      title = $this.attr('data-title'),
-      tsina = $this.attr('data-tsina');
-  var html = [
-  '<a href="#" class="overlay" id="qrcode"></a>',
-  '<div class="qrcode clearfix"><span>扫描二维码分享到微信朋友圈</span><a class="qrclose" href="#share"></a><strong>Loading...Please wait</strong><img id="qrcode-pic" data-src="http://s.jiathis.com/qrcode.php?url=' + encodedUrl + '"/></div>',
-  '<a href="#textlogo" class="article-back-to-top" title="Top"></a>',
-  '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
-  '<a href="#qrcode" class="article-share-qrcode" title="QRcode"></a>',
-  '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
-  '<a href="http://service.weibo.com/share/share.php?title='+title+'&url='+encodedUrl +'&ralateUid='+ tsina +'&searchPic=true&style=number' +'" class="article-share-weibo" target="_blank" title="Weibo"></a>',
-  '<span title="Share to"></span>'
-  ].join('');
-  $this.append(html);
-  $('.article-share-qrcode').click(function(){
-    var imgSrc = $('#qrcode-pic').attr('data-src');
-    $('#qrcode-pic').attr('src', imgSrc);
-    $('#qrcode-pic').load(function(){
-        $('.qrcode strong').text(' ');
-    });
-  });
-});     
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
 </script>
 
 
@@ -314,5 +508,79 @@ $(document).ready(function(){
 
 
 
-  </body>
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.1"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.0.1"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.1"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+  
+  
+  
+
+  
+
+  
+
+</body>
 </html>

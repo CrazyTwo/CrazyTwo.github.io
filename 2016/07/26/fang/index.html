@@ -1,0 +1,546 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.1" />
+
+
+
+
+
+
+<meta name="description" content="本文讲的是封装一个放大镜的jq插件，代码拿好不谢！)
+12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596061626364656667686970717273747576777879808182838485868788899091">
+<meta property="og:type" content="article">
+<meta property="og:title" content="放大镜">
+<meta property="og:url" content="https://github.com/CrazyTwo/CrazyTwo.github.io/2016/07/26/fang/index.html">
+<meta property="og:site_name" content="H5课堂笔记">
+<meta property="og:description" content="本文讲的是封装一个放大镜的jq插件，代码拿好不谢！)
+12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596061626364656667686970717273747576777879808182838485868788899091">
+<meta property="og:updated_time" content="2016-07-26T13:22:44.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="放大镜">
+<meta name="twitter:description" content="本文讲的是封装一个放大镜的jq插件，代码拿好不谢！)
+12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596061626364656667686970717273747576777879808182838485868788899091">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 0,
+      author: 'Author'
+    }
+  };
+</script>
+
+  <title> 放大镜 | H5课堂笔记 </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="中文">
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">H5课堂笔记</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle"></p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Archives
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            Tags
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                放大镜
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Posted on</span>
+            <time itemprop="dateCreated" datetime="2016-07-26T21:22:26+08:00" content="2016-07-26">
+              2016-07-26
+            </time>
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>本文讲的是封装一个放大镜的jq插件，代码拿好不谢！)</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br></pre></td><td class="code"><pre><span class="line">$.fn.extend(&#123;</span><br><span class="line">	fang:<span class="function"><span class="keyword">function</span>(<span class="params">style</span>) </span>&#123;</span><br><span class="line">		<span class="comment">//获取大图图片，如果没有用小图</span></span><br><span class="line">		<span class="keyword">var</span> src= $(<span class="keyword">this</span>).attr(<span class="string">'maxsrc'</span>)|| $(<span class="keyword">this</span>).attr(<span class="string">'src'</span>);</span><br><span class="line">		<span class="comment">//小图结构</span></span><br><span class="line">		<span class="keyword">var</span> $min = $(<span class="string">'&lt;div class="min"&gt;&lt;div&gt;&lt;/div&gt;&lt;/div&gt;'</span>);</span><br><span class="line"></span><br><span class="line">		mStyle = &#123;</span><br><span class="line">			minImgW:<span class="number">400</span>,</span><br><span class="line">			divW:<span class="number">150</span>,</span><br><span class="line">			maxW:<span class="number">500</span></span><br><span class="line">		&#125;</span><br><span class="line">		<span class="comment">//mStyle里面添加style的属性，如果重复的会覆盖</span></span><br><span class="line">		style = $.extend(mStyle,style)</span><br><span class="line"></span><br><span class="line">		<span class="comment">//大图结构</span></span><br><span class="line">		<span class="keyword">var</span> $max = $(<span class="string">'&lt;div class="max"&gt;&lt;img src="'</span>+src+<span class="string">'" alt=""&gt;&lt;/div&gt;'</span>)</span><br><span class="line">		<span class="keyword">var</span> $parent = $(<span class="keyword">this</span>).parent();</span><br><span class="line">		<span class="keyword">var</span> $fang = $(<span class="string">"&lt;div class='fang'&gt;&lt;/div&gt;"</span>);</span><br><span class="line">		$fang.append($min).append($max);</span><br><span class="line">		$min.append($(<span class="keyword">this</span>));</span><br><span class="line">		$parent.append($fang);</span><br><span class="line"></span><br><span class="line">		<span class="comment">//设置样式</span></span><br><span class="line">		$(<span class="keyword">this</span>).css(<span class="string">'width'</span>,<span class="string">"100%"</span>);</span><br><span class="line"></span><br><span class="line">		$fang.css(&#123;</span><br><span class="line">			width: style.minImgW,</span><br><span class="line">			height: style.minImgW,</span><br><span class="line">			border: <span class="string">"5px solid black"</span>,</span><br><span class="line">			position: <span class="string">"relative"</span></span><br><span class="line">		&#125;)</span><br><span class="line">		$min.css(<span class="string">'width'</span>,<span class="string">"100%"</span>)</span><br><span class="line">		$min.find(<span class="string">'div'</span>).css(&#123;</span><br><span class="line">			width: style.divW,</span><br><span class="line">			height: style.divW,</span><br><span class="line">			background: <span class="string">"yellow"</span>,</span><br><span class="line">			opacity: <span class="number">0.5</span>,</span><br><span class="line">			position: <span class="string">"absolute"</span>,</span><br><span class="line">			top: <span class="number">0</span>,</span><br><span class="line">			left: <span class="number">0</span>,</span><br><span class="line">			display: <span class="string">"none"</span>			</span><br><span class="line">		&#125;)</span><br><span class="line">		$max.css(&#123;</span><br><span class="line">			width: style.maxW,</span><br><span class="line">			height: style.maxW,</span><br><span class="line">			border: <span class="string">"5px solid black"</span>,</span><br><span class="line">			position: <span class="string">"absolute"</span>,</span><br><span class="line">			top: <span class="string">"0"</span>,</span><br><span class="line">			left: <span class="string">"100%"</span>,</span><br><span class="line">			overflow: <span class="string">"hidden"</span>,</span><br><span class="line">			display: <span class="string">"none"</span></span><br><span class="line">		&#125;)</span><br><span class="line"></span><br><span class="line">		<span class="comment">// JS功能</span></span><br><span class="line">		<span class="keyword">var</span> $div = $min.find(<span class="string">'div'</span>);</span><br><span class="line">		<span class="comment">//根据比例计算大图宽度</span></span><br><span class="line">		<span class="keyword">var</span> scale = $max.width()/$div .width();</span><br><span class="line">		<span class="keyword">var</span> maxW = scale*$min.width();</span><br><span class="line">		<span class="comment">//设置大图宽度</span></span><br><span class="line">		$max.find(<span class="string">'img'</span>).width(maxW);</span><br><span class="line">		<span class="comment">//移进移出显示隐藏大图</span></span><br><span class="line">		$min.hover(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">			$div.show();</span><br><span class="line">			$max.show();</span><br><span class="line">		&#125;,<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">			$div.hide();</span><br><span class="line">			$max.hide();</span><br><span class="line">		&#125;)</span><br><span class="line">		<span class="comment">//移动小方块</span></span><br><span class="line">		$min.on(<span class="string">'mousemove'</span>,<span class="function"><span class="keyword">function</span>(<span class="params">e</span>) </span>&#123;</span><br><span class="line">			<span class="keyword">var</span> x = e.clientX-$min.offset().left-$div.width()/<span class="number">2</span>;</span><br><span class="line">			<span class="keyword">var</span> y = e.clientY-$min.offset().top-$div.height()/<span class="number">2</span>;</span><br><span class="line"></span><br><span class="line">			<span class="keyword">if</span> (x&lt;<span class="number">0</span>) &#123;x=<span class="number">0</span>&#125;</span><br><span class="line">			<span class="keyword">if</span> (x&gt;$min.width()-$div.width()) &#123;</span><br><span class="line">				x=$min.width()-$div.width();</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="keyword">if</span> (y&lt;<span class="number">0</span>) &#123;y=<span class="number">0</span>&#125;</span><br><span class="line">			<span class="keyword">if</span> (y&gt;$min.height()-$div.height()) &#123;</span><br><span class="line">				y = $min.height()-$div.height();</span><br><span class="line">			&#125;</span><br><span class="line">			$div.css(&#123;left:x,top:y&#125;)</span><br><span class="line">			$max.find(<span class="string">'img'</span>).css(&#123;</span><br><span class="line">				marginLeft:-x*scale,</span><br><span class="line">				marginTop:-y*scale</span><br><span class="line">			&#125;)</span><br><span class="line">		&#125;)</span><br><span class="line"></span><br><span class="line">	&#125;	</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<h3 id="调用"><a href="#调用" class="headerlink" title="调用"></a>调用</h3><p><em>别忘了调用jq</em></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">"en"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">title</span>&gt;</span>Document<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">style</span> <span class="attr">type</span>=<span class="string">"text/css"</span>&gt;</span><span class="undefined"></span><br><span class="line">	</span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span>	</span><br><span class="line">	<span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"img/min.jpg"</span> <span class="attr">maxsrc</span>=<span class="string">'img/max.jpg'</span> <span class="attr">alt</span>=<span class="string">""</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span> <span class="attr">src</span>=<span class="string">"jquery-3.0.0.min.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span> <span class="attr">src</span>=<span class="string">"fang.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span>&gt;</span><span class="javascript"></span><br><span class="line">	<span class="comment">//小图外框DIV</span></span><br><span class="line">	$(<span class="string">'img'</span>).fang(&#123;</span><br><span class="line">		minImgW:<span class="number">200</span>,</span><br><span class="line">		divW:<span class="number">100</span>,</span><br><span class="line">		maxW:<span class="number">300</span></span><br><span class="line">	&#125;)</span><br><span class="line"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+      
+    </div>
+
+    <div>
+      
+        
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/07/26/snake_js/" rel="next" title="js实现贪食蛇">
+                <i class="fa fa-chevron-left"></i> js实现贪食蛇
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.gif"
+               alt="CrazyTwo" />
+          <p class="site-author-name" itemprop="name">CrazyTwo</p>
+          <p class="site-description motion-element" itemprop="description">这是我学习H5的笔记</p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">27</span>
+              <span class="site-state-item-name">posts</span>
+            </a>
+          </div>
+
+          
+
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#调用"><span class="nav-number">1.</span> <span class="nav-text">调用</span></a></li></ol></div>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2016</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">CrazyTwo</span>
+</div>
+
+<div class="powered-by">
+  Powered by <a class="theme-link" href="http://hexo.io">Hexo</a>
+</div>
+
+<div class="theme-info">
+  Theme -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Pisces
+  </a>
+</div>
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.1"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.0.1"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.1"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+  
+  
+  
+
+  
+
+  
+
+</body>
+</html>
