@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>车型亮点</title>
+        <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+        <link rel="stylesheet" href="css/reset.css">
+        <link rel="stylesheet" href="css/swiper.min.css">
+        <link rel="stylesheet" href="css/animate.min.css">
+        <style>
+        html{
+            width: 100%;
+            height: 100%;
+        }
+        body {
+            width: 100%;
+            height: 100%;
+            font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+            font-size: 14px;
+        }
+        .swiper-container {
+            width: 100%;
+            height: 100%;
+        }
+        .swiper-slide {
+            text-align: center;
+            font-size: 0.25rem;
+            position: relative;
+        }
+        .swiper-slide:nth-child(1){
+            background-image: url(img/bg1.jpg);
+            background-size: cover;
+        }
+        .swiper-slide:nth-child(2){
+            background-image: url(img/bg2.jpg);
+            background-size: cover;
+        }
+        .swiper-slide:nth-child(3){
+            background-image: url(img/bg3.jpg);
+            background-size: cover;
+        }
+        .swiper-slide:nth-child(5){
+            background-image: url(img/bg5.jpg);
+            background-size: cover;
+        }
+        /*header logo*/
+        .header{
+            width: 92.8125%;
+            height: 0.65rem;
+            position: fixed;
+            left: 0;
+            right: 0;
+            margin: auto;
+            z-index: 10;
+        }
+        .header div:nth-child(1) img{
+            width: 1.78rem;
+            vertical-align: middle;
+        }
+        .header div:nth-child(2) img{
+            width: 0.48rem;
+            vertical-align: middle;
+        }
+        .header div{
+            height: 100%;
+            line-height: 0.6rem
+        }
+        /*page1*/
+        .swiper-slide:nth-child(1) .title{
+            position: absolute;
+            top: 1.56rem;
+            left: 3%;
+            width: 79.21875%;
+        }
+        .swiper-slide:nth-child(1) .title img{
+            width: 100%;
+        }
+        .swiper-slide:nth-child(1) .con{
+            position: absolute;
+            top: 3.42rem;
+            left: 3%;
+            width: 89.84375%;
+        }
+        .swiper-slide:nth-child(1) .con img{
+            width: 100%;
+        }
+        .swiper-slide:nth-child(1) .car{
+            width: 119.375%;
+            position: absolute;
+            left: -22.1875%;
+            top: 6.14rem;
+        }
+        .swiper-slide:nth-child(1) .car img:nth-child(1){
+            width: 100%;
+        }
+        .swiper-slide:nth-child(1) .car img:nth-child(2){
+            position: absolute;
+            left: 52.5%;
+            top:1.45rem;
+            width: 13.565445%;
+            transform: rotateZ(0deg);
+
+        }
+        .con{
+            position: absolute;
+            color: #838383;
+            font-size: 0.27rem;
+            line-height: 0.45rem;
+        }
+        .con span{
+            font-size: 0.34rem;
+        }
+        /*page2*/
+        .swiper-slide:nth-child(2) .title{
+            position: absolute;
+            top: 11%;
+            left: 3%;
+            width: 74.21875%;
+        }
+        .swiper-slide:nth-child(2) .title img{
+            width: 100%;
+        }
+        .swiper-slide:nth-child(2) .con{
+            top: 3.25rem;
+            left:3.4375%;
+            text-align: left;
+        }
+        /*page3*/
+        .swiper-slide:nth-child(3) .title{
+            position: absolute;
+            top: 11%;
+            right: 3%;
+            width: 74.21875%;
+        }
+        .swiper-slide:nth-child(3) .title img{
+            width: 100%;
+        }
+        .swiper-slide:nth-child(3) .con{
+            top: 3.25rem;
+            right:3.4375%;
+            text-align: right;
+        }
+        /*page4*/
+        .swiper-slide:nth-child(4) .title{
+            position: absolute;
+            top: 1.23rem;
+            left: 3%;
+            width: 74.21875%;
+        }
+        .swiper-slide:nth-child(4) .title img{
+            width: 100%;
+        }
+        .swiper-slide:nth-child(4) .con{
+            top: 3.28rem;
+            left:3.4375%;
+            text-align: left;
+        }
+        .swiper-slide:nth-child(4) .img{
+            position: absolute;
+            bottom:0;
+            height: 5.11rem;
+            width: 100%;
+            background-image: url(img/bg4_b.png);
+            background-size: cover;
+        }
+        /*page5*/
+        .swiper-slide:nth-child(5) .title{
+            position: absolute;
+            top: 1.52rem;
+            left: 3%;
+            width: 83.75%;
+        }
+        .swiper-slide:nth-child(5) .title img{
+            width: 100%;
+        }
+        .swiper-slide:nth-child(5) .btn{
+            position: absolute;
+            top: 3.54rem;
+            left: 47.65625%;
+            width: 44.53125%;
+            display: block;
+        }
+        .swiper-slide:nth-child(5) .btn img{
+            width: 100%;
+        }
+        .swiper-slide:nth-child(5) .car{
+            position: absolute;
+            left: 3%;
+            top: 5.85rem;
+            width: 5.94rem;
+            height: 2.28rem;
+            background-image: url(img/car2.png);
+            background-size: 100% 100%;
+        }
+        .next{
+            position: absolute;
+            left: 0;
+            right: 0;
+            width: 0.24rem;
+            height: 0.18rem;
+            margin: auto;
+            z-index: 100;
+            background-image: url(img/web-swipe-tip.png);
+            background-size: 100% 100%;
+            bottom: 15px;
+        }
+        .loading{
+            position: absolute;
+            z-index: 999;
+            width: 100%;
+            height: 100%;
+            background-color: #fff;
+        }
+        .loading div{
+            width: 80%;
+            height: 0.25rem;
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            top: 0;
+            margin: auto;
+            border: 1px solid #666;
+        }
+        .loading div p{
+            width: 0;
+            height: 100%;
+            background: #aaa;
+        }
+        </style>
+    </head>
+    <body>
+        <div class="loading">
+            <div><p class="progress"></p></div>
+        </div>
+        <div class="header clear animated mydelay slideInDown">
+            <div class="fl"><img src="img/logo_l.png" alt="" /></div>
+            <div class="fr"><img src="img/logo_r.png" alt="" /></div>
+        </div>
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <!-- page1 -->
+                <div class="swiper-slide">
+                    <div class="title ani" swiper-animate-effect="fadeInLeft" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s"><img src="img/title1.png" alt="" /></div>
+                    <div class="con ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s" swiper-animate-delay="0.8s"><img src="img/title1_b.png" alt="" /></div>
+                    <div class="car ani" swiper-animate-effect="slideInLeft" swiper-animate-duration="1s" swiper-animate-delay="1.5s">
+                        <img src="img/car.png" alt="" />
+                        <img src="img/wheel.png" alt="" class="ani" swiper-animate-effect="rotateIn" swiper-animate-duration="0.8s" swiper-animate-delay="1.7s">
+                    </div>
+                </div>
+                <!-- page2 -->
+                <div class="swiper-slide">
+                    <div class="title ani" swiper-animate-effect="fadeInDown" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s"><img src="img/title2.png" alt="" /></div>
+                    <div class="con">
+                        <p class="ani" swiper-animate-effect="bounceInRight" swiper-animate-duration="0.5s" swiper-animate-delay="0.8s">设计动感入微，静观已澎湃。</p>
+                        <p class="ani" swiper-animate-effect="bounceInLeft" swiper-animate-duration="0.5s" swiper-animate-delay="1s">锋芒展露的前大灯与犀利尾翼首尾呼应，</p>
+                        <p class="ani" swiper-animate-effect="bounceInRight" swiper-animate-duration="0.5s" swiper-animate-delay="1.2s">匹配你的运动气质；</p>
+                        <p class="ani" swiper-animate-effect="bounceInLeft" swiper-animate-duration="0.5s" swiper-animate-delay="1.4s">有如为你度身定制的独特</p>
+                        <p class="ani" swiper-animate-effect="bounceInRight" swiper-animate-duration="0.5s" swiper-animate-delay="1.6s"><span>R-Line标识</span>，</p>
+                        <p class="ani" swiper-animate-effect="bounceInLeft" swiper-animate-duration="0.5s" swiper-animate-delay="1.8s">是你不甘于常规的鲜明印记；</p>
+                        <p class="ani" swiper-animate-effect="bounceInRight" swiper-animate-duration="0.5s" swiper-animate-delay="2s">更配备精致<span>17寸铝轮毂</span>，</p>
+                        <p class="ani" swiper-animate-effect="bounceInLeft" swiper-animate-duration="0.5s" swiper-animate-delay="2.2s">与你一同丈量世界！</p>
+                    </div>
+                </div>
+                <!-- page3 -->
+                <div class="swiper-slide">
+                    <div class="title ani" swiper-animate-effect="fadeInRight" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s"><img src="img/title3.png" alt="" /></div>
+                    <div class="con">
+                        <p class="ani" swiper-animate-effect="lightSpeedIn" swiper-animate-duration="0.5s" swiper-animate-delay="0.8s">动感要放肆，而环保要克制。</p>
+                        <p class="ani" swiper-animate-effect="lightSpeedIn" swiper-animate-duration="0.5s" swiper-animate-delay="1s">搭载<span>1.4TSI</span>发动机带来的淋漓快感，</p>
+                        <p class="ani" swiper-animate-effect="lightSpeedIn" swiper-animate-duration="0.5s" swiper-animate-delay="1.2s">满足你释放身心的渴望；</p>
+                        <p class="ani" swiper-animate-effect="lightSpeedIn" swiper-animate-duration="0.5s" swiper-animate-delay="1.4s">配合<span>手自一体DSG</span>®双离合器自动变速器；</p>
+                        <p class="ani" swiper-animate-effect="lightSpeedIn" swiper-animate-duration="0.5s" swiper-animate-delay="1.6s">领先科技更让动力与节能收放自如；</p>
+                        <p class="ani" swiper-animate-effect="lightSpeedIn" swiper-animate-duration="0.5s" swiper-animate-delay="1.8s">多功能运动方向盘，更多选择触发无限可能。</p>
+                    </div>
+                </div>
+                <!-- page4 -->
+                <div class="swiper-slide">
+                    <div class="title ani" swiper-animate-effect="fadeInDown" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s"><img src="img/title4.png" alt="" /></div>
+                    <div class="con">
+                        <p class="ani" swiper-animate-effect="zoomInUp" swiper-animate-duration="0.5s" swiper-animate-delay="0.8s">品位不拘于形式美学，</p>
+                        <p class="ani" swiper-animate-effect="zoomInUp" swiper-animate-duration="0.5s" swiper-animate-delay="1s">更将感官体验全面升华。</p>
+                        <p class="ani" swiper-animate-effect="zoomInUp" swiper-animate-duration="0.5s" swiper-animate-delay="1.2s"><span>全新酷黑内饰</span>，运动风范一展无余；</p>
+                        <p class="ani" swiper-animate-effect="zoomInUp" swiper-animate-duration="0.5s" swiper-animate-delay="1.4s"><span>双色电加热座椅</span>，真皮质感匹配创新科技，</p>
+                        <p class="ani" swiper-animate-effect="zoomInUp" swiper-animate-duration="0.5s" swiper-animate-delay="1.6s">养眼更更暖心；每一细微之处，</p>
+                        <p class="ani" swiper-animate-effect="zoomInUp" swiper-animate-duration="0.5s" swiper-animate-delay="1.8s">皆是视觉与触感的双重满足，</p>
+                        <p class="ani" swiper-animate-effect="zoomInUp" swiper-animate-duration="0.5s" swiper-animate-delay="2s">面面俱到的享受。</p>
+                    </div>
+                    <div class="img ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s" swiper-animate-delay="0.6s"></div>
+                </div>
+                <!-- page5 -->
+                <div class="swiper-slide">
+                    <div class="title ani" swiper-animate-effect="fadeInDown" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s"><img src="img/title5.png" alt="" /></div>
+                    <a href="###" class="btn ani" swiper-animate-effect="lightSpeedIn" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s"><img src="img/button.png" alt="" /></a>
+                    <div class="car ani" swiper-animate-effect="slideInLeft" swiper-animate-duration="1s" swiper-animate-delay="0.8s"></div>
+                </div>
+            </div>
+            <div class="next animated infinite fadeOutUp"></div>
+    </body>
+    <script src="js/jquery-3.0.0.min.js" charset="utf-8"></script>
+    <script src="js/swiper.min.js"></script>
+    <script src="js/swiper.animate1.0.2.min.js"></script>
+    <script type="text/javascript">
+        (function(html){
+            change()
+            function change(){
+                var w = html.clientWidth;
+                // if(w>640){
+                //     w = 640;
+                // }
+                var size = 100*(w/640).toFixed(2);
+                html.style.fontSize = size+"px"
+            }
+            window.addEventListener('resize',function () {
+                change()
+            })
+        })(document.documentElement)
+        imgArr = ["img/bg1.jpg","img/bg2.jpg","img/bg3.jpg","img/bg5.jpg","img/bg4_b.png","img/button.png",
+                  "img/car.png","img/car2.png","img/logo_l.png","img/logo_r.png","img/title1_b.png",
+                  "img/title1.png","img/title2.png","img/title3.png","img/title4.png","img/title5.png",
+                  "img/title4_b.png","img/web-swipe-tip.png","img/wheel.png"];
+        loadImage(imgArr,function(){
+            $(".loading").hide();
+        })
+        var swiper = new Swiper('.swiper-container',{
+            direction:'vertical',
+            onInit: function(swiper){ //Swiper2.x的初始化是onFirstInit
+                    swiperAnimateCache(swiper); //隐藏动画元素
+                    swiperAnimate(swiper); //初始化完成开始动画
+            },
+            onSlideChangeEnd: function(swiper){
+                    swiperAnimate(swiper); //每个slide切换结束时也运行当前slide动画
+            }
+        });
+
+        function loadImage(imgsrc,cb) {
+            if (imgsrc.constructor != Array) {
+                imgsrc = [imgsrc];
+            }
+            var index = 0;
+            var scale = 0;
+            for (var i = 0; i < imgsrc.length; i++) {
+                var img = new Image();
+                img.src = imgsrc[i];
+                img.onload = function() {
+                    index ++;
+                    scale = index/imgsrc.length;
+                    $(".loading p").css({
+                        width:scale*100+"%"
+                    })
+                    if (index == imgsrc.length) {
+                        cb && cb();
+                    }
+                }
+            }
+        }
+    </script>
+</html>
