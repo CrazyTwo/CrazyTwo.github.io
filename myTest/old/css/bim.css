@@ -1,0 +1,334 @@
+body,
+.wrap {
+  position: relative;
+  min-width: 320px;
+  overflow-x: hidden;
+}
+.header {
+  position: fixed;
+}
+.content .bim .con {
+  width: 100%;
+  height: 100%;
+  max-width: 1126px;
+  margin: auto;
+  position: relative;
+}
+.content .bim .con .left {
+  position: absolute;
+  left: 0;
+}
+.content .bim .con .txt {
+  padding-top: 76px;
+  font-size: 0.16rem;
+  font-weight: lighter;
+  width: 347px;
+  margin-bottom: 45px;
+}
+.content .bim .con .txt .title {
+  font-size: 0.18rem;
+  font-weight: bold;
+  margin-bottom: 24px;
+}
+.content .bim .con .txt .title span {
+  padding: 4px 7px;
+  border: 1px solid black;
+  border-radius: 5px;
+  margin-right: 13px;
+}
+.content .bim .con .img img:nth-child(2) {
+  margin-left: 19px;
+}
+.content .bim .con .right {
+  position: absolute;
+  right: 4.351687%;
+  height: 100%;
+  width: 413px;
+}
+.content .bim .con .right img {
+  position: absolute;
+  bottom: 0;
+  left: 44.067796%;
+}
+.content .bim:nth-child(2n) .con .right img {
+  top: 0;
+  left: 0;
+}
+.content .bim:nth-child(1) .con .left,
+.content .bim:nth-child(2) .con .left,
+.content .bim:nth-child(5) .con .left {
+  padding-left: 4.529307%;
+}
+.content .bim:nth-child(3) .con .left {
+  position: absolute;
+  left: auto;
+  right: 3.285968%;
+}
+.content .bim:nth-child(3) .con .right {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 100%;
+  width: 449px;
+  margin-right: 0;
+}
+.content .bim:nth-child(3) .con .right img {
+  left: 43.652561%;
+}
+.content .bim:nth-child(4) .con .left {
+  position: absolute;
+  height: 100%;
+  width: 449px;
+  left: 0;
+}
+.content .bim:nth-child(4) .con .left img {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.content .bim:nth-child(4) .con .center {
+  position: absolute;
+  left: 462px;
+}
+.content .bim:nth-child(4) .con .center .img img:nth-child(2) {
+  margin-left: 0;
+  display: block;
+  margin-top: 16px;
+}
+.content .bim:nth-child(4) .con .right {
+  position: absolute;
+  right: 1.420959%;
+  height: 100%;
+  width: 451px;
+}
+.content .bim:nth-child(4) .con .right img {
+  position: absolute;
+  top: auto;
+  bottom: 0;
+  left: 45.454545%;
+}
+.content .bim:nth-child(5) .con .title {
+  padding-top: 50%;
+}
+.content .bim:nth-child(5) .con .right {
+  position: absolute;
+  right: 1.420959%;
+  height: 100%;
+  width: 451px;
+}
+.content .bim:nth-child(5) .con .right img {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.content > div {
+  width: 100%;
+  height: 655px;
+}
+.content > div:nth-child(2n-1) {
+  background-color: #f2f2f3;
+}
+@media screen and (max-width: 1105px) {
+  .content .bim:nth-child(2) .con .img img:nth-child(2) {
+    margin-left: 0;
+    display: block;
+    margin-top: 16px;
+  }
+}
+@media screen and (max-width: 1085px) {
+  .content .bim:nth-child(3) .con .right {
+    width: 39.875666%;
+  }
+  .content .bim:nth-child(3) .con .right img {
+    width: 36.302895%;
+  }
+  .content .bim:nth-child(4) .con .center {
+    left: 41.030195%;
+    width: 30.817051%;
+    min-width: 190px;
+  }
+  .content .bim:nth-child(4) .con .center .txt {
+    width: 100%;
+  }
+  .content .bim:nth-child(4) .con .center .txt .title {
+    width: 100%;
+  }
+  .content .bim:nth-child(4) .con .center .img {
+    width: 100%;
+  }
+  .content .bim:nth-child(4) .con .center .img img {
+    width: 90%;
+    float: left;
+  }
+  .content .bim:nth-child(4) .con .center .img img:nth-child(2) {
+    margin-top: 5.839416%;
+  }
+  .content .bim:nth-child(4) .con .left {
+    width: 39.875666%;
+  }
+  .content .bim:nth-child(4) .con .left img {
+    width: 100%;
+  }
+  .content .bim:nth-child(4) .con .right {
+    width: 40.053285%;
+  }
+  .content .bim:nth-child(4) .con .right img {
+    width: 37.472283%;
+  }
+  .content .bim:nth-child(1) .con .right,
+  .content .bim:nth-child(2) .con .right {
+    width: 36.678507%;
+  }
+  .content .bim:nth-child(1) .con .right img,
+  .content .bim:nth-child(2) .con .right img {
+    width: 100%;
+  }
+  .content .bim:nth-child(1) .con .right img {
+    width: 37.288135%;
+  }
+  .content .bim:nth-child(5) .con .right {
+    width: 40.053285%;
+  }
+  .content .bim:nth-child(5) .con .right img {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 820px) {
+  .content .bim {
+    height: 450px;
+  }
+  .content .bim .con .txt {
+    padding-top: 38px;
+    margin-bottom: 24.5px;
+  }
+  .content .bim .con .txt .title {
+    margin-bottom: 12px;
+  }
+  .content .bim:nth-child(1) .con .left {
+    width: 40.230905%;
+    min-width: 160px;
+  }
+  .content .bim:nth-child(1) .con .txt {
+    width: 100%;
+  }
+  .content .bim:nth-child(1) .con .txt .title {
+    width: 100%;
+  }
+  .content .bim:nth-child(1) .con .img {
+    width: 100%;
+  }
+  .content .bim:nth-child(1) .con .img img {
+    width: 100%;
+  }
+  .content .bim:nth-child(2) .con .left {
+    width: 40%;
+    min-width: 150px;
+  }
+  .content .bim:nth-child(2) .con .txt {
+    width: 100%;
+  }
+  .content .bim:nth-child(2) .con .txt .title {
+    width: 100%;
+  }
+  .content .bim:nth-child(2) .con .img {
+    width: 100%;
+  }
+  .content .bim:nth-child(2) .con .img img {
+    width: 75%;
+    float: left;
+  }
+  .content .bim:nth-child(2) .con .img img:nth-child(2) {
+    margin-top: 5.839416%;
+  }
+  .content .bim:nth-child(3) .con .left {
+    width: 45.737122%;
+    min-width: 150px;
+  }
+  .content .bim:nth-child(3) .con .txt {
+    width: 100%;
+  }
+  .content .bim:nth-child(3) .con .txt .title {
+    width: 100%;
+  }
+  .content .bim:nth-child(3) .con .img {
+    width: 100%;
+  }
+  .content .bim:nth-child(3) .con .img img {
+    width: 65%;
+    float: left;
+  }
+  .content .bim:nth-child(3) .con .img img:nth-child(2) {
+    margin-left: 0;
+    margin-top: 5.839416%;
+  }
+  .content .bim:nth-child(5) .con .txt {
+    width: 55%;
+  }
+}
+@media screen and (max-width: 815px) {
+  .content .bim .con .txt {
+    font-size: 14px;
+  }
+  .content .bim .con .txt .title {
+    font-size: 16px;
+  }
+  .content .bim .con .txt .title span {
+    margin-right: 5px;
+  }
+}
+@media screen and (max-width: 710px) {
+  .content .bim {
+    height: 400px;
+  }
+  .content .bim .con .txt {
+    font-size: 12px;
+  }
+  .content .bim .con .txt .title {
+    font-size: 14px;
+  }
+  .content .bim .con .txt .title span {
+    margin-right: 5px;
+  }
+  .content .bim:nth-child(3) .con .img img {
+    width: 60%;
+  }
+  .content .bim:nth-child(4) .con .center {
+    left: 40%;
+  }
+  .content .bim:nth-child(4) .con .center .img img {
+    width: 70%;
+  }
+}
+@media screen and (max-width: 600px) {
+  .content .bim {
+    height: 350px;
+  }
+  .content .bim:nth-child(4) .con .center {
+    left: 40%;
+  }
+}
+@media screen and (max-width: 360px) {
+  .content .bim:nth-child(4) .con .center {
+    left: 39%;
+  }
+  .content .bim {
+    height: 300px;
+  }
+  .content .bim:nth-child(3) .con .left {
+    width: 58%;
+    min-width: 150px;
+  }
+  .content .bim:nth-child(3) .con .img img {
+    width: 65%;
+  }
+}
+@media screen and (max-width: 320px) {
+  .content .bim:nth-child(4) .con .right,
+  .content .bim:nth-child(5) .con .right {
+    right: 0;
+  }
+  .content .bim:nth-child(4) .con .center .img img {
+    width: 60%;
+  }
+}
+/*# sourceMappingURL=bim.css.map */

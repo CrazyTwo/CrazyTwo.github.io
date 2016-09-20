@@ -1,0 +1,93 @@
+.content{
+    .renderings,.bim,.animate{
+        width: 84.356287%;
+        max-width: 1127px;
+        margin: auto;
+        margin-bottom: 0;
+        display: block;
+        border-bottom: 1px solid #e1e1e1;
+        .txt{
+            width: 34.605146%;
+            height: 100%;
+            color: #b4b4b4;
+            line-height: 20px;
+            h2{
+                width: 100%;
+                font-size: 0.3rem;
+                padding-top: 0.65em;
+            }
+            p{
+                width: 92.307692%;
+                font-size: 0.15rem;
+                padding:0.5em 0.3em 0;
+            }
+        }
+        .img{
+            width: 64.773735%;
+            max-width: 730px;
+//          background: #cfdb00;
+            .image{
+                width: 92.465753%;
+                max-width: 675px;
+            }
+            .side{
+                width: 2.916666%;
+                background: #e1e1e1;
+                transition: background-color 1s;
+//              img{
+//                  width: 100%;
+//              }
+            }
+        }
+    }
+    .bim{
+       text-align: right;
+    }
+    .renderings:hover,.bim:hover,.animate:hover{
+        .txt{
+            color: #595757;
+            h2{
+                color: #3C3C3C;
+            }
+        }
+    }
+}
+@media screen and (max-width:850px){
+    html{
+        font-size: 80px;
+    }
+    .wrap{
+        min-width: 320px;
+    }
+    .content{
+        width: 100%;
+        .renderings,.bim,.animate{
+            width: 100%;
+            text-align: center;
+            .txt{
+                width: 100%;
+                float: none;
+                h2{
+                    text-align: center;
+//                  text-indent: .5em;
+                    padding-top: 0.5em;
+                }
+                p{
+                    text-align: left;
+                    padding-left: .5em;
+                    text-indent: 2.5em;
+                }
+            }
+            .img{
+                width: 100%;
+                float: none;
+                .image{
+                    width: 100%;
+                }
+                .side{
+                    display: none;
+                }
+            }
+        }
+    }
+}

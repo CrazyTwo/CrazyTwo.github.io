@@ -1,0 +1,117 @@
+.content .renderings,
+.content .bim,
+.content .animate {
+  width: 84.356287%;
+  max-width: 1127px;
+  margin: auto;
+  margin-bottom: 0;
+  display: block;
+  border-bottom: 1px solid #e1e1e1;
+}
+.content .renderings .txt,
+.content .bim .txt,
+.content .animate .txt {
+  width: 34.605146%;
+  height: 100%;
+  color: #b4b4b4;
+  line-height: 20px;
+}
+.content .renderings .txt h2,
+.content .bim .txt h2,
+.content .animate .txt h2 {
+  width: 100%;
+  font-size: 0.3rem;
+  padding-top: 0.65em;
+}
+.content .renderings .txt p,
+.content .bim .txt p,
+.content .animate .txt p {
+  width: 92.307692%;
+  font-size: 0.15rem;
+  padding: 0.5em 0.3em 0;
+}
+.content .renderings .img,
+.content .bim .img,
+.content .animate .img {
+  width: 64.773735%;
+  max-width: 730px;
+}
+.content .renderings .img .image,
+.content .bim .img .image,
+.content .animate .img .image {
+  width: 92.465753%;
+  max-width: 675px;
+}
+.content .renderings .img .side,
+.content .bim .img .side,
+.content .animate .img .side {
+  width: 2.916666%;
+  background: #e1e1e1;
+  transition: background-color 1s;
+}
+.content .bim {
+  text-align: right;
+}
+.content .renderings:hover .txt,
+.content .bim:hover .txt,
+.content .animate:hover .txt {
+  color: #595757;
+}
+.content .renderings:hover .txt h2,
+.content .bim:hover .txt h2,
+.content .animate:hover .txt h2 {
+  color: #3C3C3C;
+}
+@media screen and (max-width: 850px) {
+  html {
+    font-size: 80px;
+  }
+  .wrap {
+    min-width: 320px;
+  }
+  .content {
+    width: 100%;
+  }
+  .content .renderings,
+  .content .bim,
+  .content .animate {
+    width: 100%;
+    text-align: center;
+  }
+  .content .renderings .txt,
+  .content .bim .txt,
+  .content .animate .txt {
+    width: 100%;
+    float: none;
+  }
+  .content .renderings .txt h2,
+  .content .bim .txt h2,
+  .content .animate .txt h2 {
+    text-align: center;
+    padding-top: 0.5em;
+  }
+  .content .renderings .txt p,
+  .content .bim .txt p,
+  .content .animate .txt p {
+    text-align: left;
+    padding-left: .5em;
+    text-indent: 2.5em;
+  }
+  .content .renderings .img,
+  .content .bim .img,
+  .content .animate .img {
+    width: 100%;
+    float: none;
+  }
+  .content .renderings .img .image,
+  .content .bim .img .image,
+  .content .animate .img .image {
+    width: 100%;
+  }
+  .content .renderings .img .side,
+  .content .bim .img .side,
+  .content .animate .img .side {
+    display: none;
+  }
+}
+/*# sourceMappingURL=index.css.map */

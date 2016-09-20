@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Home</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" type="text/css" href="css/reset.css"/>
+		<link rel="stylesheet" type="text/css" href="css/nav.css"/>
+		<link rel="stylesheet" type="text/css" href="css/index.css"/>
+		<script src="js/jquery-3.0.0.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/nav.js" type="text/javascript" charset="utf-8"></script>
+		
+	</head>
+	<body>
+		<div class="wrap">
+			<div class="header">
+				<div class="nav">
+					<a href="index.html"><img src="img/logo.png"/></a>
+					<div>
+						<a href="index.html" class="select">Home</a><a href="about.html">ABOUT</a><a href="renderings.html">Renderings</a><a href="3d.html">3D Animate </a><a href="bim.html">BIM</a><a href="contact.html">Contact</a>
+					</div>
+					<p></p>
+				</div>
+			</div>
+			<div class="content">
+				<a href="renderings.html" class="renderings clear h">
+					<div class="img fl clear"><div class="side fr"><!--<img src="img/side.png"/>--></div><img src="img/home_ren.png" class="fr image" /></div>
+					<div class="txt fr">
+						<h2>RENDERINGS</h2>
+						<p>
+							Masterplan、Public Building、commercial Building、Residential Building、Landscape Design
+						</p>
+					</div>
+				</a>
+				<a href="bim.html" class="bim clear h">
+					<div class="img fr clear"><div class="side fl"><!--<img src="img/side.png"/>--></div><img src="img/home_bim.png" class="image fl"/></div>
+					<div class="txt fl">
+						<h2>BIM</h2>
+						<p>
+							Model Completion、Clash Detection、MEP Integration、Curtain Wall Remedying、BIM Consulting
+						</p>
+					</div>
+				</a>
+				<a href="3d.html" class="animate clear h">
+					<div class="img fl clear"><div class="side fr"><!--<img src="img/side.png"/>--></div><img src="img/home_3d.png" class="fr image"/></div>
+					<div class="txt fr">
+						<h2>3D ANIMATION</h2>
+						<p>
+							Real estate advertising animation 
+							Design scheme Animation 
+							Corporate promotional Animation 
+						</p>
+					</div>
+				</a>
+			</div>
+			<div class="footer">
+				<div class="share">
+					<a href="###"><span></span></a>
+					<p>
+						<a href="###"></a><a href="###"></a><a href="###"></a><a href="###"></a>
+					</p>
+				</div>
+				<p>Copyright © 1998-2015 shining Group</p>
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript">
+		var $div = $('.content .h');
+		var $img = $div.find('.img .image');
+		var $side = $('.side');
+		onresize = function(){
+			$side.css('height',$img.height());
+//			$div.eq(1).css('height',$img.eq(1).height());
+		}
+		var arr = ['img/home_ren_hover.png','img/home_bim_hover.png','img/home_3d_hover.png','img/home_ren.png','img/home_bim.png','img/home_3d.png']
+		$div.hover(function(){
+			$img.eq($(this).index()).attr('src',arr[$(this).index()]);
+			$side.eq($(this).index()).css('background','#cfdb00')
+//			$side.eq($(this).index()).attr('src','img/side_hover.png');
+		},function(){
+			$img.eq($(this).index()).attr('src',arr[$(this).index()+3]);
+			$side.eq($(this).index()).css('background','#e1e1e1');
+//			$side.eq($(this).index()).attr('src','img/side.png');
+		})
+	</script>
+</html>

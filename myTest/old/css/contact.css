@@ -1,0 +1,198 @@
+body {
+  background-color: #F5F5F5;
+}
+.content {
+  width: 100%;
+  position: relative;
+  margin-bottom: 0.1em;
+}
+.content .bgcolor {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-image: url(../img/map1.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: auto;
+  opacity: .65;
+  z-index: -1;
+}
+.content .con {
+  width: 100%;
+  font-size: 0.2rem;
+}
+.content .con .contacts {
+  padding-top: 133px;
+  margin: auto;
+  margin-bottom: 30px;
+  width: 270px;
+  text-indent: 49px;
+}
+.content .con .contacts span {
+  font-size: 0.18rem;
+  font-weight: lighter;
+  color: #595757;
+}
+.content .con .mail {
+  margin: auto;
+  margin-bottom: 73px;
+  width: 270px;
+}
+.content .con .mail b {
+  width: 31px;
+  height: 23px;
+  display: inline-block;
+  background: url(../img/contact.png) no-repeat;
+  vertical-align: middle;
+  margin-right: 18px;
+}
+.content .con .mail span {
+  font-size: 0.16rem;
+  font-weight: lighter;
+  color: #676666;
+}
+.content .con .other {
+  width: 755px;
+  margin: auto;
+}
+.content .con .other div {
+  display: inline-block;
+  font-size: 0.1rem;
+  margin-bottom: 15px;
+  margin-right: 60px;
+}
+.content .con .other div b {
+  display: inline-block;
+  background: url(../img/contact.png) no-repeat;
+  vertical-align: middle;
+  margin-right: 10px;
+}
+.content .con .other div span {
+  display: inline-block;
+  vertical-align: middle;
+  text-align: left;
+}
+.content .con .other .tel b {
+  width: 35px;
+  height: 31px;
+  background-position-x: -35px;
+}
+.content .con .other .tel span {
+  width: 140px;
+}
+.content .con .other .phone b {
+  width: 20px;
+  height: 38px;
+  background-position-x: -70px;
+  vertical-align: bottom;
+}
+.content .con .other .phone span {
+  width: 120px;
+}
+.content .con .other .addr {
+  margin-right: 0;
+}
+.content .con .other .addr b {
+  width: 25px;
+  height: 37px;
+  background-position-x: -105px;
+}
+.content .con .other .addr span {
+  width: 255px;
+}
+.content .bg {
+  width: 100%;
+  position: relative;
+  z-index: -2;
+}
+.content .bg img {
+  width: 100%;
+}
+@media screen and (max-width: 850px) {
+  .content {
+    margin-bottom: 0.1em;
+  }
+  .content .con .contacts {
+    margin-bottom: 40px;
+  }
+  .content .con .mail {
+    margin-bottom: 40px;
+  }
+  .content .con .other {
+    width: 270px;
+  }
+  .content .con .other div {
+    margin-right: 0;
+    margin-bottom: 40px;
+  }
+  .content .con .other .tel {
+    margin-left: -2px;
+  }
+  .content .con .other .tel b {
+    margin-right: 16px;
+  }
+  .content .con .other .phone {
+    margin-left: 5.5px;
+  }
+  .content .con .other .phone b {
+    margin-right: 23.5px;
+    vertical-align: middle;
+  }
+  .content .con .other .addr {
+    margin-left: 3px;
+  }
+  .content .con .other .addr b {
+    margin-right: 21px;
+  }
+  .content .con .other .addr span {
+    width: 212px;
+  }
+}
+@media screen and (max-width: 440px) {
+  .content {
+    margin-bottom: 0.1em;
+  }
+  .content .con .contacts {
+    padding-top: 75px;
+    margin-bottom: 25px;
+  }
+  .content .con .mail {
+    margin-bottom: 25px;
+  }
+  .content .con .other div {
+    margin-bottom: 25px;
+  }
+}
+@media screen and (max-width: 380px) {
+  .content {
+    margin-bottom: 0.1em;
+  }
+  .content .con .contacts {
+    padding-top: 55px;
+    margin-bottom: 25px;
+  }
+  .content .con .mail {
+    margin-bottom: 25px;
+  }
+  .content .con .other div {
+    margin-bottom: 25px;
+  }
+}
+@media screen and (max-width: 320px) {
+  .content {
+    margin-bottom: 0.1em;
+  }
+  .content .con .contacts {
+    padding-top: 35px;
+    margin-bottom: 15px;
+  }
+  .content .con .mail {
+    margin-bottom: 15px;
+  }
+  .content .con .other div {
+    margin-bottom: 15px;
+  }
+}
+/*# sourceMappingURL=contact.css.map */

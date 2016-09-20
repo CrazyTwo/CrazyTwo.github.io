@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>BIM</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" type="text/css" href="css/reset.css"/>
+		<link rel="stylesheet" type="text/css" href="css/nav.css"/>
+		<link rel="stylesheet" type="text/css" href="css/bim.css"/>
+		<script src="js/jquery-3.0.0.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/nav.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/myjq.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<div class="wrap">
+			<div class="header">
+				<div class="nav">
+					<a href="index.html"><img src="img/logo.png"/></a>
+					<div>
+						<a href="index.html">Home</a><a href="about.html">ABOUT</a><a href="renderings.html">Renderings</a><a href="3d.html">3D Animate </a><a href="bim.html"  class="select">BIM</a><a href="contact.html">Contact</a>
+					</div>
+					<p></p>
+				</div>
+			</div>
+			<div class="content">
+				<div class="bim">
+					<div class="con">
+						<div class="right">
+							<img src="img/bim1.png"/>
+						</div>
+						<div class="left">
+							<div class="txt">
+								<div class="title"><span>1</span>Model Completion</div>
+								<p>Establishing and creating the visible and multi-dimension Archi</p>
+							</div>
+							<div class="img"><img src="img/bim_1.png"/></div>
+						</div>
+					</div>
+				</div>
+				<div class="bim">
+					<div class="con">
+						<div class="right">
+							<img src="img/bim2.png"/>
+						</div>
+						<div class="left">
+							<div class="txt">
+								<div class="title"><span>2</span>Clash Detection</div>
+								<p>Completing the clash detection among various design parties, en</p>
+							</div>
+							<div class="img"><img src="img/bim_2l.jpg"/><img src="img/bim_2r.jpg"/></div>
+						</div>
+					</div>
+				</div>
+				<div class="bim">
+					<div class="con">
+						<div	 class="right">
+							<img src="img/bim3.png"/>
+						</div>
+						<div class="left">
+							<div class="txt">
+								<div class="title"><span>3</span>MEP Integration</div>
+								<p>Profoundly completing the pipeline integration, design coordina</p>
+							</div>
+							<div class="img"><img src="img/bim_3l.jpg"/><img src="img/bim_3r.jpg"/></div>
+						</div>
+					</div>
+				</div>
+				<div class="bim">
+					<div class="con">
+						<div	 class="left">
+							<img src="img/bim4_1.png"/>
+						</div>
+						<div class="right">
+							<img src="img/bim4_2.png"/>
+						</div>
+						<div class="center">
+							<div class="txt">
+								<div class="title"><span>4</span>Curtain Wall Remedying</div>
+								<p>Creating the abnormity wall based on parametric design tools, a</p>
+							</div>
+							<div class="img"><img src="img/bim_4t.jpg"/><img src="img/bim_4b.jpg"/></div>
+						</div>
+					</div>
+				</div>
+				<div class="bim">
+					<div class="con">
+						<div class="right">
+							<img src="img/bim5.png"/>
+						</div>
+						<div class="left">
+							<div class="txt">
+								<div class="title"><span>5</span>BIM Consulting</div>
+								<p>To help you to precisely know what is BIM? How BIM use? When an</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="footer">
+				<div class="share">
+					<a href="###"><span></span></a>
+					<p>
+						<a href="###"></a><a href="###"></a><a href="###"></a><a href="###"></a>
+					</p>
+				</div>
+				<p>Copyright © 1998-2015 shining Group</p>
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript">
+		var $div = $('.content .bim');
+		var headerH = $('.header').height();
+		var index = getIndex ();
+		var before = index;
+		$div.parent().css('paddingTop',headerH);
+		$(window).mousewheel(function(e,down){
+			if ($div.bol) {return}
+			$div.bol = true;
+			before = index;
+			if (down) {
+				index ++;
+				if(index>=$div.length-1){
+					index = $div.length-1;
+				}
+			} else{
+				index --;
+				if(index<= 0){
+					index = 0;
+				}
+			}
+			move(down);
+		})
+		$(window).scroll(function(){
+			index = getIndex();
+		})
+		$(window).resize(function(){
+			index = getIndex();
+		})
+		function move (down) {
+			var top = $div.eq(index).offset().top-headerH;
+			var divT = $div.eq(before).offset().top-headerH;
+			var sTop = $(window).scrollTop();
+			if (index == before && sTop == divT) {$div.bol = false;return;}
+			if (sTop>divT && !down) {
+				top = divT;
+			}
+			$(window).scrollMove(top,Tween.easeOut,function(){
+				$div.bol = false;
+			});
+		}
+		function getIndex () {
+			var sTop = $(window).scrollTop();
+			var index = 0;
+			$div.each(function(i){
+				if (sTop>=$(this).offset().top-headerH) {
+					index = i;
+				}
+			})
+			return index;
+		}
+//		var index = Math.ceil(($(window).scrollTop()-$('.header').height())/$bim.height());
+//		var Send = 0;
+//		var bol = false;
+//		
+//		$(window).mousewheel(function(e, down){
+//			if (bol) {return}
+//			bol = true;
+//			var i = ($(window).scrollTop()-$('.header').height())/$bim.height();
+//			index = Math.ceil(i);
+//			if (down) {
+//				index ++;
+//				index>=5?index=4:index;
+//				Send = index* $bim.height() + $('.header').height();
+//				$(this).scrollMove(Send,Tween.Linear,function(){
+//					bol = false;
+//				});
+//			} else{
+//				index --;
+//				if (index <= 0) {
+//					index = 0;
+//					$(this).scrollMove(0,Tween.Linear,function(){
+//						bol = false;
+//					});
+//				}else{
+//					Send = index* $bim.height() + $('.header').height();
+//					$(this).scrollMove(Send,Tween.Linear,function(){
+//						bol = false;
+//					});
+//				}
+//			}
+//		})
+	</script>
+</html>

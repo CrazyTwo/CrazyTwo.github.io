@@ -1,0 +1,183 @@
+.header{
+    background: black;
+    width: 100%;
+    position: relative;
+    top:0;
+    left: 0;
+    height: 4.2em;
+    font-size: 0.14em;
+    line-height: 4.2em;
+    z-index: 999;
+    box-shadow: 2px 2px 5px #000;
+    .nav{
+        width: 100%;
+        max-width: 1127px;
+        min-width: 600px;
+        margin: auto;
+        .list_nav{
+            display: none;
+            width: 70%;
+            height: auto;
+            background: rgba(0,0,0,.5);
+            position: absolute;
+            top:4.2em;
+            right: 0;
+            z-index: 999;
+            text-align: center;
+            a{
+                width: 98%;
+                padding: 0;
+                margin: 0;
+                display: block;
+                border: none;
+                border-radius: 0;
+                border-top: 1px solid rgba(255,255,255,.7);
+            }
+            .select{
+                border-top: 1px solid rgba(255,255,255,.7);
+                color: rgba(255,255,0,.5);
+            }
+            
+        }
+    }
+    .nav p{
+        display: none;
+    }
+    .nav div{
+       position: relative;
+       top: -4.2em;
+       left: 36.734693%;
+       height: 100%;
+       width: 600px;
+        a{
+            color: white;
+            padding: 5px 10px;
+            border-radius: 8px;
+            margin-left:4.615384%;
+            border: 1px solid transparent;
+            color: #a8a8a8;
+        }
+        a:nth-child(1){
+            margin-left: 0;
+        }
+        a:hover{
+            border: 1px solid #7b7b7b;
+        }
+        .select{
+            border: 1px solid #7b7b7b;
+            color: #fff;
+        }
+    }
+    img{
+        vertical-align: middle;
+    }
+}
+.content{
+    width: 100%;
+    margin-bottom: 0.7em;
+}
+.footer{
+    width: 100%;
+    height: 1.19em;
+//  position: absolute;
+//  bottom: 0.23em;
+    .share{
+        width: 148px;
+        margin: auto;
+        text-align: center;
+        margin-bottom: 0.3em;
+        a{
+            display: block;
+            width: 35px;
+            height: 26px;
+            margin: auto;
+            background: url(../img/share.png) no-repeat;
+            background-position: 0 -50px;
+        }
+        a:hover{
+            background-position: -35px -50px;
+        }
+        p{
+            width: 100%;
+            margin-top: 19px;
+            text-align: center;
+            height: 25px;
+            overflow: hidden;
+            a{
+                float: left;
+                width: 25px;
+                height: 25px;
+                background-position: 0 0;
+                margin-left: 16px;
+            }
+            a:nth-child(1){
+                margin-left: 0;
+            }
+            a:nth-child(2){
+                background-position: -25px 0;
+            }
+            a:nth-child(3){
+                background-position: -50px 0;
+            }
+            a:nth-child(4){
+                background-position: -75px 0;
+            }
+            
+        }
+    }
+    p{
+        width: 100%;
+        font-size: 0.12em;
+        text-align: center;
+        color: #666;
+    }
+}
+@media screen and (max-width:850px){
+    .header{
+        .nav div{
+            display: none;
+            overflow: hidden;
+        }
+        .nav{
+             min-width: 320px;
+        }
+        .nav p{
+            display: block;
+            background: url(../img/nav.png) no-repeat;
+            background-size: 100% 100%;
+            width: 1.4em;
+            height: 1.2em;
+            position: relative;
+            top:-2.7em;
+            left: 100%;
+            margin-left: -45px;
+        }
+    }
+}
+@media screen and (max-width:640px){
+    .wrap{
+        min-width: 320px;
+    }
+    .header{
+        .nav p{
+            width: 1.8em;
+            height: 1.6em;
+        }
+    }
+    .content{
+         margin-bottom: 0.3em;
+    }
+}
+@media screen and (max-width:320px){
+   .content{
+         margin-bottom: 0.07em;
+    }
+    .footer{
+        .share{
+            margin-bottom: 0.07em;
+            p{
+                margin-top: 7px;
+            }
+        }
+    }
+}
