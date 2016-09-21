@@ -1,9 +1,10 @@
 window.onload = function (){
-
+	var load = document.querySelector(".loading");
+	var load_p = document.querySelector(".loading p");
 
 	var imgArr = ["load_img/load_bg1.jpg","load_img/load_bg2.jpg","load_img/load_bg3.jpg"];
         loadImage(imgArr,function(){
-            $(".loading").hide();
+            load.style.display = "none";
         })
 
 
@@ -81,9 +82,7 @@ window.onload = function (){
                 img.onload = function() {
                     index ++;
                     scale = index/imgsrc.length;
-                    $(".loading p").css({
-                        width:scale*100+"%"
-                    })
+                    load_p.style.width = scale*100+"%"
                     if (index == imgsrc.length) {
                         cb && cb();
                     }
