@@ -49,24 +49,3 @@ window.onload = function (){
 	}
 
 }
-
-
-function loadImage(imgsrc,cb) {
-        if (imgsrc.constructor != Array) {
-            imgsrc = [imgsrc];
-        }
-        var index = 0;
-        var scale = 0;
-        for (var i = 0; i < imgsrc.length; i++) {
-            var img = new Image();
-            img.src = imgsrc[i];
-            img.onload = function() {
-                index ++;
-                scale = index/imgsrc.length;
-                load_p.style.width = scale*100+"%"
-                if (index == imgsrc.length) {
-                    cb && cb();
-                }
-            }
-        }
-    }
