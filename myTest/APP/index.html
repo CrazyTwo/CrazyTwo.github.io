@@ -37,6 +37,15 @@
 		<div class="loading">
             <div><p></p></div>
         </div>
+        <script type="text/javascript">
+        var load = document.querySelector(".loading");
+		var load_p = document.querySelector(".loading p");
+
+		var imgArr = ["load_img/load_bg1.jpg","load_img/load_bg2.jpg","load_img/load_bg3.jpg"];
+	        loadImage(imgArr,function(){
+	            load.style.display = "none";
+	        })
+        </script>
 		<div id="load">
 			<span class="header">晚安</span>
 			<span class="center">有效提高睡眠质量 </span>

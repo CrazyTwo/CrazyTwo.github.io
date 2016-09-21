@@ -1,14 +1,4 @@
 window.onload = function (){
-	var load = document.querySelector(".loading");
-	var load_p = document.querySelector(".loading p");
-
-	var imgArr = ["load_img/load_bg1.jpg","load_img/load_bg2.jpg","load_img/load_bg3.jpg"];
-        loadImage(imgArr,function(){
-            load.style.display = "none";
-        })
-
-
-
 //	var time = document.getElementById('time');
 	var bd = document.getElementById('load');
 	var wrap = document.getElementsByClassName('wrap')[0];
@@ -58,35 +48,25 @@ window.onload = function (){
 		},1000)
 	}
 
+}
 
 
-
-
-
-
-
-
-
-
-
-
-	function loadImage(imgsrc,cb) {
-            if (imgsrc.constructor != Array) {
-                imgsrc = [imgsrc];
-            }
-            var index = 0;
-            var scale = 0;
-            for (var i = 0; i < imgsrc.length; i++) {
-                var img = new Image();
-                img.src = imgsrc[i];
-                img.onload = function() {
-                    index ++;
-                    scale = index/imgsrc.length;
-                    load_p.style.width = scale*100+"%"
-                    if (index == imgsrc.length) {
-                        cb && cb();
-                    }
+function loadImage(imgsrc,cb) {
+        if (imgsrc.constructor != Array) {
+            imgsrc = [imgsrc];
+        }
+        var index = 0;
+        var scale = 0;
+        for (var i = 0; i < imgsrc.length; i++) {
+            var img = new Image();
+            img.src = imgsrc[i];
+            img.onload = function() {
+                index ++;
+                scale = index/imgsrc.length;
+                load_p.style.width = scale*100+"%"
+                if (index == imgsrc.length) {
+                    cb && cb();
                 }
             }
         }
-}
+    }
