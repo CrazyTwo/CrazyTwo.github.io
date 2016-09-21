@@ -9,6 +9,29 @@ body {
   color: #9a97a0;
   background: black;
 }
+.loading{
+    position: absolute;
+    z-index: 999;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+}
+.loading div{
+    width: 80%;
+    height: 0.25rem;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    margin: auto;
+    border: 1px solid #666;
+}
+.loading div p{
+    width: 0;
+    height: 100%;
+    background: #aaa;
+}
 #load {
   max-width: 1000px;
   width: 100%;
