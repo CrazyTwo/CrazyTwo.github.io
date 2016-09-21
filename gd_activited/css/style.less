@@ -1,0 +1,192 @@
+@-webkit-keyframes swing {
+  20% {
+    -webkit-transform: rotate3d(0, 0, 1, 15deg);
+    transform: rotate3d(0, 0, 1, 15deg);
+  }
+
+  40% {
+    -webkit-transform: rotate3d(0, 0, 1, -10deg);
+    transform: rotate3d(0, 0, 1, -10deg);
+  }
+
+  60% {
+    -webkit-transform: rotate3d(0, 0, 1, 5deg);
+    transform: rotate3d(0, 0, 1, 5deg);
+  }
+
+  80% {
+    -webkit-transform: rotate3d(0, 0, 1, -5deg);
+    transform: rotate3d(0, 0, 1, -5deg);
+  }
+
+  to {
+    -webkit-transform: rotate3d(0, 0, 1, 0deg);
+    transform: rotate3d(0, 0, 1, 0deg);
+  }
+}
+
+//@keyframes swing {
+//20% {
+//  -webkit-transform: rotate3d(0, 0, 1, 15deg);
+//  transform: rotate3d(0, 0, 1, 15deg);
+//}
+//
+//40% {
+//  -webkit-transform: rotate3d(0, 0, 1, -10deg);
+//  transform: rotate3d(0, 0, 1, -10deg);
+//}
+//
+//60% {
+//  -webkit-transform: rotate3d(0, 0, 1, 5deg);
+//  transform: rotate3d(0, 0, 1, 5deg);
+//}
+//
+//80% {
+//  -webkit-transform: rotate3d(0, 0, 1, -5deg);
+//  transform: rotate3d(0, 0, 1, -5deg);
+//}
+//
+//to {
+//  -webkit-transform: rotate3d(0, 0, 1, 0deg);
+//  transform: rotate3d(0, 0, 1, 0deg);
+//}
+//}
+
+html,body{
+    height: 100%;
+}
+body{
+    background-image: url(../img/bg.jpg);
+//  ie9以上可用
+    background-size: cover;
+    background-attachment: fixed;
+//  取背景中间位置为主
+    background-position: center center;
+}
+.wrap{
+    padding-top: 125px;
+}
+.header{
+//  间距为0时占100%，不为0时宽1060
+    width: 100%;
+    max-width: 1060px;
+    margin: auto;
+    
+    font-size: 28px;
+    color: white;
+    img{
+        vertical-align: bottom;
+    }
+}
+.content{
+    display: -webkit-box;
+    width: 100%;
+    max-width: 859px;
+    margin: 15px auto 0;
+     img:hover{
+         -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+          -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+         -webkit-transform-origin: top center;
+         transform-origin: top center;
+        -webkit-animation-name: swing;
+        animation-name: swing;
+     }
+     .left{
+         margin-right: 2px;
+         a:nth-child(1){
+             margin-right: 14px;
+             img{
+//               width: 32.596041%;
+             }
+         }
+         a:nth-child(2){
+             img{
+//               width: 19.208381%;
+             }
+         }
+     }
+     .right{
+         a:nth-child(1){
+             margin-right: 2px;
+             img{
+//               width: 19.208381%;
+             }
+         }
+         a:nth-child(2){
+             img{
+//               width: 27.939464%;
+             }
+         }
+     }
+}
+.footer{
+    text-align: center;
+    margin-top: 115px;
+    padding-bottom: 10px;
+}
+@media screen and (max-width:640px) {
+    .header{
+        width: 451px;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        img{
+            width: 91px;
+            display: block;
+        }
+//      span{
+//          display: block;
+//      }
+    }
+    
+    .content{
+        width: 70%;
+        -webkit-box-orient: vertical;
+        .left{
+            margin-right: 0;
+            a:nth-child(1){
+                margin-right: 2.12px;
+                img{
+                    width: 62.084257%;
+                }
+            }
+             a:nth-child(2){
+                 img{
+                    width: 35.920177%;
+                }
+            }
+        }
+        .right{
+            a:nth-child(1){
+                margin-right: 1%;
+                img{
+                    width: 39.689578%;
+                }
+            }
+             a:nth-child(2){
+                img{
+                    width: 58.536585%;
+                }
+                img:nth-child(1){
+                    margin-top: 2px;
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width:540px) {
+    .wrap{
+        padding-top: 30px;
+    }
+    .header{
+        width: 90%;
+    }
+    .content{
+        width: 90%;
+    }
+    .footer{
+        margin-top: 50px;
+        padding-top: 30px;
+    }
+}
