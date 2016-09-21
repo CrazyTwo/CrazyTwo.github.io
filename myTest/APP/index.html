@@ -16,7 +16,7 @@
         var load = document.querySelector(".loading");
 		var load_p = document.querySelector(".loading p");
 
-		load.style.height = document.documentElement.clienHeight;
+		load.style.height = window.clienHeight + "px";
 		var imgArr = ["load_img/load_bg1.jpg","load_img/load_bg2.jpg","load_img/load_bg3.jpg"];
 	        loadImage(imgArr,function(){
 	            load.style.display = "none";
