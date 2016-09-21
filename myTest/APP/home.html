@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" type="text/css" href="css/reset.css"/>
+		<link rel="stylesheet" type="text/css" href="css/h_f.css"/>
+		<script src="js/js.js" type="text/javascript" charset="utf-8"></script>
+		<title>Home</title>
+	</head>
+	<body>
+		<div id="load">
+			<span class="header">晚安</span>
+			<span class="center">有效提高睡眠质量 </span>
+			<span class="center">伴你入眠</span>
+			<span class="foot">some rihts reserved:creativecommons.org</span>
+			<!--<span id="time">5</span>-->
+		</div>
+		<div class="wrap" style="display: none;">
+			<div class="header">
+				<p>晚安</p>
+				<img id="clock" src="home_img/clock.png"/>
+			</div>
+			<div id="sleep" class="sleep_content tab" style="display: none;">
+				<div class="hd">
+					第一周
+				</div>
+				<div class="con_week">
+					<ul>
+						<li>周一<span>12:10</span></li>
+						<li>周二<span></span></li>
+						<li>周三<span></span></li>
+						<li>周四<span></span></li>
+						<li>周五<span></span></li>
+						<li>周六<span></span></li>
+						<li>周日<span></span></li>
+					</ul>
+				</div>
+				<div class="con_month"  style="display: none;">
+					<div class="day clear">
+						<div class="th fl">日</div>
+						<div class="th fl">一</div>
+						<div class="th fl">二</div>
+						<div class="th fl">三</div>
+						<div class="th fl">四</div>
+						<div class="th fl">五</div>
+						<div class="th fl">六</div>
+					</div>
+					<div id="date">
+						<div class="date clear">
+							<div class="td fl"></div>
+							<div class="td fl">1</div>
+							<div class="td fl">2</div>
+							<div class="td fl">3</div>
+							<div class="td fl">4</div>
+							<div class="td fl">5</div>
+							<div class="td fl">6</div>
+						</div>
+							<div class="date clear">
+							<div class="td fl" style="background: #f19149;">7</div>
+							<div class="td fl">8</div>
+							<div class="td fl">9</div>
+							<div class="td fl">10</div>
+							<div class="td fl"></div>
+							<div class="td fl"></div>
+							<div class="td fl"></div>
+						</div>
+					</div>
+				</div>
+				<div id="btn">
+					开始睡觉
+				</div>
+			</div>
+			<div id="home" class="home_content tab">
+				<div class="icon">
+					<img src="home_img/icon1.jpg"/>
+				</div>
+				<div class="summary">
+					<h2>治愈系轻音乐 睡前15分钟听 </h2>
+					<h3>舒缓压力 有益睡眠</h3>
+					<h4>钢琴曲</h4>
+				</div>
+				<div class="music">
+					<div class="progress"></div>
+					<div class="cricle"><img src="home_img/circle.png"/></div>
+					<div class="btns">
+						<img src="home_img/per.png"/><img src="home_img/paly.png"/><img src="home_img/next.png"/>
+					</div>
+				</div>
+				<div class="suggest">
+					<h3>催眠音乐推荐</h3>
+					<ul>
+						<li>
+							<div class="img"><img src="home_img/icon2.jpg"/></div>
+							<div class="txt">
+								<p>极度放松舒压音乐 帮你进入深度睡眠</p>
+								<span>小提琴独奏</span>
+							</div>
+						</li>
+						<li>
+							<div class="img"><img src="home_img/icon3.jpg"/></div>
+							<div class="txt">
+								<p>大自然的催眠曲 享受高品质睡眠</p>
+								<span>雨声 蝉鸣</span>
+							</div>
+						</li>
+						<li>
+							<div class="img"><img src="home_img/icon4.jpg"/></div>
+							<div class="txt">
+								<p>谦谦的数绵羊曲 让你快速入睡</p>
+								<span>网络歌手</span>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div id="add" class="add_content tab" style="display: none;">
+				<form class="search clear" action="###">
+					<input type="button" name="btn_search" id="btn_search" value="" />
+					<input type="text" name="txt" id="txt" value="" placeholder="歌曲/歌手/歌词" />
+					<input type="reset" id="btn_reset" value="" />					
+				</form>
+				<div id="select_music" class="clear">
+					<div class="fl mid">闻到薰衣草时</div>
+					<div class="fr">回想</div>
+					<div class="fl lo">月影摇曳Shadow Shaking in the Moonlight</div>
+					<div class="fr mid">贝多芬：月光奏鸣曲 </div>
+					<div class="fl">不语</div>
+					<div class="fr">无心睡眠</div>
+					<div class="fl">Spa 深度睡眠音乐 逐梦</div>
+					<div class="fr last">从新在开始</div>
+				</div>
+				<div id="search_list">
+					<ol>
+						<li></li>
+						<li></li>
+						<li></li>
+						<li></li>
+						<li></li>
+						<li></li>
+						<li></li>
+					</ol>
+				</div>
+			</div>
+			<div class="footer">
+				<div class="bar1"><img src="home_img/log.png" alt="" /><p>睡眠记录</p></div>
+				<div class="bar2"><img src="home_img/sleep.png" alt="" /><p>伴你入眠</p></div>
+				<div class="bar3"><img src="home_img/add.png" alt="" /><p>歌曲添加</p></div>
+			</div>
+			<div class="bg" style="display: none;">
+				<div class="settimer">
+					<div id="add_time">
+						设置定时播放
+					</div>
+					<ul>
+						<li>10分钟</li>
+						<li>20分钟</li>
+						<li>30分钟</li>
+						<li>1小时</li>
+					</ul>
+					<div id="clear_time">
+						清除设置
+					</div>
+					<div id="back_time">返回</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
