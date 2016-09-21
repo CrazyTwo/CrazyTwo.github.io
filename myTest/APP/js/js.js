@@ -1,4 +1,13 @@
 window.onload = function (){
+
+
+	var imgArr = ["load_img/load_bg1.jpg","load_img/load_bg2.jpg","load_img/load_bg3.jpg"];
+        loadImage(imgArr,function(){
+            $(".loading").hide();
+        })
+
+
+
 //	var time = document.getElementById('time');
 	var bd = document.getElementById('load');
 	var wrap = document.getElementsByClassName('wrap')[0];
@@ -47,4 +56,38 @@ window.onload = function (){
 //			time.innerHTML = n;
 		},1000)
 	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+	function loadImage(imgsrc,cb) {
+            if (imgsrc.constructor != Array) {
+                imgsrc = [imgsrc];
+            }
+            var index = 0;
+            var scale = 0;
+            for (var i = 0; i < imgsrc.length; i++) {
+                var img = new Image();
+                img.src = imgsrc[i];
+                img.onload = function() {
+                    index ++;
+                    scale = index/imgsrc.length;
+                    $(".loading p").css({
+                        width:scale*100+"%"
+                    })
+                    if (index == imgsrc.length) {
+                        cb && cb();
+                    }
+                }
+            }
+        }
 }
