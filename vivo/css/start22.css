@@ -1,0 +1,614 @@
+
+.start {
+	width: 100%;
+	height: 100%;
+	display: none;
+}
+.start p{
+	color: #aeaeae;
+	width: 100%;
+	text-align: center;
+	font-size: 0.12rem;
+	position: absolute;
+	bottom: 15%;
+}
+.start div{
+	width: 0.30rem;
+	height: 0.30rem;
+	position: absolute;
+	bottom: 10%;
+	left: 0;right: 0;
+	margin: auto;
+	animation: startdiv 1s infinite ;
+	text-align: center;
+}
+.start div img{
+	width: 0.22rem;
+	height: 0.11rem;
+	margin-top: 0.095rem;
+}
+@keyframes startdiv{
+	0%{bottom: 10%;}
+	50%{bottom: 8%;}
+	100%{bottom: 10%;}
+}
+/*关卡部分*/
+.play{
+	width: 100%;
+	height: 100%;
+	background-image:url(../img/bg.jpg) ;
+	background-size: 100% 100%;
+	display: none;
+}
+.play .one{
+	width: 90%;
+	height: 65%;
+	position: absolute;
+	top: 15%;
+	left: 5%;
+	background-image:url(../img/kuang.png) ;
+	background-size: 100% 100%;
+	text-align: center;
+}
+.play span{
+	color: red;
+	font-size: 0.16rem;
+	line-height: 0.3rem;
+}
+.play img{
+	width: 1rem;
+	height: 1.03rem;
+
+}
+
+.play .xuzheng{
+	padding-top: 0.2rem;
+	width: 90%;
+	height: 85%;
+	margin: auto;
+}
+
+/*关卡部分的小星星*/
+.checkpoint{
+	width: 1.17rem;
+	height: 0.25rem;
+	background-image: url(../img/txt1.png);
+	background-size: 100% 100%;
+	position: absolute;
+	top: 9%;
+	left: 0;right: 0;
+	margin: auto;
+	display: none;
+}
+.paly01{
+	width: 0.37rem;
+	height: 0.37rem;
+	background-image: url(../img/1_1.png);
+	background-size: 100% 100%;
+	position: absolute;
+	right: 13%;
+	top: 5%;
+	display: none;
+	animation: play 5s infinite;
+}
+.paly02{
+	width: 0.38rem;
+	height: 0.31rem;
+	background-image: url(../img/1_2.png);
+	background-size: 100% 100%;
+	position: absolute;
+	bottom: 8%;
+	left: 5%;
+	display: none;
+	animation: play 5s infinite;
+}
+.paly03{
+	width: 0.34rem;
+	height: 0.34rem;
+	background-image: url(../img/1_3.png);
+	background-size: 100% 100%;
+	position: absolute;
+	bottom: 8%;
+	right: 5%;
+	display: none;
+	animation: play 5s infinite;
+}
+@keyframes play{
+	0%{transform: rotateZ(0deg) ;}
+	100%{transform: rotateZ(360deg);}
+}
+/*关卡部分奖励*/
+.reward{
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,0.8);
+	position: absolute;
+	z-index: 2;
+	display: none;
+	color:white;
+	font-size:1rem ;
+	top: 0;
+	left: 0;
+}
+.reward div{
+	width: 2.09rem;
+	height: 2.36rem;
+	position: absolute;
+	left: 0;top: 0;bottom: 0;right: 0;
+	margin: auto;
+	background-image: url(../img/reward01.png);
+	background-size: 100% 100%;
+}
+/*结束合体动画*/
+.end{
+	display: none;
+	position: absolute;
+	color: #eaeaea;
+	text-align: center;
+	width: 100%;
+	height: 100%;
+}
+.end p{
+	width: 100%;
+	text-align: center;
+	font-size:0.12rem ;
+	line-height: 0.14rem;
+    margin-top: 4%;
+}
+.end .merge{
+	width: 2rem;
+    height: 4rem;
+    position: absolute;
+    left: 0;top: 0;right: 0;bottom: 0;
+    margin: auto;
+    /*background-image: url(../img/phone.png);*/
+    background-size: 100% 100%;
+}
+
+.end .merge div:nth-child(1){
+	width: 1.28rem;
+	height: 1.7rem;
+	position: absolute;
+	top: 0rem;
+    left: 0rem;
+    animation: onemerge 2s both ;
+    background-image: url(../img/merge01.png);
+    background-size: 100% 100%;
+}
+@keyframes onemerge{
+	0%{width: 0.64rem;height: 0.85rem;top: -0.5rem;left: -0.5rem;transform: rotateZ(34deg) scale(0.8);}
+	100%{}
+}
+.end .merge div:nth-child(2){
+	width: 1.26rem;
+    height: 1.66rem;
+    position: absolute;
+    top: 0rem;
+    right: 0.024rem;
+    background-image: url(../img/merge02.png);
+    background-size: 100% 100%;
+    animation: twomerge 2s  both;
+}
+@keyframes twomerge{
+	0%{width: 0.63rem;height: 0.83rem;top: -0.4rem;right: -0.4rem;transform: rotateZ(-16deg) scale(0.8);}
+	100%{}
+}
+
+.end .merge div:nth-child(3){
+	width: 1.44rem;
+	height: 1.8rem;
+	position: absolute;
+	top: 0.52rem;right: 0.024rem;
+	background-image: url(../img/merge03.png);
+    background-size: 100% 100%;
+    animation: threemerge 2s both;
+}
+@keyframes threemerge{
+	0%{width: 0.72rem;height: 0.90rem;top: 0.26rem;right:-0.5rem;transform: rotateZ(43deg) scale(0.8);}
+	100%{}
+}
+.end .merge div:nth-child(4){
+	width: 1.16rem;
+	height: 2.14rem;
+	position: absolute;
+	top: 1rem;left: 0;
+	background-image: url(../img/merge04.png);
+    background-size: 100% 100%;
+    animation: fourmerge 2s both;
+}
+@keyframes fourmerge{
+	0%{width: 0.58rem;height: 1.07rem;top: 0.5rem;left: -0.3rem;transform: rotateZ(57deg) scale(0.8);}
+	100%{}
+}
+.end .merge div:nth-child(5){
+	width: 1.10rem;
+	height:2.12rem;
+	position: absolute;
+	top:1rem;right:0.34rem;
+	background-image: url(../img/merge05.png);
+    background-size: 100% 100%;
+    animation: fivemerge 2s both;
+}
+@keyframes fivemerge{
+	0%{width: 0.55rem;height: 1.06rem;top: 1rem;right:0.34rem;transform: rotateZ(-52deg) scale(0.8);}
+	100%{}
+}
+.end .merge div:nth-child(6){
+	width: 1.02rem;
+	height: 1.64rem;
+	position: absolute;
+	top: 1.83rem;right: 0.024rem;
+	background-image: url(../img/merge06.png);
+    background-size: 100% 100%;
+    animation: sixmerge 2s both;
+}
+@keyframes sixmerge{
+	0%{width: 0.51rem;height: 0.82rem;top: 1.83rem;right: 0.5rem;transform: rotateZ(29deg) scale(1);}
+	100%{}
+}
+.end .merge div:nth-child(7){
+	width: 1.16rem;
+	height: 1.52rem;
+	position: absolute;
+	top: 2.54rem;left: 0;
+	background-image: url(../img/merge07.png);
+    background-size: 100% 100%;
+    animation: sevenmerge 2s both;
+}
+@keyframes sevenmerge{
+	0%{width: 0.58rem;height: 0.76rem;top: 3.1rem;left: -0.6rem;transform: rotateZ(35deg) scale(1);}
+	100%{}
+}
+.end .merge div:nth-child(8){
+	width: 1.44rem;
+	height: 1.14rem;
+	position: absolute;
+	top: 2.92rem;right: 0.024rem;
+	background-image: url(../img/merge08.png);
+    background-size: 100% 100%;
+    animation: eightmerge 2s both;
+}
+@keyframes eightmerge{
+	0%{width: 0.72rem;height: 0.57rem;top: 2.92rem;right: -0.6rem;transform: rotateZ(-46deg) scale(1.2);}
+	100%{}
+}
+
+/*合体完成出现的手机*/
+.endphone{
+	width: 2rem;
+    height: 4rem;
+    position: absolute;
+    left: 0;top: 0;right: 0;bottom: 0;
+    margin: auto;
+    background-image: url(../img/phone02.png);
+    background-size: 100% 100%;
+    display: none;
+}
+.endphone p{
+	width: 1.3rem;
+    color: #fff;
+    font-size: 0.12rem;
+    line-height: 0.16rem;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    bottom: 1.3rem;
+}
+.endphone div:nth-child(2){
+	text-align: center;
+	width: 1.3rem;
+    color: #58bedd;
+    font-size: 0.12rem;
+    border: 1px solid #52727c;
+    background: transparent;
+    border-radius: 0.05rem;
+    position: absolute;
+    bottom: 0.95rem;
+    left: 0;
+    right: 0;
+    margin: auto;
+    line-height: 0.23rem;
+}
+.endphone div:nth-child(3){
+	text-align: center;
+	width: 1.3rem;
+    color: #58bedd;
+    font-size: 0.12rem;
+    border: 1px solid #52727c;
+    background: transparent;
+    border-radius: 0.05rem;
+    position: absolute;
+    bottom: 0.65rem;
+    left: 0;
+    right: 0;
+    margin: auto;
+    line-height:0.23rem;
+}
+/*游戏说明*/
+.explain{
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,0.8);
+	position: absolute;
+	z-index: 2;
+	display: none;
+	top: 0;
+	left: 0;
+	z-index: 3;
+}
+.explain .BG{
+	width: 2.03rem;
+	height: 2.82rem;
+	position: absolute;
+	left: 0;top: 0;bottom: 0;right: 0;
+	margin: auto;
+	background-image: url(../img/explainbg.png);
+	background-size: 100% 100%;
+}
+.explain .BG .top{
+	width: 100%;
+	height: 13.829787%;
+	color: #58BEDD;
+	font-size:0.18rem;
+	line-height: 0.4rem;
+	padding-left: 0.1rem;
+}
+.explain .BG .bot{
+	width: 100%;
+	height: 86.170212%;
+	color: white;
+	font-size: 0.10rem;
+	/*line-height: 0.132rem;*/
+	line-height: 0.15rem;
+	overflow: hidden;
+}
+.explain .BG .bot .left{
+	width: 1.67rem;
+	padding: 0.1rem;
+}
+.explain .BG .bot .r{
+	width: 0.2rem;
+	height: 82%;
+    margin-top: 3.5%;
+    background-image: url(../img/explain02.png);
+    background-position: center;
+    background-repeat: repeat-y;
+    position: absolute;
+    right: 0.05rem;
+    }
+.explain .BG .bot .r p{
+	width:8px;
+	height:49px;
+    border-radius: 8px;
+    background: #c5c5c5;
+    position: absolute;
+    left: 0;right: 0;
+    margin: auto;
+    padding: 0;
+}
+.explain .BG .bot strong{
+	font-size: 0.12rem;
+	color: #58BEDD;
+	line-height: 0.2rem;
+}
+.explain .BG .bot p{
+	text-indent: -1em;
+    padding-left: 1em;
+}
+.explain .BG img{
+	position: absolute;
+    top: 0.05rem;
+    right: 0.1rem;
+    width: 0.2rem;
+}
+/*抽奖*/
+.lottery {
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,0.8);
+	position: absolute;
+	z-index: 2;
+	display: none;
+	top: 0;
+	left: 0;
+}
+.lottery .BG{
+	width: 2.03rem;
+	height: 2.28rem;
+	position: absolute;
+	left: 0;top: 0;bottom: 0;right: 0;
+	margin: auto;
+	background-image: url(../img/lotterybg.png);
+	background-size: 100% 100%;
+	text-align: center;
+}
+.lottery .BG p:nth-child(1){
+	color: white;
+    width: 100%;
+    text-align: center;
+    font-size: 0.14rem;
+    line-height: 0.3rem;
+    margin-top: 0.5rem;
+	
+}
+.lottery .BG p:nth-child(2){
+	color: white;
+    width: 100%;
+    text-align: center;
+    font-size: 0.12rem;
+    margin-bottom: 0.1rem;
+	
+}
+.lottery .BG input{
+	background-color: transparent;
+    border: 0px;
+    border-bottom: 1px dashed #637175;
+    width: 73%;
+    margin: 0.05rem;
+    height: 0.2rem;
+    font-size: 0.12rem;
+}
+.lottery .BG input:-ms-input-placeholder{
+	color: #597e8a;
+}
+.lottery .BG input::-webkit-input-placeholder{
+	color: #597e8a;
+}
+.lottery .BG input::-moz-placeholder{
+	color: #597e8a;
+}
+.lottery .BG button{
+	border: 1px solid skyblue;
+    background-color: transparent;
+    border-radius: 0.08rem;
+    width: 50%;
+    font-size: 0.12rem;
+    line-height: 0.2rem;
+    margin-top: 0.15rem;
+    color: #51adc8;
+}
+.lottery .BG img{
+	position: absolute;
+    top: -0.35rem;
+    left: -0.28rem;
+    width: 1.093rem;
+	 z-index: 3;
+}
+.lottery .ye{
+	width: 100%;
+	height: 100%;
+	background-image: url(../img/lottery03_1.png);
+	background-size: 100%;
+	background-position: top;
+	background-repeat: no-repeat;
+	position: absolute;
+	top: 0;
+	left: 0;
+	animation:yeq 0.5s steps(1) infinite;
+}
+@keyframes yeq{
+	0%{background-image: url(../img/lottery03_1.png);}
+	50%{background-image: url(../img/lottery03_2.png);}
+	100%{background-image: url(../img/lottery03_1.png);}
+}
+/*抽中奖品，再玩一次*/
+.sorry{
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,0.8);
+	position: absolute;
+	z-index: 2;
+	display: none;
+	top: 0;
+	left: 0;
+}
+.sorry div{
+	width: 2.03rem;
+	height: 2.28rem;
+	position: absolute;
+	left: 0;top: 0;bottom: 0;right: 0;
+	margin: auto;
+	background-image: url(../img/lotterybg.png);
+	background-size: 100% 100%;
+	text-align: center;
+}
+.sorry div p:nth-child(1){
+	color: white;
+    width: 100%;
+    text-align: center;
+    font-size: 0.2rem;
+    line-height: 0.4rem;
+    margin-top: 0.56rem;
+	
+}
+.sorry div p:nth-child(2){
+	color: white;
+    width: 100%;
+    text-align: center;
+    font-size: 0.12rem;
+    margin-bottom: 0.1rem;
+	
+}
+.sorry div button{
+	border: 1px solid skyblue;
+    background-color: transparent;
+    border-radius: 0.08rem;
+    width: 50%;
+    font-size: 0.12rem;
+    line-height: 0.2rem;
+    margin-top: 0.5rem;
+    color: #51adc8;
+}
+.sorry div img{
+	position: absolute;
+    top: -0.35rem;
+    left: -0.28rem;
+    width: 1.093rem;
+    z-index: 3;
+}
+/*没有聚齐碎片*/
+.fail{
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,0.8);
+	position: absolute;
+	z-index: 2;
+	display: none;
+	top: 0;
+	left: 0;
+}
+.fail div{
+	width: 2.03rem;
+	height: 2.28rem;
+	position: absolute;
+	left: 0;top: 0;bottom: 0;right: 0;
+	margin: auto;
+	background-image: url(../img/lotterybg.png);
+	background-size: 100% 100%;
+	text-align: center;
+}
+.fail div img{
+	position: absolute;
+    top: -0.35rem;
+    left: -0.28rem;
+    width: 1.093rem;
+}
+.fail div p:nth-child(1){
+	color: white;
+    width: 100%;
+    text-align: center;
+    font-size: 0.2rem;
+    line-height: 0.4rem;
+    margin-top: 0.45rem;
+	
+}
+.fail div p:nth-child(2){
+	color: white;
+    width: 100%;
+    text-align: center;
+    font-size: 0.12rem;
+    margin-bottom: 0.1rem;
+    line-height: 0.17rem;
+	
+}
+.fail div button:nth-child(3){
+	border: 1px solid skyblue;
+    background-color: transparent;
+    border-radius: 0.08rem;
+    width: 50%;
+    font-size: 0.12rem;
+    line-height: 0.2rem;
+    margin-top: 0.2rem;
+    color: #51adc8;
+}
+.fail div button:nth-child(4){
+	border: 1px solid skyblue;
+    background-color: transparent;
+    border-radius: 0.08rem;
+    width: 50%;
+    font-size: 0.12rem;
+    line-height: 0.2rem;
+    margin-top: 0.1rem;
+    color: #51adc8;
+}

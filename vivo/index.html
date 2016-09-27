@@ -1,0 +1,278 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" type="text/css" href="css/css.css"/>
+		<link rel="stylesheet" type="text/css" href="css/start.css"/>
+		<style type="text/css">
+			.xing{
+				display: none;
+				width: 0.38rem;
+				height: 0.31rem;
+				position: absolute;
+				left: -10%;
+				top: 0;
+				animation: xing 5s infinite;
+			}
+			@keyframes xing{
+				from{top:0%;left: -10%;}
+				to{top:60%;left: 110%;}
+			}
+			.xing1{
+				display: none;
+				width: 0.38rem;
+				height: 0.31rem;
+				position: absolute;
+				left: 60%;
+				top: 20%;
+				animation:xing1 5s infinite;
+			}
+			@keyframes xing1{
+				0%{transform: rotateZ(0deg); }
+				100%{transform: rotateZ(360deg);}
+
+			}
+			.xing2{
+				display: none;
+				width: 0.31rem;
+				height: 0.32rem;
+				position: absolute;
+				left: 25%;
+				top: 60%;
+				animation:xing1 5s infinite;
+			}
+			.xing3{
+				display: none;
+				width: 0.38rem;
+				height: 0.31rem;
+				position: absolute;
+				left: -10%;
+				top: 70%;
+				animation: xing3 8s infinite;
+			}
+			@keyframes xing3{
+				from{top:70%;left: -10%;}
+				to{top:20%;left: 110%;}
+			}
+		</style>
+	</head>
+	<body>
+		<div class="wrap">
+			<!--加载页面-->
+			<div class="loading">
+				<img src="img/load.png" alt="">
+				<div>
+					<span>徐</span>
+					<span>峥</span>
+					<span>新</span>
+					<span>作</span>
+					<span>人</span>
+					<span>再</span>
+					<span>囧</span>
+					<span>途</span>
+					<span>之</span>
+					<span>《</span>
+					<span>太</span>
+					<span>阳</span>
+					<span>系</span>
+					<span>囧</span>
+					<span>》</span>
+					<span>即</span>
+					<span>将</span>
+					<span>开</span>
+					<span>演</span>
+				</div>
+			</div>
+			<!--小星球-->
+			<div class="xing"><img src="img/1_2.png"/></div>
+			<div class="xing1"><img src="img/star8.png"/></div>
+			<div class="xing2"><img src="img/star2.png"/></div>
+			<div class="xing3"><img src="img/2_2.png"/></div>
+
+
+			<!--文字介绍部分-->
+			<div class="con">
+				公元9025年<br>
+				外星人为了争夺<br>
+				封印在vivo手机中的神秘能量<br>
+				发起宇宙战乱<br>
+				超人徐峥为了保卫神秘能量<br>
+				带着手机来到浩瀚宇宙中<br>
+				分身成为8个自己<br>
+				分别保卫8块手机碎片<br>
+				消失在太阳系的八大行星中<br>
+				据说找齐徐峥的8个分身<br>
+				就能启动神秘能量保护地球<br>
+				...
+			</div>
+			<!--<div class="con1">跳过...</div>-->
+			<!--超人徐峥部分-->
+			<div class="super">
+				<img src="img/super_head.png" alt="">
+				<div class="super_body"></div>
+			</div>
+			<!--手机转动部分-->
+			<div class="phone"></div>
+			<!--手机破碎部分-->
+			<div class="phone2">
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+			</div>
+			 <!--八个星球-->
+			 <div class="ball">
+			 	<div></div>
+			 	<div></div>
+			 	<div></div>
+			 	<div></div>
+			 	<div></div>
+			 	<div></div>
+			 	<div></div>
+			 	<div></div>
+			 </div>
+			<!--开始界面-->
+			<div class="start">
+				<p>找齐徐峥 启动能量</p>
+				<div><img src="img/start.png"/></div>
+			</div>
+			<!--关卡部分-->
+			<div class="play">
+				<div class="one"><span>60:00</span>
+					<div class="xuzheng">
+					</div>
+				</div>
+			</div>
+			<!--关卡部分奖励-->
+			<div class="reward">
+				<div></div>
+			</div>
+			<!--关卡部分的小星星-->
+			<div class="checkpoint"></div>
+			<div class="paly01"></div>
+			<div class="paly02"></div>
+			<div class="paly03"></div>
+			<!--结束合体动画-->
+			<div class="end">
+				<p>旺德福<br>
+				你已集齐徐铮分身<br>
+				vivo X5pro碎片开始合体<br>
+				合体中<br>
+				...</p>
+				<div class="merge">
+					<div></div>
+					<div></div>
+					<div></div>
+					<div></div>
+					<div></div>
+					<div></div>
+					<div></div>
+					<div></div>
+				</div>
+			</div>
+			<!--合体完成出现的手机-->
+			<div class="endphone">
+				<p>成功合体！<br>
+					距离启动神秘力量<br>
+					还差最后一步，<br>
+					请点击......<br>
+				</p>
+				<div>开始抽奖</div>
+				<div>游戏说明</div>
+			</div>
+			<!--游戏说明-->
+			<div class="explain">
+				<div class="BG">
+				<div class="top">找徐峥 送vivo </div>
+				<div class="clear bot">
+					<div class="fl left">
+						<strong>游戏规则：</strong>
+						<p>1.玩家要在规定时间内，依次从2*2至7*7的方格中找徐铮。点对徐铮，即可过关。</p>
+						<p>2.每找到一个徐铮，得到一个vivo手机“碎片”。集齐8块“碎片”，即获得一次抽奖机会。</p>
+						<p>3.中奖玩家请正确填写信息。信息填写错误或未填写的玩家将被取消中奖资格。</p>
+						<p>4.每个ID只有一次中奖机会。</p>
+						<p>5.恶意刷奖的玩家一经发现将取消抽奖资格。</p><br>
+
+
+						<strong>活动时间：</strong><br>
+						2015年9月28至10月2日<br><br>
+
+						<strong>游戏奖励：</strong><br>
+						一等奖：vivo X5Pro智能手机 2台<br>
+						二等奖：vivo充电宝 10个<br>
+						三等奖：vivo耳机 20个<br>
+						四等奖：《港囧》电影票20套（每套2张）<br>
+						五等奖：《港囧》主创签名剧照 50张<br><br><br>
+
+						注：电影票为格瓦拉兑换券，中奖玩家请自行兑换<br><br><br>
+					</div>
+					<div class="fr r">
+						<p></p>
+					</div>
+
+
+
+				</div>
+				<img src="img/explain01.png"/>
+				</div>
+			</div>
+			<!--八个碎片聚成失败-->
+			<div class="fail">
+				<div>
+					<p>很遗憾</p>
+					<p>你没有找齐徐峥的8个分身<br>看来他要一直囧在宇宙太阳系了</p>
+					<button>再试一次</button>
+					<button>游戏说明</button>
+					<img src="img/lottery01.png"/>
+				</div>
+			</div>
+			<!--抽奖-->
+			<div class="lottery">
+				<div class="BG">
+					<p>恭喜你获得</p>
+					<p>vivo充电宝一个</p>
+					<!--<form action="index.html" method="post">-->
+					 <input type="text" name="name" id="" value="" placeholder="姓名：" />
+					<input type="text" name="phone" id="" value="" placeholder="手机号码：" />
+					<!--<input type="submit" value="提交信息"/>-->
+					<button>提交信息</button>
+					<!--</form>-->
+					<img src="img/lottery02.png"/>
+				</div>
+				<div class="ye"></div>
+			</div>
+			<!--没抽中奖品，再玩一次-->
+			<div class="sorry">
+				<div>
+					<p>很遗憾</p>
+					<p>你没有抽中奖品，再玩一次吧！</p>
+					<button>返回游戏</button>
+					<img src="img/lottery01.png"/>
+				</div>
+			</div>
+
+
+		</div>
+		<!--音乐-->
+		<audio src="sound/bg.mp3"></audio>
+		<audio src="sound/daojishi.mp3"></audio>
+		<audio src="sound/false.mp3"></audio>
+		<audio src="sound/false_prize.mp3"></audio>
+		<audio src="sound/succ_prize.mp3"></audio>
+		<audio src="sound/type.mp3"></audio>
+
+
+	</body>
+</html>
+<script src="js/jquery-3.0.0.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/gun.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/tween.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/htmlsize.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/js.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/start.js" type="text/javascript" charset="utf-8"></script>
