@@ -19,7 +19,7 @@
 	bottom: 10%;
 	left: 0;right: 0;
 	margin: auto;
-	animation: startdiv 1s infinite ;
+	-webkit-animation: startdiv 1s infinite ;
 	text-align: center;
 }
 .start div img{
@@ -27,7 +27,7 @@
 	height: 0.11rem;
 	margin-top: 0.095rem;
 }
-@keyframes startdiv{
+@-webkit-keyframes startdiv{
 	0%{bottom: 10%;}
 	50%{bottom: 8%;}
 	100%{bottom: 10%;}
@@ -89,7 +89,7 @@
 	right: 13%;
 	top: 5%;
 	display: none;
-	animation: play 5s infinite;
+	-webkit-animation: play 5s infinite;
 }
 .paly02{
 	width: 0.38rem;
@@ -100,7 +100,7 @@
 	bottom: 8%;
 	left: 5%;
 	display: none;
-	animation: play 5s infinite;
+	-webkit-animation: play 5s infinite;
 }
 .paly03{
 	width: 0.34rem;
@@ -111,9 +111,9 @@
 	bottom: 8%;
 	right: 5%;
 	display: none;
-	animation: play 5s infinite;
+	-webkit-animation: play 5s infinite;
 }
-@keyframes play{
+@-webkit-keyframes play{
 	0%{transform: rotateZ(0deg) ;}
 	100%{transform: rotateZ(360deg);}
 }
@@ -173,11 +173,11 @@
 	position: absolute;
 	top: 0rem;
     left: 0rem;
-    animation: onemerge 2s both ;
+    -webkit-animation: onemerge 2s both ;
     background-image: url(../img/merge01.png);
     background-size: 100% 100%;
 }
-@keyframes onemerge{
+@-webkit-keyframes onemerge{
 	0%{width: 0.64rem;height: 0.85rem;top: -0.5rem;left: -0.5rem;transform: rotateZ(34deg) scale(0.8);}
 	100%{}
 }
@@ -189,9 +189,9 @@
     right: 0.024rem;
     background-image: url(../img/merge02.png);
     background-size: 100% 100%;
-    animation: twomerge 2s  both;
+    -webkit-animation: twomerge 2s  both;
 }
-@keyframes twomerge{
+@-webkit-keyframes twomerge{
 	0%{width: 0.63rem;height: 0.83rem;top: -0.4rem;right: -0.4rem;transform: rotateZ(-16deg) scale(0.8);}
 	100%{}
 }
@@ -203,9 +203,9 @@
 	top: 0.52rem;right: 0.024rem;
 	background-image: url(../img/merge03.png);
     background-size: 100% 100%;
-    animation: threemerge 2s both;
+    -webkit-animation: threemerge 2s both;
 }
-@keyframes threemerge{
+@-webkit-keyframes threemerge{
 	0%{width: 0.72rem;height: 0.90rem;top: 0.26rem;right:-0.5rem;transform: rotateZ(43deg) scale(0.8);}
 	100%{}
 }
@@ -216,9 +216,9 @@
 	top: 1rem;left: 0;
 	background-image: url(../img/merge04.png);
     background-size: 100% 100%;
-    animation: fourmerge 2s both;
+    -webkit-animation: fourmerge 2s both;
 }
-@keyframes fourmerge{
+@-webkit-keyframes fourmerge{
 	0%{width: 0.58rem;height: 1.07rem;top: 0.5rem;left: -0.3rem;transform: rotateZ(57deg) scale(0.8);}
 	100%{}
 }
@@ -229,9 +229,9 @@
 	top:1rem;right:0.34rem;
 	background-image: url(../img/merge05.png);
     background-size: 100% 100%;
-    animation: fivemerge 2s both;
+    -webkit-animation: fivemerge 2s both;
 }
-@keyframes fivemerge{
+@-webkit-keyframes fivemerge{
 	0%{width: 0.55rem;height: 1.06rem;top: 1rem;right:0.34rem;transform: rotateZ(-52deg) scale(0.8);}
 	100%{}
 }
@@ -242,9 +242,9 @@
 	top: 1.83rem;right: 0.024rem;
 	background-image: url(../img/merge06.png);
     background-size: 100% 100%;
-    animation: sixmerge 2s both;
+    -webkit-animation: sixmerge 2s both;
 }
-@keyframes sixmerge{
+@-webkit-keyframes sixmerge{
 	0%{width: 0.51rem;height: 0.82rem;top: 1.83rem;right: 0.5rem;transform: rotateZ(29deg) scale(1);}
 	100%{}
 }
@@ -255,9 +255,9 @@
 	top: 2.54rem;left: 0;
 	background-image: url(../img/merge07.png);
     background-size: 100% 100%;
-    animation: sevenmerge 2s both;
+    -webkit-animation: sevenmerge 2s both;
 }
-@keyframes sevenmerge{
+@-webkit-keyframes sevenmerge{
 	0%{width: 0.58rem;height: 0.76rem;top: 3.1rem;left: -0.6rem;transform: rotateZ(35deg) scale(1);}
 	100%{}
 }
@@ -268,9 +268,9 @@
 	top: 2.92rem;right: 0.024rem;
 	background-image: url(../img/merge08.png);
     background-size: 100% 100%;
-    animation: eightmerge 2s both;
+    -webkit-animation: eightmerge 2s both;
 }
-@keyframes eightmerge{
+@-webkit-keyframes eightmerge{
 	0%{width: 0.72rem;height: 0.57rem;top: 2.92rem;right: -0.6rem;transform: rotateZ(-46deg) scale(1.2);}
 	100%{}
 }
@@ -495,9 +495,9 @@
 	position: absolute;
 	top: 0;
 	left: 0;
-	animation:yeq 0.5s steps(1) infinite;
+	-webkit-animation:yeq 0.5s steps(1) infinite;
 }
-@keyframes yeq{
+@-webkit-keyframes yeq{
 	0%{background-image: url(../img/lottery03_1.png);}
 	50%{background-image: url(../img/lottery03_2.png);}
 	100%{background-image: url(../img/lottery03_1.png);}

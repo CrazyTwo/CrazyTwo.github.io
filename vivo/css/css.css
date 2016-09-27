@@ -55,97 +55,97 @@ body{font-size:12px;font-family: arial;}
 		top: 0;
 		color: #53bedf;
 		font-size: 0.15rem;
-		animation:move 10s linear infinite;
+		-webkit-animation:move 10s linear infinite;
 	}
-	@keyframes move{
-		from{transform: rotateZ(-180deg);}
-		to{transform: rotateZ(180deg);}
+	@-webkit-keyframes move{
+		from{-webkit-transform: rotateZ(-180deg);}
+		to{-webkit-transform: rotateZ(180deg);}
 	}
 	.loading div span{
 		width: 100%;
 		position: absolute;
 		text-align: center;
 		top: -0.15rem;
-		transform-origin: 50% 1.05rem;
+		-webkit-transform-origin: 50% 1.05rem;
 	}
 	.loading div span:nth-child(1){
-		transform: rotateZ(0deg);
-		animation:fontshow 1s backwards;
+		-webkit-transform: rotateZ(0deg);
+		-webkit-animation:fontshow 1s backwards;
 	}
 	.loading div span:nth-child(2){
-		transform: rotateZ(10deg);
-		animation:fontshow 1s 0.2s backwards;
+		-webkit-transform: rotateZ(10deg);
+		-webkit-animation:fontshow 1s 0.2s backwards;
 	}
 	.loading div span:nth-child(3){
-		transform: rotateZ(20deg);
-		animation:fontshow 1s 0.4s backwards;
+		-webkit-transform: rotateZ(20deg);
+		-webkit-animation:fontshow 1s 0.4s backwards;
 	}
 	.loading div span:nth-child(4){
-		transform: rotateZ(30deg);
-		animation:fontshow 1s 0.6s backwards;
+		-webkit-transform: rotateZ(30deg);
+		-webkit-animation:fontshow 1s 0.6s backwards;
 	}
 	.loading div span:nth-child(5){
-		transform: rotateZ(50deg);
-		animation:fontshow 1s 0.8s backwards;
+		-webkit-transform: rotateZ(50deg);
+		-webkit-animation:fontshow 1s 0.8s backwards;
 	}
 	.loading div span:nth-child(6){
-		transform: rotateZ(60deg);
-		animation:fontshow 1s 1s backwards;
+		-webkit-transform: rotateZ(60deg);
+		-webkit-animation:fontshow 1s 1s backwards;
 	}
 	.loading div span:nth-child(7){
-		transform: rotateZ(70deg);
-		animation:fontshow 1s 1.2s backwards;
+		-webkit-transform: rotateZ(70deg);
+		-webkit-animation:fontshow 1s 1.2s backwards;
 	}
 	.loading div span:nth-child(8){
-		transform: rotateZ(80deg);
-		animation:fontshow 1s 1.4s backwards;
+		-webkit-transform: rotateZ(80deg);
+		-webkit-animation:fontshow 1s 1.4s backwards;
 	}
 	.loading div span:nth-child(9){
-		transform: rotateZ(90deg);
-		animation:fontshow 1s 1.6s backwards;
+		-webkit-transform: rotateZ(90deg);
+		-webkit-animation:fontshow 1s 1.6s backwards;
 	}
 	.loading div span:nth-child(10){
-		transform: rotateZ(100deg);
-		animation:fontshow 1s 1.8s backwards;
+		-webkit-transform: rotateZ(100deg);
+		-webkit-animation:fontshow 1s 1.8s backwards;
 	}
 	.loading div span:nth-child(11){
-		transform: rotateZ(110deg);
-		animation:fontshow 1s 2s backwards;
+		-webkit-transform: rotateZ(110deg);
+		-webkit-animation:fontshow 1s 2s backwards;
 	}
 	.loading div span:nth-child(12){
-		transform: rotateZ(120deg);
-		animation:fontshow 1s 2.2s backwards;
+		-webkit-transform: rotateZ(120deg);
+		-webkit-animation:fontshow 1s 2.2s backwards;
 	}
 	.loading div span:nth-child(13){
-		transform: rotateZ(130deg);
-		animation:fontshow 1s 2.4s backwards;
+		-webkit-transform: rotateZ(130deg);
+		-webkit-animation:fontshow 1s 2.4s backwards;
 	}
 	.loading div span:nth-child(14){
-		transform: rotateZ(140deg);
-		animation:fontshow 1s 2.6s backwards;
+		-webkit-transform: rotateZ(140deg);
+		-webkit-animation:fontshow 1s 2.6s backwards;
 	}
 	.loading div span:nth-child(15){
-		transform: rotateZ(150deg);
-		animation:fontshow 1s 2.8s backwards;
+		-webkit-transform: rotateZ(150deg);
+		-webkit-animation:fontshow 1s 2.8s backwards;
 	}
 	.loading div span:nth-child(16){
-		transform: rotateZ(160deg);
-		animation:fontshow 1s 3s backwards;
+		-webkit-transform: rotateZ(160deg);
+		-webkit-animation:fontshow 1s 3s backwards;
 	}
 	.loading div span:nth-child(17){
-		transform: rotateZ(170deg);
-		animation:fontshow 1s 3.2s backwards;
+		-webkit-transform: rotateZ(170deg);
+		-webkit-animation:fontshow 1s 3.2s backwards;
 	}
 	.loading div span:nth-child(18){
-		transform: rotateZ(180deg);
-		animation:fontshow 1s 3.4s backwards;
+		-webkit-transform: rotateZ(180deg);
+		-webkit-animation:fontshow 1s 3.4s backwards;
 	}
 	.loading div span:nth-child(19){
-		transform: rotateZ(190deg);
-		animation:fontshow 1s 3.6s backwards;
+		-webkit-transform: rotateZ(190deg);
+		-webkit-animation:fontshow 1s 3.6s backwards;
 	}
-	@keyframes fontshow{
-		from{transform: rotateZ(-90deg);opacity: 0}
+	@-webkit-keyframes fontshow{
+		from{-webkit-transform: rotateZ(-90deg);opacity: 0}
 		to{opacity: 1}
 	}
 
@@ -181,14 +181,14 @@ body{font-size:12px;font-family: arial;}
 		position: absolute;
 		left: 0.50rem;
 		top: 2rem;
-		animation: fly 5s both;
+		-webkit-animation: fly 5s both;
 		display: none;
 	}
-	@keyframes fly{
-		0%{transform: translate3d(3rem,3rem,0px);}
-		30%{transform: translate3d(0px,0px,0px);}
-		60%{transform: translate3d(0px,0px,0px);}
-		100%{transform: translate3d(-3rem,-3rem,0px);}
+	@-webkit-keyframes fly{
+		0%{-webkit-transform: translate3d(3rem,3rem,0px);}
+		30%{-webkit-transform: translate3d(0px,0px,0px);}
+		60%{-webkit-transform: translate3d(0px,0px,0px);}
+		100%{-webkit-transform: translate3d(-3rem,-3rem,0px);}
 	}
 	.super img{
 		width: 0.80rem;
@@ -201,9 +201,9 @@ body{font-size:12px;font-family: arial;}
 		height: 1.80rem;
 		background-image: url(../img/super_body1.png);
 		background-size: 100% 100%;
-		animation: super_body 0.8s steps(1) infinite;
+		-webkit-animation: super_body 0.8s steps(1) infinite;
 	}
-	@keyframes super_body{
+	@-webkit-keyframes super_body{
 		0%{background-image: url(../img/super_body1.png);}
 		33%{background-image: url(../img/super_body2.png);}
 		66%{background-image: url(../img/super_body3.png);}
@@ -219,13 +219,13 @@ body{font-size:12px;font-family: arial;}
 	position: absolute;
 	left: 0;top: 0;right: 0;bottom: 0;
 	margin: auto;
-	animation: phone 3s;
+	-webkit-animation: phone 3s;
 	display: none;
 }
-@keyframes phone{
-	0%{transform:rotateZ(0deg) scale(0)}
-	80%{transform:rotateZ(720deg) scale(1)}
-	100%{transform:rotateZ(720deg) scale(1)}
+@-webkit-keyframes phone{
+	0%{-webkit-transform:rotateZ(0deg) scale(0)}
+	80%{-webkit-transform:rotateZ(720deg) scale(1)}
+	100%{-webkit-transform:rotateZ(720deg) scale(1)}
 }
 
 /*手机破碎*/
@@ -243,17 +243,17 @@ body{font-size:12px;font-family: arial;}
 	position: absolute;
 	top: -0.6rem;
     left: 0.88rem;
-    transform: rotateZ(-36deg) scale(1);
-    animation: oneimg 2s 1s both ;
+    -webkit-transform: rotateZ(-36deg) scale(1);
+    -webkit-animation: oneimg 2s 1s both ;
     background-image: url(../img/11_1.png);
     background-size: 100% 100%;
 }
-@keyframes oneimg{
-	0%{width: 0.64rem;height: 0.85rem;top: 0;left: 0;transform: rotateZ(0deg);}
-	40%{top: -0.6rem;left: 0.88rem;transform: rotateZ(-36deg) scale(1);}
-	45%{top: -0.6rem;left: 0.88rem;transform: rotateZ(-36deg) scale(1);background-image: url(../img/jigsaw01.png);}
-	60%{top: -0.6rem;left: 0.88rem;transform: rotateZ(-36deg) scale(1);background-image: url(../img/jigsaw01.png);}
-	100%{top: -0.6rem;left: 1.5rem;transform: rotateZ(-36deg) scale(0.2);background-image: url(../img/jigsaw01.png);}
+@-webkit-keyframes oneimg{
+	0%{width: 0.64rem;height: 0.85rem;top: 0;left: 0;-webkit-transform: rotateZ(0deg);}
+	40%{top: -0.6rem;left: 0.88rem;-webkit-transform: rotateZ(-36deg) scale(1);}
+	45%{top: -0.6rem;left: 0.88rem;-webkit-transform: rotateZ(-36deg) scale(1);background-image: url(../img/jigsaw01.png);}
+	60%{top: -0.6rem;left: 0.88rem;-webkit-transform: rotateZ(-36deg) scale(1);background-image: url(../img/jigsaw01.png);}
+	100%{top: -0.6rem;left: 1.5rem;-webkit-transform: rotateZ(-36deg) scale(0.2);background-image: url(../img/jigsaw01.png);}
 }
 .phone2 div:nth-child(2){
 	width: 0.8rem;
@@ -261,17 +261,17 @@ body{font-size:12px;font-family: arial;}
     position: absolute;
     top: -0.65rem;
     right: 0.93rem;
-    transform: rotateZ(60deg) scale(1);
+    -webkit-transform: rotateZ(60deg) scale(1);
     background-image: url(../img/12_1.png);
     background-size: 100% 100%;
-    animation: twoimg 2s 1s both;
+    -webkit-animation: twoimg 2s 1s both;
 }
-@keyframes twoimg{
-	0%{width: 0.63rem;height: 0.83rem;top: 0;right: 0.012rem;transform: rotateZ(0deg) scale(1);}
-	40%{top: -0.65rem;right: 0.93rem;transform: rotateZ(60deg) scale(1); }
-	45%{top: -0.65rem;right: 0.93rem;transform: rotateZ(60deg) scale(1);background-image: url(../img/jigsaw02.png);}
-	60%{top: -0.65rem;right: 0.93rem;transform: rotateZ(60deg) scale(1);background-image: url(../img/jigsaw02.png);}
-	100%{top: -0.95rem;right: 0.15rem;transform: rotateZ(60deg) scale(0.2);background-image: url(../img/jigsaw02.png);}
+@-webkit-keyframes twoimg{
+	0%{width: 0.63rem;height: 0.83rem;top: 0;right: 0.012rem;-webkit-transform: rotateZ(0deg) scale(1);}
+	40%{top: -0.65rem;right: 0.93rem;-webkit-transform: rotateZ(60deg) scale(1); }
+	45%{top: -0.65rem;right: 0.93rem;-webkit-transform: rotateZ(60deg) scale(1);background-image: url(../img/jigsaw02.png);}
+	60%{top: -0.65rem;right: 0.93rem;-webkit-transform: rotateZ(60deg) scale(1);background-image: url(../img/jigsaw02.png);}
+	100%{top: -0.95rem;right: 0.15rem;-webkit-transform: rotateZ(60deg) scale(0.2);background-image: url(../img/jigsaw02.png);}
 }
 
 .phone2 div:nth-child(3){
@@ -281,15 +281,15 @@ body{font-size:12px;font-family: arial;}
 	top: 1.1rem;right: 0.8rem;
 	background-image: url(../img/13_1.png);
     background-size: 100% 100%;
-    transform: rotateZ(-2deg) scale(0.8);
-    animation: threeimg 2s 1s both;
+    -webkit-transform: rotateZ(-2deg) scale(0.8);
+    -webkit-animation: threeimg 2s 1s both;
 }
-@keyframes threeimg{
-	0%{width: 0.72rem;height: 0.90rem;top: 0.26rem;right: 0.012rem;;transform: rotateZ(0deg);}
-	40%{top: 1.1rem;right: 0.8rem;transform: rotateZ(-2deg) scale(0.8); }
-	45%{top: 1.1rem;right: 0.8rem;transform: rotateZ(-2deg) scale(0.8);background-image: url(../img/jigsaw03.png);}
-	60%{top: 1.1rem;right: 0.8rem;transform: rotateZ(-2deg) scale(0.8);background-image: url(../img/jigsaw03.png);}
-	100%{top: 1rem;right: 1.4rem;transform: rotateZ(-2deg) scale(0.2);background-image: url(../img/jigsaw03.png);}
+@-webkit-keyframes threeimg{
+	0%{width: 0.72rem;height: 0.90rem;top: 0.26rem;right: 0.012rem;;-webkit-transform: rotateZ(0deg);}
+	40%{top: 1.1rem;right: 0.8rem;-webkit-transform: rotateZ(-2deg) scale(0.8); }
+	45%{top: 1.1rem;right: 0.8rem;-webkit-transform: rotateZ(-2deg) scale(0.8);background-image: url(../img/jigsaw03.png);}
+	60%{top: 1.1rem;right: 0.8rem;-webkit-transform: rotateZ(-2deg) scale(0.8);background-image: url(../img/jigsaw03.png);}
+	100%{top: 1rem;right: 1.4rem;-webkit-transform: rotateZ(-2deg) scale(0.2);background-image: url(../img/jigsaw03.png);}
 }
 .phone2 div:nth-child(4){
 	width: 0.58rem;
@@ -298,15 +298,15 @@ body{font-size:12px;font-family: arial;}
 	top: 0.5rem;left: 0;
 	background-image: url(../img/14_1.png);
     background-size: 100% 100%;
-    transform: rotateZ(57deg) scale(1);
-    animation: fourimg 2s 1s both;
+    -webkit-transform: rotateZ(57deg) scale(1);
+    -webkit-animation: fourimg 2s 1s both;
 }
-@keyframes fourimg{
-	0%{width: 0.58rem;height: 1.07rem;top: 0.5rem;left: 0;transform: rotateZ(0deg);}
-	40%{top: 0.25rem;left: -0.7rem;transform: rotateZ(57deg) scale(1);}
-	45%{top: 0.25rem;left: -0.7rem;transform: rotateZ(57deg) scale(1);background-image: url(../img/jigsaw04.png);}
-	60%{top: 0.25rem;left: -0.7rem;transform: rotateZ(57deg) scale(1);background-image: url(../img/jigsaw04.png);}
-	100%{top: -0.5rem;left:-1.1rem;transform: rotateZ(57deg) scale(0.2);background-image: url(../img/jigsaw04.png);}
+@-webkit-keyframes fourimg{
+	0%{width: 0.58rem;height: 1.07rem;top: 0.5rem;left: 0;-webkit-transform: rotateZ(0deg);}
+	40%{top: 0.25rem;left: -0.7rem;-webkit-transform: rotateZ(57deg) scale(1);}
+	45%{top: 0.25rem;left: -0.7rem;-webkit-transform: rotateZ(57deg) scale(1);background-image: url(../img/jigsaw04.png);}
+	60%{top: 0.25rem;left: -0.7rem;-webkit-transform: rotateZ(57deg) scale(1);background-image: url(../img/jigsaw04.png);}
+	100%{top: -0.5rem;left:-1.1rem;-webkit-transform: rotateZ(57deg) scale(0.2);background-image: url(../img/jigsaw04.png);}
 }
 .phone2 div:nth-child(5){
 	width: 0.55rem;
@@ -315,15 +315,15 @@ body{font-size:12px;font-family: arial;}
 	top: 0.5rem;right:0.17rem;
 	background-image: url(../img/15_1.png);
     background-size: 100% 100%;
-    transform: rotateZ(-8deg) scale(1);
-    animation: fiveimg 2s 1s both;
+    -webkit-transform: rotateZ(-8deg) scale(1);
+    -webkit-animation: fiveimg 2s 1s both;
 }
-@keyframes fiveimg{
-	0%{width: 0.55rem;height: 1.06rem;top: 0.5rem;right:0.17rem;transform: rotateZ(0deg);}
-	40%{top: 0.1rem;right: -0.32rem;transform: rotateZ(-8deg) scale(0.7); }
-	45%{top: 0.1rem;right:-0.32rem;transform: rotateZ(-8deg) scale(0.7);background-image: url(../img/jigsaw05.png);}
-	60%{top: 0.1rem;right: -0.32rem;transform: rotateZ(-8deg) scale(0.7);background-image: url(../img/jigsaw05.png);}
-	100%{top: -0.1rem;right: -1.2rem;transform: rotateZ(-8deg) scale(0.2);background-image: url(../img/jigsaw05.png);}
+@-webkit-keyframes fiveimg{
+	0%{width: 0.55rem;height: 1.06rem;top: 0.5rem;right:0.17rem;-webkit-transform: rotateZ(0deg);}
+	40%{top: 0.1rem;right: -0.32rem;-webkit-transform: rotateZ(-8deg) scale(0.7); }
+	45%{top: 0.1rem;right:-0.32rem;-webkit-transform: rotateZ(-8deg) scale(0.7);background-image: url(../img/jigsaw05.png);}
+	60%{top: 0.1rem;right: -0.32rem;-webkit-transform: rotateZ(-8deg) scale(0.7);background-image: url(../img/jigsaw05.png);}
+	100%{top: -0.1rem;right: -1.2rem;-webkit-transform: rotateZ(-8deg) scale(0.2);background-image: url(../img/jigsaw05.png);}
 
 }
 .phone2 div:nth-child(6){
@@ -333,15 +333,15 @@ body{font-size:12px;font-family: arial;}
 	top: 0.915rem;right: 0.012rem;
 	background-image: url(../img/16_1.png);
     background-size: 100% 100%;
-    transform: rotateZ(-8deg) scale(1);
-    animation: siximg 2s 1s both;
+    -webkit-transform: rotateZ(-8deg) scale(1);
+    -webkit-animation: siximg 2s 1s both;
 }
-@keyframes siximg{
-	0%{width: 0.51rem;height: 0.82rem;top: 0.915rem;right: 0.012rem;transform: rotateZ(0deg);}
-	40%{top: 0.4rem;right: 0.38rem;transform: rotateZ(-1deg) scale(1.3); }
-	45%{top: 0.4rem;right:0.38rem;transform: rotateZ(-1deg) scale(1.3);background-image: url(../img/jigsaw06.png);}
-	60%{top: 0.4rem;right: 0.38rem;transform: rotateZ(-1deg) scale(1.3);background-image: url(../img/jigsaw06.png);}
-	100%{top: -0.15rem;right: 0.07rem;transform: rotateZ(-1deg) scale(0.2);background-image: url(../img/jigsaw06.png);}
+@-webkit-keyframes siximg{
+	0%{width: 0.51rem;height: 0.82rem;top: 0.915rem;right: 0.012rem;-webkit-transform: rotateZ(0deg);}
+	40%{top: 0.4rem;right: 0.38rem;-webkit-transform: rotateZ(-1deg) scale(1.3); }
+	45%{top: 0.4rem;right:0.38rem;-webkit-transform: rotateZ(-1deg) scale(1.3);background-image: url(../img/jigsaw06.png);}
+	60%{top: 0.4rem;right: 0.38rem;-webkit-transform: rotateZ(-1deg) scale(1.3);background-image: url(../img/jigsaw06.png);}
+	100%{top: -0.15rem;right: 0.07rem;-webkit-transform: rotateZ(-1deg) scale(0.2);background-image: url(../img/jigsaw06.png);}
 }
 .phone2 div:nth-child(7){
 	width: 0.58rem;
@@ -350,15 +350,15 @@ body{font-size:12px;font-family: arial;}
 	top: 1.27rem;left: 0;
 	background-image: url(../img/17_1.png);
     background-size: 100% 100%;
-    transform: rotateZ(35deg) scale(1);
-    animation: sevenimg 2s 1s both;
+    -webkit-transform: rotateZ(35deg) scale(1);
+    -webkit-animation: sevenimg 2s 1s both;
 }
-@keyframes sevenimg{
-	0%{width: 0.58rem;height: 0.76rem;top: 1.27rem;left: 0;transform: rotateZ(0deg);}
-	40%{top: 1.2rem;left: 0.65rem;transform: rotateZ(44deg) scale(0.9); }
-	45%{top: 1.2rem;left: 0.65rem;transform: rotateZ(44deg) scale(0.9);background-image: url(../img/jigsaw07.png);}
-	60%{top: 1.2rem;left: 0.65rem;transform: rotateZ(44deg) scale(0.9);background-image: url(../img/jigsaw07.png);}
-	100%{top: 1.8rem;left: 0rem;transform: rotateZ(44deg) scale(0.2);background-image: url(../img/jigsaw07.png);}
+@-webkit-keyframes sevenimg{
+	0%{width: 0.58rem;height: 0.76rem;top: 1.27rem;left: 0;-webkit-transform: rotateZ(0deg);}
+	40%{top: 1.2rem;left: 0.65rem;-webkit-transform: rotateZ(44deg) scale(0.9); }
+	45%{top: 1.2rem;left: 0.65rem;-webkit-transform: rotateZ(44deg) scale(0.9);background-image: url(../img/jigsaw07.png);}
+	60%{top: 1.2rem;left: 0.65rem;-webkit-transform: rotateZ(44deg) scale(0.9);background-image: url(../img/jigsaw07.png);}
+	100%{top: 1.8rem;left: 0rem;-webkit-transform: rotateZ(44deg) scale(0.2);background-image: url(../img/jigsaw07.png);}
 
 }
 .phone2 div:nth-child(8){
@@ -368,15 +368,15 @@ body{font-size:12px;font-family: arial;}
 	top: 1.46rem;right: 0.012rem;
 	background-image: url(../img/18_1.png);
     background-size: 100% 100%;
-     transform: rotateZ(-8deg) scale(1);
-    animation: eightimg 2s 1s both;
+     -webkit-transform: rotateZ(-8deg) scale(1);
+    -webkit-animation: eightimg 2s 1s both;
 }
-@keyframes eightimg{
-	0%{width: 0.72rem;height: 0.57rem;top: 1.46rem;right: 0.012rem;transform: rotateZ(0deg);}
-	40%{top: 0.7rem;right: -0.9rem;transform: rotateZ(0deg) scale(1); }
-	45%{top: 0.7rem;right:-0.9rem;transform: rotateZ(0deg) scale(1);background-image: url(../img/jigsaw08.png);}
-	60%{top: 0.7rem;right: -0.9rem;transform: rotateZ(0deg) scale(1);background-image: url(../img/jigsaw08.png);}
-	100%{top: 1.5rem;right: -1rem;transform: rotateZ(0deg) scale(0.2);background-image: url(../img/jigsaw08.png);}
+@-webkit-keyframes eightimg{
+	0%{width: 0.72rem;height: 0.57rem;top: 1.46rem;right: 0.012rem;-webkit-transform: rotateZ(0deg);}
+	40%{top: 0.7rem;right: -0.9rem;-webkit-transform: rotateZ(0deg) scale(1); }
+	45%{top: 0.7rem;right:-0.9rem;-webkit-transform: rotateZ(0deg) scale(1);background-image: url(../img/jigsaw08.png);}
+	60%{top: 0.7rem;right: -0.9rem;-webkit-transform: rotateZ(0deg) scale(1);background-image: url(../img/jigsaw08.png);}
+	100%{top: 1.5rem;right: -1rem;-webkit-transform: rotateZ(0deg) scale(0.2);background-image: url(../img/jigsaw08.png);}
 }
 
 /*八个星球*/
@@ -398,10 +398,10 @@ body{font-size:12px;font-family: arial;}
 	background-size: 100% 100%;
 	position: absolute;
 	top: -0.35rem;left: 1.64rem;
-	animation: onediv 0.5s 2s infinite;
+	-webkit-animation: onediv 0.5s 2s infinite;
 }
 
-@keyframes onediv{
+@-webkit-keyframes onediv{
 	0%{top: -0.35rem;left: 1.64rem;}
 	50%{top: -0.33rem;left: 1.62rem;}
 	100%{top: -0.35rem;left: 1.64rem;}
@@ -413,9 +413,9 @@ body{font-size:12px;font-family: arial;}
 	background-size: 100% 100%;
 	position: absolute;
 	top: -0.1rem;left:-1rem;
-	animation: twodiv 0.5s 2s infinite;
+	-webkit-animation: twodiv 0.5s 2s infinite;
 }
-@keyframes twodiv{
+@-webkit-keyframes twodiv{
 	0%{top: -0.1rem;left:-1rem;}
 	50%{top: -0.12rem;left: -0.98rem;}
 	100%{top: -0.1rem;left:-1rem;}
@@ -427,9 +427,9 @@ body{font-size:12px;font-family: arial;}
 	background-size: 100% 100%;
 	position: absolute;
 	top: 2rem;left: 0.14rem;
-	animation: threediv 0.5s 2s infinite;
+	-webkit-animation: threediv 0.5s 2s infinite;
 }
-@keyframes threediv{
+@-webkit-keyframes threediv{
 	0%{top: 2rem;left: 0.14rem;}
 	50%{top: 2.02rem;left: 0.14rem;}
 	100%{top: 2rem;left: 0.14rem;}
@@ -441,9 +441,9 @@ body{font-size:12px;font-family: arial;}
 	background-size: 100% 100%;
 	position: absolute;
 	top: -0.59rem;right: 0.35rem;
-	animation: fourdiv 0.5s 2s infinite;
+	-webkit-animation: fourdiv 0.5s 2s infinite;
 }
-@keyframes fourdiv{
+@-webkit-keyframes fourdiv{
 	0%{top: -0.59rem;right: 0.35rem;}
 	50%{top: -0.59rem;right: 0.37rem;}
 	100%{top: -0.59rem;right: 0.35rem;}
@@ -455,9 +455,9 @@ body{font-size:12px;font-family: arial;}
 	background-size: 100% 100%;
 	position: absolute;
 	top: 0.15rem;right: 0.17rem;
-	animation: fivediv 0.5s 2s infinite;
+	-webkit-animation: fivediv 0.5s 2s infinite;
 }
-@keyframes fivediv{
+@-webkit-keyframes fivediv{
 	0%{top: 0.15rem;right: 0.17rem;}
 	50%{top: 0.13rem;right: 0.19rem;}
 	100%{top: 0.15rem;right: 0.17rem;}
@@ -469,9 +469,9 @@ body{font-size:12px;font-family: arial;}
 	background-size: 100% 100%;
 	position: absolute;
 	top: 1.25rem;right: 1.55rem;
-	animation: sixdiv 0.5s 2s infinite;
+	-webkit-animation: sixdiv 0.5s 2s infinite;
 }
-@keyframes sixdiv{
+@-webkit-keyframes sixdiv{
 	0%{top: 1.25rem;right: 1.55rem;}
 	50%{top: 1.28rem;right: 1.53rem;}
 	100%{top: 1.25rem;right: 1.55rem;}
@@ -483,9 +483,9 @@ body{font-size:12px;font-family: arial;}
 	background-size: 100% 100%;
 	position: absolute;
 	top: 1.65rem;right: -0.95rem;
-	animation: sevendiv 0.5s 2s infinite;
+	-webkit-animation: sevendiv 0.5s 2s infinite;
 }
-@keyframes sevendiv{
+@-webkit-keyframes sevendiv{
 	0%{	top: 1.65rem;right: -0.95rem;}
 	50%{	top: 1.63rem;right: -0.93rem;}
 	100%{top: 1.65rem;right: -0.95rem;
@@ -497,9 +497,9 @@ body{font-size:12px;font-family: arial;}
 	background-size: 100% 100%;
 	position: absolute;
 	top: 0.2rem;right: -1.05rem;
-	animation: eightdiv 0.5s 2s infinite;
+	-webkit-animation: eightdiv 0.5s 2s infinite;
 }
-@keyframes eightdiv{
+@-webkit-keyframes eightdiv{
 	0%{top: 0.2rem;right: -1.05rem;}
 	50%{top: 0.21rem;right: -1.05rem;}
 	100%{top: 0.2rem;right: -1.05rem;}
@@ -542,9 +542,9 @@ body{font-size:12px;font-family: arial;}
 	position: absolute;
 	left: -10%;
 	top: 0;
-	animation: xing 5s infinite;
+	-webkit-animation: xing 5s infinite;
 }
-@keyframes xing{
+@-webkit-keyframes xing{
 	from{top:0%;left: -10%;}
 	to{top:60%;left: 110%;}
 }
@@ -555,11 +555,11 @@ body{font-size:12px;font-family: arial;}
 	position: absolute;
 	left: 60%;
 	top: 20%;
-	animation:xing1 5s infinite;
+	-webkit-animation:xing1 5s infinite;
 }
-@keyframes xing1{
-	0%{transform: rotateZ(0deg); }
-	100%{transform: rotateZ(360deg);}
+@-webkit-keyframes xing1{
+	0%{-webkit-transform: rotateZ(0deg); }
+	100%{-webkit-transform: rotateZ(360deg);}
 
 }
 .xing2{
@@ -569,7 +569,7 @@ body{font-size:12px;font-family: arial;}
 	position: absolute;
 	left: 25%;
 	top: 60%;
-	animation:xing1 5s infinite;
+	-webkit-animation:xing1 5s infinite;
 }
 .xing3{
 	display: none;
@@ -578,9 +578,9 @@ body{font-size:12px;font-family: arial;}
 	position: absolute;
 	left: -10%;
 	top: 70%;
-	animation: xing3 8s infinite;
+	-webkit-animation: xing3 8s infinite;
 }
-@keyframes xing3{
+@-webkit-keyframes xing3{
 	from{top:70%;left: -10%;}
 	to{top:20%;left: 110%;}
 }
