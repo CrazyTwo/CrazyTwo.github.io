@@ -14,9 +14,9 @@
 				position: absolute;
 				left: -10%;
 				top: 0;
-				animation: xing 5s infinite;
+				-webkit-animation: xing 5s infinite;
 			}
-			@keyframes xing{
+			@-webkit-keyframes xing{
 				from{top:0%;left: -10%;}
 				to{top:60%;left: 110%;}
 			}
@@ -27,11 +27,11 @@
 				position: absolute;
 				left: 60%;
 				top: 20%;
-				animation:xing1 5s infinite;
+				-webkit-animation:xing1 5s infinite;
 			}
-			@keyframes xing1{
-				0%{transform: rotateZ(0deg); }
-				100%{transform: rotateZ(360deg);}
+			@-webkit-keyframes xing1{
+				0%{-webkit-transform: rotateZ(0deg); }
+				100%{-webkit-transform: rotateZ(360deg);}
 
 			}
 			.xing2{
@@ -41,7 +41,7 @@
 				position: absolute;
 				left: 25%;
 				top: 60%;
-				animation:xing1 5s infinite;
+				-webkit-animation:xing1 5s infinite;
 			}
 			.xing3{
 				display: none;
@@ -50,9 +50,9 @@
 				position: absolute;
 				left: -10%;
 				top: 70%;
-				animation: xing3 8s infinite;
+				-webkit-animation: xing3 8s infinite;
 			}
-			@keyframes xing3{
+			@-webkit-keyframes xing3{
 				from{top:70%;left: -10%;}
 				to{top:20%;left: 110%;}
 			}
