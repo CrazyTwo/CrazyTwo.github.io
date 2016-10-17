@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>VIP会员</title>
+    <link rel="stylesheet" media="screen" title="no title" href="../css/reset.css">
+    <link rel="stylesheet" media="screen" title="no title" href="../css/payok.css">
+</head>
+<body>
+    <div class="wrap">
+        
+        <div class="header">
+            <a href="javascript:history.go(-1);"><img src="../img/gt.png" /></a>
+            <h3>购买成功</h3>
+        </div>
+
+        <div class="content">
+            <div class="ok">
+                <img src="../img/pay_ok.png" />
+                <p>恭喜您成为VIP会员！</p>
+                <div class="btn">继续购物</div>
+            </div>
+        </div>
+    </div>
+</body>
+<script type="text/javascript">
+    var oBtn = document.getElementsByClassName('btn')[0];
+    oBtn.onclick = function(){
+        window.location.href = '../index.html';
+        return false;
+    }
+</script>
+
+</html>

@@ -1,0 +1,58 @@
+.con{
+	width: 100%;
+	padding-top: 0.4rem;
+  	padding-bottom:0.44rem;
+  	background: #ebeae4;
+}
+.con .warp{
+	width: 95%;
+	margin: auto;
+}
+
+.con .warp div{
+	width: 47%;
+	padding: 1%;
+	margin-top: 2%;
+	background: white;
+}
+.con .warp div:nth-child(2n){
+	margin-left: 2%;
+}
+
+.con .warp div img{
+	width: 100%;
+}
+.con .warp div p{
+	color: #292929;
+	font-size: 0.12rem;
+	margin-top: 0.1rem;
+	
+}
+.con .warp div span{
+	color: red;
+}
+.con .warp div .logo{
+	width: 96%;
+	height: auto;
+	margin-top: 0%;
+	padding-top: 0%;
+	padding-right: 0%;
+}
+.con .warp div .logo div{
+	width: 98%;
+	height: auto;
+	width: 0.15rem;
+	height: 0.15rem;
+	background-image: url(../img/menulogo.png);
+	background-size: 0.2rem;
+	margin-right: 2%;
+	padding: 0;
+    margin-top: 0%;
+}
+.con .warp div .logo div:nth-child(1){
+	background-position:-0.02rem -0.02rem;
+	
+}
+.con .warp div .logo div:nth-child(2){
+	background-position:-0.02rem -0.17rem;
+}

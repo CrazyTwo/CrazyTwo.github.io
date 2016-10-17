@@ -1,0 +1,22 @@
+
+/*重置样式*/
+@charset 'utf-8';
+
+body,h1,h2,h3,h4,p,dl,dd,ul,ol,form,input,textarea,th,td,select{margin: 0;padding: 0;}
+
+em{font-style: normal;}
+li{list-style: none;}
+a{text-decoration: none;}
+img{border: none;vertical-align: middle;}
+table{border-collapse: collapse;}
+input,textarea{outline: none;}
+textarea{resize:none;overflow: auto;}
+body{font-size:12px;}
+
+.fl{float: left;}
+.fr{float: right;}
+.clear:after{
+	content:'';
+	display: block;
+	clear: both;
+}

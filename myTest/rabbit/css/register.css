@@ -1,0 +1,86 @@
+/*重置样式*/
+body,h1,h2,h3,h4,p,dl,dd,ul,ol,form,input,textarea,th,td,select{margin: 0;padding: 0;}
+em{font-style: normal;}
+li{list-style: none;}
+a{text-decoration: none;}
+img{border: none;vertical-align: top;}
+table{border-collapse: collapse;}
+input,textarea{outline: none;}
+textarea{resize:none;overflow: auto;}
+body{font-size:14px;font-family: arial;}
+
+
+
+.wrap{
+	width:100%;
+	max-width:980px;
+	margin:0 auto;
+}
+.header{
+	position: relative;
+	text-align: center;
+	background:#48382b;
+	height:50px;
+	line-height:50px;
+}
+.header h3{
+	color:white;
+	font-size:20px;
+}
+.header a{
+	display:inline-block;
+	width:12px;
+	position:absolute;
+	left:2%;
+	top:27%;
+}
+.header a img{
+	width:100%;
+}
+form{
+	width:95%;
+	margin:30px auto 0;
+	text-align:center;
+}
+form p{
+	border-bottom:1px solid #c5c4c4;
+	line-height:3em;
+}
+p input{
+	width:95%;
+	height:25px;
+	outline:none;
+	border:none;
+	font-size:16px;
+}
+
+form>input{
+	width:90%;
+	height:35px;
+	border-radius:20px;
+	background:#48382b;
+	color:white;
+	font-size:16px;
+	margin:10% auto;
+	outline:none;
+}
+.wrap .foot{
+	text-align:center;
+	padding-bottom:20px;
+}
+.foot p{
+	line-height: 3em;
+	font-size:16px;
+	color:#48382b;
+}
+.wrap .foot img{
+	margin:0 10px;
+}
+
+
+
+
+
+
+
+

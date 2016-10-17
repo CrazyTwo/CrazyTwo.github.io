@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0, maximum-scale=1.0,user-scalable=0">
+	<title>我的上传</title>
+    <link rel="stylesheet" href="../css/reset.css">
+	<link rel="stylesheet" type="text/css" href="../css/upload.css">
+</head>
+<body>
+	<div class="wrap">
+		<div class="header">
+            <a href="javascript:history.go(-1);"><img src="../img/gt.png" /></a>
+            <h3>我的上传</h3>
+        </div>
+		<div class="content">
+			<div class="shuru">
+				<textarea placeholder="这一刻想说什么......"></textarea>
+				<ul class="clear">
+					<li class="fl"><div id="filePicker">选择图片</div><img src="../img/4.png" /></li>
+				</ul>
+			</div>
+			<div class="place clear">
+				<div class="fl"><img src="../img/2.png" /></div>
+				<p class="fl">我的位置</p>
+			</div>
+			<div class="who clear">
+				<div class="fl"><img src="../img/3.png" /></div>
+				<p class="fl">不让谁看我的状态</p>
+			</div>
+		</div>
+		<div class="footer">
+			<p>我要上传</p>
+		</div>
+	</div>
+</body>
+<script type="text/javascript" src="../js/jquery-3.0.0.min.js"></script>
+<script type="text/javascript" src="../js/webuploader.min.js"></script>
+<script type="text/javascript">
+	// 初始化Web Uploader
+var uploader = WebUploader.create({
+
+    // 选完文件后，是否自动上传。
+    auto: true,
+
+    // swf文件路径
+    swf:'Uploader.swf',
+
+    // 文件接收服务端。
+    server: 'http://webuploader.duapp.com/server/fileupload.php',
+
+    // 选择文件的按钮。可选。
+    // 内部根据当前运行是创建，可能是input元素，也可能是flash.
+    pick: '#filePicker',
+
+    // 只允许选择图片文件。
+    accept: {
+        title: 'Images',
+        extensions: 'gif,jpg,jpeg,bmp,png',
+        mimeTypes: 'image/*'
+    }
+});
+
+// 当有文件添加进来的时候
+uploader.on( 'fileQueued', function( file ) {
+    var $li = $(
+            '<li id="' + file.id + '" class="file-item thumbnail">' +
+                '<img>' +
+                
+            '</li>'
+            ),
+        $img = $li.find('img');
+
+        $li.addClass('fl');
+    // $list为容器jQuery实例
+    $('ul').prepend( $li );
+
+    // 创建缩略图
+    // 如果为非图片文件，可以不用调用此方法。
+    // thumbnailWidth x thumbnailHeight 为 100 x 100
+    uploader.makeThumb( file, function( error, src ) {
+        if ( error ) {
+            $img.replaceWith('<span>不能预览</span>');
+            return;
+        }
+
+        $img.attr( 'src', src );
+    }, 72, 72);
+});
+</script>
+</html>

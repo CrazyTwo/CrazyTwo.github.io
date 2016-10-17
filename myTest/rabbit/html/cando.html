@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="utf-8">
+	<title>可做菜品</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+	<link rel="stylesheet" href="../css/reset.css">
+	<link rel="stylesheet" href="../css/cando.css">
+</head>
+<body ondragstart= "return   false">
+	<div id="top">
+		<a href="javascript:history.go(-1);"><img src="../img/gt.png" /></a><span>可做菜品</span>
+	</div>
+
+	<div id="con">
+		<div class="con_div clear">
+			<div class="div_img"><img src="../img/food_1.png" /></div>
+			<div class="txt">
+				<p><strong>辣子鸡</strong></p>
+				<p>
+					<img src="../img/xin1.png" />
+					<img src="../img/xin1.png" />
+					<img src="../img/xin1.png" />
+					<img src="../img/xin1.png" />
+				</p>
+				<p><em>家常菜</em><span>白领</span><span>香辣</span></p>
+				<p><em>>15分钟</em><img src="../img/xing2.png" /></p>
+			</div>
+		</div>
+		<div class="con_div clear">
+			<div class="div_img"><img src="../img/food_2.png" /></div>
+			<div class="txt">
+				<p><strong>竹简筒湘味小河虾</strong></p>
+				<p>
+					<img src="../img/xin1.png" />
+					<img src="../img/xin1.png" />
+					<img src="../img/xin1.png" />
+					<img src="../img/xin1.png" />
+				</p>
+				<p><em>家常菜</em><span>白领</span></p>
+				<p><em>>15分钟</em><img src="../img/xing1.png" /></p>
+			</div>
+		</div>
+		<div class="con_div clear">
+			<div class="div_img"><img src="../img/food_3.png" /></div>
+			<div class="txt">
+				<p><strong>粉皮如意卷</strong></p>
+				<p>
+					<img src="../img/xin1.png" />
+					<img src="../img/xin1.png" />
+					<img src="../img/xin1.png" />
+					<img src="../img/xin1.png" />
+				</p>
+				<p><em>家常菜</em><span>白领</span></p>
+				<p><em>>15分钟</em><img src="../img/xing2.png" /></p>
+			</div>
+		</div>
+		<div class="con_div clear">
+			<div class="div_img"><img src="../img/food_4.png" /></div>
+			<div class="txt">
+				<p><strong>可乐鸡翅</strong></p>
+				<p>
+					<img src="../img/xin1.png" />
+					<img src="../img/xin1.png" />
+					<img src="../img/xin1.png" />
+					<img src="../img/xin1.png" />
+				</p>
+				<p><em>家常菜</em><span>白领</span><span>时尚</span></p>
+				<p><em>>15分钟</em><img class="111" src="../img/xing1.png" /></p>
+			</div>
+		</div>
+		<div class="con_div clear">
+			<div class="div_img"><img src="../img/food_5.png" /></div>
+			<div class="txt">
+				<p><strong>香辣蟹</strong></p>
+				<p>
+					<img src="../img/xin1.png" />
+					<img src="../img/xin1.png" />
+					<img src="../img/xin1.png" />
+					<img src="../img/xin1.png" />
+				</p>
+				<p><em>家常菜</em><span>白领</span><span>香辣</span></p>
+				<p><em>>15分钟</em><img class="111" src="../img/xing2.png" /></p>
+			</div>
+		</div>
+	</div>
+</body>
+<script src='../js/jquery-3.0.0.min.js'></script>
+<script>
+
+	var Arr = ['../img/xing2.png','../img/xing1.png','../img/xin1.png','../img/xin2.png','../img/food_1.png','../img/food_2.png','../img/food_3.png','../img/food_4.png','../img/food_5.png']
+
+	function loadingFn(Arr,fn){
+		var index = 0;
+	for (var i = 0; i < Arr.length; i++) {
+		var img = new Image();
+		img.src = Arr[i];
+		img.onload = function(){
+				index++;
+				fn && fn(index);
+			}
+		}
+	}
+
+loadingFn(Arr,function(index){
+
+	var arr = [];
+	var arr2 = [];
+	var p = document.querySelectorAll('.txt p:nth-of-type(2)');
+	var $oXing = $('.txt p:nth-of-type(4) img');
+	var oXin = document.querySelectorAll('.txt p:nth-of-type(2) img');
+	var k = 0;
+
+	function xin() {
+		for (var i = 0; i < p.length; i++) {
+			for (var j = 0; j < arr[i]; j++) {
+				oXin[j+4*k].src = "../img/xin2.png";
+			}
+			k++;
+		}
+	}
+	arr = [1,2,1,4,3];
+	xin();
+	
+	$oXing.on('touchstart',function(){
+		if ($(this).attr("src")=="../img/xing2.png") {
+			$(this).attr("src","../img/xing1.png");
+		}else {
+			$(this).attr("src","../img/xing2.png");
+		}
+		
+	})
+})
+</script>
+</html>

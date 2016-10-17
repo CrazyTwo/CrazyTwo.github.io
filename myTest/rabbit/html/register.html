@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="utf-8">
+	<title>帐号注册</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	<link rel="stylesheet" href="../css/reset.css">
+	<link rel="stylesheet" href="../css/register.css">
+</head>
+<body>
+	<div class="wrap">
+		<div class="header">
+			<a href="javascript:history.go(-1);"><img src="../img/gt.png" /></a>
+			<h3>注 册</h3>
+		</div>
+		<form action="javascript:;">
+
+			<p><input type="text" name="name" placeholder="手机号" />	</p>
+
+			<p><input type="password" placeholder="密码" /></p>
+
+			<p><input type="password" placeholder="确认密码" /></p>
+
+			<input type="submit" value="注 册">
+		</form>
+		
+		<div class="foot">
+			<p>快速注册方式:</p>
+			<img src="../img/qq.png" />
+			<img src="../img/weixin.png" />
+			<img src="../img/weibo.png" />
+			<img src="../img/baidu.png" />
+		</div>
+	</div>
+</body>
+<script type="text/javascript" src="../js/jquery-3.0.0.min.js"></script>
+<script>
+
+	var input = document.getElementsByTagName('input');
+
+	input[0].onblur = function(){		
+		$.ajax({
+			type:"post",
+			url:"js/reg.php",
+			data:{act:"check",name:this.value},
+			dataType:"json",
+			success:function(data){
+				if(data.error==0){
+					// alert(1);
+				}else{
+					// alert(0);
+				}
+			}
+		})
+	}
+
+	input[3].onclick = function(){
+		if(input[1].value!=input[2].value){alert("两次输入密码不一致");return false;}
+		if(input[1].value==''||input[2].value==''||input[0].value==''){alert("请输入完整信息");return false;}
+		
+		$.ajax({
+			type:"POST",
+			url:"js/reg.php",
+			data:{act:"add",name:input[0].value,pwd:input[1].value},
+			dataType:"json",
+			success:function(data){
+				if(data.error==1){
+					console.log("注册成功");
+				}else{
+					console.log("注册失败");
+				}
+			}
+		})
+	}
+</script>
+</html>
+
+
+
+
+
+
+

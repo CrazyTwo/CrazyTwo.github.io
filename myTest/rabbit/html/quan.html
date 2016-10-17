@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+	<title>Document</title>
+	<link rel="stylesheet" href="../css/reset.css">
+	<link rel="stylesheet" href="../css/style_quan.css">
+	<link rel="stylesheet" href="../css/top.css">
+	<link rel="stylesheet" href="../css/foot.css">
+</head>
+<body>
+
+	<div class="top clear">
+     	<a href="circle.html"><span class="btn1  select2 span">圈子</span></a><a href="quan.html"><span class="btn2 span"> 视频</span></a>
+     	<div class="fr r" id="maun2"></div>
+    </div>
+
+	<div class="wrap">
+		<div class="content">
+			<div class="con1">
+				<img src="../img/in2.png" alt="">
+				<div class="bg">
+					<p class="p1">豆芽健康&nbsp;养生界的“四大天王”</p>
+					<p class="p2">身体“减肥”正当时</p>
+				</div>
+			</div>
+			<div class="con1">
+				<img src="../img/in3.png" alt="">
+				<div class="bg">
+					<p class="p1">脆皮曲奇&nbsp;零食早餐都ok</p>
+					<p class="p2">水果与粗粮的完美组合</p>
+				</div>
+			</div>
+			<div class="con1">
+				<img src="../img/in4.png" alt="">
+				<div class="bg2">
+					<p class="p1">咖啡慕斯蛋糕　甜品的诱惑</p>
+				</div>
+			</div>
+			<div class="con1">
+				<img src="../img/in2.png" alt="">
+				<div class="bg">
+					<p class="p1">豆芽健康&nbsp;养生界的“四大天王”</p>
+					<p class="p2">身体“减肥”正当时</p>
+				</div>
+			</div>
+			
+		</div>
+		<div class="foot">
+		<a href="../index.html"><div class="fl"><div></div><p>主页</p></div></a>
+		<a href="../menu.html"><div class="fl"><div></div><p>商城</p></div></a>
+		<a href="choose.html"><div class="fl"><div></div><p>选菜</p></div></a>
+		<a href="circle.html"><div class="fl select1"><div class="select"></div><p>发现</p></div></a>
+		<a href="user.html"><div class="fl"><div></div><p>我的</p></div></a>
+	</div>
+	</div>
+</body>
+<script type="text/javascript" src="../js/jquery-3.0.0.min.js"></script>
+<script type="text/javascript" src="../js/top.js"></script>
+<script>
+	var arr=["../img/in2.png","../img/in3.png","../img/in4.png"];
+	var index=0;
+	for (var i = 0; i < arr.length; i++) {
+		var img=new Image();
+		img.src=arr[i];
+		img.onload=function (argument) {
+			index++;
+			if(index==arr.length){
+					var img = document.querySelectorAll('.content img');
+					var bg 	= document.querySelectorAll('.content .bg');
+					var bg2 = document.querySelector('.content .bg2');
+				//获取背景的高度
+				 	for (var i = 0; i < bg.length; i++) {
+				 		bg[i].style.height=parseInt(img[0].offsetHeight)+"px";
+				 	}
+				 		
+				 		bg2.style.height=parseInt(img[2].offsetHeight)+"px";
+
+				 window.onresize=function(){
+				 	for (var i = 0; i < bg.length; i++) {
+				 		bg[i].style.height=parseInt(img[0].offsetHeight)+"px";
+				 	}
+				 
+				 		bg2.style.height=parseInt(img[2].offsetHeight)+"px";
+				 }
+			}
+		}
+	}
+	
+	
+</script>
+</html>

@@ -1,0 +1,98 @@
+.warp{
+	padding-top: 0.4rem;
+  	padding-bottom:0.44rem;
+}
+.warp .b{
+	background-color:#ebeae4 ;
+	width: 100%;
+}
+.warp .b div{
+	width: 30%;
+	background: white;
+	margin:1.666666%;
+	border-radius: 5%;
+	text-align: center;
+	box-shadow: 0.0rem 0.02rem 0.04rem #9c9c9c;
+}
+.warp .b div img{
+	width: 90%;
+	border-radius: 5%;
+	margin: 15% 0;
+}
+.warp .b div p{
+	font-size: 0.12rem;
+	color: #999999;
+	line-height: 0.3rem;
+	border-bottom: 1px solid #dadada;
+}
+.warp .t .l{
+	width: 70%;
+	height: 1.27rem;
+	background-color:#d1d0ca ;
+	box-shadow:-0.02rem 0.02rem 0.1rem #9c9c9c inset;
+	/*margin-bottom:0.03rem ;*/
+	overflow: hidden;
+}
+.warp .t .l .con div{
+	width: 0.7rem;
+	background: white;
+	margin:0.05rem;
+	border-radius: 5%;
+	text-align: center;
+	box-shadow: 0.0rem 0.02rem 0.04rem #9c9c9c;
+	position: relative;
+}
+.warp .t .l .con{
+	width:3.2rem;
+	background: transparent;
+	padding-top: 0.05rem;
+	position: relative;
+}
+.warp .t .l .con div img{
+	width: 90%;
+	border-radius: 5%;
+	margin: 10% 0;
+}
+.warp .t .l .con  div p{
+	font-size: 0.12rem;
+	color: #999999;
+	line-height: 0.3rem;
+	border-bottom: 1px solid #dadada;
+}
+.warp .t .l .con div div{
+	width: 0.15rem;
+	height: 0.15rem;
+	border-radius: 50%;
+	background: rgba(0,0,0,0.5);
+	position: absolute;
+	box-shadow: 0rem 0rem 0rem #9c9c9c;
+	color: white;
+	right:-0.1rem ;
+	top:-0.1rem ;
+	font-size: 0.12rem;
+}
+.warp .t .r{
+	width: 30%;
+	height: 1.27rem;
+	background-color:#d1d0ca ;
+	/*box-shadow: 0.0rem 0.02rem 0.04rem #9c9c9c;*/
+	/*margin-bottom:0.03rem ;*/
+    text-align: center;
+}
+.warp .t .r p{
+	color:#6f6f6f;
+	line-height: 0.4rem;
+	font-size: 0.13rem;
+	margin-top: 0.2rem;
+	
+}
+.warp .t .r div{
+	width: 65%;
+	height: 0.3rem;
+	background: #65aa36;
+	font-size: 0.13rem;
+	color: white;
+	line-height: 0.3rem;
+	border-radius: 0.1rem;
+	margin: auto;
+}

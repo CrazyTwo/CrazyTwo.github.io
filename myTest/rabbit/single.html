@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>单品</title>
+		<link rel="stylesheet" type="text/css" href="css/reset.css"/>
+		<link rel="stylesheet" type="text/css" href="css/foot.css"/>
+		<link rel="stylesheet" type="text/css" href="css/top.css"/>
+		<link rel="stylesheet" type="text/css" href="css/menu.css"/>
+	</head>
+	<body>
+		 <div class="top clear">
+	    	 <div class="fl l"><p>北京</p>
+	    	 	<div id="mav_l">
+	    	 		<ul style="display: none;">
+	    	 			<li>广州</li>
+	    	 			<li>上海</li>
+	    	 			<li>深圳</li>
+	    	 			<li>北京</li>
+	    	 		</ul>
+	    	 	</div>
+	    	 </div>
+	     <div class="fr r" id="maun">
+	     	<div id="mav_r" >
+	     		<div class="top"></div>
+		     	<div class="bot">
+		     		<ul>
+		     			<li>荤菜</li>
+		     			<li>素菜</li>
+		     			<li>汤羹</li>
+		     			<li>凉菜</li>
+		     			<li>更多</li>
+		     		</ul>
+		     	</div>
+	     	</div>
+	     </div>
+	     <div class="fr r" id="maun2"></div>
+     	<a href="single.html"><span class="btn1 span" >单品</span></a><a href="menu.html"><span class="btn2 select2 span">菜品</span></a>
+    </div>
+		
+	<div class="con clear">
+		<div class="warp">
+			<div class="fl depa"><img src="img/single01.jpg"/><p>精选延庆生态芦笋300g</p><p><span>￥21.80</span></p> </div>
+			<div class="fl depa"><img src="img/single02.jpg"/><p>精选兰州百合150g</p><p><span>￥16.80</span></p> </div>
+			<div class="fl depa"><img src="img/single03.jpg"/><p>精选山东迷你小土豆500g</p><p><span>￥5.00</span></p> </div>
+			<div class="fl depa"><img src="img/single04.jpg"/><p>精选本地卷心菜600g</p><p><span>￥6.90</span></p> </div>
+			<div class="fl depa"><img src="img/single01.jpg"/><p>精选延庆生态芦笋300g</p><p><span>￥21.80</span></p> </div>
+			<div class="fl depa"><img src="img/single02.jpg"/><p>精选兰州百合150g</p><p><span>￥16.80</span></p> </div>
+			<div class="fl depa"><img src="img/single03.jpg"/><p>精选山东迷你小土豆500g</p><p><span>￥5.00</span></p> </div>
+			<div class="fl depa"><img src="img/single04.jpg"/><p>精选本地卷心菜600g</p><p><span>￥6.90</span></p> </div>
+		</div>
+	</div>
+		
+		
+	<div id="gwc"></div>
+
+		
+	<div class="foot">
+		<a href="index.html"><div class="fl"><div></div><p>主页</p></div></a>
+		<a href="menu.html"><div class="fl select1"><div class="select"></div><p>商城</p></div></a>
+		<a href="html/choose.html"><div class="fl"><div></div><p>选菜</p></div></a>
+		<a href="html/circle.html"><div class="fl"><div></div><p>发现</p></div></a>
+		<a href="html/user.html"><div class="fl"><div></div><p>我的</p></div></a>
+	</div>
+	</body>
+	<script type="text/javascript" charset="utf-8" src="js/jquery-3.0.0.min.js"></script>
+	<script type="text/javascript" charset="utf-8" src="js/top.js"></script>
+	<script type="text/javascript">
+		$('.depa').on('touchstart',function(){
+			var time1 = new Date().getTime();
+			$('.depa').on('touchend',function(){
+				var time2 = new Date().getTime();
+				if(time2 - time1 < 150){
+					window.location.href = 'html/details.html';
+				}
+			})
+		})
+	</script>
+</html>

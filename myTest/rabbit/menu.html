@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang-"zh-cn">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>菜品</title>
+		<link rel="stylesheet" type="text/css" href="css/reset.css"/>
+		<link rel="stylesheet" type="text/css" href="css/foot.css"/>
+		<link rel="stylesheet" type="text/css" href="css/top.css"/>
+		<link rel="stylesheet" type="text/css" href="css/menu.css"/>
+	</head>
+	<body>
+	 <div class="top clear">
+	    	 <div class="fl l"><p>北京</p>
+	    	 	<div id="mav_l">
+	    	 		<ul style="display: none;">
+	    	 			<li>广州</li>
+	    	 			<li>上海</li>
+	    	 			<li>深圳</li>
+	    	 			<li>北京</li>
+	    	 		</ul>
+	    	 	</div>
+	    	 </div>
+	     <div class="fr r" id="maun">
+	     	<div id="mav_r" >
+	     		<div class="top"></div>
+		     	<div class="bot">
+		     		<ul>
+		     			<li>荤菜</li>
+		     			<li>素菜</li>
+		     			<li>汤羹</li>
+		     			<li>凉菜</li>
+		     			<li>更多</li>
+		     		</ul>
+		     	</div>
+	     	</div>
+	     	
+	     </div>
+	     <div class="fr r" id="maun2"></div>
+     	<a href="single.html"><span class="btn1 select2 span">单品</span></a><a href="menu.html"><span class="btn2 span">菜品</span></a>
+    </div>
+		
+	<div class="con clear">
+		<div class="warp">
+			<div class="fl depa">
+				<img src="img/menu01.jpg"/>
+				<p>燕麦粥</p>
+				<p><span>￥22.80</span></p>
+				<div class="logo clear"><div class="fr"></div><div class="fr"></div></div> 
+			</div>
+			<div class="fl depa">
+				<img src="img/menu02.jpg"/>
+				<p>韭菜鸡蛋馅</p>
+				<p><span>￥26.80</span></p> 
+				<div class="logo clear"><div class="fr"></div><div class="fr"></div></div>
+			</div>
+			<div class="fl depa">
+				<img src="img/menu03.jpg"/>
+				<p>柠檬雨</p>
+				<p><span>￥25.00</span></p> 
+				<div class="logo clear"><div class="fr"></div><div class="fr"></div></div>
+			</div>
+			<div class="fl depa">
+				<img src="img/menu04.jpg"/>
+				<p>汉堡包</p>
+				<p><span>￥36.90</span></p> 
+				<div class="logo clear"><div class="fr"></div><div class="fr"></div></div>
+			</div>
+			<div class="fl depa">
+				<img src="img/menu01.jpg"/>
+				<p>燕麦粥</p>
+				<p><span>￥22.80</span></p>
+				<div class="logo clear"><div class="fr"></div><div class="fr"></div></div> 
+			</div>
+			<div class="fl depa">
+				<img src="img/menu02.jpg"/>
+				<p>韭菜鸡蛋馅</p>
+				<p><span>￥26.80</span></p> 
+				<div class="logo clear"><div class="fr"></div><div class="fr"></div></div>
+			</div>
+			<div class="fl depa">
+				<img src="img/menu03.jpg"/>
+				<p>柠檬雨</p>
+				<p><span>￥25.00</span></p> 
+				<div class="logo clear"><div class="fr"></div><div class="fr"></div></div>
+			</div>
+			<div class="fl depa">
+				<img src="img/menu04.jpg"/>
+				<p>汉堡包</p>
+				<p><span>￥36.90</span></p> 
+				<div class="logo clear"><div class="fr"></div><div class="fr"></div></div>
+			</div>
+		
+		</div>
+	</div>
+		
+		
+	<div id="gwc">
+    	
+    </div>
+		
+	<div class="foot">
+		<a href="index.html"><div class="fl"><div></div><p>主页</p></div></a>
+		<a href="menu.html"><div class="fl select1"><div class="select"></div><p>商城</p></div></a>
+		<a href="html/choose.html"><div class="fl"><div></div><p>选菜</p></div></a>
+		<a href="html/circle.html"><div class="fl"><div></div><p>发现</p></div></a>
+		<a href="html/user.html"><div class="fl"><div></div><p>我的</p></div></a>
+	</div>
+	</body>
+	<script type="text/javascript" charset="utf-8" src="js/jquery-3.0.0.min.js"></script>
+	<script type="text/javascript" charset="utf-8" src="js/top.js"></script>
+	<script type="text/javascript">		
+		
+		$('.depa').on('touchstart',function(){
+			var time1 = new Date().getTime();
+			$('.depa').on('touchend',function(){
+				var time2 = new Date().getTime();
+				if(time2 - time1 < 150){
+					window.location.href = 'html/details.html';
+				}
+			})
+		})
+		
+	</script>
+</html>

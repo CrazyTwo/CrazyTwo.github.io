@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+    <head>
+        <meta charset="utf-8">
+        <title>Document</title>
+        <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+        <link rel="stylesheet" type="text/css" href="../css/reset.css"/>
+        <link rel="stylesheet" type="text/css" href="../css/top.css"/>
+        <link rel="stylesheet" type="text/css" href="../css/foot.css"/>
+        <link rel="stylesheet" type="text/css" href="../css/search.css"/>
+    </head>
+	
+	<body>
+		<div id="search">
+			<div id="top" class="clear">
+				<a href="javascript:history.go(-1);" class="fl"><img src="../img/return.png"/></a>
+				<input type="text" name="" id="" value="" style="width: 60%;" placeholder="搜索食材、菜品"/>
+				<div id="ex" class="fr">取消</div>
+			</div>
+		<div class="content">
+        <div class="history">
+          <div class="h clear">
+            <span>搜索记录</span>
+            <a href="###" id="aClear">清空记录</a>
+          </div>
+          <div class="con">
+            <div class="tr clear">
+              <a href="###" class="td">海带</a>
+              <a href="###" class="td">菠菜</a>
+            </div>
+            <div class="tr clear">
+              <a href="###" class="td">西蓝花</a>
+              <a href="###" class="td">澳大利亚小肥牛</a>
+            </div>
+            <div class="tr clear">
+              <a href="###" class="td">红烧排骨</a>
+              <a href="###" class="td">浓情布朗尼懒人版</a>
+            </div>
+          </div>
+        </div>
+        <div class="hot">
+          <div class="h clear">
+            <span>热门搜索</span>
+          </div>
+          <div class="con">
+            <div class="tr clear">
+              <a href="###"  class="td">湾仔红烧排骨</a>
+              <a href="###"  class="td">庄园养生小炒</a>
+            </div>
+            <div class="tr clear">
+              <a href="###"  class="td">生滚鱼片粥</a>
+              <a href="###"  class="td">鲜虾云吞面</a>
+            </div>
+            <div class="tr clear">
+              <a href="###"  class="td">浓情布朗尼懒人版</a>
+              <a href="###"  class="td"></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+        </div>
+			
+		</div>
+	</body>
+<script>
+  var ex = document.getElementById('ex');
+  ex.addEventListener('click',function(){
+      window.history.go(-1);
+  })
+</script>
+</html>

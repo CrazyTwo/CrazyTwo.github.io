@@ -1,0 +1,171 @@
+/*重置样式*/
+body,h1,h2,h3,h4,p,dl,dd,ul,ol,form,input,textarea,th,td,select{margin: 0;padding: 0;}
+em{font-style: normal;}
+li{list-style: none;}
+a{text-decoration: none;}
+img{border: none;vertical-align: top;}
+table{border-collapse: collapse;}
+input,textarea{outline: none;}
+textarea{resize:none;overflow: auto;}
+body{font-size:14px;font-family: arial;}
+
+
+
+html,body{
+	font-size:14px;
+}
+a{
+	color:#333;
+	text-decoration: none;
+}
+.wrap{
+	width:100%;
+	max-width:980px;
+	margin:0 auto;
+}
+.header{
+	position:relative;
+	border-bottom:1px solid #c5c4c4;
+}
+.header>img{
+	width:100%;
+	vertical-align:middle;
+}
+.header .bg{
+	width:90%;
+	text-align:center;
+	margin:0 auto;
+	padding-bottom:5px;
+}
+.header .bg>img{
+	width:30%;
+	margin-top:10%;
+}
+.header .bg>a{
+	width:100px;
+	height:30px;
+	display:block;
+	margin:10px auto;
+}
+.header .bg a input{
+	width:96px;
+	height:26px;
+	font-size:16px;
+	color:#c3ad88;
+	border:2px solid #c3ad88;
+	border-radius:8px;
+	background:white;
+}
+.header .bg .bbs_1{
+	overflow:hidden;
+	border-top:1px solid #c5c4c4;
+	border-bottom:1px solid #c5c4c4;
+}
+.header .bg .bbs_2{
+	overflow:hidden;
+}
+.header .bg .bbs_1 div{
+	float:left;
+	width:49%;
+	text-align:center;
+	margin:5px 0;
+	line-height:2em;
+}
+.header .bg .bbs_1 div:nth-child(1){
+	border-right:2px solid #c5c4c4;
+}
+.header .bg .bbs_2 div{
+	float:left;
+	width:32%;
+	text-align:center;
+	margin:5px 0;
+	line-height: 2em;
+}
+.header .bg .bbs_2 div:nth-child(2){
+	border-left:2px solid #c5c4c4;
+	border-right:2px solid #c5c4c4;
+}
+
+
+.content_1{
+	border-bottom:1px solid #ccc;
+}
+.content_1 span{
+	padding-left:2em;
+	line-height:3em;
+}
+.content_1 img{
+	float:right;
+	margin:10px 10px 0 0;
+	width:3%;
+}
+.content_2{
+	text-align:center;
+	overflow:hidden;
+	border-bottom:1px solid #ccc;
+}
+.content_2 a{
+	margin:10px 0;
+	display:inline-block;
+	width:23%;
+	font-size:12px;
+}
+.content_2 a img{
+	width:30px;
+	height:25px;
+}
+.content_2 a p{
+	line-height:2em;
+}
+ul{
+	padding-bottom:100px;
+}
+ul li{
+	list-style:none;
+	line-height: 3em;
+	border-bottom:1px solid #ccc;
+}
+ul li .content_nav{
+	margin:0 0.5em 0 1em;
+	vertical-align:middle;
+	width:5%;
+}
+
+ul li .content_nav_2{
+	float:right;
+	margin:10px 10px 0 0;
+	width:3%;
+}
+
+ul li a{
+	vertical-align:middle;
+	display: inline-block;
+	width: 80%;
+}
+.foot{
+	width:100%;
+	text-align:center;
+	background:#48382b;
+	position:fixed;
+	bottom:0px;
+	left:0px;
+}
+.foot a{
+	display:inline-block;
+	width:19%;
+}
+.foot a img{
+	margin:5px 0;
+	width:27px;
+	height:24px;
+}
+.foot a p{color:#c3ad88;padding-bottom:5px;}
+
+
+
+
+
+
+
+
+

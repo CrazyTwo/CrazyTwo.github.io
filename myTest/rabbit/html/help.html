@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0, maximum-scale=1.0,user-scalable=0">
+	<title>帮助中心</title>
+	<link rel="stylesheet" type="text/css" href="../css/reset.css">
+	<link rel="stylesheet" type="text/css" href="../css/help.css">
+</head>
+<body>
+	<div class="wrap">
+		<div class="header">
+			<a href="javascript:history.go(-1);"><img src="../img/gt.png" /></a>
+			<h3>帮助中心</h3>
+		</div>
+		<div class="content">
+			<ul>
+				<li >
+					<div class="title"><img src="../img/help_1.png" alt=""><span>已审核订单能否取消</span><img class="on" src="../img/h5.png" alt=""></div>
+					<div class="clear p">
+						<p class="fl p1">答：</p>
+						<p class="fl p2">订单提交后，您将无法取消您的订单。若您通过礼金卡进行支付，订单在未审核前，可自行取消订单。其他付款方式取消订单可直接致电1234-000-321。</p>
+					</div>
+				</li>
+				<li>
+					<div class="title"><img src="../img/h2.png" alt=""><span>如何修改订单</span><img class="on" src="../img/h5.png" alt=""></div>
+					<div class="clear p">
+						<p class="fl p1">答：</p>
+						<p class="fl p2">如果没有付款的话，重新下一个订单就可以了！如果已经付款了，可以联系卖家修改信息。如果想取消订单，直接申请退款即可。</p>
+					</div>
+				</li>
+				<li>
+					<div class="title"><img src="../img/h3.png" alt=""><span>怎么样获得发票</span><img class="on" src="../img/h5.png" alt=""></div>
+					<div class="clear p">
+						<p class="fl p1">答：</p>
+						<p class="fl p2">在网站订购,提交订单前在  您是否需要开具发票  处选择  是  ,并填写发票抬头。发票将随商品一起送到</p>
+					</div>
+				</li>
+				<li>
+					<div class="title"><img src="../img/h4.png" alt=""><span>如何申请退货</span><img class="on" src="../img/h5.png" alt=""></div>
+					<div class="clear p">
+						<p class="fl p1">答：</p>
+						<p class="fl p2">首先由买家申请退款－双方沟通－卖家必须要同意此退款协议－然后买家就会发货－发了以后把单号上传在此退款详情里－状态变为等待卖家收货－卖家收到了货后确认－退款完成（简单说，就是卖家必须要先同意你的退款协议，在淘宝此交易的状态改为卖家已经同意退货，等待买家发货，这个时候你才可以退货回去，并即时上传发货单号</p>
+					</div>
+				</li>
+			</ul>
+		</div>
+		<div class="footer">
+		</div>
+	</div>
+</body>
+<script type="text/javascript" src="../js/jquery-3.0.0.min.js"></script>
+<script type="text/javascript">
+
+	var $li = $('.content ul li');
+
+	$li.each(function () {
+		$(this).on('touchstart',function(){
+			$li.stop().children('.p').slideUp();
+
+			if ($(this).attr("bol")=="true") {				
+				$(this).attr("bol","false");				
+				$(this).find('.on').css('transform','rotate(0deg)');
+			}else{
+				$(this).stop().children('.p').slideToggle();
+				$li.find('.on').css('transform','rotate(0deg)');
+				$(this).find('.on').css('transform','rotate(180deg)');
+				$li.attr("bol","false");
+				$(this).attr("bol","true");
+			}			
+			
+		})
+	})
+</script>
+</html>

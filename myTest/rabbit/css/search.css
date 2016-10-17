@@ -1,0 +1,76 @@
+#search{
+	width: 100%;
+}
+#search #top{
+	height: 0.30rem;
+	width: 98%;
+	background: #48382b;
+	position: fixed;
+	top: 0;
+	padding: 0.05rem 1%;
+	text-align: center;
+	z-index: 10;
+}
+#top a img{
+	width: 0.11rem;
+}
+#top a{
+	width: 0.15rem;
+	margin-left: 0.1rem;
+	margin-top: 0.05rem;
+}
+#top div{
+	width: 0.3rem;
+	height: 0.25rem;
+	color: white;
+	font-size: 0.12rem;
+	background-image: none;
+	line-height: 0.3rem;
+	margin-right: 0.1rem;
+}
+.content{
+        width: 100%;
+        margin-top: 0.4rem;
+      }
+.history .h,.hot .h{
+        width: 86.4%;
+        height: .285rem;
+        line-height: .285rem;
+        font-size: .12rem;
+        margin: auto;
+        border-bottom: 1px solid #b9d0c4;
+        margin-bottom: .165rem;
+      }
+      .hot .h{
+        height: .265rem;
+        line-height: .265rem;
+        margin-bottom: .145rem;
+      }
+      .history span,.hot span{
+        color: #86765d;
+        float: left;
+      }
+      .history a{
+        float: right;
+        color: #aacf50;
+      }
+     .con .tr{
+       width: 86.4%;
+       margin: auto;
+       height: .12rem;
+       font-size: .12rem;
+       margin-bottom: .26rem;
+     }
+     .hot .con .tr{
+       margin-bottom: .29rem;
+     }
+     .con .tr .td{
+       float: left;
+       width: 45%;
+       text-align: left;
+       color: #000;
+       padding-right: 5%;
+       text-overflow: ellipsis;
+       white-space:nowrap;
+       overflow:hidden;
+     }

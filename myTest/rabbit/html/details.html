@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="utf-8">
+	<title>Document</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+	<link rel="stylesheet" href="../css/reset.css">
+	<link rel="stylesheet" href="../css/detail.css">
+</head>
+<body ondragstart= "return   false">
+	<div id="top">
+		<a href="javascript:history.go(-1);"><img src="../img/gt.png" /></a><span>菜品详情</span>
+	</div>
+
+	<div id="con">
+		<div id="c_img"><img src="../img/3-2img1.png" /></div>
+		<div id="menu">
+			<div id="menu1">
+				<p class="clear">
+					<span>香煎杏鲍菇</span>
+					<img src="../img/3-2xin1.png" />
+					<img src="../img/3-2xin1.png" />
+					<img src="../img/3-2xin1.png" />
+					<img src="../img/3-2xin1.png" />
+					<img src="../img/3-2xin1.png" />
+				</p>
+				<p class="clear">
+					<span>酱香口味</span><em>5分钟</em><i>人浏览</i>
+				</p>
+			</div>
+			<div id="menu2">菜单</div>
+		</div>
+		
+
+		<div id="tactic" class="clear">
+			<img src="../img/xingbaogu.png" /><img src="../img/cong.png" /><img src="../img/you.png" /><img src="../img/cong.png" />
+		</div>
+
+
+		<div id="gonglue">
+			<div id="gonglue2">攻略</div>
+		</div>
+		
+		
+		<div id="cailiao">
+			<p class="liao">主料</p>
+			<p class="huo">
+				<span>杏鲍菇(2个)</span><span></span>
+			</p>
+			<p class="liao">辅料</p>
+			<p class="huo">
+				<span>鲜葱(一颗)</span><span>山椒酱(45毫升)</span>
+			</p>
+			<p class="huo">
+				<span>玉米油(2.5毫升)</span><span></span>
+			</p>
+		</div>
+
+		<div id="content">
+			<div class="buzhou">
+				<img src="../img/buzhou1.png" />
+				<span><em>步骤一</em><br>杏鲍菇洗净，拭干水分，切片；尽量厚薄均匀；再切点葱花；</span>
+			</div>
+
+			<div class="buzhou">
+				<img src="../img/buzhou2.png" />
+				<span><em>步骤二</em><br>电饼铛上下两个煎盘都刷上一层玉米油；</span>
+			</div>
+
+			<div class="buzhou">
+				<img src="../img/buzhou3.png" />
+				<span><em>步骤三</em><br>通电，打开上下两个开关，预热</span>
+			</div>
+
+
+			<div class="buzhou">
+				<img src="../img/buzhou4.png" />
+				<span><em>步骤四</em><br>预热完成后，将杏鲍菇片铺在电饼铛里；启动“大饼/馅饼”功能；</span>
+			</div>
+
+			<div class="buzhou">
+				<img src="../img/buzhou5.png" />
+				<span><em>步骤五</em><br>一个程序完成后，将杏鲍菇翻面；启动“煎蛋/薄饼”功能；</span>
+			</div>
+
+			<div class="buzhou">
+				<img src="../img/buzhou6.png" />
+				<span><em>步骤六</em><br>程序完成后，关掉上开关；调入适量山椒酱；将酱料同杏鲍菇炒均匀；</span>
+			</div>
+
+			<div class="buzhou">
+				<img src="../img/buzhou7.png" />
+				<span><em>步骤七</em><br>食材都煎熟之后，撒入葱花；</span>
+			</div>
+
+			<div class="buzhou">
+				<img src="../img/buzhou8.png" />
+				<span><em>步骤八</em><br>装盘，上桌咯。</span>
+			</div>
+		</div>
+		
+	</div>
+
+	<div id="bot">
+		<div id="join">加入购物车</div>
+		<div id="buy">立即购买</div>
+	</div>
+	<div style="height:1.2rem"></div>
+</body>
+<script>
+
+	var arr = ['../img/return.png','../img/3-2img1.png','../img/3-2xin1.png','../img/xingbaogu.png','../img/cong.png','../img/you.png','../img/buzhou1.png','../img/buzhou2.png','../img/buzhou3.png','../img/buzhou4.png','../img/buzhou5.png','../img/buzhou6.png','../img/buzhou7.png','../img/buzhou8.png']
+	
+	function loadingFn(arr,fn){
+		var index = 0;
+	for (var i = 0; i < arr.length; i++) {
+		var img = new Image();
+		img.src = arr[i];
+		img.onload = function(){
+				index++;
+				fn && fn(index);
+			}
+		}
+	}
+
+loadingFn(arr,function(index){
+	var oXin = document.querySelectorAll('#menu1 img');
+	var people = document.querySelector('#menu1 p:nth-of-type(2) i');
+	var json = {"xin":[],"liulan":[]};
+
+	json={"xin":3,"liulan":388};
+	
+	var k = json.xin;
+	for (var i = 0; i < k; i++) {
+		oXin[i].src = "../img/3-2xin2.png";
+	}
+	
+	people.innerHTML = json.liulan+"人浏览";
+
+
+	
+	var tactic = document.querySelector('#tactic');
+	var con = document.querySelector('#con');
+	var l = con.offsetWidth;
+	tactic.addEventListener("touchstart",function(e){
+		var z =	tactic.offsetLeft;
+		var disX = e.touches[0].clientX;
+		tactic.addEventListener("touchmove",function(e){
+			var x = e.touches[0].clientX-disX;
+			var zx = z+x;
+			if(zx>0){zx=0};
+			if(zx<-(l*134/100-l)){zx=-(l*134/100-l)};
+			// console.log(l*134/100-l);
+			tactic.style.left = zx+"px";
+		})
+		return false;
+	})
+	document.addEventListener("touchend",function(e){
+		//手指离开屏幕后获取不到属性;
+	})
+})
+
+</script>
+</html>
+

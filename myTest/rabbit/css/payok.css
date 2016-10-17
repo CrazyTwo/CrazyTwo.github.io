@@ -1,0 +1,65 @@
+html,body{
+    width:100%;
+    height:100%;
+    font-size: 100px;
+}
+.wrap{
+    width:100%;
+    max-width:9.8rem;
+    margin:0 auto;
+}
+.header{
+    position: relative;
+    text-align: center;
+    background:#48382b;
+    height:0.5rem;
+    line-height:0.5rem;
+}
+.header h3{
+    color:white;
+    font-size:0.2rem;
+}
+.header a{
+    display:inline-block;
+    width:0.1rem;
+    height:0.285rem;
+    position:absolute;
+    left:0.1rem;
+    top:0.105rem;
+    font-size:0;
+    line-height: 0.285rem;
+}
+.header a img{
+    width:100%;
+}
+.content{
+    width: 100%;
+    font-size: 0.2rem;
+    position: relative;
+}
+.ok{
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    top: 0.58rem;
+    text-align: center;
+}
+.ok img{
+    width: 0.8rem;
+}
+p{
+    margin-top: 0.27rem;
+    margin-bottom: 0.835rem;
+    font-size: 0.19rem;
+}
+.btn{
+    background-color: #ee4147;
+    width: 1.125rem;
+    height: 0.35rem;
+    line-height: 0.35rem;
+    text-align: center;
+    margin: auto;
+    color: #fff;
+    font-size: 0.17rem
+}

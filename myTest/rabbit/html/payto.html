@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="zn-cn">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>购买会员</title>
+    <link rel="stylesheet" media="screen" title="no title" href="../css/reset.css">
+    <link rel="stylesheet" media="screen" title="no title" href="../css/payto.css">
+</head>
+<body>
+    <div class="wrap">
+    
+        <div class="header">
+            <a href="javascript:history.go(-1);"><img src="../img/gt.png" /></a>
+            <h3>购买会员</h3>
+        </div>
+
+        <div class="content">
+            <div class="div">
+                <div class="h clear"><span class="fl">购买商品</span><span class="fr">待付款</span></div>
+                <ul>
+                    <li>
+                        <div class="img"><img src="../img/_menber.png" alt=""></div>
+                        <div class="con">
+                            <div id="btn">升级成为VIP会员</div>
+                            <p>期限为一年</p>
+                            <span>￥100</span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="btn">立即支付</div>
+    </div>
+</body>
+<script type="text/javascript">
+    var oBtn = document.getElementsByClassName('btn')[0];
+
+    oBtn.onclick = function(){
+        window.location.href = 'payok.html';
+        return false;
+    }
+</script>
+</html>

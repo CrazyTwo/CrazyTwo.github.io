@@ -1,0 +1,134 @@
+.wrap{
+	width: 100%;
+	position: relative;
+	padding-bottom:15%;  
+}
+
+.span1_1{
+	border-right: 2px solid #99886b;
+}
+.span1_2{
+	border-left: 2px solid #99886b;
+}
+
+.content{
+	width: 100%;
+}
+.content .con1{
+	margin-bottom: 2%;
+	width: 100%;
+	position: relative;
+}
+.content .con1 img{
+	width: 100%;
+	vertical-align:middle;
+}
+.content .con1 .bg{
+	left: 0;
+	top: 0;
+	width: 100%;
+	z-index: 8;
+	background: black;
+	opacity: 0.5;
+	position: absolute;
+}
+
+.content .con1 .bg .p1{
+	text-align: center;
+	line-height: 20px;
+	margin-top:30%; 
+	font-size: 16px;
+	z-index: 9;
+	color: white;
+}
+.content .con1 .bg .p2{
+	text-align: center;
+	font-size: 12px;
+	color: rgba(255,255,255,0.75);
+	z-index: 9;
+}
+.content .con1 .bg2{
+	left: 0;
+	top: 0;
+	width: 100%;
+	z-index: 8;
+	background: black;
+	opacity: 0.5;
+	position: absolute;
+}
+.content .con1 .bg2 .p1{
+	margin-top: 17%;
+	text-align: center;
+	font-size: 16px;
+	z-index: 9;
+	color: white;
+}
+.foot{
+	width: 100%;
+	background: #48382b;
+	padding-top: 2%;
+	position: fixed;
+	bottom: 0;
+	z-index: 999;
+}
+.foot ul{
+	width: 88%;
+	margin-left: 6%;
+	overflow: hidden;
+	text-align: center;
+}
+.foot ul li img{
+	width: 100%;
+	margin-bottom: 5px;
+}
+.foot ul li{
+	vertical-align: middle;
+	text-align: center;
+	font-size: 14px;
+	float: left;
+	width: 10%;
+	margin-right: 12%;      
+	color: #c3ad88;
+}
+@media screen and (min-width: 500px) and (min-width: 600px){
+	.heard div span{
+		font-size: 26px;
+		line-height:30px;
+	}
+	.content .con1 .bg .p1{
+		line-height: 30px;
+		font-size: 26px;
+	}
+	.content .con1 .bg .p2{
+		font-size: 22px;
+	}
+
+	.content .con1 .bg2 .p1{
+		font-size: 26px;
+	}
+	.foot ul li{	
+		font-size: 22px;
+	}
+}
+
+@media screen and (min-width: 600px) and (min-width: 700px){
+	.heard div span{
+		font-size: 36px;
+		line-height:40px;
+	}
+	.content .con1 .bg .p1{
+		line-height: 40px;
+		font-size: 36px;
+	}
+	.content .con1 .bg .p2{
+		font-size: 26px;
+	}
+	.content .con1 .bg2 .p1{
+		font-size: 36px;
+	}
+	.foot ul li{	
+		font-size: 26px;
+	}
+}
+
+
