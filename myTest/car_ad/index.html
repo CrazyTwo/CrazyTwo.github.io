@@ -2,6 +2,45 @@
 <html>
     <head>
         <meta charset="utf-8">
+        <script id="GA_001">
+
+          //get cookie value with key
+          function getCookie(name){
+             var arr,reg=new RegExp("(^| )"+name+"=([^;]*)(;|$)");
+             if(arr=document.cookie.match(reg))
+                return unescape(arr[2]);
+             else
+                return null;
+          }
+
+          //primary cookie key.
+          var Honda_CookieID = getCookie("SL_Layout_Cookie");//Honda CookieID
+
+          var myDate = new Date();
+          var timeStr=myDate.getFullYear().toString()+(myDate.getMonth()+1).toString()+myDate.getDate();
+          var GA_CookieID_OrderID = timeStr+Honda_CookieID;//交易id
+
+          var Honda_adcode = "";
+          var reg = new RegExp("(^|&)"+ 'adcode' +"=([^&]*)(&|$)");
+          var r = window.location.search.substr(1).match(reg);
+          if(r!=null) Honda_adcode = unescape(r[2]);//Honda adcode
+
+          //001
+          (function(i,s,o,g,r,a,m){
+            i['GoogleAnalyticsObject']=r;
+            i[r]=i[r] ||function(){  
+                (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();
+                a=s.createElement(o),  m=s.getElementsByTagName(o)[0];
+                a.async=1;
+                a.src=g;
+                m.parentNode.insertBefore(a,m)  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-91669570-1', 'auto');
+        ga('set', 'dimension1', Honda_CookieID);
+        ga('set', 'dimension4', Honda_adcode);
+        var clientId = tracker.get('clientId');
+        ga('set', 'dimension5', clientId);
+        </script>
         <title>车型亮点</title>
         <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
         <link rel="stylesheet" href="css/reset.css">
