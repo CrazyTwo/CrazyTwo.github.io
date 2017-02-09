@@ -369,6 +369,18 @@
             },
             onSlideChangeEnd: function(swiper){
                     swiperAnimate(swiper); //每个slide切换结束时也运行当前slide动画
+               var slide =swiper.activeIndex;
+                if(Math.abs(slide)==0){
+                    ga('send', 'pageview',    {'page': '/myTest/car_ad/0', 'title': '上市'}); 
+                }else if(Math.abs(slide)==1){
+                   ga('send', 'pageview',    {'page': '/myTest/car_ad/1', 'title': '外观'}); 
+                }else if(Math.abs(slide)==2){
+                   ga('send', 'pageview',    {'page': '/myTest/car_ad/2', 'title': '驾控'}); 
+                }else if(Math.abs(slide)==3){
+                   ga('send', 'pageview',    {'page': '/myTest/car_ad/3', 'title': '内饰'}); 
+                }else if(Math.abs(slide)==4){
+                    ga('send', 'pageview',    {'page': '/myTest/car_ad/4', 'title': '逐路'}); 
+                }
             }
         });
 
