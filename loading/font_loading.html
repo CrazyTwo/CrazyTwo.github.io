@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>font_loading</title>
+	<style>
+		 body, html {
+            height: 100%;
+            background: #fff;
+        }
+        
+        #container {
+            width: 400px;
+            height: 400px;
+            margin: 0 auto;
+            padding: 0;
+            position: relative;
+          top: 100px;
+            bottom: 0;
+            left: 0;
+            right: 0;
+        }
+        
+        .center {
+            width: 50%;
+            height: 50%;
+            display: block;
+            margin: 0 auto;
+            padding: 20px;
+            background: #E41C7C;
+            border-radius: 20%;
+            
+        }
+        
+        .c {
+            width: 50px;
+            height: 45px;
+            background: #FE5961;
+            padding: 5px;
+            position: absolute;
+            border-radius: 50%;
+            left: 105px;
+            -webkit-animation-name: c; /* Safari 4.0 - 8.0 */
+            -webkit-animation-duration: 1s; /* Safari 4.0 - 8.0 */
+            animation-name: c;
+            animation-duration: 1s;
+            animation-iteration-count: infinite;
+            animation-timing-function: ease-in-out;
+        }
+        
+        @keyframes c {
+        0%   {background-color: #1085C3;}
+        25%  {background-color: #FE5961;}
+        50%  {background-color: #FE5961;}
+        75%  {background-color: #FE5961;}
+        100% {background-color: #FE5961;}   
+        }
+        
+        .c:before {
+            content: "";
+            display: block;
+            width: 20px;
+            height: 48px;
+            background: #E41C7C;
+            position: relative;
+            bottom: 1px; left: 40px;
+            
+            
+        }
+        
+        .a {
+            width: 0;
+	        height: 100px;
+	        border-left: 28px solid transparent;
+	        border-right: 28px solid transparent;
+	        border-bottom: 50px solid #1CB492;
+            position: relative;
+            bottom: 97px; left: 78px;
+            
+        }
+        
+        .b, .b:before {
+            width: 30px;
+            height: 20px;
+            background: #7750CC;
+            padding: 5px;
+            position: relative;
+            border-radius: 0% 100% 100% 0%;
+          bottom: 149px; left: 155px;
+        }
+        
+        .b:before {
+            content: "";
+            display: block;
+            position: relative;
+            top: 18px; left: -5px
+        }
+        
+        .o1, .o2 {
+            width: 55px;
+            height: 55px;
+            background: #59C7E9;
+            border-radius: 50%;
+            position: absolute;
+            top: 90px; left: 105px;
+        }
+    
+        .o2 {
+            background-color: #FFE25E;
+            position: absolute;
+            left: 180px;
+            -webkit-animation-name: b; /* Safari 4.0 - 8.0 */
+            -webkit-animation-duration: 1s; /* Safari 4.0 - 8.0 */
+            animation-name: b;
+            animation-duration: 1s;
+            animation-iteration-count: infinite;
+            animation-timing-function: ease-in-out;
+            
+        }
+        
+        @keyframes b {
+	        0%   {background-color: #FFE25E;}
+	        25%  {background-color: #7750CC;}
+	        50%  {background-color: #FFE25E;}
+	        75%  {background-color: #FFE25E;}
+	        100% {background-color: #FFE25E;}  
+	    }
+        
+        .d {
+            width: 33px;
+            height: 40px;
+            background: #260059;
+            padding: 5px;
+            position: relative;
+            border-radius: 0% 100% 100% 0%;
+            bottom: 107px; left: 155px;
+            
+        }
+        
+        .l, .l:before {
+            width: 30px;
+            height: 50px;
+            background: #1B2F77;
+            position: relative;
+            bottom: 85px; left: 10px;
+             -webkit-animation-name: l; /* Safari 4.0 - 8.0 */
+            -webkit-animation-duration: 1s; /* Safari 4.0 - 8.0 */
+            animation-name: l;
+            animation-duration: 1s;
+            animation-iteration-count: infinite;
+            animation-timing-function: ease-in-out;
+        }
+        
+        @keyframes l {
+	        0%   {background-color: #1B2F77;}
+	        25%  {background-color: #1B2F77;}
+	        50%  {background-color: #1CB492;}
+	        75%  {background-color: #1B2F77;}
+	        100% {background-color: #1B2F77;}  
+	    }
+        
+        .l:before {
+            content: "";
+            display: block;
+            width: 25px;
+            top: 12.5px; left: 15px;
+            transform: rotate(90deg);
+        }
+        
+        .e, .e:before, .e:after {
+            width: 20px;
+            height: 50px;
+            background: #F34AD1;
+            position: relative;
+            bottom: 135px; left: 84px;
+            -webkit-animation-name: e; /* Safari 4.0 - 8.0 */
+            -webkit-animation-duration: 1s; /* Safari 4.0 - 8.0 */
+            animation-name: e;
+            animation-duration: 1s;
+            animation-iteration-count: infinite;
+            animation-timing-function: ease-in-out;
+        }
+        
+         @keyframes e {
+        0%   {background-color: #F34AD1;}
+        25%  {background-color: #F34AD1;}
+        50%  {background-color: #F34AD1;}
+        75%  {background-color: #59C7E9;}
+        100% {background-color: #F34AD1;}  }
+        
+        .e:before {
+            content: "";
+            display: block;
+            width: 20px;
+            top: 15px; left: 18px;
+            transform: rotate(90deg);
+        }
+        
+        .e:after {
+            content: "";
+            display: block;
+            width: 20px;
+            height: 30px;
+            bottom: 40px; left: 10px;
+            transform: rotate(90deg);
+        }
+        
+        .s, .s:before {
+            width: 30px;
+            height: 16px;
+            background: #1085C3;
+            padding: 5px;
+            position: relative;
+            border-radius: 100% 0% 0% 100%;
+            bottom: 190px; left: 155px;
+            -webkit-animation-name: s; /* Safari 4.0 - 8.0 */
+            -webkit-animation-duration: 1s; /* Safari 4.0 - 8.0 */
+            animation-name: s;
+            animation-duration: 1s;
+            animation-iteration-count: infinite;
+            animation-timing-function: ease-in-out;
+        }
+        
+        @keyframes s {
+        0%   {background-color: #1085C3;}
+        25%  {background-color: #1085C3;}
+        50%  {background-color: #1085C3;}
+        100% {background-color: #FFE25E;}  }
+            
+        
+        .s:before {
+            content: "";
+            display: block;
+            position: absolute;
+            border-radius: 0% 100% 100% 0%; 
+            top: 28px; left: 1px
+        }
+        
+	</style>
+</head>
+<body>
+	<div id="container">
+	    <div class="center">
+	        <div class="c"></div>
+	        <div class="a"></div>
+	        <div class="b"></div>
+	        <div class="o1"></div>
+	        <div class="o2"></div>
+	        <div class="d"></div>
+	        <div class="l"></div>
+	        <div class="e"></div>
+	        <div class="s"></div>
+	    </div>
+    </div>
+</body>
+</html>
